@@ -1,0 +1,5 @@
+{
+  "sketch": "11-tropical-depression",
+  "note": "Large, raw and licensed files live on Box (2026 Realtime Weather), not in git. Lab members add them with: node scripts/assets.mjs add 11 <path>.",
+  "items": []
+}
