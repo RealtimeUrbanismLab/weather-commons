@@ -86,7 +86,7 @@ const EDDIES=[{c:[-137.3,52.7],r:90,sign:1},{c:[-134.6,53.9],r:70,sign:1},{c:[-1
 const LEGS=[[-137.06,52.85],[-137.9,52.4],[-136.4,52.3],[-136.6,53.3],[-138.0,53.1],[-137.06,52.85],[-132.18,54.04]];
 const P={iron:120,eddy:.6,graze:.5,wind:.5};
 const MULT={bloom:1,sky:1,wake:1,clock:1};
-const SET={warp:60,np:10,speed:2,drift:!reduced,posts:true,terrain:true,relief:25};
+const SET={warp:60,np:10,speed:2,drift:!reduced,posts:true,terrain:true,relief:100};
 const NP=8000,NI=700,NC=2200;
 function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
 const cellOf=(x,y)=>[clamp((x/CS)|0,0,GW-1),clamp((y/CS)|0,0,GH-1)];
@@ -206,8 +206,8 @@ function drawMap(){const ctx=plane.map.ctx;ctx.clearRect(0,0,FW,FH);ctx.drawImag
   ctx.globalCompositeOperation='source-in';ctx.fillStyle=COL.map;ctx.fillRect(0,0,FW,FH);ctx.globalCompositeOperation='source-over';
   ctx.strokeStyle=COL.map;ctx.fillStyle=COL.map;const T=(x,y,t,o)=>MAPTXT.push({x,y,z:Z.map,t,col:COL.map,...o});
   ctx.lineWidth=.6;ctx.setLineDash([1,4]);
-  for(let lon=-145;lon<=-127;lon+=3){const x=fx(lon);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,FH);ctx.stroke();T(x,FH,Math.abs(lon)+'° W',{size:10,align:'center',dy:14})}
-  for(let lat=50;lat<=57;lat+=2){const y=fy(lat);ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(FW,y);ctx.stroke();T(FW,y,lat+'° N',{size:10,align:'left',dx:6,dy:4})}
+  for(let lon=-145;lon<=-127;lon+=3){const x=fx(lon);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,FH);ctx.stroke();T(x,FH,Math.abs(lon)+'° W',{size:9,align:'center',dy:14})}
+  for(let lat=50;lat<=57;lat+=2){const y=fy(lat);ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(FW,y);ctx.stroke();T(FW,y,lat+'° N',{size:9,align:'left',dx:6,dy:4})}
   ctx.setLineDash([3,4]);ctx.lineWidth=.9;ctx.beginPath();ENVELOPE.forEach((c,i)=>{const [x,y]=pxf(...c);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.closePath();ctx.stroke();ctx.setLineDash([]);
   {const [x,y]=pxf(-140.5,54.3);T(x,y,'Reported bloom envelope, 2012',{lift:1})}
   for(const e of EDDIES){const [x,y]=pxf(...e.c);ctx.lineWidth=.7;ctx.setLineDash([1,3]);ctx.beginPath();ctx.arc(x,y,e.r/KM_LON*(FW/(LON1-LON0)),0,6.2832);ctx.stroke();ctx.setLineDash([])}
@@ -215,11 +215,11 @@ function drawMap(){const ctx=plane.map.ctx;ctx.clearRect(0,0,FW,FH);ctx.drawImag
   ctx.setLineDash([2,3]);ctx.lineWidth=.7;ctx.beginPath();LEGS.forEach((c,i)=>{const [x,y]=pxf(...c);i?ctx.lineTo(x,y):ctx.moveTo(x,y)});ctx.stroke();ctx.setLineDash([]);
   {const [x,y]=pxf(...OLD_MASSETT);ctx.beginPath();ctx.arc(x,y,3,0,6.2832);ctx.fill();T(x,y,'Old Massett',{lift:1})}
   // scale bar in miles (imperial readouts)
-  {const mipx=FW/(LON1-LON0)/KM_LON*1.609344,L=100*mipx,x0=FW-30-L,y0=22;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x0+L,y0);ctx.moveTo(x0,y0-4);ctx.lineTo(x0,y0+4);ctx.moveTo(x0+L,y0-4);ctx.lineTo(x0+L,y0+4);ctx.stroke();T(x0+L/2,y0,'100 mi',{size:10,align:'center',dy:16})}}
+  {const mipx=FW/(LON1-LON0)/KM_LON*1.609344,L=100*mipx,x0=FW-30-L,y0=22;ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(x0,y0);ctx.lineTo(x0+L,y0);ctx.moveTo(x0,y0-4);ctx.lineTo(x0,y0+4);ctx.moveTo(x0+L,y0-4);ctx.lineTo(x0+L,y0+4);ctx.stroke();T(x0+L/2,y0,'100 mi',{size:9,align:'center',dy:16})}}
 drawMap();
 function drawSea(){const ctx=plane.sea.ctx;ctx.clearRect(0,0,FW,FH);
   ctx.strokeStyle=COL.iron;if(S.trackN>1){ctx.lineWidth=1.2;ctx.beginPath();for(let i=0;i<S.trackN;i++){const [x,y]=pxf(...track[i]);i?ctx.lineTo(x,y):ctx.moveTo(x,y)}ctx.stroke()}
-  ctx.fillStyle=COL.plankton;for(let a=4;a>=1;a--){ctx.globalAlpha=a/4*.7;for(let i=0;i<NP;i+=2){const x=S.plank[i*2];if(isNaN(x))continue;const q=Math.ceil(S.pa[i]*4);if(q!==a)continue;ctx.fillRect(fx(x)-.8,fy(S.plank[i*2+1])-.8,1.6,1.6)}}
+  ctx.fillStyle=COL.plankton;for(let a=4;a>=1;a--){ctx.globalAlpha=a/4*.7;for(let i=0;i<NP;i+=2){const x=S.plank[i*2];if(isNaN(x))continue;const q=Math.ceil(S.pa[i]*4);if(q!==a)continue;ctx.fillRect(fx(x)-2.5,fy(S.plank[i*2+1])-2.5,5,5)}}
   ctx.globalAlpha=1;ctx.lineWidth=1;for(let i=0;i<NI;i++){const x=S.iron[i*2];if(isNaN(x))continue;ctx.beginPath();ctx.arc(fx(x),fy(S.iron[i*2+1]),2.2,0,6.2832);ctx.stroke()}}
 function drawCloud(){const ctx=plane.cloud.ctx;ctx.clearRect(0,0,FW,FH);ctx.fillStyle=COL.cloud;
   for(let i=0;i<NC;i++){const x=S.cloud[i*2],y=S.cloud[i*2+1];const s=patchAt(x,y);if(!s)continue;const [cx,cy]=cellOf(x,y);const c=cy*GW+cx;const k=lerp(CAL[s.a].cloud[c],CAL[s.b].cloud[c],s.t);if(k<.3)continue;
@@ -228,22 +228,30 @@ function drawInst(){const ctx=plane.inst.ctx;ctx.clearRect(0,0,FW,FH);ctx.stroke
   {const [x,y]=pxf(S.ship[0],S.ship[1]);ctx.lineWidth=1.2;ctx.fillStyle='#000';ctx.beginPath();ctx.moveTo(x-8,y+4);ctx.lineTo(x+8,y+4);ctx.lineTo(x+5,y-4);ctx.lineTo(x-5,y-4);ctx.closePath();ctx.fill();ctx.stroke();
    INSTTXT.push({x,y,z:Z.inst,t:day<0?'Ocean Pearl, in port':S.ship[2]>=LEGS.length?'Ocean Pearl, home':'Ocean Pearl',col:COL.inst,lift:1})}
   const frac=fract(day),x=FW*(1-frac),on=CAL.find(e=>Math.abs(e.n-day)<.5);ctx.lineWidth=on?1.4:.7;ctx.setLineDash(on?[]:[6,6]);ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x+40,FH);ctx.stroke();ctx.setLineDash([]);
-  INSTTXT.push({x,y:0,z:Z.inst,t:on?'Aqua, pass of '+fmtShort(on.n):'Aqua',col:COL.inst,size:10,dx:6,dy:-6})}
+  INSTTXT.push({x,y:0,z:Z.inst,t:on?'Aqua, pass of '+fmtShort(on.n):'Aqua',col:COL.inst,size:9,dx:6,dy:-6})}
 // the date chips: one per visible patch, anchored on the composite, drawn flat to the screen
 function drawLabels(){CHIPS=[];for(const s of seeds){if(!s.active||s.a<0)continue;if(patchAt(s.x,s.y)!==s)continue;
   // during a crossfade only the nearer day is named, so two chips never stack on one anchor
   CHIPS.push({x:s.x,y:s.y,d:s.t<.5?s.a:s.b,alpha:.55+.45*Math.abs(1-2*s.t),name:s.name})}}
-const liftPx=()=>10+52*Math.sin(cam.ax);
 function halo(c,t,x,y,col){c.lineJoin='round';c.lineWidth=3;c.strokeStyle='#000';c.strokeText(t,x,y);c.fillStyle=col;c.fillText(t,x,y)}
-function drawText(c){const L=liftPx();c.textBaseline='alphabetic';
-  for(const it of [...MAPTXT,...INSTTXT]){const p=proj(it.x,it.y,it.z);let qx=p[0]+(it.dx||0),qy=p[1]+(it.dy||0);
-    if(it.lift){qy-=L;c.strokeStyle=it.col;c.globalAlpha=.8;c.lineWidth=.8;c.beginPath();c.moveTo(p[0],p[1]);c.lineTo(qx,qy+3);c.stroke();c.globalAlpha=1;c.fillStyle=it.col;c.fillRect(p[0]-1.5,p[1]-1.5,3,3)}
-    font(c,it.size||12);c.textAlign=it.align||(it.lift?'center':'left');halo(c,it.t,qx,qy,it.col)}
-  const placed=[];
-  for(const ch of CHIPS.map(ch=>({...ch,p:proj(ch.x,ch.y,Z.labels)})).sort((a,b)=>b.p[1]-a.p[1])){const p=ch.p,date=fmtShort(CAL[ch.d].n);font(c,13);const wd=c.measureText(date).width;font(c,10);const w=Math.max(wd+14,c.measureText(ch.name).width)+16,h=36;
-    // a chip that would cover one already placed climbs above it
-    const x=p[0]-w/2;let y=p[1]-L-h-6;for(let n=0;n<6;n++){const hit=placed.find(r=>x<r[0]+r[2]+4&&x+w+4>r[0]&&y<r[1]+r[3]+4&&y+h+4>r[1]);if(!hit)break;y=hit[1]-h-6}placed.push([x,y,w,h]);c.globalAlpha=ch.alpha;c.strokeStyle='#fff';c.lineWidth=1;c.beginPath();c.moveTo(p[0],p[1]);c.lineTo(p[0],y+h);c.stroke();c.fillStyle='#fff';c.fillRect(p[0]-2,p[1]-2,4,4);
-    c.fillRect(x,y,w,h);c.fillStyle=monthRGB(monthOf(CAL[ch.d].n));c.fillRect(x+8,y+7,8,8);c.fillStyle='#000';c.textAlign='left';font(c,13);c.fillText(date,x+22,y+15);font(c,10);c.fillStyle='#555';c.fillText(ch.name,x+8,y+29)}
+// labels sit off the map: grid ticks stay at the frame edge; everything else is a callout in a column
+// beside the frame (left or right, by which half its anchor is in), stacked in anchor order, on a leader
+function drawText(c){c.textBaseline='alphabetic';
+  let x0=1e9,x1=-1e9;for(const z of [0,Z.inst])for(const [x,y] of [[0,0],[FW,0],[0,FH],[FW,FH]]){const p=proj(x,y,z);x0=Math.min(x0,p[0]);x1=Math.max(x1,p[0])}
+  const items=[];
+  for(const it of [...MAPTXT,...INSTTXT]){const p=proj(it.x,it.y,it.z);
+    if(!it.lift){font(c,it.size||9);c.textAlign=it.align||'left';halo(c,it.t,p[0]+(it.dx||0),p[1]+(it.dy||0),it.col);continue}
+    font(c,10);items.push({p,w:c.measureText(it.t).width+4,h:12,t:it.t,col:it.col,alpha:1})}
+  for(const ch of CHIPS){const p=proj(ch.x,ch.y,Z.labels),date=fmtShort(CAL[ch.d].n);font(c,11);const wd=c.measureText(date).width;font(c,9);
+    items.push({p,w:Math.max(wd+12,c.measureText(ch.name).width)+12,h:26,chip:ch,date,col:'#fff',alpha:ch.alpha})}
+  const m=$('#mast'),topL=m.offsetTop+m.offsetHeight+10,topR=44,mid=(x0+x1)/2;
+  for(const left of [true,false]){const col=items.filter(it=>(it.p[0]<mid)===left).sort((a,b)=>a.p[1]-b.p[1]);const top=left?topL:topR;let y=top;
+    for(const it of col){it.y=Math.max(it.p[1]-it.h/2,y);y=it.y+it.h+5}
+    const over=y-5-(H-8);if(over>0)for(const it of col)it.y=Math.max(top,it.y-over);
+    for(const it of col){it.x=left?Math.max(8,x0-16-it.w):Math.min(W-8-it.w,x1+16);const ex=left?it.x+it.w:it.x,ey=it.y+it.h/2;
+      c.globalAlpha=it.alpha*.7;c.strokeStyle=it.col;c.lineWidth=.75;c.beginPath();c.moveTo(it.p[0],it.p[1]);c.lineTo(ex,ey);c.stroke();c.globalAlpha=it.alpha;c.fillStyle=it.col;c.fillRect(it.p[0]-1.5,it.p[1]-1.5,3,3);
+      if(it.chip){c.fillStyle='#fff';c.fillRect(it.x,it.y,it.w,it.h);c.fillStyle=monthRGB(monthOf(CAL[it.chip.d].n));c.fillRect(it.x+6,it.y+5,6,6);c.fillStyle='#000';c.textAlign='left';font(c,11);c.fillText(it.date,it.x+16,it.y+11);font(c,9);c.fillStyle='#555';c.fillText(it.chip.name,it.x+6,it.y+22)}
+      else{font(c,10);c.textAlign='left';halo(c,it.t,it.x+2,it.y+10,it.col)}}}
   c.globalAlpha=1}
 function drawTerrain(c){if(!TER||!SET.terrain)return;const k=SET.relief*FW/(LON1-LON0)/KM_LON/1000;c.strokeStyle=COL.terrain;c.lineWidth=.7;c.globalAlpha=.75;
   for(let j=0;j<TH;j+=3){const y=(j+.5)/TH*FH;c.beginPath();let pen=false;for(let i=0;i<TW;i++){const h=TER[j*TW+i];if(h<=0){pen=false;continue}const [sx,sy]=proj((i+.5)/TW*FW,y,h*k);if(pen)c.lineTo(sx,sy);else{c.moveTo(sx,sy);pen=true}}c.stroke()}c.globalAlpha=1}
@@ -255,7 +263,8 @@ function proj(x,y,z){const X=x-FW/2,Y=y-FH/2,cz=Math.cos(cam.az),sz=Math.sin(cam
 function affine(z){const p0=proj(0,0,z),p1=proj(FW,0,z),p2=proj(0,FH,z);return [(p1[0]-p0[0])/FW,(p1[1]-p0[1])/FW,(p2[0]-p0[0])/FH,(p2[1]-p0[1])/FH,p0[0],p0[1]]}
 function unproj(sx,sy){const [a,b,c,d,e,f]=affine(0),det=a*d-b*c;if(Math.abs(det)<1e-9)return null;const X=sx-e,Y=sy-f;return [(d*X-c*Y)/det,(-b*X+a*Y)/det]}
 function fit(){const r=Math.hypot(FW,FH)/2,ca=Math.cos(cam.ax),sa=Math.sin(cam.ax),bw=2*r,bh=2*r*ca+sa*Z.inst;const small=W<700;
-  cam.zoom=Math.min((W-(small?24:60))/bw,(H-(small?140:110))/bh);cam.px=0;cam.py=cam.zoom*sa*Z.inst/2+(small?30:36)}
+  // wide screens keep a gutter each side for the label columns
+  cam.zoom=Math.min((W-(small?24:W>1000?380:60))/bw,(H-(small?140:110))/bh);cam.px=0;cam.py=cam.zoom*sa*Z.inst/2+(small?30:36)}
 function resize(){const r=$('#stage').getBoundingClientRect();DPR=Math.min(2,devicePixelRatio||1);W=r.width;H=r.height;canvas.width=W*DPR;canvas.height=H*DPR;fit()}
 const PCOL={map:COL.map,sea:COL.plankton,cloud:COL.cloud,inst:COL.inst};
 function render(c,w,h,dpr){c.setTransform(dpr,0,0,dpr,0,0);c.fillStyle='#000';c.fillRect(0,0,w,h);
