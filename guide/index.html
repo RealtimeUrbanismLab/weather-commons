@@ -87,7 +87,7 @@
 5. Give me the link to the pull request, and the address my page will have once it is merged: https://&lt;username&gt;.github.io/weather-commons/&lt;number&gt;-&lt;slug&gt;/</pre>
       <button type="button" data-copy="prompt">Copy</button>
     </div>
-    <p class="gloss">The words in &lt;angle brackets&gt; fill in as you type. If they stay, replace them yourself before you send.</p>
+    <p class="gloss">The words in &lt;angle brackets&gt; fill in as you type. If they stay, replace them yourself before you send. The boxes are kept only until you close this tab. <button type="button" id="f-clear">Clear the boxes</button></p>
     <p class="ok">Claude works for a few minutes, then gives you a pull request link. If it can't open the pull request itself, it shows a <strong>Create PR</strong> button. Check that the base is <em>your</em> fork.</p>
   </li>
   <li>
@@ -270,7 +270,9 @@
 </main>
 <script>
 (() => {
-  // Fill the prompt and the live address from the four boxes. Remembers them on this device only.
+  // Fill the prompt and the live address from the four boxes. Kept for this tab only, so a shared
+  // laptop never shows the last person's username.
+  try { localStorage.removeItem('wc-guide'); } catch {}
   const ids = ['name', 'user', 'num', 'title'];
   const el = Object.fromEntries(ids.map((k) => [k, document.getElementById('f-' + k)]));
   const promptEl = document.getElementById('prompt');
@@ -280,6 +282,7 @@
   const slugify = (s) => s.toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 48);
   const fill = (tpl, v) => tpl
+    .replaceAll('<username>.github.io', (v.user || '<username>').toLowerCase() + '.github.io')
     .replaceAll('<name>', v.name || '<name>')
     .replaceAll('<username>', v.user || '<username>')
     .replaceAll('<number>', v.num || '<number>')
@@ -291,13 +294,17 @@
     if (v.num && /^\d$/.test(v.num)) v.num = v.num.padStart(2, '0');
     promptEl.textContent = fill(promptTpl, v);
     liveEl.textContent = fill(liveTpl, v);
-    try { localStorage.setItem('wc-guide', JSON.stringify(v)); } catch {}
+    try { sessionStorage.setItem('wc-guide', JSON.stringify(v)); } catch {}
   };
   try {
-    const saved = JSON.parse(localStorage.getItem('wc-guide') || '{}');
+    const saved = JSON.parse(sessionStorage.getItem('wc-guide') || '{}');
     for (const k of ids) if (saved[k]) el[k].value = saved[k];
   } catch {}
   for (const k of ids) el[k].addEventListener('input', update);
+  document.getElementById('f-clear').addEventListener('click', () => {
+    for (const k of ids) el[k].value = '';
+    update();
+  });
   update();
 
   // Copy buttons.
