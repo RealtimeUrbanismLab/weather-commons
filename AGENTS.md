@@ -6,7 +6,7 @@ The workshop is about how weather is monitored, modelled, managed and shown in r
 
 ## Working with workshop participants
 
-There are 17 participants. Each works on their own project, often research they already have, and breakout rooms are only for peer feedback. Many are new to code, GitHub and Claude. When you work for one:
+There are 18 participants. Each works on their own project, often research they already have, and breakout rooms are only for peer feedback. Many are new to code, GitHub and Claude. When you work for one:
 
 - Build on their research and sources. Don't steer them toward a different topic.
 

@@ -4,7 +4,7 @@ Realtime Weather is a working group in *Weather Commons*, TBA21–Academy's UNI 
 
 We look at how weather is monitored, modelled, managed and shown in real time. We try to understand these practices on their own terms and to place them in their social, political and global context. We model an event and also its effects, through scientific, geographic, historical, humanities and critical approaches. Behind it all is the program's question: if the atmosphere is a commons, who has the right to change the weather?
 
-There are 17 participants, and each works on their own project: a sketch, which is a small web page that models and explains one event, practice or intervention. Many of you bring research you're already doing. Use the workshop to take it further, and we'll support you. Together the sketches form a shared atlas of how weather becomes visible, governable and contested. Each covers one bounded case. None tries to model the whole planet.
+There are 18 participants, and each works on their own project: a sketch, which is a small web page that models and explains one event, practice or intervention. Many of you bring research you're already doing. Use the workshop to take it further, and we'll support you. Together the sketches form a shared atlas of how weather becomes visible, governable and contested. Each covers one bounded case. None tries to model the whole planet.
 
 In each session, breakout rooms of four or five are for peer feedback, not group work.
 
