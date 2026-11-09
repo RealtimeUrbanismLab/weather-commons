@@ -91,6 +91,8 @@ Claude writes most of the code. You decide what the sketch says and check that i
 
 Two shortcuts are built in. Ask Claude to **start a sketch** (the `start-sketch` skill), and to **publish** it (the `publish` skill).
 
+You don't have to install anything or give Claude access to your computer. The setup guide explains [what Claude can reach](https://realtimeurbanismlab.github.io/weather-commons/guide/#access) on each route. Facilitators: see [claude-access.md](claude-access.md).
+
 ## The pilot
 
 Sketch 01, *Realtime Weather pilot*, is a worked example with a globe, satellite imagery, cloud heights, terrain and a simple transport model. Its exercises for these sessions are in [sketches/01-realtime-weather-pilot/docs/WORKSHOP.md](../../sketches/01-realtime-weather-pilot/docs/WORKSHOP.md).

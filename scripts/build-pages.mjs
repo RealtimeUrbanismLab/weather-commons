@@ -31,7 +31,7 @@ const REPO_NAME = process.env.GITHUB_REPOSITORY || UPSTREAM; // a fork builds it
 const IS_FORK = REPO_NAME.toLowerCase() !== UPSTREAM.toLowerCase();
 const SHARED_SITE = 'https://realtimeurbanismlab.github.io/weather-commons/';
 const COMMUNITY = 'https://community.ocean-archive.org/spaces/25478985';
-const SITE_PAGES = ['guide', 'catalog']; // root folders published as they are
+const SITE_PAGES = ['guide', 'catalog', 'resources']; // root folders published as they are
 const SKIP = new Set(['assets', 'tools', 'node_modules', 'dist', '.vite', '.wrangler']);
 
 function run(cmd, cmdArgs, cwd, env = {}) {
@@ -103,6 +103,7 @@ function landing(sketches) {
     <a href="./" aria-current="page">Sketches</a>
     <a href="guide/">Guide</a>
     <a href="catalog/">Catalog</a>
+    <a href="resources/">Resources</a>
     <a href="${repoUrl}/blob/main/CONTRIBUTING.md">Contribute</a>
     <a href="${COMMUNITY}">Community</a>
   </nav>
