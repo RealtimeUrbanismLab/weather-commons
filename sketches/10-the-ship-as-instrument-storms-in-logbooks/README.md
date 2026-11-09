@@ -19,7 +19,7 @@ Then open http://localhost:8000.
 
 ## 1. Event
 
-Storms as recorded in European ships' logbooks, 1662–1855, through the CLIWOC database. A first case is 7 March 1796, when six ships of a Dutch group sailing from Texel north around Scotland logged a storm near 63°N, each in its own words. If the sketch needs one very specific case, it will follow this group's voyage.
+Storms as recorded in European ships' logbooks, 1662–1855, through the CLIWOC database. A first case is 7 March 1796. Two Dutch squadrons had left Texel together on 23 February and sailed north around Scotland: Lucas's, bound for the Cape, and Braak's, bound for the West Indies. On 7 March six of their ships logged a storm near 63°N, each in its own words. If the sketch needs one very specific case, it will follow Lucas's squadron. The logbooks track it via Gran Canaria and Praia to Saldanha Bay, where it surrendered to a British fleet on 17 August 1796.
 
 ## 2. Simulate
 
@@ -43,9 +43,12 @@ To come.
   - Size: 282,322 entries from 1,756 logbooks, 1662–1855.
   - Downloaded: 8 November 2026, the GeoPackage version.
   - Licence: not stated by the source.
-  - Used on the page: six entries for 7 March 1796, plus the last logged dates and places of the same voyages. Positions are rounded to 0.1°; nothing else is changed. No data file is committed.
+  - Used on the page: six entries for 7 March 1796, plus the anchorages and dates of the same voyages. Positions are rounded to 0.1°; nothing else is changed. No data file is committed.
   - What kind of material: the logbook words are **observed**, as transcribed by CLIWOC. The wind speeds are **converted** by the database from words to the middle of a Beaufort band, so they are not measurements.
   - Coding caveats: https://stvno.github.io/page/cliwoc/
+- **The surrender at Saldanha Bay**, 17 August 1796:
+  - "Capitulation of Saldanha Bay", Wikipedia, https://en.wikipedia.org/wiki/Capitulation_of_Saldanha_Bay, read 9 November 2026. A **secondary** source citing James, Clowes and Dutch naval historians. Used for the two squadrons, the voyage and the surrender.
+  - "A plan of Soldanah Bay and capture of the Dutch fleet which surrendered to his Majesty's arms 17th August, 1796", map, 1796, Library of Parliament, South Africa, https://archive.parliament.gov.za/items/8d100406-d96a-4ba5-839b-625fe37b5eb4. A **primary** source for the date.
 - **English translations** of the Dutch wind words: mine, **interpretive**.
 - **Readings:**
   - García-Herrera et al. 2005, *Climatic Change* 73: 1–12.
@@ -59,4 +62,4 @@ What this sketch cannot show yet:
 - There is one entry a day, so we don't know what happened in between.
 - Some voyages were entered twice in the database.
 - A ship that wrote nothing was not necessarily in calm weather.
-- What happened at Saldanha Bay in August 1796 still needs a historical source.
+- Not every logbook was digitised in full. *Havick* sailed with Lucas to the Cape, but its log in the database stops at Gran Canaria.
