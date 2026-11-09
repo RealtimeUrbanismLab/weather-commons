@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "blockReadsOutsideWorkingDirectories": true,
+    "disableBypassPermissionsMode": "disable",
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(//**/.env)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)"
+    ]
+  }
+}

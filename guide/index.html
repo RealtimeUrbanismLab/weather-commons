@@ -16,6 +16,7 @@
     <a href="../">Sketches</a>
     <a href="../guide/" aria-current="page">Guide</a>
     <a href="../catalog/">Catalog</a>
+    <a href="../resources/">Resources</a>
     <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
     <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
   </nav>
@@ -26,16 +27,17 @@
 <ul class="toc" aria-label="On this page">
   <li><a href="#route-a">Route A: browser</a></li>
   <li><a href="#route-b">Route B: desktop</a></li>
+  <li><a href="#access">What Claude can reach</a></li>
   <li><a href="#share">Add to the shared site</a></li>
   <li><a href="#trouble">Troubleshooting</a></li>
 </ul>
-<p>There are two ways to work. <strong>Route A</strong> uses only a web browser. Use it today. <strong>Route B</strong> installs a few tools on your laptop, for later sessions. Both end with a page you can open on any phone.</p>
+<p>There are two ways to work. <strong>Route A</strong> uses only a web browser, and Claude never touches your computer. Start here. You can stay on it for the whole workshop. <strong>Route B</strong> installs a few tools on your laptop and is optional. Both end with a page you can open on any phone. See <a href="#access">what Claude can reach</a> on each route.</p>
 
 <div class="note">
   <p><strong>Before you start</strong></p>
   <p>Ask a facilitator for your <strong>sketch number</strong>. Each breakout room has a block: 10–19, 20–29, 30–39 or 40–49. Your number is yours for the whole workshop. Nobody else uses it.</p>
   <p>Your sketch is your own project. It can be research you are already doing, or an event from the <a href="../catalog/">catalog</a>.</p>
-  <p>You need a Claude plan (you have one) and about 20 minutes.</p>
+  <p>You need about 20 minutes and your own seat on the workshop's Claude Team plan. Accept the invitation email, and sign in with the address it was sent to. Each seat is for one person, so please don't share a login. If you also have a personal Claude account, make sure you're in the workshop organization, not your personal one.</p>
 </div>
 
 <h3>Words you will meet</h3>
@@ -43,7 +45,7 @@
 
 <!-- Route A -->
 <h2 id="route-a">Route A: browser only</h2>
-<p>For everyone, today. Nothing to install.</p>
+<p>For everyone. Nothing to install, and nothing runs on your computer.</p>
 
 <ol class="steps">
   <li>
@@ -65,8 +67,11 @@
   </li>
   <li>
     <strong>Connect Claude to your fork.</strong>
-    Open <a href="https://claude.ai/code">claude.ai/code</a> and sign in. When it asks, connect your GitHub account and install the <strong>Claude</strong> GitHub app. On GitHub's page, choose <strong>Only select repositories</strong> and pick <code>&lt;your username&gt;/weather-commons</code>. Click <strong>Install</strong>.
-    <p class="ok"><code>weather-commons</code> in Claude's repository list.</p>
+    <br>a. Open <a href="https://claude.ai/code">claude.ai/code</a> and sign in with your workshop seat.
+    <br>b. Click <strong>Sign in with GitHub</strong> and approve the request. If you see “GitHub access is required for Claude Code cloud sessions” and no button, you haven't done anything wrong: see <a href="#trouble">Troubleshooting</a>.
+    <br>c. Install the <strong>Claude</strong> GitHub app. On GitHub's page, choose <strong>Only select repositories</strong> and pick <code>&lt;your username&gt;/weather-commons</code>. Click <strong>Install</strong>. This limits Claude to your fork and nothing else on your GitHub account. If Claude doesn't offer the app, <a href="https://github.com/apps/claude/installations/new">install it here</a>.
+    <br>d. If you see <strong>Create your first cloud environment</strong>, leave everything as it is and click <strong>Create &amp; finish</strong>. A cloud environment is the temporary computer Claude works on.
+    <p class="ok"><code>weather-commons</code> in the repository list under the message box.</p>
   </li>
   <li>
     <strong>Ask Claude to make your first page.</strong>
@@ -108,7 +113,7 @@
 
 <!-- Route B -->
 <h2 id="route-b">Route B: desktop app</h2>
-<p>From session 2, for anyone who wants to preview pages before publishing, work with larger data, or use the lab's Box files. You install three tools once. A <strong>terminal</strong> is a window where you type commands: <strong>Terminal</strong> on a Mac, <strong>Terminal</strong> or <strong>PowerShell</strong> on Windows.</p>
+<p>Optional, for anyone who wants to preview pages before publishing, work with larger data, or use the lab's Box files. Claude then works on your own computer, so read <a href="#access">what Claude can reach</a> first. You install three tools once. A <strong>terminal</strong> is a window where you type commands: <strong>Terminal</strong> on a Mac, <strong>Terminal</strong> or <strong>PowerShell</strong> on Windows.</p>
 
 <div class="tabs" role="tablist" aria-label="Operating system">
   <button type="button" role="tab" id="tab-mac" aria-controls="panel-mac" aria-selected="true">Mac</button>
@@ -146,14 +151,47 @@
     <div class="code"><pre id="c-setup">gh auth setup-git</pre><button type="button" data-copy="c-setup">Copy</button></div>
   </li>
   <li>
-    <strong>Fork and download the repository.</strong> This makes a folder called <code>weather-commons</code> where you run it. If you already forked it in Route A, it just downloads your fork.
+    <strong>Fork and download the repository.</strong> This makes a folder called <code>weather-commons</code> where you run it. If you already forked it in Route A, it just downloads your fork. If you already have a fork, first open it on GitHub and click <strong>Sync fork</strong> → <strong>Update branch</strong>, so you get the latest safety settings.
     <div class="code"><pre id="c-fork">gh repo fork RealtimeUrbanismLab/weather-commons --clone</pre><button type="button" data-copy="c-fork">Copy</button></div>
   </li>
   <li>
-    <strong>Open it in Claude.</strong> Install the Claude desktop app from <a href="https://claude.ai/download">claude.ai/download</a>. Open the <strong>Code</strong> tab and choose the <code>weather-commons</code> folder.
+    <strong>Open it in Claude.</strong> Install the Claude desktop app from <a href="https://claude.ai/download">claude.ai/download</a>. Open the <strong>Code</strong> tab, choose <strong>Local</strong>, and choose the <code>weather-commons</code> folder and nothing wider. In the box where you type, set the mode to <strong>Accept edits</strong> or <strong>Manual</strong>. Check it before your first message.
     <p class="ok">Claude can now preview your page on your laptop before you publish it. The prompt from Route A step 5 works here too.</p>
   </li>
 </ol>
+
+<!-- What Claude can reach -->
+<h2 id="access">What Claude can reach</h2>
+<p>It's reasonable to be careful about this. How much Claude can reach depends on where it runs, not on which app you open it from.</p>
+<table>
+  <tr><th>Where you use it</th><th>Where it runs</th><th>What it can reach</th></tr>
+  <tr><td><strong>Browser</strong> (Route A)</td><td>A temporary computer run by Anthropic</td><td>Your fork. Not your laptop, your files or your other repositories.</td></tr>
+  <tr><td><strong>Desktop app</strong>, Code tab, <strong>Cloud</strong></td><td>The same temporary computer</td><td>The same as the browser.</td></tr>
+  <tr><td><strong>Desktop app</strong>, Code tab, <strong>Local</strong> (Route B)</td><td>Your computer</td><td>It works in the folder you choose. It can also run commands, and those commands have the same access to your computer as you do.</td></tr>
+  <tr><td><strong>VS Code</strong> extension</td><td>Your computer</td><td>The same as Local. Installing through VS Code is not safer.</td></tr>
+</table>
+<p>The workshop's Team plan doesn't include computer use, the feature that lets Claude control your screen. You don't need Cowork or the Claude browser extension for this workshop, so you can leave them alone.</p>
+
+<h3>If you work on your own computer</h3>
+<ol class="steps">
+  <li><strong>Give Claude one folder.</strong> Choose <code>weather-commons</code>. Never choose your home folder, Documents or Desktop, and don't use <strong>Add folder</strong> for anything personal.</li>
+  <li><strong>Use Accept edits or Manual.</strong> In both modes, Claude has to ask before it runs most commands. Accept edits lets it change files in your folder and run a few simple file commands without asking. <strong>Auto</strong> skips most questions. Don't use <strong>Bypass permissions</strong>.</li>
+  <li><strong>Read each request before you allow it.</strong> If you don't understand it, choose no and ask Claude to explain in plain words.</li>
+  <li><strong>Keep private things out of the folder:</strong> passwords, keys, unpublished interviews, anything you wouldn't post. Your fork is public.</li>
+  <li><strong>Think about your GitHub sign-in.</strong> After <code>gh auth login</code>, Claude's commands can do what your GitHub account can do. If that account holds private work, make a separate GitHub account for the workshop.</li>
+</ol>
+<p>This repository also has a safety file, <code>.claude/settings.json</code>. It stops Claude's file tools reading outside the folder, and turns off Bypass permissions. It's a seat belt, not a wall: a command can still read outside the folder, which is why step 2 matters.</p>
+
+<h3>If you want a real wall</h3>
+<ul>
+  <li><strong>Stay on Route A.</strong> It's the simplest and strongest choice, and you can do the whole workshop this way.</li>
+  <li><strong>Use a separate user account on your computer,</strong> with nothing personal in it. Your computer then keeps Claude out of your main account's files. This works on Mac and Windows. You need to be an administrator to create one.</li>
+  <li><strong>Use Claude's own sandbox,</strong> a limit enforced by your computer. It works on a Mac, and on Windows only inside WSL2 (a Linux system that runs in Windows), not on normal Windows. It takes more setup, so ask in the community space first.</li>
+</ul>
+
+<div class="note">
+  <p><strong>What happens to what you type.</strong> Under Anthropic's terms for Team plans, your prompts and code aren't used to train its models by default, and Anthropic keeps them for 30 days as standard. Details: <a href="https://code.claude.com/docs/en/data-usage">Claude Code data usage</a>. A local session also keeps a plain-text record on your computer for 30 days.</p>
+</div>
 
 <!-- Sharing -->
 <h2 id="share">Add to the shared site</h2>
@@ -182,6 +220,22 @@
 <!-- Troubleshooting -->
 <h2 id="trouble">Troubleshooting</h2>
 <dl class="trouble">
+  <dt>“GitHub access is required for Claude Code cloud sessions”, with no sign-in button.</dt>
+  <dd>This is a setting on the workshop's Claude plan, not a mistake of yours. An owner of the plan has to turn on GitHub for everyone. Tell a facilitator. Once it's on, reload <a href="https://claude.ai/code">claude.ai/code</a> and start step 4 again.
+    <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
+
+  <dt>“Claude Code isn't available on your account”.</dt>
+  <dd>You're probably signed in to the wrong account. Click <strong>Switch organization</strong> and choose the workshop one, or sign out and use the address your invitation went to. If that doesn't help, your seat may not be set up yet: tell a facilitator.
+    <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
+
+  <dt>Claude can't open a pull request, or says GitHub GraphQL isn't available.</dt>
+  <dd>In the browser, Claude can't always open pull requests itself. Click the <strong>Create PR</strong> button in Claude's window, and check that the base is your fork. To add your sketch to the shared site, follow <a href="#share">Add to the shared site</a> yourself on GitHub.
+    <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
+
+  <dt>In the browser, Claude can't download a dataset.</dt>
+  <dd>Claude's temporary computer can only reach a list of trusted sites, such as GitHub and package stores, and many data sites aren't on it. Download the file yourself. If it's under 10 MB, open your sketch's folder in your fork on GitHub, click <strong>Add file</strong> → <strong>Upload files</strong>, then ask Claude to use it. Record its source and licence in <strong>Sources and limits</strong>.
+    <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
+
   <dt>Nothing happens in the Actions tab after I merge.</dt>
   <dd>Actions are still off in your fork. Open the <strong>Actions</strong> tab and click <strong>I understand my workflows, go ahead and enable them</strong>. Then merge again, or open the <em>pages</em> workflow and click <strong>Run workflow</strong> if it offers one.
     <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
@@ -219,20 +273,20 @@
   <p>Full guide: realtimeurbanismlab.github.io/weather-commons/guide/ · Help: community.ocean-archive.org/spaces/25478985</p>
   <p>Name <span class="blank"></span> &nbsp; GitHub username <span class="blank"></span> &nbsp; Sketch number <span class="blank" style="min-width:40pt"></span></p>
 
-  <h2>Route A · browser only (today)</h2>
+  <h2>Route A · browser only (nothing runs on your computer)</h2>
   <ul>
     <li>Make a GitHub account at github.com/signup.</li>
     <li>Fork github.com/RealtimeUrbanismLab/weather-commons: <b>Fork</b> → <b>Create fork</b>.</li>
     <li>In your fork, <b>Actions</b> tab → <b>I understand my workflows, go ahead and enable them</b>.</li>
     <li>In your fork, <b>Settings → Pages → Source: GitHub Actions</b>.</li>
-    <li>claude.ai/code → connect GitHub → install the Claude app for <b>Only select repositories</b>: your weather-commons.</li>
+    <li>claude.ai/code, with your workshop seat → <b>Sign in with GitHub</b> → install the Claude app for <b>Only select repositories</b>: your weather-commons → <b>Create &amp; finish</b>.</li>
     <li>Start a task on your fork. Paste the prompt from the online guide (step 5). It runs<br><code>node scripts/new-sketch.mjs "&lt;title&gt;" --number &lt;NN&gt; --author "&lt;name&gt;"</code></li>
     <li>Open the pull request. Check the base is <i>your</i> fork. <b>Merge pull request → Confirm merge</b>.</li>
     <li>Wait for the green tick in Actions (about a minute). Open<br><code>https://&lt;username&gt;.github.io/weather-commons/&lt;NN&gt;-&lt;slug&gt;/</code></li>
     <li>Post your link in the community space.</li>
   </ul>
 
-  <h2>Route B · desktop (from session 2)</h2>
+  <h2>Route B · desktop (optional; use Accept edits or Manual, one folder only)</h2>
   <div class="cols">
     <ul>
       <li><b>Mac:</b> <code>xcode-select --install</code></li>
