@@ -25,6 +25,9 @@ How the four sessions work (Event, Simulate, Situate, Narrate): [docs/workshop/R
 | 01 | [Realtime Weather pilot](sketches/01-realtime-weather-pilot/) | Farzin Lotfi-Jam | pilot | vinext (Next on Vite) + React + three.js, Cloudflare | An evidence-led technical pilot for the Realtime Weather working group. |
 | 02 | [Haida witness composite](sketches/02-haida-witness-composite/) | Boone Mercado (with Claude) | sketch, v0.2 | static HTML + JS, no build step | A layered model of the 2012 Haida Gwaii iron dump. |
 | 03 | [Operation Popeye, Laos 1966–1972](sketches/03-operation-popeye-laos-1966-1972/) | Farzin Lotfi-Jam (with Claude) | sketch | static HTML + JS, no build step | The US military's secret cloud seeding over Laos, told in four parts: what happened, where the weather went, who and what it touched, and what we can and can't say. |
+| 04 | [Haida Gwaii iron dump v2](sketches/04-haida-gwaii-iron-dump-v2/) | Boone Mercado (with Claude) | sketch | static HTML + JS, WebGL 2, no build step | The 2012 Haida Gwaii iron sulphate release as a simulated sea under a picture stitched from nineteen MODIS Aqua passes, with terrain: which satellite day best witnesses each part of the water? |
+| 10 | [The Ship as Instrument: Storms in Logbooks](sketches/10-the-ship-as-instrument-storms-in-logbooks/) | Christos Montsenigos | sketch | static HTML, no build step | Before wind gauges, sailors judged the wind by how much sail their ship could carry and wrote it down in words every day at noon. |
+| 11 | [Tropical Depression](sketches/11-tropical-depression/) | Alexander Walmsley | sketch | static HTML + JS | What has to be measured, by whom, before a patch of cloud over warm sea is declared a tropical depression? |
 <!-- sketches:end -->
 
 Maintainers refresh this table with `node scripts/index-sketches.mjs` after merging. The site's front page updates on its own.
