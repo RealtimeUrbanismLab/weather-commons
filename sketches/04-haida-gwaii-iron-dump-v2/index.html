@@ -3,51 +3,70 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>04 · Haida Gwaii iron dump v2 · Realtime Weather</title>
-<meta name="description" content="The 2012 Haida Gwaii iron sulphate release: a simulated sea under a picture stitched from nineteen MODIS Aqua passes, with terrain.">
+<title>04 · Haida Gwaii iron dump v3 · Realtime Weather</title>
+<meta name="description" content="The 2012 Haida Gwaii iron release as a 3D model: measured chlorophyll and currents on the sea, a simulated plankton bloom, and the story told step by step.">
 <style>
-/* Layout: the picture is the page, on a black ground (imagery work). A masthead top-left, one word top-right,
-   the clock in a white bar along the bottom, settings in a flat white panel. ABC Diatype Regular only:
-   hierarchy by size and position, never weight or underline; −2 % tracking; leading about 1.15.
-   Each data layer has its own colour; the patch edges take the 1 px red imagery accent; time takes one hue per month. */
-:root{--ground:#000;--ink:#fff;--paper:#fff;--fg:#000;--mute:#7a7a7a;--sans:"ABC Diatype","Helvetica Neue",Helvetica,Arial,sans-serif;color-scheme:dark}
+/* Layout: the model is the page, on a black ground. A masthead top-left; the views top-right; under them a column with
+   the narration and, below it, the archive box; along the bottom a white bar with the clock and the numbered steps.
+   Type (DESIGN LANGUAGE §1): ABC Diatype Regular for titles and labels, ABC Synt for paragraphs and dates; body 12 px,
+   citations 8 px; −2 % tracking; leading 1.15; hierarchy by size and position, never weight, underline or italics.
+   Colour belongs to the picture and to the measured and simulated layers; time takes one hue per month. */
+:root{--bar:112px;--ground:#000;--ink:#fff;--paper:#fff;--fg:#000;--mute:#7a7a7a;
+  --sans:"ABC Diatype","Helvetica Neue",Helvetica,Arial,sans-serif;--text:"ABC Synt Edu","ABC Synt","ABC Diatype","Helvetica Neue",Helvetica,Arial,sans-serif;color-scheme:dark}
 *{box-sizing:border-box}
 [hidden]{display:none!important}
 html,body{height:100%}
 body{margin:0;background:var(--ground);color:var(--ink);font:400 12px/1.15 var(--sans);letter-spacing:-.02em;overflow:hidden;-webkit-font-smoothing:antialiased;user-select:none}
 b,strong,h1,h2{font-weight:400}
+p{font-family:var(--text);margin:0}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;text-align:left;letter-spacing:inherit}
 :focus-visible{outline:1px solid currentColor;outline-offset:3px}
 /* the shared site header, as a white top bar */
 #site{position:absolute;left:0;right:0;top:0;height:32px;background:var(--paper);color:var(--fg);display:flex;align-items:center;gap:18px;padding:0 20px;z-index:3;white-space:nowrap;overflow:hidden}
-#site .wordmark{text-transform:uppercase;letter-spacing:.02em}
+#site .wordmark{text-transform:uppercase}
 #site .tagline{color:var(--mute)}
 #site nav{margin-left:auto;display:flex;gap:16px}
 #site a:hover{color:var(--mute)}
-#stage{position:absolute;inset:32px 0 72px 0;cursor:grab;background:var(--ground)}
+#stage{position:absolute;inset:32px 0 var(--bar) 0;cursor:grab;background:var(--ground)}
 #stage.drag{cursor:grabbing}
-canvas#c{position:absolute;inset:0;width:100%;height:100%;display:block}
-#mast{position:absolute;left:20px;top:16px;max-width:min(52ch,calc(100vw - 140px));pointer-events:none}
-#mast h1{margin:0 0 6px;font-size:24px;line-height:1.05;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
-#mast p{margin:0}
-#mast .st{margin-top:6px;color:var(--mute);font-variant-numeric:tabular-nums}
-#key{display:flex;flex-wrap:wrap;gap:4px 12px;margin-top:10px;font-size:11px}
+canvas#c,canvas#g{position:absolute;inset:0;width:100%;height:100%;display:block}
+#mast{position:absolute;left:20px;top:16px;max-width:min(46ch,calc(100vw - 140px));pointer-events:none;z-index:1}
+#mast h1{margin:0 0 8px;font-size:24px;line-height:1;text-transform:uppercase;text-wrap:balance}
+#mast .st{margin-top:8px;color:var(--mute)}
+#key{display:flex;flex-direction:column;gap:3px;margin-top:10px;font-size:8px;line-height:1.15}
 #key span{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
-#key i{display:inline-block;width:8px;height:8px}
-sup{font-size:8px;line-height:0;vertical-align:4px;margin-left:1px}
-#word{position:absolute;right:20px;top:16px;font-size:12px;color:var(--ink)}
-#word[aria-expanded="true"]{color:var(--fg);z-index:2}
-#read{position:absolute;pointer-events:none;background:var(--paper);color:var(--fg);padding:6px 9px;max-width:34ch;font-size:12px;line-height:1.15}
-#read .d{font-size:13px}
+#key i{display:inline-block;width:7px;height:7px}
+sup{font-size:6px;line-height:0;vertical-align:3px;margin-left:1px}
+#views{position:absolute;right:92px;top:16px;display:flex;gap:14px;color:#b5b5b5}
+#views button[aria-pressed="true"]{color:var(--ink)}
+#word{position:absolute;right:20px;top:16px;color:var(--ink)}
+#word[aria-expanded="true"]{color:var(--fg);z-index:3}
+#hint{position:absolute;left:20px;bottom:22px;font-size:8px;color:var(--mute);pointer-events:none}
+/* the column on the right: the narration, then the archive */
+#side{position:absolute;right:20px;top:48px;bottom:20px;width:400px;display:flex;flex-direction:column;gap:8px;pointer-events:none}
+#side>*{pointer-events:auto;background:var(--paper);color:var(--fg);padding:12px 14px}
+#story h2{margin:0 0 2px;font-size:18px;line-height:1.1}
+#story .meta{font-family:var(--sans);font-size:8px;color:var(--mute);margin-bottom:8px}
+#step-text{font-size:12px;line-height:1.15}
+#media{flex:1;min-height:0;overflow:auto;font-size:12px}
+#media-head{display:flex;gap:12px;align-items:baseline;margin-bottom:8px;color:var(--mute);font-size:8px}
+#media-head span:first-child{color:var(--fg);text-transform:uppercase;margin-right:auto;font-size:12px}
+#media-head button{font-size:12px;color:var(--fg)}
+#media img{display:block;width:100%;height:auto;margin-bottom:8px}
+#media p{margin:0 0 4px}
+#media .hl{font-family:var(--sans);font-size:18px;line-height:1.1;margin:2px 0 8px}
+#media .cr{font-family:var(--sans);font-size:8px;line-height:1.3;color:var(--mute)}
+#media a{border-bottom:1px solid currentColor}
+#read{position:absolute;pointer-events:none;background:var(--paper);color:var(--fg);padding:6px 9px;max-width:34ch;z-index:2}
 #read .m{color:var(--mute)}
-#panel{position:absolute;right:0;top:0;bottom:0;width:320px;background:var(--paper);color:var(--fg);padding:54px 20px 20px;overflow-y:auto;font-size:12px;display:flex;flex-direction:column;gap:18px;z-index:1}
-#panel h2{margin:0 0 8px;font-size:12px;letter-spacing:0;text-transform:uppercase}
+#panel{position:absolute;right:0;top:0;bottom:0;width:320px;background:var(--paper);color:var(--fg);padding:54px 20px 20px;overflow-y:auto;display:flex;flex-direction:column;gap:18px;z-index:2}
+#panel h2{margin:0 0 8px;font-size:12px;text-transform:uppercase}
 #panel p{margin:0 0 8px;color:var(--mute)}
 #panel ol{margin:0;padding-left:14px;font-size:8px;line-height:1.3;color:var(--fg)}
 #panel ol li{margin-bottom:3px}
 .ctl{margin:0 0 7px}
-.ctl label{display:flex;justify-content:space-between;gap:8px;margin-bottom:1px;font-variant-numeric:tabular-nums}
+.ctl label{display:flex;justify-content:space-between;gap:8px;margin-bottom:1px}
 input[type=range]{-webkit-appearance:none;appearance:none;width:100%;height:14px;background:none;margin:0;cursor:pointer}
 input[type=range]::-webkit-slider-runnable-track{height:1px;background:var(--fg)}
 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:11px;height:11px;border-radius:50%;background:var(--fg);margin-top:-5px}
@@ -58,21 +77,29 @@ input[type=range]::-moz-range-thumb{width:11px;height:11px;border:0;border-radiu
 .row{display:flex;gap:14px;flex-wrap:wrap}
 .row button::before{content:"→ "}
 textarea{width:100%;height:120px;font:11px/1.3 ui-monospace,Menlo,Consolas,monospace;border:1px solid var(--fg);padding:6px;resize:vertical;background:var(--paper);color:var(--fg)}
-#clock{position:absolute;left:0;right:0;bottom:0;height:72px;background:var(--paper);color:var(--fg);display:flex;align-items:center;gap:16px;padding:0 20px env(safe-area-inset-bottom,0px)}
+/* the bottom bar: the clock, and under it the numbered steps */
+#clock{position:absolute;left:0;right:0;bottom:0;height:var(--bar);background:var(--paper);color:var(--fg);padding:0 20px env(safe-area-inset-bottom,0px)}
+#rail{display:flex;align-items:center;gap:16px;height:72px}
 #play{width:48px;flex:0 0 auto}
 #play::before{content:"▶ "}#play[aria-pressed="true"]::before{content:"❚❚ "}
 #ck{flex:1;min-width:0;height:72px;cursor:ew-resize;touch-action:none}
-#date{flex:0 0 auto;text-align:right;font-variant-numeric:tabular-nums;min-width:0}
-#date b{display:block;font-size:15px}
-#date span{color:var(--mute)}
+#date{flex:0 0 auto;text-align:right;font-family:var(--text);min-width:0}
+#date b{display:block;font-size:18px;line-height:1.1}
+#date span{color:var(--mute);font-size:8px}
+#steps{display:flex;gap:2px;align-items:center;height:32px;border-top:1px solid var(--fg)}
+#steps button{width:22px;height:22px;text-align:center;color:var(--mute)}
+#steps button[aria-current="true"]{background:var(--fg);color:var(--paper)}
 #shot{position:fixed;inset:0;background:rgba(0,0,0,.94);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:20px;z-index:5}
 #shot img{max-width:100%;max-height:calc(100% - 40px)}
-#err{position:absolute;left:20px;top:120px;max-width:50ch}
-@media (max-width:700px){
+#err{position:absolute;left:20px;top:160px;max-width:50ch}
+@media (max-width:900px){
   #site .tagline,#site nav a:not(:first-child){display:none}
-  #mast{max-width:calc(100vw - 110px)}#mast h1{font-size:18px}#mast p.sub{display:none}#key{font-size:10px}
+  #mast{max-width:calc(100vw - 40px)}#mast h1{font-size:18px}#mast p.sub,#key{display:none}
+  #views{right:16px;top:40px;gap:10px}#word{right:16px}#hint{display:none}
+  #stage{inset:32px 0 calc(var(--bar) + 150px) 0}
+  #side{position:fixed;left:0;right:0;top:auto;bottom:var(--bar);width:auto;height:150px;gap:0}#media{display:none}#side>*{height:150px;overflow:auto}
   #panel{width:100%;padding-top:50px}
-  #clock{gap:10px;padding-left:16px;padding-right:16px}#date b{font-size:13px}#date span{display:none}
+  #clock{padding-left:16px;padding-right:16px}#rail{gap:10px}#date b{font-size:12px}#date span{display:none}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
@@ -84,69 +111,89 @@ textarea{width:100%;height:120px;font:11px/1.3 ui-monospace,Menlo,Consolas,monos
   <nav aria-label="Site"><a href="../">Sketches</a><a href="../guide/">Guide</a><a href="../catalog/">Catalog</a><a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a><a href="https://community.ocean-archive.org/spaces/25478985">Community</a></nav>
 </header>
 <div id="stage">
+  <canvas id="g"></canvas>
   <canvas id="c"></canvas>
   <div id="mast">
     <h1>Haida Gwaii Iron Dump</h1>
-    <p class="sub">July–August 2012. The Haida Salmon Restoration Corporation put about 120 t (132 US tons) of iron sulphate into an eddy 190 mi west of Haida Gwaii. The sea below is simulated; the picture over it is stitched from the nineteen MODIS Aqua passes that best witness each part of it. Turn it, scrub it, rest on a patch to read it.</p>
+    <p class="sub">July to August 2012. The Haida Salmon Restoration Corporation, paid for by the village of Old Massett, put about 120 t (132 US tons) of iron sulphate and iron oxide into an eddy 230 mi west of Haida Gwaii. The green on the sea is chlorophyll and the streaks are currents, both as satellites measured them. The stems are a simulation.</p>
     <div id="key"></div>
-    <p class="st" id="status">loading nineteen passes</p>
+    <p class="st" id="status">loading the pictures</p>
   </div>
+  <div id="views" role="group" aria-label="View"><button id="v-region" aria-pressed="false">Region</button><button id="v-plan" aria-pressed="false">Plan</button><button id="v-model" aria-pressed="true">3D</button><button id="v-elev" aria-pressed="false">Elevation</button><button id="t-chl" aria-pressed="true" style="margin-left:14px">Chlorophyll</button><button id="t-cur" aria-pressed="true">Currents</button></div>
   <button id="word" aria-expanded="false" aria-controls="panel">Settings</button>
+  <p id="hint">Drag to turn · Shift-drag to pan · scroll to zoom</p>
+  <div id="side">
+    <section id="story" aria-live="polite">
+      <h2 id="step-title"></h2>
+      <div class="meta"><span id="step-n"></span> · <span id="step-kind"></span></div>
+      <p id="step-text"></p>
+    </section>
+    <aside id="media" hidden aria-label="Photos and clippings">
+      <div id="media-head"><span>Archive</span><span id="media-n"></span><button id="media-prev" aria-label="Previous item">←</button><button id="media-next" aria-label="Next item">→</button><button id="media-x" aria-label="Hide the archive box">×</button></div>
+      <div id="media-body"></div>
+    </aside>
+  </div>
   <div id="read" hidden></div>
   <div id="err" hidden></div>
   <aside id="panel" hidden>
     <section>
-      <h2>The sea</h2>
-      <p>The simulation. Changing these recomputes the whole run.</p>
+      <h2>The sea model</h2>
+      <p>The simulated part. Changing these recomputes the whole run.</p>
       <div class="ctl"><label for="iron"><span>Iron released</span><span id="v-iron">120 t</span></label><input type="range" id="iron" min="0" max="300" step="5" value="120"></div>
-      <div class="ctl"><label for="eddy"><span>Eddy strength</span><span id="v-eddy">0.60</span></label><input type="range" id="eddy" min="0" max="1" step="0.01" value="0.6"></div>
+      <div class="ctl"><label for="eddy"><span>Current strength</span><span id="v-eddy">0.60</span></label><input type="range" id="eddy" min="0" max="1" step="0.01" value="0.6"></div>
       <div class="ctl"><label for="graze"><span>Grazing</span><span id="v-graze">0.50</span></label><input type="range" id="graze" min="0" max="1" step="0.01" value="0.5"></div>
-      <div class="ctl"><label for="wind"><span>Wind</span><span id="v-wind">0.50</span></label><input type="range" id="wind" min="0" max="1" step="0.01" value="0.5"></div>
+      <div class="ctl" hidden><label for="wind"><span>Wind</span><span id="v-wind">0.50</span></label><input type="range" id="wind" min="0" max="1" step="0.01" value="0.5"></div>
     </section>
     <section>
-      <h2>The witnesses</h2>
-      <p>How much each kind of evidence counts when a patch chooses its pass.</p>
-      <div class="ctl"><label for="m-bloom"><span>The bloom</span><span id="v-m-bloom">1.00</span></label><input type="range" id="m-bloom" min="0" max="2" step="0.05" value="1"></div>
-      <div class="ctl"><label for="m-sky"><span>The sky</span><span id="v-m-sky">1.00</span></label><input type="range" id="m-sky" min="0" max="2" step="0.05" value="1"></div>
-      <div class="ctl"><label for="m-wake"><span>The ship's wake</span><span id="v-m-wake">1.00</span></label><input type="range" id="m-wake" min="0" max="2" step="0.05" value="1"></div>
-      <div class="ctl"><label for="m-clock"><span>The clock</span><span id="v-m-clock">1.00</span></label><input type="range" id="m-clock" min="0" max="2" step="0.05" value="1"></div>
-    </section>
-    <section>
-      <h2>The patches</h2>
-      <div class="ctl"><label for="np"><span>Patches</span><span id="v-np">10</span></label><input type="range" id="np" min="6" max="14" step="1" value="10"></div>
-      <div class="ctl"><label for="warp"><span>Edge roughness</span><span id="v-warp">60</span></label><input type="range" id="warp" min="0" max="160" step="2" value="60"></div>
+      <h2>The run</h2>
       <div class="ctl"><label for="speed"><span>Run speed</span><span id="v-speed">2 days / s</span></label><input type="range" id="speed" min="0.5" max="8" step="0.5" value="2"></div>
-      <label class="ctl chk"><input type="checkbox" id="drift" checked>Drift round when idle</label>
-      <label class="ctl chk"><input type="checkbox" id="posts" checked>Show the planes when tilted</label>
+      <label class="ctl chk"><input type="checkbox" id="follow" checked>The story moves the camera while it runs</label>
+      <label class="ctl chk"><input type="checkbox" id="drift">Turn slowly on its own</label>
     </section>
     <section>
-      <h2>The land</h2>
-      <label class="ctl chk"><input type="checkbox" id="terrain" checked>Terrain</label>
-      <div class="ctl"><label for="relief"><span>Height exaggeration</span><span id="v-relief">×100</span></label><input type="range" id="relief" min="0" max="250" step="5" value="100"></div>
+      <h2>Measured layers</h2>
+      <p>Chlorophyll is the green pigment of plankton. Currents come from the height of the sea surface. Both are satellite measurements.</p>
+      <label class="ctl chk"><input type="checkbox" id="chl" checked>Show chlorophyll</label>
+      <div class="ctl"><label for="chlA"><span>Chlorophyll strength</span><span id="v-chlA">90%</span></label><input type="range" id="chlA" min="0.2" max="1" step="0.05" value="0.9"></div>
+      <div class="ctl"><label for="chlH"><span>Chlorophyll relief</span><span id="v-chlH">×1.0</span></label><input type="range" id="chlH" min="0" max="3" step="0.1" value="1"></div>
+      <label class="ctl chk"><input type="checkbox" id="cur" checked>Show currents</label>
+    </section>
+    <section>
+      <h2>Heights</h2>
+      <div class="ctl"><label for="vex"><span>Land height, exaggerated</span><span id="v-vex">×5</span></label><input type="range" id="vex" min="1" max="25" step="1" value="5"></div>
+      <div class="ctl"><label for="bloom"><span>Plankton stem height</span><span id="v-bloom">×1.0</span></label><input type="range" id="bloom" min="0.2" max="3" step="0.1" value="1"></div>
+      <label class="ctl chk"><input type="checkbox" id="terrain" checked>Land relief</label>
+      <label class="ctl chk"><input type="checkbox" id="posts" checked>Show the height scale</label>
+      <label class="ctl chk"><input type="checkbox" id="mediaOn" checked>Show the archive box</label>
     </section>
     <section>
       <h2>Out</h2>
-      <div class="row"><button id="png">Save the view</button><button id="svgb">Patch map</button><button id="save">Setup</button><button id="apply">Apply setup</button></div>
-      <p style="margin-top:8px">The patch map and the setup appear below as text. Copy them out; paste a setup back and apply it.</p>
-      <textarea id="txt" spellcheck="false" aria-label="Setup or patch map text"></textarea>
+      <div class="row"><button id="png">Save the view</button><button id="save">Setup</button><button id="apply">Apply setup</button></div>
+      <p style="margin-top:8px">The setup appears below as text. Copy it out; paste one back and apply it.</p>
+      <textarea id="txt" spellcheck="false" aria-label="Setup text"></textarea>
       <div class="row" style="margin-top:6px"><button id="copy">Copy</button></div>
     </section>
     <section>
       <h2>Sources and limits</h2>
       <ol>
-        <li>NASA MODIS Aqua true colour and chlorophyll via Worldview, public domain. 19 passes, 14 June – 28 October 2012, 49–58° N, 145–127° W. Observed; cloud hides the water on most days.</li>
-        <li>Coastline and graticule: cartographic. Coastline source to be recorded.</li>
-        <li>Terrain: AWS Terrain Tiles (Tilezen terrarium, zoom 7; SRTM, GMTED2010, ETOPO1 and others), retrieved 5 November 2026, resampled to 360 × 180. Land only; height exaggerated.</li>
-        <li>The sea is a toy: particles, three eddies, grazing. Synthetic, not a forecast or a hindcast. The ship's route is approximate. The reported bloom was about 10,000 km² (3,900 sq mi).</li>
+        <li>Chlorophyll: daily chlorophyll-a readings by MODIS on Aqua and Terra and VIIRS on Suomi NPP (NASA GIBS, public domain, retrieved 9 November 2026). For each of 19 dates the middle value of every valid reading within 8 days is kept. Observed, gathered over about two weeks; satellites see only the top few yards of water. Drawn from about 0.3 to 4 mg/m³. The relief on the sea shows the same value.</li>
+        <li>Currents: derived for this sketch from JPL MEaSUREs gridded sea-surface height anomalies (satellite altimetry, NASA GIBS, public domain, retrieved 9 November 2026), one field every 5 days. Water circles a rise or a dip in the sea surface, so the slope of the surface gives the current. Streaks show direction and relative speed, sped up. Features smaller than about 60 mi are smoothed away.</li>
+        <li>The picture: MODIS Terra and Aqua true colour (NASA GIBS, public domain, retrieved 9 November 2026). Sea: every picture within 8 days of each date, the third-darkest view of each pixel, with remaining cloud and haze pressed down to dark water. Land: one sharp composite, 21 August to 6 September 2012. Clouds are left out on purpose.</li>
+        <li>Land relief: AWS Terrain Tiles (Tilezen terrarium, zoom 9), retrieved 9 November 2026. Heights are exaggerated; the shading is computed, lit from the north-west.</li>
+        <li>Coast, borders and the region under the block: Natural Earth 1:50m, public domain. The coastline inside the block is from an earlier source still to be recorded.</li>
+        <li>The plankton stems and the iron are a toy model carried by the measured currents: synthetic. A stem's height shows how dense the simulated plankton are. The ship's track and dates are approximate.</li>
       </ol>
-      <p style="margin-top:8px">Keys: space runs, ← → step a day, F fits, Alt-drag pans.</p>
+      <p style="margin-top:8px">Keys: space runs; , and . step through the story; ← → step a day; 1 2 3 4 switch view; C chlorophyll; V currents; W A S D pan; F fits.</p>
     </section>
   </aside>
 </div>
 <div id="clock">
-  <button id="play" aria-pressed="false">Run</button>
-  <canvas id="ck"></canvas>
-  <div id="date"><b id="d-long">—</b><span id="d-sub"></span></div>
+  <div id="rail">
+    <button id="play" aria-pressed="false">Run</button>
+    <canvas id="ck"></canvas>
+    <div id="date"><b id="d-long">—</b><span id="d-sub"></span></div>
+  </div>
+  <div id="steps"></div>
 </div>
 <div id="shot" hidden><img id="shotimg" alt="The view, rendered"><button id="shotclose">Close · right-click or long-press the image to save it</button></div>
 
