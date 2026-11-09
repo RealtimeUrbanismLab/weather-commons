@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22 · Maintained Ice, Presena 2008–2026 · Realtime Weather</title>
+<meta name="description" content="Since 2008 a lift company has covered part of the Presena glacier with white fleece every summer. An explorable diagram of what is documented, claimed, observed, calculated and not known.">
+<link rel="stylesheet" href="style.css">
+<style>
+.tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--line);padding:0 5px;margin-right:6px;vertical-align:2px;white-space:nowrap}
+.tag.soft{border-style:dashed}.tag.dot{border-style:dotted}
+sup a{text-decoration:none;font-size:12px}
+.stops{display:flex;flex-wrap:wrap;gap:6px;margin:14px 0 10px}
+.stops button,.filters button,.controls button{font:14px var(--font);padding:4px 12px;cursor:pointer;background:var(--bg);color:var(--fg);border:1px solid var(--line)}
+.stops button[aria-pressed=true],.filters button[aria-pressed=true],.controls button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+.explorer{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:16px;align-items:start}
+@media (max-width:820px){.explorer{grid-template-columns:1fr}}
+.stage svg{width:100%;height:auto;display:block;border:1px solid var(--line);background:var(--bg)}
+.stage text{font:11px var(--font);fill:currentColor}
+.stage .plate{cursor:pointer}
+.stage .plate polygon,.stage .plate circle{pointer-events:none}
+.stage .hit{fill:transparent;pointer-events:all}
+.stage .plate:hover polygon.base{stroke-width:2}
+.stage .plate:focus{outline:none}
+.stage .hl polygon.base{stroke-width:2.5}
+.inspector{border:1px solid var(--line);padding:12px 14px;font-size:15px;min-height:200px}
+.inspector h3{margin:0 0 6px;font-size:16px}
+.inspector dl{margin:8px 0 0}.inspector dt{font-size:12px;text-transform:uppercase;letter-spacing:.05em;margin-top:8px}.inspector dd{margin:2px 0 0}
+.toggles{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:14px;margin:8px 0}
+.toggles label{display:flex;align-items:center;gap:6px}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:6px 14px;font-size:13px;margin:10px 0}
+.legend svg{vertical-align:middle;margin-right:6px}
+.range{display:flex;align-items:center;gap:8px;font-size:14px}
+.ledger td,.ledger th{vertical-align:top}
+.chip{display:inline-block;min-width:96px;font-size:12px;border:1px solid var(--line);padding:0 6px;white-space:nowrap}
+.chip.pending{border-style:dashed}.chip.unverifiable{border-style:dotted}.chip.tension{border-width:2px}
+.chip.contradicted{text-decoration:line-through}
+.filters{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.chart svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:10px 0 0;font-size:15px}
+.controls label{display:flex;align-items:center;gap:8px;flex:1 1 240px}
+.controls input[type=range]{flex:1 1 120px;accent-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px;margin:14px 0 0;font-size:15px}
+.readout strong{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.places{list-style:none;padding:0;margin:12px 0 0}.places li{border-top:1px solid var(--line);padding:10px 0;max-width:none}
+.note{border-left:3px solid var(--line);padding-left:12px}
+</style>
+</head>
+<body>
+<main>
+<header class="site-header">
+  <div class="brand"><a class="wordmark" href="../">Realtime Weather</a><span class="tagline">Part of <a href="https://tba21.org/uni_weathercommons">Weather Commons</a>, TBA21–Academy UNI</span></div>
+  <nav aria-label="Site">
+    <a href="../">Sketches</a>
+    <a href="../guide/">Guide</a>
+    <a href="../catalog/">Catalog</a>
+    <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
+  </nav>
+</header>
+
+<h1>Maintained Ice, Presena 2008–2026</h1>
+<p class="note small">Prototype, v0: an explorable view of the evidence. The overview is on the <a href="index.html">main page</a>.</p>
+<p class="lede">Since 2008 a lift company has covered part of the Presena glacier, above Passo del Tonale, with white fleece every summer. What have nearly twenty summers of covers left, and how far does that match what the operator, the Province and the studies say? Who maintains a public glacier, who pays, and who decides?</p>
+<p class="muted small">22 · Luca · started 2 November 2026 · status: sketch, v0.2</p>
+<p class="note small">This page shows what is known and how well. Every element carries its kind and its status. Gaps are drawn, not hidden. Read the legend first.</p>
+
+<h2 id="explore">The evidence stack</h2>
+<p>Each plate is one summer, 2008 at the bottom, 2026 at the top. A plate holds what each kind of source says about the covered area that year. Click a year, a marker or a stop.</p>
+<div class="stops" role="group" aria-label="Guided stops">
+  <button type="button" data-stop="explore" aria-pressed="true">Explore</button>
+  <button type="button" data-stop="event" aria-pressed="false">1 · Event</button>
+  <button type="button" data-stop="simulate" aria-pressed="false">2 · Simulate</button>
+  <button type="button" data-stop="situate" aria-pressed="false">3 · Situate</button>
+  <button type="button" data-stop="narrate" aria-pressed="false">4 · Narrate</button>
+</div>
+<div class="toggles" role="group" aria-label="Layers">
+  <label><input type="checkbox" data-layer="documented" checked> Documented</label>
+  <label><input type="checkbox" data-layer="claimed" checked> Claimed</label>
+  <label><input type="checkbox" data-layer="calc"> Satellite count, run 1 (not validated)</label>
+  <label><input type="checkbox" data-layer="tests" checked> Pending tests</label>
+</div>
+<div class="range"><label for="spread">Spread</label><input id="spread" type="range" min="12" max="40" value="24"></div>
+<div class="explorer">
+  <figure class="stage" style="margin:8px 0"><svg id="stack" role="img" aria-label="Stack of summers 2008 to 2026"></svg></figure>
+  <aside class="inspector" id="inspector" aria-live="polite"><h3>Start here</h3><p>Each plate is a summer. Inside it, rectangles are areas drawn to scale against a frame of 170,000 m². Their line tells you how much to trust them. Click a plate.</p></aside>
+</div>
+
+<div class="legend" aria-label="Legend">
+  <div><svg width="34" height="14"><rect x="1" y="2" width="32" height="10" fill="none" stroke="currentColor" stroke-width="2"/></svg>Documented: measured by a study</div>
+  <div><svg width="34" height="14"><rect x="1" y="2" width="32" height="10" fill="none" stroke="currentColor" stroke-dasharray="5 3"/></svg>Claimed: stated, not yet tested</div>
+  <div><svg width="34" height="14"><rect x="1" y="2" width="32" height="10" fill="none" stroke="currentColor" stroke-dasharray="1.5 2.5"/></svg>Calculated, not validated</div>
+  <div><svg width="34" height="14"><defs><pattern id="lg-h" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="4" stroke="currentColor" stroke-width="1"/></pattern></defs><rect x="1" y="2" width="32" height="10" fill="url(#lg-h)" stroke="currentColor"/></svg>Range of uncertainty (when validated)</div>
+  <div><svg width="34" height="14"><rect x="1" y="2" width="32" height="10" fill="none" stroke="currentColor" stroke-dasharray="1 4" opacity=".6"/></svg>Gap: nothing known about the area</div>
+  <div><svg width="34" height="14"><text x="12" y="12" font-size="13">?</text></svg>Flag: value looks wrong, to check</div>
+</div>
+
+<h2 id="event">1. Event</h2>
+<p>The Presena glacier sits above Passo del Tonale, in Trentino, on the border with Lombardy. Lifts reach it from both sides. Since 2008, part of it is covered each summer with white geotextile to slow melting on the ski run.<sup><a href="#s1">1</a></sup> The operator says the covered area grew from 40,000 m² in 2014 to 110,000 m² in 2020 and 2021, and that snow is also laid on the glacier every winter.<sup><a href="#s1">1</a></sup> These are its own figures, shown dashed in the stack.</p>
+
+<h2 id="simulate">2. Simulate</h2>
+<h3>Can a satellite see the cover?</h3>
+<p>Yes. On 14 August 2021, Sentinel-2 shows a bright strip along the ski run. In visible light, fleece and clean ice look alike. In shortwave infrared they do not: ice absorbs it, the fleece reflects it.</p>
+<table class="ledger">
+  <tr><th>Surface</th><th>Visible (green)</th><th>Shortwave infrared (1.6 µm)</th></tr>
+  <tr><td>Fleece</td><td>46–54%</td><td>37–47%</td></tr>
+  <tr><td>Clean ice</td><td>51–55%</td><td>3–4%</td></tr>
+</table>
+<p class="small"><span class="tag">Observed</span>Sentinel-2 top-of-atmosphere reflectance, scene 20210814T102031_T32TPS, mean of two small areas per surface.<sup><a href="#s8">8</a></sup></p>
+
+<h3>How much does a cover save?</h3>
+<p>Melt one summer on three surfaces. Choose a surface, change the fleece's albedo (the share of sunlight it reflects), count the seasons since 2008.</p>
+<figure class="chart"><svg id="chart" viewBox="0 0 680 260" role="img" aria-label="Cumulative melt over one summer on three surfaces"></svg>
+<figcaption class="small muted" id="weather-label">Cumulative melt, 25 June to 5 September, metres of water equivalent.</figcaption></figure>
+<div class="controls" role="group" aria-label="Surface">
+  <button type="button" data-surface="ice" aria-pressed="false">Bare ice</button>
+  <button type="button" data-surface="fleece" aria-pressed="true">Fleece</button>
+  <button type="button" data-surface="snow" aria-pressed="false">Snow</button>
+</div>
+<div class="controls">
+  <label>Fleece albedo <input id="albedo" type="range" min="0.30" max="0.80" step="0.01" value="0.60"> <output id="albedo-out">0.60</output></label>
+  <label>Seasons since 2008 <input id="seasons" type="range" min="1" max="19" step="1" value="19"> <output id="seasons-out">19</output></label>
+</div>
+<div class="readout" aria-live="polite">
+  <div><strong id="r-ice">–</strong>bare ice melt, m w.e.</div>
+  <div><strong id="r-sel">–</strong><span id="r-sel-label">fleece</span> melt, m w.e.</div>
+  <div><strong id="r-cut">–</strong>less melt than bare ice (field: 52–69%)</div>
+  <div><strong id="r-step">–</strong>m the patch would stand higher, if nothing else changed</div>
+</div>
+<p class="small"><span class="tag">Calculated</span><span class="tag dot" id="weather-tag">Synthetic</span>Albedos are placeholders until checked against the field study. When the model lands far from the field band, the model is wrong, not the field.</p>
+<details class="small"><summary>How the model works, and what it leaves out</summary>
+<p>Each day, melt = temperature factor × air temperature + radiation factor × (1 − albedo) × sunlight, when the air is above 1 °C (an enhanced temperature-index model).<sup><a href="#s7">7</a></sup> Ice density 900 kg/m³. The seasons control assumes the same patch and the same summer every year: it shows the size of the effect, not its history. Left out: wind, rain, summer snowfall, slope, shading, ice flow, grooming and snowmaking.</p></details>
+
+<h2 id="situate">3. Situate</h2>
+<p>Who says what, and how far it holds. Each statement carries its status. Filter by status.</p>
+<div class="filters" role="group" aria-label="Filter claims">
+  <button type="button" data-filter="all" aria-pressed="true">All</button>
+  <button type="button" data-filter="supported" aria-pressed="false">Supported</button>
+  <button type="button" data-filter="published" aria-pressed="false">Published</button>
+  <button type="button" data-filter="pending" aria-pressed="false">Pending</button>
+  <button type="button" data-filter="tension" aria-pressed="false">Tension</button>
+  <button type="button" data-filter="unverifiable" aria-pressed="false">Unverifiable</button>
+</div>
+<table class="ledger small" id="claims"><thead><tr><th>ID</th><th>Statement</th><th>Who</th><th>Status</th><th>Test</th></tr></thead><tbody></tbody></table>
+<h3>What this page itself asserts</h3>
+<table class="ledger small" id="assertions"><thead><tr><th>ID</th><th>Assertion</th><th>Kind</th><th>Confidence</th><th>Limit</th></tr></thead><tbody></tbody></table>
+<ol class="places">
+  <li><b>The covered patch, Presena (Vermiglio, Trentino).</b> Described as a Site of Community Importance in 2013; current status to confirm.<sup><a href="#s4">4</a></sup></li>
+  <li><b>Passo del Tonale and Ponte di Legno.</b> The lift company and consortium that lays the covers.<sup><a href="#s1">1</a></sup></li>
+  <li><b>Trento, the Province.</b> Part-funder according to the operator; authority over the protected site.</li>
+  <li><b>The Noce and the Adige.</b> Where the meltwater goes. Fibre findings come from Austrian glaciers, not from here; no effect is inferred.</li>
+  <li><b>Diavolezza and Morteratsch, Graubünden.</b> The same practice since 2008, and a proposal to snow a whole tongue.<sup><a href="#s5">5</a></sup><sup><a href="#s6">6</a></sup></li>
+</ol>
+
+<h2 id="narrate">4. Narrate</h2>
+<p><span class="tag">Interpretive</span>A glacier kept by contract is also a glacier kept by paperwork. Count the plates with nothing in them: most of what the public would need to judge the covers, the area per year, the money, the permit, the fate of the sheets, is not yet in any public record. This page is a first attempt to fill the stack, one line at a time, and to say how solid each line is.</p>
+
+<h2 id="sources">Sources and limits</h2>
+<ol class="small">
+  <li id="s1">Consorzio Pontedilegno–Tonale, “The protection of Presena glacier”, read 3–4 November 2026. <a href="https://pontedilegnotonale.com/en/pontedilegno-tonale-what-to-see/the-protection-of-presena-glacier">pontedilegnotonale.com</a>. The operator's own statements.</li>
+  <li id="s2">AINEVA, <i>Neve e Valanghe</i> 74, 2010 Presena energy balance. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista74/nv74_abstract.pdf">aineva.it</a>. Field measurement.</li>
+  <li id="s3">Senese et al. 2020, <i>Cold Regions Science and Technology</i>, doi:10.1016/j.coldregions.2020.103007. <a href="https://air.unimi.it/handle/2434/715669">air.unimi.it</a>. Field measurement.</li>
+  <li id="s4">AINEVA, <i>Neve e Valanghe</i> 80, 2012 materials test. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista80/nv80_rivista-9.pdf">aineva.it</a>.</li>
+  <li id="s5">Oerlemans et al. 2017, MortAlive feasibility study. <a href="https://ideas.repec.org/a/spr/climat/v145y2017i1d10.1007_s10584-017-2102-1.html">ideas.repec.org</a>. Simulation (theirs).</li>
+  <li id="s6">Huss et al., EGU 2022, doi:10.5194/egusphere-egu22-1808. <a href="https://meetingorganizer.copernicus.org/EGU22/EGU22-1808.html">meetingorganizer.copernicus.org</a>.</li>
+  <li id="s7">Enhanced temperature-index model after Pellicciotti et al. 2005, <i>Journal of Glaciology</i>; factors to verify, see <code>data/parameters.json</code>.</li>
+  <li id="s8">Sentinel-2 Level-1C, ESA / Copernicus, via Google Earth Engine (COPERNICUS/S2_HARMONIZED). Copernicus licence. Script in <code>tools/</code>.</li>
+</ol>
+<ul class="small">
+  <li>Stack data: <a href="data/years.json">data/years.json</a>, <a href="data/claims.json">data/claims.json</a>, <a href="data/assertions.json">data/assertions.json</a>. Full catalogue of candidate datasets: <a href="data/DATA_CATALOG.md">data/DATA_CATALOG.md</a>.</li>
+  <li>Weather in the model: <b>reanalysed</b> (ERA5 via Open-Meteo, adjusted to 2,765 m) if <code>data/weather_summer_2021.json</code> is present; otherwise <b>synthetic</b>. The label under the chart says which.</li>
+  <li>Satellite count, run 1: <b>calculated, not validated</b>. Hidden by default; known errors listed in the inspector.</li>
+</ul>
+<p class="small"><b>What the model calculates:</b> seasonal melt on a patch under three surfaces. <b>What this page cannot establish:</b> the true covered area in any year until the count is validated, whether covering pays, or any effect downstream.</p>
+<footer class="site-footer"><p>Maintained Ice · Luca · Realtime Weather working group, Weather Commons</p></footer>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var DATA = { years: null, claims: null, assertions: null };
+  var state = { layers: { documented: true, claimed: true, calc: false, tests: true }, spread: 24, stop: "explore", highlight: [] };
+  var svg = document.getElementById("stack"), insp = document.getElementById("inspector");
+  var NS = "http://www.w3.org/2000/svg";
+  function el(name, attrs, parent) { var e = document.createElementNS(NS, name); for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+  function fmt(n) { return Math.round(n).toLocaleString("en"); }
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+  // ---------- isometric stack ----------
+  var C = Math.cos(Math.PI / 6), S = Math.sin(Math.PI / 6), SIDE = 150;
+  function iso(x, y, z, ox, oy) { return [ox + (x - y) * C, oy + (x + y) * S - z]; }
+  function rect(side, z, ox, oy) {
+    var o = (SIDE - side) / 2, a = o, b = o + side;
+    return [iso(a, a, z, ox, oy), iso(b, a, z, ox, oy), iso(b, b, z, ox, oy), iso(a, b, z, ox, oy)].map(function (p) { return p[0].toFixed(1) + "," + p[1].toFixed(1); }).join(" ");
+  }
+  function sideFor(area, ref) { return SIDE * Math.sqrt(Math.min(area, ref * 1.0) / ref); }
+
+  function draw() {
+    if (!DATA.years) return;
+    var ys = DATA.years.years, ref = DATA.years.reference_area_m2, gap = state.spread;
+    var W = 520, H = 2 * SIDE * S + gap * (ys.length - 1) + 60, ox = 230, oy = H - 2 * SIDE * S - 20;
+    svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+    svg.innerHTML = "";
+    var defs = el("defs", {}, svg);
+    var pat = el("pattern", { id: "hatch", width: 5, height: 5, patternUnits: "userSpaceOnUse", patternTransform: "rotate(45)" }, defs);
+    el("line", { x1: 0, y1: 0, x2: 0, y2: 5, stroke: "currentColor", "stroke-width": 1 }, pat);
+    ys.forEach(function (y, i) {
+      var z = i * gap, g = el("g", { "class": "plate", tabindex: 0, role: "button", "aria-label": "Summer " + y.year }, svg);
+      var known = y.documented_m2 || y.claimed_m2 || y.calc_run1_m2 || y.events;
+      var hl = state.highlight.indexOf(y.year) >= 0;
+      if (hl) g.setAttribute("class", "plate hl");
+      el("polygon", { "class": "base", points: rect(SIDE, z, ox, oy), fill: "var(--bg)", "fill-opacity": 0.8, stroke: "currentColor", "stroke-width": hl ? 2.5 : 0.8, "stroke-dasharray": known ? "" : "1 4", opacity: known ? 1 : 0.6 }, g);
+      if (state.layers.documented && y.documented_m2) el("polygon", { points: rect(sideFor(y.documented_m2, ref), z, ox, oy), fill: "none", stroke: "currentColor", "stroke-width": 2 }, g);
+      if (state.layers.claimed && y.claimed_m2) el("polygon", { points: rect(sideFor(y.claimed_m2, ref), z, ox, oy), fill: "none", stroke: "currentColor", "stroke-dasharray": "6 3", "stroke-width": 1.4 }, g);
+      if (state.layers.calc && y.calc_run1_m2) {
+        el("polygon", { points: rect(sideFor(y.calc_run1_m2, ref), z, ox, oy), fill: "none", stroke: "currentColor", "stroke-dasharray": "1.5 2.5", "stroke-width": 1.4 }, g);
+        if (y.calc_flag) { var p = iso(SIDE, SIDE / 2, z, ox, oy); el("text", { x: p[0] + 6, y: p[1] + 4, "font-size": 13 }, g).textContent = "?"; }
+      }
+      var lp = iso(0, SIDE, z, ox, oy); var t = el("text", { x: lp[0] - 40, y: lp[1] + 4 }, g); t.textContent = y.year;
+      // hit zone: a band from the year label across the front-left edge, one plate-step high
+      el("rect", { "class": "hit", x: lp[0] - 44, y: lp[1] - gap / 2, width: 44 + SIDE * C, height: Math.max(gap, 10) }, g);
+      if (y.events) { var ep = iso(SIDE, 0, z, ox, oy); el("circle", { cx: ep[0] + 8, cy: ep[1], r: 3, fill: "currentColor" }, g); }
+      g.addEventListener("click", function () { showYear(y); });
+      g.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showYear(y); } });
+    });
+    if (state.layers.tests && DATA.years.pending_tests) {
+      DATA.years.pending_tests.forEach(function (tst, k) {
+        var i = tst.year - ys[0].year, z = i * gap, p = iso(SIDE, 0, z, ox, oy);
+        var g = el("g", { "class": "plate", tabindex: 0, role: "button", "aria-label": tst.label }, svg);
+        el("rect", { x: p[0] + 22 + k * 0, y: p[1] - 7, width: 10, height: 10, fill: "var(--bg)", stroke: "currentColor", "stroke-dasharray": "2 2", transform: "rotate(45 " + (p[0] + 27) + " " + (p[1] - 2) + ")" }, g);
+        el("text", { x: p[0] + 40, y: p[1] + 2 }, g).textContent = tst.label;
+        g.addEventListener("click", function () { showTest(tst); });
+      });
+      // claim C09 as a dashed vertical between 2008 and 2014
+      var a = iso(SIDE, SIDE, 0, ox, oy), b = iso(SIDE, SIDE, 6 * gap, ox, oy);
+      var gc = el("g", { "class": "plate", tabindex: 0, role: "button", "aria-label": "Claim C09" }, svg);
+      el("line", { x1: a[0] + 14, y1: a[1], x2: b[0] + 14, y2: b[1], stroke: "currentColor", "stroke-dasharray": "6 3", "stroke-width": 1.4 }, gc);
+      el("text", { x: b[0] + 20, y: (a[1] + b[1]) / 2 }, gc).textContent = "C09: −11 m?";
+      gc.addEventListener("click", function () { showClaim("C09"); });
+    }
+  }
+
+  function row(label, value) { return "<dt>" + label + "</dt><dd>" + value + "</dd>"; }
+  function showYear(y) {
+    var h = "<h3>Summer " + y.year + "</h3><dl>";
+    var any = false;
+    if (y.documented_m2) { any = true; h += row('<span class="tag">Documented</span>Covered area', fmt(y.documented_m2) + " m². " + esc(y.documented_note || "") + ' <a href="#' + y.documented_source + '">Source</a>'); }
+    if (y.claimed_m2) { any = true; h += row('<span class="tag soft">Claimed</span>Covered area', fmt(y.claimed_m2) + " m², operator, claim " + y.claim + ". Status: pending test."); }
+    if (y.calc_run1_m2) { any = true; h += row('<span class="tag dot">Calculated</span>Satellite count, run 1', fmt(y.calc_run1_m2) + " m². Not validated." + (y.calc_note ? " " + esc(y.calc_note) : "") + (y.calc_flag ? " <b>" + esc(y.calc_flag) + "</b>" : "") + (state.layers.calc ? "" : " (layer hidden)")); }
+    if (y.scene) h += row("Scene", "<code>" + esc(y.scene) + "</code>");
+    (y.events || []).forEach(function (e) { any = true; h += row('<span class="tag">' + esc(e.kind) + "</span>Event", esc(e.text) + ' <a href="#' + e.source + '">Source</a>'); });
+    if (y.note) h += row("Note", esc(y.note));
+    if (!any) h += row('<span class="tag dot">Not known</span>', "No public record of the covered area this summer. Candidate sources: Landsat, SPOT archive, orthophotos, webcams, hikers' photos.");
+    h += "</dl>";
+    if (y.calc_run1_m2) h += '<p class="small muted">' + esc(DATA.years.calc_run1_about) + "</p>";
+    insp.innerHTML = h;
+  }
+  function showTest(t) { insp.innerHTML = "<h3>" + esc(t.label) + '</h3><p><span class="tag dot">Pending</span>' + esc(t.text) + "</p>"; }
+  function showClaim(id) {
+    var c = (DATA.claims.claims || []).filter(function (x) { return x.id === id; })[0]; if (!c) return;
+    insp.innerHTML = "<h3>" + c.id + " · " + esc(c.who) + "</h3><p>" + esc(c.text) + '</p><dl>' + row("Status", '<span class="chip ' + c.status + '">' + c.status + "</span>") + row("Test", esc(c.test)) + "</dl>";
+  }
+
+  var STOPS = {
+    explore: { hl: [], html: "<h3>Explore</h3><p>Click any plate. Toggle layers above. Use Spread to separate the summers.</p>" },
+    event: { hl: [2008, 2010, 2012, 2021], html: "<h3>1 · Event</h3><p>Four summers carry documented events: the first covers (2008), the measured season (2010), the materials test (2012), the reuse of sheets (2021). The rest of the stack is mostly claims or gaps.</p>" },
+    simulate: { hl: [2021], html: "<h3>2 · Simulate</h3><p>2021 is the reference: on 14 August the cover is visible from Sentinel-2 and spectrally distinct from ice. Turn on the run-1 layer to see the first count: dotted, because it is not validated.</p><p><a href=\"#simulate\">Go to the model and the reflectance table.</a></p>" },
+    situate: { hl: [2014, 2016, 2017, 2018, 2019, 2020, 2021], html: "<h3>3 · Situate</h3><p>Dashed rectangles are the operator's own figures. The dashed vertical line is its claim that uncovered ice dropped 11 m: the two LiDAR surveys can test it.</p><p><a href=\"#situate\">Go to the claims ledger.</a></p>" },
+    narrate: { hl: [2009, 2011, 2013, 2015], html: "<h3>4 · Narrate</h3><p>The highlighted plates are summers with nothing public about the covered area. A maintained glacier is also a gap in the record.</p>" }
+  };
+  document.querySelectorAll("[data-stop]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      state.stop = b.dataset.stop; state.highlight = STOPS[state.stop].hl;
+      document.querySelectorAll("[data-stop]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); });
+      if (state.stop === "simulate") { state.layers.calc = true; document.querySelector('[data-layer="calc"]').checked = true; }
+      insp.innerHTML = STOPS[state.stop].html; draw();
+    });
+  });
+  document.querySelectorAll("[data-layer]").forEach(function (c) { c.addEventListener("change", function () { state.layers[c.dataset.layer] = c.checked; draw(); }); });
+  document.getElementById("spread").addEventListener("input", function (e) { state.spread = +e.target.value; draw(); });
+
+  // ---------- claims ledger ----------
+  function drawClaims(filter) {
+    var tb = document.querySelector("#claims tbody"); tb.innerHTML = "";
+    DATA.claims.claims.filter(function (c) { return filter === "all" || c.status === filter; }).forEach(function (c) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + c.id + "</td><td>" + esc(c.text) + ' <sup><a href="#' + c.source + '">src</a></sup></td><td>' + esc(c.who) + '</td><td><span class="chip ' + c.status + '">' + c.status + "</span></td><td>" + esc(c.test) + "</td>";
+      tb.appendChild(tr);
+    });
+  }
+  document.querySelectorAll("[data-filter]").forEach(function (b) {
+    b.addEventListener("click", function () { document.querySelectorAll("[data-filter]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); }); drawClaims(b.dataset.filter); });
+  });
+  function drawAssertions() {
+    var tb = document.querySelector("#assertions tbody"); tb.innerHTML = "";
+    DATA.assertions.assertions.forEach(function (a) {
+      var tr = document.createElement("tr");
+      tr.innerHTML = "<td>" + a.id + "</td><td>" + esc(a.text) + '</td><td><span class="tag">' + esc(a.kind) + '</span></td><td><span class="chip">' + a.confidence + "</span></td><td>" + esc(a.limit) + "</td>";
+      tb.appendChild(tr);
+    });
+  }
+
+  // ---------- melt model ----------
+  var P = { tf: 0.05, srf: 0.0094, tt: 1.0, albedo: { ice: 0.30, snow: 0.75, fleece: 0.60 }, ice_density: 900, days: 73, seed: 22 };
+  var W = null, weatherKind = "Synthetic";
+  function rng(seed) { var s = seed >>> 0; return function () { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+  function synthWeather() { var r = rng(P.seed), out = []; for (var d = 0; d < P.days; d++) { var se = Math.sin(Math.PI * d / (P.days - 1)), cl = r() < 0.3; out.push({ t: 1.5 + 4.5 * se + (r() - 0.5) * 3 - (cl ? 1.5 : 0), g: (cl ? 140 : 260) + 60 * se + (r() - 0.5) * 40 }); } return out; }
+  var mstate = { surface: "fleece", seasons: 19 };
+  function melt(alb) { var cum = 0, s = []; W.forEach(function (w) { var m = w.t > P.tt ? 24 * (P.tf * w.t + P.srf * (1 - alb) * w.g) : 0; cum += Math.max(0, m) / 1000; s.push(cum); }); return s; }
+  var chart = document.getElementById("chart");
+  function drawModel() {
+    var a = P.albedo, s = { ice: melt(a.ice), fleece: melt(a.fleece), snow: melt(a.snow) }, n = W.length;
+    var max = Math.max(s.ice[n - 1], 0.1), x0 = 40, x1 = 600, y0 = 230, y1 = 20;
+    function px(i) { return x0 + (x1 - x0) * i / (n - 1); } function py(v) { return y0 - (y0 - y1) * v / max; }
+    var h = '<line x1="' + x0 + '" x2="' + x1 + '" y1="' + y0 + '" y2="' + y0 + '" stroke="currentColor" opacity=".4"/><text x="' + x0 + '" y="14" font-size="12" fill="currentColor">' + max.toFixed(2) + ' m w.e.</text>';
+    ["ice", "snow", "fleece"].forEach(function (k) {
+      var d = s[k].map(function (v, i) { return (i ? "L" : "M") + px(i).toFixed(1) + " " + py(v).toFixed(1); }).join(" "), on = k === mstate.surface;
+      h += '<path d="' + d + '" fill="none" stroke="currentColor" stroke-width="' + (on ? 3 : 1) + '" opacity="' + (on ? 1 : 0.45) + '"' + (k === "snow" ? ' stroke-dasharray="4 4"' : "") + "/>";
+      h += '<text x="' + (x1 + 6) + '" y="' + (py(s[k][n - 1]) + 4).toFixed(1) + '" font-size="12" fill="currentColor">' + (k === "ice" ? "bare ice" : k) + "</text>";
+    });
+    chart.innerHTML = h;
+    var ice = s.ice[n - 1], sel = s[mstate.surface][n - 1];
+    document.getElementById("r-ice").textContent = ice.toFixed(2);
+    document.getElementById("r-sel").textContent = sel.toFixed(2);
+    document.getElementById("r-sel-label").textContent = mstate.surface === "ice" ? "bare ice" : mstate.surface;
+    document.getElementById("r-cut").textContent = Math.round((ice > 0 ? 1 - sel / ice : 0) * 100) + "%";
+    document.getElementById("r-step").textContent = ((ice - sel) * 1000 / P.ice_density * mstate.seasons).toFixed(1);
+  }
+  document.querySelectorAll("[data-surface]").forEach(function (b) { b.addEventListener("click", function () { mstate.surface = b.dataset.surface; document.querySelectorAll("[data-surface]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); }); drawModel(); }); });
+  var al = document.getElementById("albedo"), se = document.getElementById("seasons");
+  al.addEventListener("input", function () { P.albedo.fleece = +al.value; document.getElementById("albedo-out").textContent = (+al.value).toFixed(2); drawModel(); });
+  se.addEventListener("input", function () { mstate.seasons = +se.value; document.getElementById("seasons-out").textContent = se.value; drawModel(); });
+
+  // ---------- data loading ----------
+  function getJSON(p) { return fetch(p).then(function (r) { if (!r.ok) throw new Error(p); return r.json(); }); }
+  Promise.all([getJSON("data/years.json"), getJSON("data/claims.json"), getJSON("data/assertions.json")]).then(function (r) {
+    DATA.years = r[0]; DATA.claims = r[1]; DATA.assertions = r[2]; draw(); drawClaims("all"); drawAssertions();
+  }).catch(function () { insp.innerHTML = "<p>Data files did not load. Open the page through a web server (see README).</p>"; });
+
+  getJSON("data/parameters.json").then(function (j) {
+    if (j && j.values) { P.tf = j.values.tf.value; P.srf = j.values.srf.value; P.tt = j.values.tt.value; P.albedo.ice = j.values.albedo_ice.value; P.albedo.snow = j.values.albedo_snow.value; P.albedo.fleece = j.values.albedo_fleece.value; al.value = P.albedo.fleece; document.getElementById("albedo-out").textContent = P.albedo.fleece.toFixed(2); }
+  }).catch(function () {}).then(function () {
+    return getJSON("data/weather_summer_2021.json").then(function (w) {
+      if (w && w.days && w.days.length) { W = w.days.map(function (d) { return { t: d.t_mean_c, g: d.sw_mean_wm2 }; }); weatherKind = "Reanalysed"; document.getElementById("weather-label").textContent = "Cumulative melt, " + w.start + " to " + w.end + ", metres of water equivalent. Weather: " + w.source + "."; }
+    }).catch(function () {});
+  }).then(function () {
+    if (!W) W = synthWeather();
+    document.getElementById("weather-tag").textContent = weatherKind;
+    drawModel();
+  });
+})();
+</script>
+</body>
+</html>

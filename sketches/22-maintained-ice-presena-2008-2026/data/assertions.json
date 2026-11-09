@@ -1,0 +1,9 @@
+{
+  "about": "What this sketch itself asserts, with how sure it is. Confidence: high, medium, low.",
+  "assertions": [
+    {"id": "A1", "text": "The cover is visible from Sentinel-2 at 10 m.", "kind": "Observed", "confidence": "high", "basis": "Scene 2021-08-14: a bright strip along the ski run on snow-free terrain.", "limit": "One date checked closely."},
+    {"id": "A2", "text": "Fleece and clean ice differ in shortwave infrared (fleece reflects, ice absorbs).", "kind": "Observed", "confidence": "medium", "basis": "Two sample areas per surface, one date: fleece 37-47%, ice 3-4% at 1.6 um.", "limit": "Two areas, one date; sheets age and get dirty."},
+    {"id": "A3", "text": "The covered area can be counted year by year from 2016.", "kind": "Calculated", "confidence": "low", "basis": "First run gives numbers for every year.", "limit": "Not validated: debris and clouds counted as fleece; edges lost at 20 m."},
+    {"id": "A4", "text": "The melt model reproduces the field result of 52-69% less melt.", "kind": "Calculated", "confidence": "low", "basis": "Model runs.", "limit": "Synthetic weather and placeholder albedos for now: gives about 38%."}
+  ]
+}

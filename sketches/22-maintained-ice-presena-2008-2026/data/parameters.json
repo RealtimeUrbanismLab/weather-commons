@@ -1,0 +1,64 @@
+{
+  "about": "Parameters for the Simulate model of sketch 22. Every value says where it comes from and whether it is synthetic. Replace placeholders with published values and update 'status'.",
+  "model": "Enhanced temperature-index melt: melt per hour = tf * T + srf * (1 - albedo) * G, when T > tt. Applied to daily means x 24 h.",
+  "values": {
+    "tf": {
+      "value": 0.05,
+      "unit": "mm w.e. h-1 degC-1",
+      "source": "Pellicciotti et al. 2005, J. Glaciol. 51(175)",
+      "status": "to verify against the paper"
+    },
+    "srf": {
+      "value": 0.0094,
+      "unit": "m2 mm w.e. W-1 h-1",
+      "source": "Pellicciotti et al. 2005, J. Glaciol. 51(175)",
+      "status": "to verify against the paper"
+    },
+    "tt": {
+      "value": 1.0,
+      "unit": "degC",
+      "source": "Pellicciotti et al. 2005",
+      "status": "to verify against the paper"
+    },
+    "albedo_ice": {
+      "value": 0.3,
+      "unit": "-",
+      "source": "none",
+      "status": "SYNTHETIC placeholder; replace with Senese et al. 2020 / AINEVA 2010 values"
+    },
+    "albedo_snow": {
+      "value": 0.75,
+      "unit": "-",
+      "source": "none",
+      "status": "SYNTHETIC placeholder; replace with field values"
+    },
+    "albedo_fleece": {
+      "value": 0.6,
+      "unit": "-",
+      "source": "none",
+      "status": "SYNTHETIC placeholder; replace with Senese et al. 2020 values"
+    }
+  },
+  "patch_area_m2": {
+    "value": 76400,
+    "source": "AINEVA Neve e Valanghe 74 (2010 cover)",
+    "status": "documented"
+  },
+  "ice_density_kg_m3": {
+    "value": 900,
+    "source": "standard glaciological value",
+    "status": "convention"
+  },
+  "candidates": {
+    "albedo_fleece": {
+      "value": 0.64,
+      "source": "operator page, attributed to University of Milan (absorbed 36%)",
+      "status": "candidate, verify in Senese et al. 2020 before use"
+    },
+    "albedo_uncovered": {
+      "value": 0.43,
+      "source": "operator page, attributed to University of Milan (absorbed 57%)",
+      "status": "candidate, verify; surface type (snow or ice) unclear"
+    }
+  }
+}

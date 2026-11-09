@@ -1,0 +1,30 @@
+{
+  "about": "One record per summer, 2008-2026. Areas in m2. Every value says what kind it is. 'calc_run1' is a first satellite count that is NOT validated (known errors); it is hidden by default on the page.",
+  "reference_area_m2": 170000,
+  "years": [
+    {"year": 2008, "events": [{"text": "First covers on the Presena glacier (and on the Diavolezza ski run).", "kind": "Documented", "source": "s1"}]},
+    {"year": 2009},
+    {"year": 2010, "documented_m2": 76400, "documented_note": "Cover from late June to early September; about 52% less ablation under the cover (one station on each surface).", "documented_source": "s2"},
+    {"year": 2011},
+    {"year": 2012, "events": [{"text": "Materials test at about 2,765 m: up to 69% less melt.", "kind": "Documented", "source": "s3"}]},
+    {"year": 2013},
+    {"year": 2014, "claimed_m2": 40000, "claim": "C10"},
+    {"year": 2015, "note": "Sentinel-2 starts (June 2015). Late-summer scenes exist; not yet counted."},
+    {"year": 2016, "claimed_m2": 50000, "claim": "C10", "calc_run1_m2": 25893},
+    {"year": 2017, "claimed_m2": 65000, "claim": "C10", "calc_run1_m2": 52334},
+    {"year": 2018, "claimed_m2": 80000, "claim": "C10", "calc_run1_m2": 40491},
+    {"year": 2019, "claimed_m2": 100000, "claim": "C10", "calc_run1_m2": 60793},
+    {"year": 2020, "claimed_m2": 110000, "claim": "C10", "calc_run1_m2": 55247},
+    {"year": 2021, "claimed_m2": 110000, "claim": "C10", "calc_run1_m2": 94687, "calc_note": "Training year of the classifier: the most favourable case.", "scene": "20210814T102031_20210814T102609_T32TPS", "events": [{"text": "Used sheets shown at the Venice Architecture Biennale, according to the operator.", "kind": "Reported", "source": "s1"}]},
+    {"year": 2022, "calc_run1_m2": 31988},
+    {"year": 2023, "calc_run1_m2": 50635},
+    {"year": 2024, "calc_run1_m2": 161101, "calc_flag": "Anomalous: larger than any claimed year. Likely cloud or snow counted as fleece. To check by eye."},
+    {"year": 2025, "calc_run1_m2": 80051},
+    {"year": 2026, "calc_run1_m2": 11124, "calc_flag": "Anomalous: scene error or real change. To check by eye."}
+  ],
+  "calc_run1_about": "Random forest on Sentinel-2 L1C, trained on 2021-08-14 (fleece, ice, shadow); sunlit debris had no class; area of interest 1.51 km2. Run on 2026-11-04. Not validated.",
+  "pending_tests": [
+    {"id": "lidar0609", "label": "LiDAR 2006-09", "year": 2008, "text": "First province-wide LiDAR. If flown over Presena before summer 2008, it is the surface before the covers. Flight date to check.", "status": "pending"},
+    {"id": "lidar1418", "label": "LiDAR 2014 / 2018", "year": 2014, "text": "Second LiDAR. Differencing with 2006-09 tests claim C09 (uncovered ice 11 m lower).", "status": "pending"}
+  ]
+}

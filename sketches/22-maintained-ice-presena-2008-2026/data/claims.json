@@ -1,0 +1,19 @@
+{
+  "about": "Statements by others (the operator, institutions, studies) and how far they are tested. Status vocabulary: supported, published (one study, not replicated), pending (test planned), tension (contradicts another statement), unverifiable (as stated), contradicted.",
+  "claims": [
+    {"id": "C01", "text": "Costs of up to EUR 350,000 a year, partly financed by the Province of Trento.", "who": "Operator", "status": "pending", "test": "Provincial acts, civic access request, right of reply.", "source": "s1"},
+    {"id": "C02", "text": "2010 cover of 76,400 m2; about 52% less ablation.", "who": "AINEVA (field study)", "status": "published", "test": "Single season, one station per surface.", "source": "s2"},
+    {"id": "C03", "text": "Up to 69% less melt; albedo about 50% higher than ice.", "who": "Senese et al. 2020", "status": "published", "test": "Single season.", "source": "s3"},
+    {"id": "C04", "text": "Used sheets reused as the installation The Invisible Mountain.", "who": "Operator", "status": "pending", "test": "What share of the material? Where does the rest go?", "source": "s1"},
+    {"id": "C05", "text": "About 0.18 km2 of glacier covered in Switzerland; up to 350,000 m3 of ice saved a year.", "who": "Huss et al. 2022", "status": "published", "test": "Context and scale only.", "source": "s6"},
+    {"id": "C06", "text": "The Presena glacier is a Site of Community Importance.", "who": "AINEVA 2013", "status": "pending", "test": "Current Natura 2000 status; candidate site IT3120158.", "source": "s4"},
+    {"id": "C07", "text": "Covers reduce melt by about 50%.", "who": "Operator", "status": "supported", "test": "Consistent with C02 and C03 (published field measurements).", "source": "s1"},
+    {"id": "C08", "text": "Covered areas absorb 36% of solar energy, uncovered areas 57%.", "who": "Operator, attributed to University of Milan", "status": "pending", "test": "Find the values in the original study.", "source": "s1"},
+    {"id": "C09", "text": "After six seasons the covers preserved 2.5 m of snow; uncovered ice dropped 11 m.", "who": "Operator", "status": "pending", "test": "LiDAR 2006-09 against 2014/2018.", "source": "s1"},
+    {"id": "C10", "text": "Covered area 40,000 m2 (2014) rising to 110,000 m2 (2020-2021).", "who": "Operator", "status": "pending", "test": "Sentinel-2 count, under way; first run not validated. Also in tension with C02 (76,400 m2 already in 2010).", "source": "s1"},
+    {"id": "C11", "text": "Partly financed by the Province, and carried out 'in total autonomy'.", "who": "Operator (same page)", "status": "tension", "test": "Provincial acts; ask the operator.", "source": "s1"},
+    {"id": "C12", "text": "350,000 m2 of snow laid every winter; yearly loss of 600,000 m2 of ice mass.", "who": "Operator", "status": "unverifiable", "test": "Units mix area and volume; ask the operator.", "source": "s1"},
+    {"id": "C13", "text": "Strips of 5 x 70 m, 500 g/m2, 4 mm thick, EUR 2/m2; more than 300 sheets.", "who": "Operator", "status": "pending", "test": "Supplier unknown.", "source": "s1"},
+    {"id": "C14", "text": "A covered glacier will never disappear: it stays as a rectangular mass kept with snowmaking (2021 MUSE study).", "who": "Operator, citing MUSE", "status": "pending", "test": "Find the MUSE study itself.", "source": "s1"}
+  ]
+}

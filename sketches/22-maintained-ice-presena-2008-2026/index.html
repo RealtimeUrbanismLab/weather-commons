@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22 · Maintained Ice, Presena 2008–2026 · Realtime Weather</title>
+<meta name="description" content="Since 2008 a lift company has covered part of the Presena glacier with white fleece every summer. An overview of what is documented, claimed, observed, calculated and not known.">
+<!-- style.css is the shared Realtime Weather look, copied into this folder. Add your own styles below it. -->
+<link rel="stylesheet" href="style.css">
+<style>
+.tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--line);padding:0 5px;margin-right:6px;vertical-align:2px;white-space:nowrap}
+.tag.soft{border-style:dashed}.tag.dot{border-style:dotted}
+sup a{text-decoration:none;font-size:12px}
+.timeline{list-style:none;padding:0;margin:12px 0 0}
+.timeline li{display:grid;grid-template-columns:9em minmax(0,1fr);gap:4px 14px;border-top:1px solid var(--line);padding:10px 0;max-width:none}
+.timeline .when{font-variant-numeric:tabular-nums;font-weight:600}
+@media (max-width:560px){.timeline li{grid-template-columns:1fr}}
+.ledger td,.ledger th{vertical-align:top}
+.chart svg{width:100%;height:auto;display:block;border:1px solid var(--line)}
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin:10px 0 0;font-size:15px}
+.controls button{font:14px var(--font);padding:4px 12px;cursor:pointer;background:var(--bg);color:var(--fg);border:1px solid var(--line)}
+.controls button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+.controls label{display:flex;align-items:center;gap:8px;flex:1 1 240px}
+.controls input[type=range]{flex:1 1 120px;accent-color:var(--fg)}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px 16px;margin:14px 0 0;font-size:15px}
+.readout strong{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.places{list-style:none;padding:0;margin:12px 0 0}.places li{border-top:1px solid var(--line);padding:10px 0;max-width:none}
+</style>
+</head>
+<body>
+<main>
+<header class="site-header">
+  <div class="brand"><a class="wordmark" href="../">Realtime Weather</a><span class="tagline">Part of <a href="https://tba21.org/uni_weathercommons">Weather Commons</a>, TBA21–Academy UNI</span></div>
+  <nav aria-label="Site">
+    <a href="../">Sketches</a>
+    <a href="../guide/">Guide</a>
+    <a href="../catalog/">Catalog</a>
+    <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
+  </nav>
+</header>
+
+<h1>Maintained Ice, Presena 2008–2026</h1>
+
+<p class="lede">What have nearly twenty summers of covers left on the Presena glacier, and how far does that match what the operator, the Province and the studies say? Who maintains a public glacier, who pays, and who decides?</p>
+<p class="muted small">22 · Luca · started 2026-11-02</p>
+<p class="note small">Every element on this page carries its kind: documented, claimed, observed, calculated, synthetic or reanalysed. The explorable view of the evidence is on <a href="explore.html">explore.html</a>.</p>
+
+<!-- 1. Event -->
+<h2 id="event">Event</h2>
+<p>The Presena glacier sits above Passo del Tonale, in Trentino, on the border with Lombardy. Since 2008, part of it is covered each summer with white geotextile to slow melting on the ski run.<sup><a href="#s1">1</a></sup></p>
+<ol class="timeline">
+  <li><span class="when">2008</span><span><span class="tag">Documented</span>First covers on the Presena glacier (and on the Diavolezza ski run).<sup><a href="#s1">1</a></sup></span></li>
+  <li><span class="when">2009, 2011, 2013, 2015</span><span><span class="tag dot">Not known</span>Nothing public about the covered area these summers.</span></li>
+  <li><span class="when">2010</span><span><span class="tag">Documented</span>Covered area 76,400 m². Cover from late June to early September; about 52% less ablation under the cover (one station on each surface).<sup><a href="#s2">2</a></sup></span></li>
+  <li><span class="when">2012</span><span><span class="tag">Documented</span>Materials test at about 2,765 m: up to 69% less melt.<sup><a href="#s3">3</a></sup></span></li>
+  <li><span class="when">2014 to 2021</span><span><span class="tag soft">Claimed</span>The operator says the covered area grew from 40,000 m² in 2014 to 110,000 m² in 2020 and 2021, and that snow is also laid on the glacier every winter. Its own figures, not yet tested.<sup><a href="#s1">1</a></sup></span></li>
+  <li><span class="when">June 2015</span><span><span class="tag">Documented</span>Sentinel-2 starts. Late-summer scenes exist; not yet counted.<sup><a href="#s8">8</a></sup></span></li>
+  <li><span class="when">14 August 2021</span><span><span class="tag">Observed</span>Sentinel-2 shows a bright strip along the ski run: the cover is visible from space and distinct from ice.<sup><a href="#s8">8</a></sup></span></li>
+  <li><span class="when">2021</span><span><span class="tag soft">Reported</span>Used sheets shown at the Venice Architecture Biennale, according to the operator.<sup><a href="#s1">1</a></sup></span></li>
+  <li><span class="when">2022 to 2026</span><span><span class="tag dot">Not known</span>No documented or claimed figure for the covered area.</span></li>
+</ol>
+
+<!-- 2. Simulate -->
+<h2 id="simulate">Simulate</h2>
+<h3>Can a satellite see the cover?</h3>
+<p>Yes. On 14 August 2021, Sentinel-2 shows a bright strip along the ski run. In visible light, fleece and clean ice look alike. In shortwave infrared they do not: ice absorbs it, the fleece reflects it.</p>
+<table class="ledger">
+  <tr><th>Surface</th><th>Visible (green)</th><th>Shortwave infrared (1.6 µm)</th></tr>
+  <tr><td>Fleece</td><td>46–54%</td><td>37–47%</td></tr>
+  <tr><td>Clean ice</td><td>51–55%</td><td>3–4%</td></tr>
+</table>
+<p class="small"><span class="tag">Observed</span>Sentinel-2 top-of-atmosphere reflectance, scene 20210814T102031_T32TPS, mean of two small areas per surface.<sup><a href="#s8">8</a></sup></p>
+<p class="small"><span class="tag dot">Calculated</span>A count of the covered area year by year is under way and not yet validated.</p>
+
+<h3>How much does a cover save?</h3>
+<p>Melt one summer on three surfaces. Choose a surface, change the fleece's albedo (the share of sunlight it reflects), count the seasons since 2008.</p>
+<figure class="chart"><svg id="chart" viewBox="0 0 680 260" role="img" aria-label="Cumulative melt over one summer on three surfaces"></svg>
+<figcaption class="small muted" id="weather-label">Cumulative melt, 25 June to 5 September, metres of water equivalent.</figcaption></figure>
+<div class="controls" role="group" aria-label="Surface">
+  <button type="button" data-surface="ice" aria-pressed="false">Bare ice</button>
+  <button type="button" data-surface="fleece" aria-pressed="true">Fleece</button>
+  <button type="button" data-surface="snow" aria-pressed="false">Snow</button>
+</div>
+<div class="controls">
+  <label>Fleece albedo <input id="albedo" type="range" min="0.30" max="0.80" step="0.01" value="0.60"> <output id="albedo-out">0.60</output></label>
+  <label>Seasons since 2008 <input id="seasons" type="range" min="1" max="19" step="1" value="19"> <output id="seasons-out">19</output></label>
+</div>
+<div class="readout" aria-live="polite">
+  <div><strong id="r-ice">–</strong>bare ice melt, m w.e.</div>
+  <div><strong id="r-sel">–</strong><span id="r-sel-label">fleece</span> melt, m w.e.</div>
+  <div><strong id="r-cut">–</strong>less melt than bare ice (field: 52–69%)</div>
+  <div><strong id="r-step">–</strong>m the patch would stand higher, if nothing else changed</div>
+</div>
+<p class="small"><span class="tag">Calculated</span><span class="tag dot" id="weather-tag">Synthetic</span>Albedos are placeholders until checked against the field study. When the model lands far from the field band, the model is wrong, not the field.</p>
+<details class="small"><summary>How the model works, and what it leaves out</summary>
+<p>Each day, melt = temperature factor × air temperature + radiation factor × (1 − albedo) × sunlight, when the air is above 1 °C (an enhanced temperature-index model).<sup><a href="#s7">7</a></sup> Ice density 900 kg/m³. The seasons control assumes the same patch and the same summer every year: it shows the size of the effect, not its history. Left out: wind, rain, summer snowfall, slope, shading, ice flow, grooming and snowmaking.</p></details>
+
+<!-- 3. Situate -->
+<h2 id="situate">Situate</h2>
+<p>Five places, from the covered patch to the comparison case.</p>
+<ol class="places">
+  <li><b>The covered patch, Presena (Vermiglio, Trentino).</b> Described as a Site of Community Importance in 2013; current status to confirm.<sup><a href="#s4">4</a></sup></li>
+  <li><b>Passo del Tonale and Ponte di Legno.</b> The lift company and consortium that lays the covers.<sup><a href="#s1">1</a></sup></li>
+  <li><b>Trento, the Province.</b> Part-funder according to the operator; authority over the protected site.</li>
+  <li><b>The Noce and the Adige.</b> Where the meltwater goes. Fibre findings come from Austrian glaciers, not from here; no effect is inferred.</li>
+  <li><b>Diavolezza and Morteratsch, Graubünden.</b> The same practice since 2008, and a proposal to snow a whole tongue.<sup><a href="#s5">5</a></sup><sup><a href="#s6">6</a></sup></li>
+</ol>
+<p class="small">Who says what about the covers, and how far each statement holds, is in the claims ledger on the <a href="explore.html#situate">explore page</a>.</p>
+
+<!-- 4. Narrate -->
+<h2 id="narrate">Narrate</h2>
+<p><span class="tag">Interpretive</span>A glacier kept by contract is also a glacier kept by paperwork. Most of what the public would need to judge the covers, the area per year, the money, the permit, the fate of the sheets, is not yet in any public record. This sketch tries to fill that record one line at a time, and to say how solid each line is.</p>
+<p><a href="explore.html"><b>Open the explorable view of the evidence →</b></a></p>
+
+<h2 id="sources">Sources and limits</h2>
+<ol class="small">
+  <li id="s1">Consorzio Pontedilegno–Tonale, “The protection of Presena glacier”, read 3–4 November 2026. <a href="https://pontedilegnotonale.com/en/pontedilegno-tonale-what-to-see/the-protection-of-presena-glacier">pontedilegnotonale.com</a>. The operator's own statements.</li>
+  <li id="s2">AINEVA, <i>Neve e Valanghe</i> 74, 2010 Presena energy balance. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista74/nv74_abstract.pdf">aineva.it</a>. Field measurement.</li>
+  <li id="s3">Senese et al. 2020, <i>Cold Regions Science and Technology</i>, doi:10.1016/j.coldregions.2020.103007. <a href="https://air.unimi.it/handle/2434/715669">air.unimi.it</a>. Field measurement.</li>
+  <li id="s4">AINEVA, <i>Neve e Valanghe</i> 80, 2012 materials test. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista80/nv80_rivista-9.pdf">aineva.it</a>.</li>
+  <li id="s5">Oerlemans et al. 2017, MortAlive feasibility study. <a href="https://ideas.repec.org/a/spr/climat/v145y2017i1d10.1007_s10584-017-2102-1.html">ideas.repec.org</a>. Simulation (theirs).</li>
+  <li id="s6">Huss et al., EGU 2022, doi:10.5194/egusphere-egu22-1808. <a href="https://meetingorganizer.copernicus.org/EGU22/EGU22-1808.html">meetingorganizer.copernicus.org</a>.</li>
+  <li id="s7">Enhanced temperature-index model after Pellicciotti et al. 2005, <i>Journal of Glaciology</i>; factors to verify, see <code>data/parameters.json</code>.</li>
+  <li id="s8">Sentinel-2 Level-1C, ESA / Copernicus, via Google Earth Engine (COPERNICUS/S2_HARMONIZED). Copernicus licence. Script in <code>tools/</code>.</li>
+</ol>
+<ul class="small">
+  <li>Methods and data catalogue: <a href="data/DATA_CATALOG.md">data/DATA_CATALOG.md</a>.</li>
+  <li>Data behind the explore page: <a href="data/years.json">data/years.json</a>, <a href="data/claims.json">data/claims.json</a>, <a href="data/assertions.json">data/assertions.json</a>.</li>
+  <li>Weather in the model: <b>reanalysed</b> (ERA5 via Open-Meteo, adjusted to 2,765 m) if <code>data/weather_summer_2021.json</code> is present; otherwise <b>synthetic</b>. The label under the chart says which.</li>
+  <li>Count of the covered area year by year: <b>calculated, not validated</b>. Not shown on this page.</li>
+</ul>
+<p class="small"><b>What the model calculates:</b> seasonal melt on a patch under three surfaces. <b>What this sketch cannot establish:</b> the true covered area in any year until the count is validated, whether covering pays, or any effect downstream.</p>
+
+<footer class="site-footer">
+  <p>Maintained Ice, Presena 2008–2026 · Luca · Realtime Weather working group, Weather Commons</p>
+</footer>
+</main>
+<script>
+(function () {
+  "use strict";
+  // ---------- melt model (same as explore.html) ----------
+  var P = { tf: 0.05, srf: 0.0094, tt: 1.0, albedo: { ice: 0.30, snow: 0.75, fleece: 0.60 }, ice_density: 900, days: 73, seed: 22 };
+  var W = null, weatherKind = "Synthetic";
+  function rng(seed) { var s = seed >>> 0; return function () { s = (s * 1664525 + 1013904223) >>> 0; return s / 4294967296; }; }
+  function synthWeather() { var r = rng(P.seed), out = []; for (var d = 0; d < P.days; d++) { var se = Math.sin(Math.PI * d / (P.days - 1)), cl = r() < 0.3; out.push({ t: 1.5 + 4.5 * se + (r() - 0.5) * 3 - (cl ? 1.5 : 0), g: (cl ? 140 : 260) + 60 * se + (r() - 0.5) * 40 }); } return out; }
+  var mstate = { surface: "fleece", seasons: 19 };
+  function melt(alb) { var cum = 0, s = []; W.forEach(function (w) { var m = w.t > P.tt ? 24 * (P.tf * w.t + P.srf * (1 - alb) * w.g) : 0; cum += Math.max(0, m) / 1000; s.push(cum); }); return s; }
+  var chart = document.getElementById("chart");
+  function drawModel() {
+    var a = P.albedo, s = { ice: melt(a.ice), fleece: melt(a.fleece), snow: melt(a.snow) }, n = W.length;
+    var max = Math.max(s.ice[n - 1], 0.1), x0 = 40, x1 = 600, y0 = 230, y1 = 20;
+    function px(i) { return x0 + (x1 - x0) * i / (n - 1); } function py(v) { return y0 - (y0 - y1) * v / max; }
+    var h = '<line x1="' + x0 + '" x2="' + x1 + '" y1="' + y0 + '" y2="' + y0 + '" stroke="currentColor" opacity=".4"/><text x="' + x0 + '" y="14" font-size="12" fill="currentColor">' + max.toFixed(2) + ' m w.e.</text>';
+    ["ice", "snow", "fleece"].forEach(function (k) {
+      var d = s[k].map(function (v, i) { return (i ? "L" : "M") + px(i).toFixed(1) + " " + py(v).toFixed(1); }).join(" "), on = k === mstate.surface;
+      h += '<path d="' + d + '" fill="none" stroke="currentColor" stroke-width="' + (on ? 3 : 1) + '" opacity="' + (on ? 1 : 0.45) + '"' + (k === "snow" ? ' stroke-dasharray="4 4"' : "") + "/>";
+      h += '<text x="' + (x1 + 6) + '" y="' + (py(s[k][n - 1]) + 4).toFixed(1) + '" font-size="12" fill="currentColor">' + (k === "ice" ? "bare ice" : k) + "</text>";
+    });
+    chart.innerHTML = h;
+    var ice = s.ice[n - 1], sel = s[mstate.surface][n - 1];
+    document.getElementById("r-ice").textContent = ice.toFixed(2);
+    document.getElementById("r-sel").textContent = sel.toFixed(2);
+    document.getElementById("r-sel-label").textContent = mstate.surface === "ice" ? "bare ice" : mstate.surface;
+    document.getElementById("r-cut").textContent = Math.round((ice > 0 ? 1 - sel / ice : 0) * 100) + "%";
+    document.getElementById("r-step").textContent = ((ice - sel) * 1000 / P.ice_density * mstate.seasons).toFixed(1);
+  }
+  document.querySelectorAll("[data-surface]").forEach(function (b) { b.addEventListener("click", function () { mstate.surface = b.dataset.surface; document.querySelectorAll("[data-surface]").forEach(function (x) { x.setAttribute("aria-pressed", x === b); }); if (W) drawModel(); }); });
+  var al = document.getElementById("albedo"), se = document.getElementById("seasons");
+  al.addEventListener("input", function () { P.albedo.fleece = +al.value; document.getElementById("albedo-out").textContent = (+al.value).toFixed(2); if (W) drawModel(); });
+  se.addEventListener("input", function () { mstate.seasons = +se.value; document.getElementById("seasons-out").textContent = se.value; if (W) drawModel(); });
+
+  // ---------- data loading (relative paths, so it works on the published site) ----------
+  function getJSON(p) { return fetch(p).then(function (r) { if (!r.ok) throw new Error(p); return r.json(); }); }
+  getJSON("data/parameters.json").then(function (j) {
+    if (j && j.values) { P.tf = j.values.tf.value; P.srf = j.values.srf.value; P.tt = j.values.tt.value; P.albedo.ice = j.values.albedo_ice.value; P.albedo.snow = j.values.albedo_snow.value; P.albedo.fleece = j.values.albedo_fleece.value; al.value = P.albedo.fleece; document.getElementById("albedo-out").textContent = P.albedo.fleece.toFixed(2); }
+  }).catch(function () {}).then(function () {
+    return getJSON("data/weather_summer_2021.json").then(function (w) {
+      if (w && w.days && w.days.length) { W = w.days.map(function (d) { return { t: d.t_mean_c, g: d.sw_mean_wm2 }; }); weatherKind = "Reanalysed"; document.getElementById("weather-label").textContent = "Cumulative melt, " + w.start + " to " + w.end + ", metres of water equivalent. Weather: " + w.source + "."; }
+    }).catch(function () {});
+  }).then(function () {
+    if (!W) W = synthWeather();
+    document.getElementById("weather-tag").textContent = weatherKind;
+    drawModel();
+  });
+})();
+</script>
+</body>
+</html>
