@@ -46,13 +46,13 @@ Use an account that doesn't own the repository, such as Boone's or a spare one, 
 | A repository called `weather-commons` already exists | The fork is named `weather-commons-1`, and the address ends `/weather-commons-1/` | The build handles it. Tell them to use that address |
 | The first deploy takes 1–2 minutes | The page shows 404 and people think it failed | Wait for the green tick under **Actions**, then reload |
 | 17 people on one connection while you share your screen | Slow pages and stalled demos | Keep the recording ready |
-- **Decide the breakout rooms:** 17 people in four rooms of four or five, for peer feedback. Everyone works on their own project. Give out sketch numbers by room: room 1 gets 10–19, room 2 gets 20–29, and so on.
+- **Decide the breakout rooms:** 18 people in four rooms of four or five, for peer feedback. Everyone works on their own project. Give out sketch numbers by room: room 1 gets 10–19, room 2 gets 20–29, and so on.
 
 ## Part 1: Intro (60 minutes)
 
 **10 min: Boone and Farzin introduce themselves.**
 
-**30 min: participants introduce themselves.** That's under two minutes each for 17 people. Each person gives their name, their practice, and the research or weather question they want to work on. Many will bring an existing project. Write the topics down for the breakout.
+**30 min: participants introduce themselves.** That's under two minutes each for 18 people. Each person gives their name, their practice, and the research or weather question they want to work on. Many will bring an existing project. Write the topics down for the breakout.
 
 **10 min: Workshop introduction.** Use [README.md](README.md) in this folder.
 - **The framing:** how weather is monitored, modelled, managed and shown in real time, and who has the right to change it.
@@ -121,5 +121,5 @@ Anything else goes into the community space, where facilitators answer after the
 ## After the session
 
 - Merge nothing to the shared site yet. First pages stay in participants' own copies.
-- Put the filled-in numbers on Box. Commit only the numbers that are taken to `roster.md`.
+- Put the filled-in numbers on Box. Commit only initials and the numbers that are taken to `roster.md`.
 - Answer setup questions in the community space.
