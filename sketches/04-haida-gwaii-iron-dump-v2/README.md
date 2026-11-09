@@ -1,8 +1,8 @@
-# 04 · Haida Gwaii iron dump v2
+# 04 · Haida Gwaii iron dump v3
 
-Author: Boone Mercado (with Claude) · Started: 2026-11-05 · Status: sketch · Stack: static HTML + JS, WebGL 2, no build step
+Author: Boone Mercado (with Claude) · Started: 2026-11-05 · Status: v3 · Stack: static HTML + JS, WebGL 2, no build step
 
-The 2012 Haida Gwaii iron release told in eight steps over a 3D model you can turn: the real shape of the land, the chlorophyll that satellites measured on the sea, and a simulated plankton bloom standing on the water. A second version of sketch 02, from the "HAIDA GWAII v2" artifact.
+The 2012 Haida Gwaii iron release told in eight steps over a 3D model you can turn: the real shape of the land, the chlorophyll that satellites measured on the sea, and a simulated plankton bloom standing on the water. Version 3 of this sketch (9 November 2026); it began as a second version of sketch 02, from the "HAIDA GWAII v2" artifact. The folder keeps its first name.
 
 ## Run
 

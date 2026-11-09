@@ -19,6 +19,7 @@ Working notes for sketch 04. Read this first. Dated entries; move items to Done 
 
 ## Decisions
 
+- 2026-11-09: This is v3. The folder name stays `04-haida-gwaii-iron-dump-v2`, because sketch folders are never renamed.
 - 2026-11-09: Measured and simulated are kept visibly apart: measured chlorophyll is green on the sea, simulated plankton are teal stems. Each story step says which it is showing.
 - 2026-11-09: The archive box takes only public-domain or openly licensed photos; news is a headline and a link, never a screenshot.
 - 2026-11-09: Clouds are left out. The picture is a time-faded cloud-cleared composite, not single passes; the "witness" patches are gone.
