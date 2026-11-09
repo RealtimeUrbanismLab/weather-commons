@@ -35,7 +35,7 @@
 
 <div class="note">
   <p><strong>Before you start</strong></p>
-  <p>Ask a facilitator for your <strong>sketch number</strong>. Each breakout room has a block: 10–19, 20–29, 30–39 or 40–49. Your number is yours for the whole workshop. Nobody else uses it.</p>
+  <p>Find your <strong>sketch number</strong> next to your initials on the <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/docs/workshop/roster.md">roster</a>. Your number is yours for the whole workshop. Nobody else uses it.</p>
   <p>Your sketch is your own project. It can be research you are already doing, or an event from the <a href="../catalog/">catalog</a>.</p>
   <p>You need about 20 minutes and your own seat on the workshop's Claude Team plan. Accept the invitation email, and sign in with the address it was sent to. Each seat is for one person, so please don't share a login. If you also have a personal Claude account, make sure you're in the workshop organization, not your personal one.</p>
 </div>
@@ -56,6 +56,7 @@
   <li>
     <strong>Fork the repository.</strong>
     Open <a href="https://github.com/RealtimeUrbanismLab/weather-commons">github.com/RealtimeUrbanismLab/weather-commons</a>. Click <strong>Fork</strong> (top right), then <strong>Create fork</strong>. Leave the settings as they are.
+    <br>Already forked? Open your fork and click <strong>Sync fork</strong> → <strong>Update branch</strong>, so you have the latest version.
     <p class="ok">a page titled <code>&lt;your username&gt;/weather-commons</code>, with “forked from RealtimeUrbanismLab/weather-commons” under it.</p>
   </li>
   <li>
@@ -68,8 +69,8 @@
   <li>
     <strong>Connect Claude to your fork.</strong>
     <br>a. Open <a href="https://claude.ai/code">claude.ai/code</a> and sign in with your workshop seat.
-    <br>b. Click <strong>Sign in with GitHub</strong> and approve the request. If you see “GitHub access is required for Claude Code cloud sessions” and no button, you haven't done anything wrong: see <a href="#trouble">Troubleshooting</a>.
-    <br>c. Install the <strong>Claude</strong> GitHub app. On GitHub's page, choose <strong>Only select repositories</strong> and pick <code>&lt;your username&gt;/weather-commons</code>. Click <strong>Install</strong>. This limits Claude to your fork and nothing else on your GitHub account. If Claude doesn't offer the app, <a href="https://github.com/apps/claude/installations/new">install it here</a>.
+    <br>b. Click <strong>Sign in with GitHub</strong> and approve the request.
+    <br>c. Install the <strong>Claude</strong> GitHub app. Don't click <strong>Skip</strong>: without the app, Claude may not be able to save changes to your fork. On GitHub's page, choose <strong>Only select repositories</strong> and pick <code>&lt;your username&gt;/weather-commons</code>. Click <strong>Install</strong>. This limits Claude to your fork and nothing else on your GitHub account. If Claude doesn't offer the app, <a href="https://github.com/apps/claude/installations/new">install it here</a>.
     <br>d. If you see <strong>Create your first cloud environment</strong>, leave everything as it is and click <strong>Create &amp; finish</strong>. A cloud environment is the temporary computer Claude works on.
     <p class="ok"><code>weather-commons</code> in the repository list under the message box.</p>
   </li>
@@ -220,11 +221,7 @@
 <!-- Troubleshooting -->
 <h2 id="trouble">Troubleshooting</h2>
 <dl class="trouble">
-  <dt>“GitHub access is required for Claude Code cloud sessions”, with no sign-in button.</dt>
-  <dd>This is a setting on the workshop's Claude plan, not a mistake of yours. An owner of the plan has to turn on GitHub for everyone. Tell a facilitator. Once it's on, reload <a href="https://claude.ai/code">claude.ai/code</a> and start step 4 again.
-    <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
-
-  <dt>“Claude Code isn't available on your account”.</dt>
+  <dt>“Claude Code isn't available on your account”, or “GitHub access is required for Claude Code cloud sessions” with no sign-in button.</dt>
   <dd>You're probably signed in to the wrong account. Click <strong>Switch organization</strong> and choose the workshop one, or sign out and use the address your invitation went to. If that doesn't help, your seat may not be set up yet: tell a facilitator.
     <span class="ask">Stuck? Ask in the community space: <a href="https://community.ocean-archive.org/spaces/25478985">https://community.ocean-archive.org/spaces/25478985</a></span></dd>
 
@@ -276,10 +273,10 @@
   <h2>Route A · browser only (nothing runs on your computer)</h2>
   <ul>
     <li>Make a GitHub account at github.com/signup.</li>
-    <li>Fork github.com/RealtimeUrbanismLab/weather-commons: <b>Fork</b> → <b>Create fork</b>.</li>
+    <li>Fork github.com/RealtimeUrbanismLab/weather-commons: <b>Fork</b> → <b>Create fork</b>. Already forked? <b>Sync fork</b> → <b>Update branch</b>.</li>
     <li>In your fork, <b>Actions</b> tab → <b>I understand my workflows, go ahead and enable them</b>.</li>
     <li>In your fork, <b>Settings → Pages → Source: GitHub Actions</b>.</li>
-    <li>claude.ai/code, with your workshop seat → <b>Sign in with GitHub</b> → install the Claude app for <b>Only select repositories</b>: your weather-commons → <b>Create &amp; finish</b>.</li>
+    <li>claude.ai/code, with your workshop seat → <b>Sign in with GitHub</b> → install the Claude app (don't skip) for <b>Only select repositories</b>: your weather-commons → <b>Create &amp; finish</b>.</li>
     <li>Start a task on your fork. Paste the prompt from the online guide (step 5). It runs<br><code>node scripts/new-sketch.mjs "&lt;title&gt;" --number &lt;NN&gt; --author "&lt;name&gt;"</code></li>
     <li>Open the pull request. Check the base is <i>your</i> fork. <b>Merge pull request → Confirm merge</b>.</li>
     <li>Wait for the green tick in Actions (about a minute). Open<br><code>https://&lt;username&gt;.github.io/weather-commons/&lt;NN&gt;-&lt;slug&gt;/</code></li>
@@ -308,7 +305,7 @@
     <li>Your fork on GitHub → <b>Contribute → Open pull request</b>, base RealtimeUrbanismLab/weather-commons. A facilitator reviews and merges.</li>
   </ul>
   <p>Public: your name and username show on the shared site. Nothing goes there until your pull request is merged.<br>
-  Numbers: room 1 = 10–19, room 2 = 20–29, room 3 = 30–39, room 4 = 40–49.</p>
+  Your sketch number is next to your initials on the roster: docs/workshop/roster.md in the repository.</p>
 
   <h2>If something goes wrong</h2>
   <div class="cols">
