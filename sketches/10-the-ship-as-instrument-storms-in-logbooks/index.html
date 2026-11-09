@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>10 · The Ship as Instrument: Storms in Logbooks · Realtime Weather</title>
+<!-- style.css is the shared Realtime Weather look, copied into this folder. Add your own styles below it. -->
+<link rel="stylesheet" href="style.css">
+<style>
+  .scroll { overflow-x: auto; }
+  .scroll table { min-width: 36rem; }
+</style>
+</head>
+<body>
+<main>
+<header class="site-header">
+  <div class="brand"><a class="wordmark" href="../">Realtime Weather</a><span class="tagline">Part of <a href="https://tba21.org/uni_weathercommons">Weather Commons</a>, TBA21–Academy UNI</span></div>
+  <nav aria-label="Site">
+    <a href="../">Sketches</a>
+    <a href="../guide/">Guide</a>
+    <a href="../catalog/">Catalog</a>
+    <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
+  </nav>
+</header>
+
+<h1>The Ship as Instrument: Storms in Logbooks</h1>
+
+<!-- 1. Event: what are you looking at, and what do you want to find out? -->
+<p class="lede">What does a storm look like when the instrument is a ship, and what changes when the sailors' words become data?</p>
+<p class="muted small">10 · Christos Montsenigos · started 2026-11-09</p>
+
+<h2>Event</h2>
+<p>Before there were reliable wind gauges, officers at sea judged the wind themselves. They watched how fast the ship went and how much sail it could safely carry, and wrote what they saw in the logbook in words: a moderate breeze, a topsail breeze, a storm. Every day at noon they also noted the ship's position. The researchers who digitised these logs call this "semi-instrumental": the sails were the instrument.</p>
+<p>Thousands of these logbooks survive. The CLIWOC project typed in about 280,000 noon entries from Dutch, British, Spanish and French ships between 1662 and 1855, and translated their wind words into Beaufort numbers, the scale used today. This sketch looks at storms, where the instrument is pushed hardest, and at what happens to the sailors' words on the way to becoming a number.</p>
+<p class="label">Interpretive: my framing, drawing on the sources listed below.</p>
+
+<h3>A first look: 7 March 1796</h3>
+<p>On 23 February 1796 two Dutch squadrons left Texel together and sailed north around Scotland: one under Rear-Admiral Engelbertus Lucas bound for the Cape of Good Hope, the other under Vice-Admiral Adriaan Braak bound for the West Indies. On 7 March six of their ships, all near 63°N, logged a storm. Each ship wrote it down in its own words, and the database turns those words into two different wind speeds.</p>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Ship</th><th>Noon position</th><th>Logbook words (Dutch)</th><th>In English</th><th>CLIWOC wind speed</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Castor</td><td>62.9°N 1.9°W</td><td>storm</td><td>storm</td><td>26.8 m/s</td></tr>
+    <tr><td>Dordrecht</td><td>62.6°N 4.1°W</td><td>stormweer</td><td>stormy weather</td><td>22.6 m/s</td></tr>
+    <tr><td>Havick</td><td>63.0°N 1.5°W</td><td>gereefde onderzeilskoelte-storm</td><td>reefed lower-sail breeze, to storm</td><td>26.8 m/s</td></tr>
+    <tr><td>Pollux</td><td>63.1°N 5.6°W</td><td>stormweer</td><td>stormy weather</td><td>22.6 m/s</td></tr>
+    <tr><td>Tromp</td><td>63.0°N 4.5°W</td><td>continuerende storm</td><td>continuing storm</td><td>26.8 m/s</td></tr>
+    <tr><td>Vrouwe Maria</td><td>63.2°N 1.3°W</td><td>stijve gereefde onderzeilskoelte met stormvlagen</td><td>stiff reefed lower-sail breeze with storm gusts</td><td>26.8 m/s</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="label">Observed: ship names, positions and Dutch words, as transcribed in CLIWOC 2.1. Converted: wind speeds are CLIWOC's estimates for each word (the middle of a Beaufort band), not measurements. Interpretive: the English translations are mine.</p>
+<p>The same storm, met by ships up to about 200 km apart, becomes 22.6 or 26.8 m/s depending on whether an officer wrote "stormy weather" or "storm".</p>
+<p>The logbooks follow Lucas's squadron the rest of the way: anchored at Gran Canaria on 13 April and at Praia in the Cape Verde Islands on 26 May, then at Saldanha Bay, north of Cape Town, from 5 to 7 August. There, short of water, sick and close to mutiny, the squadron was trapped by a larger British fleet under Vice-Admiral George Elphinstone and surrendered without a fight on 17 August 1796. The last logbook entry, from the <i>Revolutie</i>, is dated that day. The ships were taken into the Royal Navy.</p>
+<p class="label">Observed: anchorages and dates, from the logbooks in CLIWOC 2.1. Historical: the surrender and its circumstances, from the sources below.</p>
+
+<!-- 2. Simulate: a first model. -->
+<h2>Simulate</h2>
+<p>To come: the ships' noon positions as dots (not lines, since we only know where they were at noon), each day's words beside the number they became, and a drawing of how much sail each entry implies.</p>
+
+<!-- 3. Situate: where, when, who. -->
+<h2>Situate</h2>
+<p>To come: the routes, the war that shaped them, and the archives where the logbooks ended up, among them Den Haag, De Bilt, Greenwich and Seville.</p>
+
+<!-- 4. Narrate: the story in a few sentences, and what the model cannot show. -->
+<h2>Narrate</h2>
+<p>To come.</p>
+
+<section class="note" id="sources">
+<h2>Sources and limits</h2>
+<ul class="small">
+  <li><strong>CLIWOC 2.1</strong>, the Climatological Database for the World's Oceans, reformatted by Dagomar Degroot and Steven Ottens at <a href="https://historicalclimatology.com/cliwoc">historicalclimatology.com</a> from the EU CLIWOC project (2001–2004). Downloaded 8 November 2026. Licence: not stated by the source. Used here: six entries for 7 March 1796, and the anchorages and dates of the same voyages, with positions rounded to 0.1°. Logbook words: observed, as transcribed. Wind speeds: converted by the database from words.</li>
+  <li>R. García-Herrera et al., "CLIWOC: a climatological database for the world's oceans 1750–1854", <i>Climatic Change</i> 73 (2005): 1–12. How the database was made, and the term "semi-instrumental".</li>
+  <li>D. Wheeler and C. Wilkinson, "From calm to storm: the origins of the Beaufort wind scale", <i>Mariner's Mirror</i> 90 (2004): 187–201; and "The determination of logbook wind force and weather terms: the English case", <i>Climatic Change</i> 73 (2005): 57–77. How wind was judged without instruments.</li>
+  <li>R. Sorrenson, "The ship as a scientific instrument in the eighteenth century", <i>Osiris</i> 11 (1996): 221–236.</li>
+  <li>"Capitulation of Saldanha Bay", <a href="https://en.wikipedia.org/wiki/Capitulation_of_Saldanha_Bay">Wikipedia</a>, read 9 November 2026. Secondary source, citing naval histories by William James and William Laird Clowes among others. Used for the two squadrons, the voyage and the surrender.</li>
+  <li>"A plan of Soldanah Bay and capture of the Dutch fleet which surrendered to his Majesty's arms 17th August, 1796", map, 1796, <a href="https://archive.parliament.gov.za/items/8d100406-d96a-4ba5-839b-625fe37b5eb4">Library of Parliament, South Africa</a>. Primary source for the date.</li>
+  <li>English translations of the Dutch words: mine, interpretive.</li>
+</ul>
+<p class="small">What this sketch cannot show yet: the wind speeds are estimates for words, not measurements; positions were often worked out by dead reckoning, not observed; the logs give one noon entry a day, so we don't know what happened in between; a ship that wrote nothing was not necessarily in calm weather; and not every logbook was digitised in full. The sloop <i>Havick</i> sailed with Lucas to the Cape, but its log in the database stops at Gran Canaria.</p>
+</section>
+
+<footer class="site-footer">
+  <p>The Ship as Instrument: Storms in Logbooks · Christos Montsenigos · Realtime Weather working group, Weather Commons</p>
+</footer>
+</main>
+</body>
+</html>
