@@ -90,7 +90,7 @@ ol.steps > li::before {
   margin: 0; padding: 12px 72px 12px 14px; background: var(--soft); border: 1px solid var(--line);
   font: 14px/1.5 var(--mono); white-space: pre-wrap; overflow-wrap: anywhere;
 }
-.code button, .tabs button {
+.code button, .tabs button, .gloss button {
   font: 14px var(--font); padding: 4px 12px; cursor: pointer; background: var(--bg); color: var(--fg); border: 1px solid var(--line);
 }
 .code button { position: absolute; top: 6px; right: 6px; }
