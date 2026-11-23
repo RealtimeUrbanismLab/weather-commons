@@ -1,0 +1,60 @@
+island,group,scope,first_known_year,first_known_source,first_known_place,lit_plants,lit_capacity_m3d,emod_records,emod_capacity_2020_m3d,emod_first_online,emod_last_online,permits,permits_with_capacity,first_permit_year,last_permit_date,temp_permits_2024_26,temp_permit_capacity_m3d
+Syros,Cyclades,base,1970,EMODNET,Syros,9,6890,16,10360,1989,2018,9,3,2015,2026-01-27,0,
+Naxos,Cyclades,base,2011,EMODNET,Naxos,0,,4,1750,2011,2017,3,2,2018,2024-07-26,2,3600
+Santorini (Thira),Cyclades,base,1994,HELLEXP14,Oia (1st),3,700,12,3950,2001,2019,15,6,2012,2025-06-27,0,
+Paros,Cyclades,base,2001,HELLEXP14,Naousa,1,1200,2,3800,2001,2011,4,3,2017,2025-05-20,2,1200
+Mykonos,Cyclades,base,1981,HELLEXP14,Korfos (old),2,2500,12,19480,1981,2019,7,4,2014,2025-07-07,2,2000
+Tinos,Cyclades,base,2001,HELLEXP14,Tinos (old),2,1000,5,3820,2001,2019,10,4,2013,2026-09-16,2,400
+Andros,Cyclades,base,,,,0,,0,,,,4,4,2025,2025-08-01,4,2400
+Milos,Cyclades,base,2018,EMODNET,Municipality of Milos,2,3360,1,1200,2018,2018,3,0,2017,2025-11-28,0,
+Sifnos,Cyclades,base,2001,EMODNET,Municipality of Sifnos,1,500,4,2000,2001,2008,1,0,2019,2019-07-05,0,
+Kea,Cyclades,base,2018,EMODNET,Tzia Island,0,,2,1000,2018,2018,0,0,,,0,
+Ios,Cyclades,base,2002,EMODNET,Municipality of Ios,0,,2,1500,2002,2010,1,0,2020,2020-07-23,0,
+Amorgos,Cyclades,base,2013,EMODNET,Amorgos,0,,1,450,2013,2013,11,1,2014,2025-11-26,0,
+Kythnos,Cyclades,base,2014,EMODNET,Municipality of Kithnos,0,,1,600,2014,2014,0,0,,,0,
+Antiparos,Cyclades,base,2014,EMODNET,Antiparos,0,,2,1200,2014,2014,3,2,2016,2024-06-05,1,300
+Serifos,Cyclades,base,,,,0,,0,,,,2,1,2024,2024-07-26,1,600
+Kimolos,Cyclades,base,1996,EMODNET,Kimolos,1,,1,100,1996,1996,2,1,2015,2016-07-26,0,
+Folegandros,Cyclades,base,2012,EMODNET,Foundation Propondis,0,,2,1080,2012,2014,9,1,2011,2022-01-21,0,
+Ano Koufonisi,Cyclades,base,2013,EMODNET,Koufonisi,0,,1,600,2013,2013,2,1,2012,2018-04-30,0,
+Sikinos,Cyclades,base,2019,EMODNET,Sikinos Island,0,,1,210,2019,2019,3,3,2014,2019-01-30,0,
+Schinoussa,Cyclades,base,2004,HELLEXP14,Schinoussa,1,100,0,,,,3,2,2013,2026-04-09,0,
+Donousa,Cyclades,base,,,,0,,0,,,,3,1,2015,2015-10-06,0,
+Iraklia,Cyclades,base,2018,EMODNET,Iraklia Island,1,,1,300,2018,2018,3,1,2015,2015-11-18,0,
+Rhodes,Dodecanese,base,2007,EMODNET,OCEAN BLUE RESORT,0,,35,13500,2007,2019,5,0,2023,2026-03-27,0,
+Kos,Dodecanese,base,2008,EMODNET,OCEANIS HOTEL,0,,13,7525,2008,2019,1,0,2012,2012-11-12,0,
+Kalymnos,Dodecanese,base,2013,EMODNET,Kalymnos island,0,,4,128,2013,2016,1,1,2024,2024-10-03,1,100
+Leros,Dodecanese,base,2001,HELLEXP14,Leros municipal water enterprise,1,200,2,2240,2001,2015,7,2,2013,2025-12-11,1,600
+Karpathos,Dodecanese,base,2010,EMODNET,ALIMOUNDA MARE HOTEL,0,,1,200,2010,2010,4,2,2024,2026-06-02,2,1500
+Patmos,Dodecanese,base,2010,EMODNET,Patmos Aktis Hotel,0,,2,1320,2010,2013,9,3,2011,2026-06-11,2,1200
+Symi,Dodecanese,base,2007,EMODNET,Symi Island,1,450,3,2950,2007,2009,0,0,,,0,
+Astypalaia,Dodecanese,base,2018,EMODNET,Astypalaia,0,,1,300,2018,2018,3,1,2018,2026-08-11,1,600
+Nisyros,Dodecanese,base,1990,EMODNET,Nisyros,2,350,4,1200,1990,2019,2,0,2019,2022-04-19,0,
+Lipsi,Dodecanese,base,,,,0,,0,,,,2,0,2015,2019-04-05,0,
+Kastellorizo (Megisti),Dodecanese,base,2017,EMODNET,Municipality of Megisti,0,,1,400,2017,2017,3,0,2017,2022-07-13,0,
+Chalki,Dodecanese,base,2014,EMODNET,Chalki,0,,1,600,2014,2014,3,0,2012,2012-09-20,0,
+Agathonisi,Dodecanese,base,2012,EMODNET,Agathonisi,0,,1,80,2012,2012,4,0,2015,2020-10-14,0,
+Pserimos,Dodecanese,base,,,,0,,0,,,,2,1,2017,2024-09-17,1,100
+Telendos,Dodecanese,base,,,,0,,0,,,,2,1,2017,2024-09-17,1,100
+Arkoi,Dodecanese,base,,,,0,,0,,,,2,0,2015,2017-09-27,0,
+Ro,Dodecanese,base,2015,EMODNET,"Ro, Megistis island",0,,1,20,2015,2015,0,0,,,0,
+Chios,North Aegean,base,1995,EMODNET,Chios Island,3,4100,6,7270,1995,2019,8,4,2017,2024-06-13,0,
+Lemnos,North Aegean,base,2006,EMODNET,Lemnos Village Hotel,0,,1,290,2006,2006,2,1,2024,2025-06-27,1,600
+Ikaria,North Aegean,base,,,,0,,0,,,,2,0,2019,2020-10-09,0,
+Fournoi,North Aegean,base,2008,BERTSIOU23,Chrysomilia,1,100,1,300,2019,2019,7,4,2013,2025-09-15,2,350
+Oinousses,North Aegean,base,,,,0,,0,,,,1,0,2022,2022-08-08,0,
+Psara,North Aegean,base,,,,0,,0,,,,1,0,2022,2022-07-13,0,
+Thymaina,North Aegean,base,2009,BERTSIOU23,Thymaina,1,,0,,,,2,0,2019,2020-10-09,0,
+Skiathos,Sporades,base,,,,0,,0,,,,2,1,2025,2026-05-18,0,
+Alonnisos,Sporades,base,,,,0,,0,,,,5,4,2022,2025-10-06,3,900
+Skyros,Sporades,base,2018,EMODNET,Skiros Island,0,,1,2700,2018,2018,2,0,2016,2016-04-14,0,
+Crete,Crete,context,1975,EMODNET,Crete,1,2400,67,28191,1997,2019,40,2,2010,2026-04-17,2,2000
+Gavdos,Crete,context,2015,EMODNET,Gavdos island,0,,1,80,2015,2015,0,0,,,0,
+Evia,Evia,context,1995,EMODNET,Chalkis,0,,11,5040,1995,2020,3,0,2016,2018-08-22,0,
+Kythera,Kythera,context,,,,0,,0,,,,3,2,2021,2024-07-01,2,600
+Antikythera,Kythera,context,,,,0,,0,,,,1,1,2024,2024-07-01,1,100
+Aegina,Saronic,context,2007,EMODNET,SHR 25 AM,0,,1,500,2007,2007,1,0,2014,2014-07-01,0,
+Spetses,Saronic,context,1981,EMODNET,Spetsopoula Island,0,,3,450,2011,2017,1,1,2024,2024-06-05,1,600
+Poros,Saronic,context,,,,0,,0,,,,3,1,2021,2026-08-10,1,1600
+Hydra,Saronic,context,2014,EMODNET,Hydra SWRO,0,,1,1600,2014,2014,11,2,2014,2026-03-24,1,400
+Agistri,Saronic,context,2013,EMODNET,Municipality of Agkistri,0,,1,1200,2013,2013,1,0,2013,2013-12-09,0,

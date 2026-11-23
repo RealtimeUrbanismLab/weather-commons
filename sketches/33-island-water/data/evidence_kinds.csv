@@ -1,0 +1,9 @@
+kind,meaning,example
+documented,"From a primary record: a decision, contract, deed, official dataset",Civil Protection decision declaring Sifnos's emergency
+reported,From news or secondary sources we have read but not verified against primary records,Desal cost per island reported by Proto Thema
+reanalysed,From a model built on historical observations (ERA5),Daily rain at Sifnos since 2023
+calculated,"Computed by us from other data, with the method stated",Days a rooftop cistern would run dry
+synthetic,An assumption or invented value used to illustrate,A 30 m3 cistern and 80 m2 roof
+cartographic,Base map features,OpenStreetMap coastline
+interpretive,Our reading or narrative,Tourism as a resource curse on Sifnos
+not known,A gap we name instead of filling,Share of Sifnos supply from rooftop cisterns

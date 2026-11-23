@@ -1,0 +1,989 @@
+{
+  "description": "Every data request made for sketch 33: url, date, file, sha256.",
+  "requests": [
+    {
+      "url": "https://www.statistics.gr/documents/20181/17286366/MON_PLI_DHM_OIKISN_2021.xlsx/2b5a5f24-4083-ede5-7201-3c4fb109fb44",
+      "retrieved": "2026-11-23T05:45:39+00:00",
+      "file": "data/raw/elstat_census_2021/MON_PLI_DHM_OIKISN_2021.xlsx",
+      "sha256": "7bca25fef57294a7b9a75531658d530187622e03e084460082de3d6be79d5534",
+      "licence": "ELSTAT; re-use approved by ELSTAT (per author, 2026-11-23)",
+      "note": "Resident population 2021 by settlement (final, 2024-03-29)"
+    },
+    {
+      "url": "https://www.statistics.gr/documents/20181/17286366/MON_PLI_DHM_KOIN_2021.xlsx/17bff52d-4fb3-6563-7d67-251116184f56",
+      "retrieved": "2026-11-23T05:45:42+00:00",
+      "file": "data/raw/elstat_census_2021/MON_PLI_DHM_KOIN_2021.xlsx",
+      "sha256": "aa6c5ed4fdb3e1c0d761d88ed3440b4f69ad1ce4d2adf4584afa93f03997449d",
+      "licence": "ELSTAT; re-use approved by ELSTAT (per author, 2026-11-23)",
+      "note": "Resident population 2021 by municipal/local community"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3B%0Anwr%5B%22place%22~%22%5E%28island%7Cislet%29%24%22%5D%5B%22name%22%5D%2834.7%2C%2022.8%2C%2041.1%2C%2028.4%29%3B%0Aout%20tags%20center%20bb%3B",
+      "retrieved": "2026-11-23T05:52:47+00:00",
+      "file": "data/raw/osm_islands/islands.json",
+      "sha256": "288e82df907200358cc01e11239d2b7e5d08692fed2fb7422e3afee8a254e8da",
+      "licence": "ODbL (© OpenStreetMap contributors)",
+      "note": "Named islands and islets, Aegean box: 1208 features"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3B%0A%28nwr%5B%22place%22~%22%5E%28island%7Cislet%29%24%22%5D%5B%22name%22%5D%2834.7%2C%2022.8%2C%2041.1%2C%2028.4%29%3Bnwr%5B%22place%22~%22%5E%28island%7Cislet%29%24%22%5D%5B%22name%22%5D%2836.0%2C%2029.4%2C%2036.3%2C%2029.7%29%3B%29%3B%0Aout%20center%20bb%20tags%3B",
+      "retrieved": "2026-11-23T05:55:29+00:00",
+      "file": "data/raw/osm_islands/islands.json",
+      "sha256": "c68d21956745105e28dd4ddc67fbef6845348692f8cf269dce9a051f337fb812",
+      "licence": "ODbL (© OpenStreetMap contributors)",
+      "note": "Named islands and islets, Aegean box: 1232 features"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter (POST; query in tools/fetch_osm_villages.py)",
+      "retrieved": "2026-11-23T06:00:11+00:00",
+      "file": "data/raw/osm_islands/villages.json",
+      "sha256": "7e4ef55793229524647e7368409b486e36b2be36c6d233f83314ffb016cc5edb",
+      "licence": "ODbL (© OpenStreetMap contributors)",
+      "note": "Place nodes inside 105 island outlines: 4682 elements"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.97392&longitude=24.72338&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:05:32+00:00",
+      "file": "data/raw/rain_daily/rain_daily_sifnos.csv",
+      "sha256": "2c709214fa7933ffa310a779b246d38462a22a2ee1f9aa8f5205b787b67853c5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Sifnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.44457&longitude=24.94232&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:49+00:00",
+      "file": "data/raw/rain_daily/rain_daily_syros.csv",
+      "sha256": "d7dd6e2310408a64c100fb4cc17a40389d85b96eef5ef299e57e58e46636b40e",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Syros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.10207&longitude=25.37625&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:50+00:00",
+      "file": "data/raw/rain_daily/rain_daily_naxos.csv",
+      "sha256": "97a6739e60270419fb84542d9d0887ae60f59e9a9695e90b2a4fa704233f1885",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Naxos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.35717&longitude=25.44612&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:52+00:00",
+      "file": "data/raw/rain_daily/rain_daily_santorini-thira.csv",
+      "sha256": "680ec1856088c1819da6191e5ae8052c29f4b37c77b2256bdd25999b4c483586",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Santorini (Thira), 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.08424&longitude=25.1504&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:53+00:00",
+      "file": "data/raw/rain_daily/rain_daily_paros.csv",
+      "sha256": "0398ed127477da57cc0a7172471f9ab601a1cea86e810e2fa4036ebfc76ddcf1",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Paros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.44504&longitude=25.32597&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:55+00:00",
+      "file": "data/raw/rain_daily/rain_daily_mykonos.csv",
+      "sha256": "01e37948de3d4ab7b5a21c1825ed449a00c5e1b9e766773786dd8003f83c6464",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Mykonos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.53783&longitude=25.16125&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:56+00:00",
+      "file": "data/raw/rain_daily/rain_daily_tinos.csv",
+      "sha256": "01e37948de3d4ab7b5a21c1825ed449a00c5e1b9e766773786dd8003f83c6464",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Tinos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.83674&longitude=24.93678&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:08:58+00:00",
+      "file": "data/raw/rain_daily/rain_daily_andros.csv",
+      "sha256": "5cbe2aa6bc4b324af322168ad3bd17bb7db89bcfbcc60809da1826f09694c588",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Andros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.72626&longitude=24.44721&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:30+00:00",
+      "file": "data/raw/rain_daily/rain_daily_milos.csv",
+      "sha256": "8265b668a2e4f563ad5f59e9b1471b852e080ce83be00918afa06bf70f364e44",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Milos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.97392&longitude=24.72338&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:33+00:00",
+      "file": "data/raw/rain_daily/rain_daily_sifnos.csv",
+      "sha256": "2c709214fa7933ffa310a779b246d38462a22a2ee1f9aa8f5205b787b67853c5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Sifnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.65707&longitude=24.31298&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:35+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kea.csv",
+      "sha256": "4ee05fc73ee7b3a53ca839bf20c3fe0d91d810f141a105ea166a4125d44958c2",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kea, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.72212&longitude=25.28131&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:37+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ios.csv",
+      "sha256": "034c95c228273db378a67ebb74fa6f86e05e5379709dd70c5497f5adda7289d2",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ios, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.83172&longitude=25.89816&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:39+00:00",
+      "file": "data/raw/rain_daily/rain_daily_amorgos.csv",
+      "sha256": "b35b7fdc5c3de62069a04f3c6975c05930581c96fd727bbc1fd6584cab7584ee",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Amorgos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.41256&longitude=24.43049&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:42+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kythnos.csv",
+      "sha256": "70e0004bee6c05e51c2cf9e56b9a9ed668e3bc3a56f4b7ca456b3559484d86d8",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kythnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.99442&longitude=25.05284&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:44+00:00",
+      "file": "data/raw/rain_daily/rain_daily_antiparos.csv",
+      "sha256": "7269f762e08b305a45dae0a17d426a3abed52138fd3f9cd3e1eb478eca844955",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Antiparos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.1425&longitude=24.51406&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:10:45+00:00",
+      "file": "data/raw/rain_daily/rain_daily_serifos.csv",
+      "sha256": "129cfc9ec9499448158fc4b2d40df102ac340690e4bf0dcfb065229cdea1fcb9",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Serifos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.79357&longitude=24.57376&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:17+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kimolos.csv",
+      "sha256": "8265b668a2e4f563ad5f59e9b1471b852e080ce83be00918afa06bf70f364e44",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kimolos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.62812&longitude=24.91966&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:19+00:00",
+      "file": "data/raw/rain_daily/rain_daily_folegandros.csv",
+      "sha256": "7d89a56b97825f707a787661c8ca196f03f2af73e46c632c75ca2da2254940ce",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Folegandros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.93277&longitude=25.60094&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:20+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ano-koufonisi.csv",
+      "sha256": "97a6739e60270419fb84542d9d0887ae60f59e9a9695e90b2a4fa704233f1885",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ano Koufonisi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.35094&longitude=25.76737&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:22+00:00",
+      "file": "data/raw/rain_daily/rain_daily_anafi.csv",
+      "sha256": "567749d096e6532d2e35212094b23e6dfa0fac7dcf884579f0c2bc9302a66832",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Anafi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.69518&longitude=25.11848&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:23+00:00",
+      "file": "data/raw/rain_daily/rain_daily_sikinos.csv",
+      "sha256": "7d89a56b97825f707a787661c8ca196f03f2af73e46c632c75ca2da2254940ce",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Sikinos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.43457&longitude=25.34483&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:25+00:00",
+      "file": "data/raw/rain_daily/rain_daily_therasia.csv",
+      "sha256": "85bd288dd5cb9b1aeccef1275ec92ed515441527045bf7699b82b3c17418db33",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Therasia, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.87001&longitude=25.51869&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:27+00:00",
+      "file": "data/raw/rain_daily/rain_daily_schinoussa.csv",
+      "sha256": "c67aefc4231b7d69f743eddbb175cf6adc87d4c81223c2237a7edb406d2a8490",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Schinoussa, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.10067&longitude=25.79599&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:12:59+00:00",
+      "file": "data/raw/rain_daily/rain_daily_donousa.csv",
+      "sha256": "c4c6f2063c0680bbd152cfbc6ef12d8c7ea46e0d909c3a7c88f8c3360095514e",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Donousa, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.86095&longitude=25.46792&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:00+00:00",
+      "file": "data/raw/rain_daily/rain_daily_iraklia.csv",
+      "sha256": "c67aefc4231b7d69f743eddbb175cf6adc87d4c81223c2237a7edb406d2a8490",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Iraklia, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.39081&longitude=25.27058&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:02+00:00",
+      "file": "data/raw/rain_daily/rain_daily_delos.csv",
+      "sha256": "01e37948de3d4ab7b5a21c1825ed449a00c5e1b9e766773786dd8003f83c6464",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Delos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.70122&longitude=24.12763&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:03+00:00",
+      "file": "data/raw/rain_daily/rain_daily_makronisos.csv",
+      "sha256": "4b99ff3c99061e32549b5449e6109be996ad1b8696ac79e4b74936605fc726d1",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Makronisos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.76628&longitude=24.63533&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:05+00:00",
+      "file": "data/raw/rain_daily/rain_daily_polyaigos.csv",
+      "sha256": "4e3ccafa064338b23c829f91f0bf1b06310473e796fced3500e0822ed038f148",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Polyaigos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.8398&longitude=25.66699&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:06+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kato-antikeri.csv",
+      "sha256": "302661ef7a35dd46b52fddbb98ebd3ebf93804907c16d7818aecfeab8714eb79",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kato Antikeri, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.91094&longitude=25.57528&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:08+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kato-koufonisi.csv",
+      "sha256": "97a6739e60270419fb84542d9d0887ae60f59e9a9695e90b2a4fa704233f1885",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kato Koufonisi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.44372&longitude=28.22737&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:40+00:00",
+      "file": "data/raw/rain_daily/rain_daily_rhodes.csv",
+      "sha256": "198d4489411abea9d410104509a6581d1ec427cc81569c7dc57115a216f9d059",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Rhodes, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.89403&longitude=27.28666&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:41+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kos.csv",
+      "sha256": "f869f11e89e4de19e61cb03754dd878cea96288fac3789cc2bc481654e87652d",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.95158&longitude=26.98207&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:43+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kalymnos.csv",
+      "sha256": "e027b96bb645fb0918a07c08c0acbac60ac71f47db2972a0d715a3761b999182",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kalymnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.15658&longitude=26.85175&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:44+00:00",
+      "file": "data/raw/rain_daily/rain_daily_leros.csv",
+      "sha256": "c0c5ce8d22f7032ccdd8d0ad6ea064a7b25658e0ee023ec6b11e51ad083dcb8c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Leros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.50658&longitude=27.21271&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:46+00:00",
+      "file": "data/raw/rain_daily/rain_daily_karpathos.csv",
+      "sha256": "28f69894a03a9cb4ffb225181d5c427ab9c4e2299259c8280c5b5a5fd70dcb43",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Karpathos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.32297&longitude=26.54316&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:47+00:00",
+      "file": "data/raw/rain_daily/rain_daily_patmos.csv",
+      "sha256": "50928eb1be096c610dd6fe71d66d6224228ecf7696ffb786f09fcc795774d098",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Patmos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.61329&longitude=27.83803&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:13:49+00:00",
+      "file": "data/raw/rain_daily/rain_daily_symi.csv",
+      "sha256": "56a821a92fcea79d58f094af0166dd0897ceb91062f7fcf8ee1338c29931fdde",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Symi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.54787&longitude=26.35194&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:21+00:00",
+      "file": "data/raw/rain_daily/rain_daily_astypalaia.csv",
+      "sha256": "347686f423a748b81c043d6b4e795b74c7d60f7f1bec071166ad61bc1eb9cbbc",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Astypalaia, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.41195&longitude=26.91166&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:23+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kasos.csv",
+      "sha256": "f604dd2d4f96e611753cf2bc096ad32797f36874c29af4d0c7f39099f52559ca",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kasos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.61093&longitude=27.13193&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:24+00:00",
+      "file": "data/raw/rain_daily/rain_daily_nisyros.csv",
+      "sha256": "2ccc361f31959ef6011338f743144f41b9c7efb5773ee1e206aff09c739fe724",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Nisyros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.29555&longitude=26.76873&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:26+00:00",
+      "file": "data/raw/rain_daily/rain_daily_lipsi.csv",
+      "sha256": "c0c5ce8d22f7032ccdd8d0ad6ea064a7b25658e0ee023ec6b11e51ad083dcb8c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Lipsi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.41585&longitude=27.38474&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:27+00:00",
+      "file": "data/raw/rain_daily/rain_daily_tilos.csv",
+      "sha256": "7d3953dd5269431007a42e8594e2cb35c938b4c58190563dab690d83c5d809c5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Tilos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.14856&longitude=29.58971&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:29+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kastellorizo-megisti.csv",
+      "sha256": "993f08218d5e53fd46b05d23ba09b9c09ebada8b871f7cc3841f1df5792d3a07",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kastellorizo (Megisti), 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.22279&longitude=27.61147&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:30+00:00",
+      "file": "data/raw/rain_daily/rain_daily_chalki.csv",
+      "sha256": "ef7e96ed3efb438964d690ecd2a4b5390339412d3fcdd7c27c33c97cf92c5b45",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Chalki, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.45808&longitude=26.97233&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:32+00:00",
+      "file": "data/raw/rain_daily/rain_daily_agathonisi.csv",
+      "sha256": "5ec39c6f17a2e3d6ea69207f6765f182baa679d365ea5f5b603b311a83889183",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Agathonisi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.93233&longitude=27.13453&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:34+00:00",
+      "file": "data/raw/rain_daily/rain_daily_pserimos.csv",
+      "sha256": "f869f11e89e4de19e61cb03754dd878cea96288fac3789cc2bc481654e87652d",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Pserimos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.99808&longitude=26.92115&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:35+00:00",
+      "file": "data/raw/rain_daily/rain_daily_telendos.csv",
+      "sha256": "e027b96bb645fb0918a07c08c0acbac60ac71f47db2972a0d715a3761b999182",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Telendos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.86759&longitude=27.21357&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:37+00:00",
+      "file": "data/raw/rain_daily/rain_daily_saria.csv",
+      "sha256": "b547a2e972eb8ebafb9e6f64d9e50bdf0e9738a650d11d61e1fceac8f9788c66",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Saria, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.38271&longitude=26.73592&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:38+00:00",
+      "file": "data/raw/rain_daily/rain_daily_arkoi.csv",
+      "sha256": "b0a2acc1f5983f05389cb6573220b0f6b8bd3a58334c881af0a6e31d79cfa06e",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Arkoi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.29111&longitude=27.09105&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:40+00:00",
+      "file": "data/raw/rain_daily/rain_daily_farmakonisi.csv",
+      "sha256": "5ec39c6f17a2e3d6ea69207f6765f182baa679d365ea5f5b603b311a83889183",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Farmakonisi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.06123&longitude=27.08908&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:15:42+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kalolimnos.csv",
+      "sha256": "e027b96bb645fb0918a07c08c0acbac60ac71f47db2972a0d715a3761b999182",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kalolimnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.36859&longitude=26.72435&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:17:14+00:00",
+      "file": "data/raw/rain_daily/rain_daily_marathos.csv",
+      "sha256": "c0c5ce8d22f7032ccdd8d0ad6ea064a7b25658e0ee023ec6b11e51ad083dcb8c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Marathos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.66081&longitude=27.1241&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:17:15+00:00",
+      "file": "data/raw/rain_daily/rain_daily_gyali.csv",
+      "sha256": "6f839a54d530fcbacbb51135d9c9f5171570e6d7819ba0537e7d32da4df52f79",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Gyali, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.00574&longitude=26.46454&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T06:17:17+00:00",
+      "file": "data/raw/rain_daily/rain_daily_levitha.csv",
+      "sha256": "f6cf6926e664311790271da27dc338338c374fac33eda936b9080da523df32f7",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Levitha, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet:desalination&outputFormat=application/json&count=10&cql_filter=country=%27Greece%27",
+      "retrieved": "2026-11-23T06:23:12+00:00",
+      "file": "data/raw/emodnet_desal/sample_greece_10.json",
+      "sha256": "4f37b115fdd1c7b0b0cd4fa6a260a23b2140f539a109a1271a0c596f2b1a65a8",
+      "licence": "CC BY 4.0 (EMODnet Human Activities; originator Cogea Srl, from GWI DesalData)",
+      "note": "Sample: 10 of 415 Greek plants; key fields only"
+    },
+    {
+      "url": "https://ows.emodnet-humanactivities.eu/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=emodnet%3Adesalination&outputFormat=application%2Fjson&cql_filter=country%3D%27Greece%27&propertyName=id%2Ccountry%2Cpositionsrc%2Ccomm_name%2Cnuts3id%2Clat%2Clon%2Clocationname%2Cstateregion%2Cregion%2Csubregion%2Cproject%2Ccapacity_m3d%2Csize%2Cunits%2Cunit_size_m3d%2Ctechnology%2Cfeedwater%2Cplant_type%2Cplant_status%2Caward_date%2Conline_date%2Clocation_type%2Ccustomer_type%2Cindustry_type%2Ccustomer%2Cholding_company%2Cplant_owner%2Caccuracy%2Clast_update%2Ctechnical_notes",
+      "retrieved": "2026-11-23T06:30:11+00:00",
+      "file": "data/raw/emodnet_desal/desal_greece.json",
+      "sha256": "441ed4e280078638a96c11dac2442c2fedd5812e1b8dd962bfcb2e067b8ef711",
+      "licence": "CC BY 4.0 (EMODnet Human Activities; originator Cogea Srl, from GWI DesalData)",
+      "note": "Desalination plants, Greece: 415 records"
+    },
+    {
+      "url": "https://ows.emodnet-humanactivities.eu/wfs (GetCapabilities, DescribeFeatureType, resultType=hits counts)",
+      "retrieved": "2026-11-23T06:34:52+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "",
+      "note": "EMODnet probes: layer list, schema, Greek counts (no data saved)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search?q=αφαλάτωση (2021-01-01..2026-11-23, size=3)",
+      "retrieved": "2026-11-23T06:34:52+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "",
+      "note": "Diavgeia probe: q parameter ignored; API returns max 6-month windows (no data saved)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search/advanced?q=subject:\"αφαλάτωσης\" (2021 H1, size=5)",
+      "retrieved": "2026-11-23T06:34:52+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "",
+      "note": "Diavgeia probe: 1,094 decisions with desalination in subject, 2021 H1 (no data saved)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search/advanced?q=subject:\"αφαλάτωσης\" [AND subject:\"άδεια\"] (2026 H1, size=8)",
+      "retrieved": "2026-11-23T06:34:52+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "",
+      "note": "Diavgeia probe: 991 decisions 2026 H1; 9 with 'άδεια' incl. fast-track temporary permits with capacity in subject (no data saved)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search/advanced?q=subject:\"αφαλάτωσης\" AND (subject:\"άδεια\" OR subject:\"αδειοδότηση\" OR subject:\"περιβαλλοντικών όρων\" OR subject:\"ΑΕΠΟ\" OR subject:\"περιβαλλοντικές δεσμεύσεις\" OR subject:\"χρήσης νερού\") AND issueDate per half-year 2010-10-01..2026-11-23",
+      "retrieved": "2026-11-23T06:39:44+00:00",
+      "file": "data/raw/diavgeia/permits.json",
+      "sha256": "865df812586da3244c0f604d2e15b999979a52b014cac278a36cb12e178adcdd",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Metadata only: 468 permit-type decisions; 66 API requests"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/organizations/{id} (61 ids)",
+      "retrieved": "2026-11-23T06:46:14+00:00",
+      "file": "data/raw/diavgeia/orgs.json",
+      "sha256": "427b7b5ebe012293e9b61ca8b430e11088081ac076cc823b07337873e2d8e33a",
+      "licence": "Diavgeia open data",
+      "note": "Issuing body names for permit decisions"
+    },
+    {
+      "url": "https://llid.aegean.gr/wp-content/uploads/2025/10/Στηριξη-ΠΑΝΑΙ-στα-νησιά-ΕΔΜΝ-270925.pdf",
+      "retrieved": "2026-11-23T06:46:14+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "not stated",
+      "note": "University of the Aegean slide deck (I. Spilanis, 2025-09-30), read to check for the desal cost study: GReco Islands overview, no desal data; not stored in the repo"
+    },
+    {
+      "url": "https://hellanicus.lib.aegean.gr/server/oai/request?verb=Identify; robots.txt of hellanicus and didaktorika",
+      "retrieved": "2026-11-23T06:46:14+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "",
+      "note": "Probe: Hellanicus behind a bot check; both repositories disallow scripted search; not pursued"
+    },
+    {
+      "url": "https://api.semanticscholar.org/graph/v1/paper/DOI:10.3390/w14050716?fields=title,abstract,openAccessPdf,externalIds,year",
+      "retrieved": "2026-11-23T07:03:01+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "Semantic Scholar API (metadata); paper CC BY",
+      "note": "Abstract only (KAKOULAS22). MDPI full text refused automated fetch (HTTP 403); not retried"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.37224&longitude=26.13298&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:07:11+00:00",
+      "file": "data/raw/rain_daily/rain_daily_chios.csv",
+      "sha256": "043bef001cb34846280e58328228a64293d58552e00800cdfdebfe3e3087eccf",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Chios, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.34291&longitude=26.67588&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:06+00:00",
+      "file": "data/raw/rain_daily/rain_daily_syrna.csv",
+      "sha256": "ebfefe79e2d3d6e9e43c103a6cc5812f9220456588fe0e19644e1052743e00e7",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Syrna, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.20327&longitude=26.7768&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:11+00:00",
+      "file": "data/raw/rain_daily/rain_daily_archangelos.csv",
+      "sha256": "c0c5ce8d22f7032ccdd8d0ad6ea064a7b25658e0ee023ec6b11e51ad083dcb8c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Archangelos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.98045&longitude=26.28974&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:17+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kinaros.csv",
+      "sha256": "96053d6ef88aa83bf483e10676aac16359c89e1a93e81b48c691a5d6ce167c75",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kinaros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.87548&longitude=26.82501&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:22+00:00",
+      "file": "data/raw/rain_daily/rain_daily_astakidopoulo.csv",
+      "sha256": "e7ca8dc92ca52992e23bc8ae69dc3d1fc3c9053ecd6317fb8c2284f16abadb0f",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Astakidopoulo, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.52376&longitude=27.86394&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:28+00:00",
+      "file": "data/raw/rain_daily/rain_daily_seskli.csv",
+      "sha256": "56a821a92fcea79d58f094af0166dd0897ceb91062f7fcf8ee1338c29931fdde",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Seskli, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.91436&longitude=26.93866&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:34+00:00",
+      "file": "data/raw/rain_daily/rain_daily_nera.csv",
+      "sha256": "e027b96bb645fb0918a07c08c0acbac60ac71f47db2972a0d715a3761b999182",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Nera, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.0738&longitude=26.39942&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:39+00:00",
+      "file": "data/raw/rain_daily/rain_daily_zafora.csv",
+      "sha256": "f0ce12649388761713b5fdea8a6b20a4a99206bad10205ec4d932f9b496f3dfd",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Zafora, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.5351&longitude=26.46877&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:45+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kounoupoi.csv",
+      "sha256": "ec709c3ffcc7b3698770fb10b5e95b685cc8325963b3a57d37b27306bad81685",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kounoupoi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.54473&longitude=26.1396&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:51+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ofidousa.csv",
+      "sha256": "347686f423a748b81c043d6b4e795b74c7d60f7f1bec071166ad61bc1eb9cbbc",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ofidousa, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.88683&longitude=26.81978&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:12:56+00:00",
+      "file": "data/raw/rain_daily/rain_daily_astakida.csv",
+      "sha256": "e7ca8dc92ca52992e23bc8ae69dc3d1fc3c9053ecd6317fb8c2284f16abadb0f",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Astakida, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.15504&longitude=29.50037&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:13:02+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ro.csv",
+      "sha256": "993f08218d5e53fd46b05d23ba09b9c09ebada8b871f7cc3841f1df5792d3a07",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ro, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.11386&longitude=29.6369&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:13:07+00:00",
+      "file": "data/raw/rain_daily/rain_daily_strongyli.csv",
+      "sha256": "68381c70804ca257abfb9b8f460fa489d282d11407ae8e79700f2e9beecede34",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Strongyli, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.22533&longitude=24.10316&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:13:43+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kavalliani.csv",
+      "sha256": "1c1a01089c915706b00ad736b8e090c719bec8c6dc44fc9972dee6386c4864b8",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kavalliani, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.10374&longitude=26.55479&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:13:49+00:00",
+      "file": "data/raw/rain_daily/rain_daily_lesvos.csv",
+      "sha256": "8aa055af8e548f7d09eb10d0692f6f2e79b637bae4edbff9cae44523eae68d80",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Lesvos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.79034&longitude=26.7055&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:13:54+00:00",
+      "file": "data/raw/rain_daily/rain_daily_samos.csv",
+      "sha256": "9f9b45d6d68e5cb1fd6ab0f48dfbf7fb36e31de75450a40baf55bf529d238b22",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Samos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.87542&longitude=25.06345&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:00+00:00",
+      "file": "data/raw/rain_daily/rain_daily_lemnos.csv",
+      "sha256": "13f530eb3bf2b8ca5aa0f0aee7939f4941822007b8f82ab804f1cbd32255615d",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Lemnos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.7782&longitude=24.70588&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:05+00:00",
+      "file": "data/raw/rain_daily/rain_daily_thasos.csv",
+      "sha256": "863a1eb8342afb54968b9f7d6f7200c05e1b206284d8a9989236401b9cd028d4",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Thasos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.61236&longitude=26.29417&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:11+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ikaria.csv",
+      "sha256": "8d39187a3e86afc7463b5460370984dcd55dcc74758d5b7cec9406a57f6e24c8",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ikaria, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.47529&longitude=25.47355&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:16+00:00",
+      "file": "data/raw/rain_daily/rain_daily_samothraki.csv",
+      "sha256": "fa1d9eb66481498abd7b4ce7781071f5b59d1dbe6413e21c15bc69d35fb7838a",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Samothraki, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.57675&longitude=26.48005&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:52+00:00",
+      "file": "data/raw/rain_daily/rain_daily_fournoi.csv",
+      "sha256": "df011e59ed6624691db84e71a6d40e5057dc47e25139908be3347a6e3eeb3bd5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Fournoi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.51483&longitude=26.22155&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:14:58+00:00",
+      "file": "data/raw/rain_daily/rain_daily_oinousses.csv",
+      "sha256": "bec19ba86fc95fe8152b104db4957e72f1f7e1a984cd6f6f393bee0aaca6bae5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Oinousses, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=40.33248&longitude=23.92126&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:15:03+00:00",
+      "file": "data/raw/rain_daily/rain_daily_ammouliani.csv",
+      "sha256": "a194ee5bb7dbede5035756e6192e96d272f5dd92f086aacbdbeb9b96c5f5512c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Ammouliani, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.53991&longitude=25.56345&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:15:09+00:00",
+      "file": "data/raw/rain_daily/rain_daily_psara.csv",
+      "sha256": "5006a0c0ccaae9627eb5c337f57382a26d67aaf2a50fe941c6f2824345283948",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Psara, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.53908&longitude=24.9904&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:15:15+00:00",
+      "file": "data/raw/rain_daily/rain_daily_agios-efstratios.csv",
+      "sha256": "954641ee36f5c71abe6b4f2b19f0d1fe7f02637c921996adc51401af4f7cae03",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Agios Efstratios, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.58192&longitude=26.45242&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:15:20+00:00",
+      "file": "data/raw/rain_daily/rain_daily_thymaina.csv",
+      "sha256": "df011e59ed6624691db84e71a6d40e5057dc47e25139908be3347a6e3eeb3bd5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Thymaina, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.5957&longitude=26.54532&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:15:26+00:00",
+      "file": "data/raw/rain_daily/rain_daily_agios-minas.csv",
+      "sha256": "df011e59ed6624691db84e71a6d40e5057dc47e25139908be3347a6e3eeb3bd5",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Agios Minas, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.1662&longitude=23.48889&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:02+00:00",
+      "file": "data/raw/rain_daily/rain_daily_skiathos.csv",
+      "sha256": "26a24e389d37c94b1567c786f940c47937ba8067ac4745143b5d82608fecb6a7",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Skiathos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.12217&longitude=23.72725&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:07+00:00",
+      "file": "data/raw/rain_daily/rain_daily_skopelos.csv",
+      "sha256": "145b59084b73b43c0f2afaab85f360f822e4cc4e5c5577232242f5b6eabf4e6e",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Skopelos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.14602&longitude=23.86435&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:13+00:00",
+      "file": "data/raw/rain_daily/rain_daily_alonnisos.csv",
+      "sha256": "a987e8f114ef576710f6f44fd9a77c5ef2f7eb4521aa7c2a6ddfc9391fc30b48",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Alonnisos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.90635&longitude=24.56604&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:19+00:00",
+      "file": "data/raw/rain_daily/rain_daily_skyros.csv",
+      "sha256": "e231c5d380a43eec1cfb1b2fedea7f1a02c6d3a4510b814467e248f736ee8ba1",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Skyros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.15486&longitude=23.07645&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:24+00:00",
+      "file": "data/raw/rain_daily/rain_daily_palaio-trikeri.csv",
+      "sha256": "c032746dd78e5803e1b208697ad53e84e7fd4c4cb9ee7ba4f3b3582dba8d3174",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Palaio Trikeri, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.20208&longitude=23.96532&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:30+00:00",
+      "file": "data/raw/rain_daily/rain_daily_peristera.csv",
+      "sha256": "4d53ad58470ccabd45b2fa222938b7b4d576e21263c941ec2b5164b951a6f854",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Peristera, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.33123&longitude=24.06949&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:36+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kyra-panagia.csv",
+      "sha256": "4d53ad58470ccabd45b2fa222938b7b4d576e21263c941ec2b5164b951a6f854",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kyra Panagia, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=39.3506&longitude=24.32254&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:41+00:00",
+      "file": "data/raw/rain_daily/rain_daily_piperi.csv",
+      "sha256": "64d281b418024434f3aa6b75376b1424444e74c74fbdf32cef63ffd1d28cf305",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Piperi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.33908&longitude=25.13328&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:47+00:00",
+      "file": "data/raw/rain_daily/rain_daily_crete.csv",
+      "sha256": "67f60925b04fcfc4cdfbec24e054da6f80a1bab082efd5adfea4b912ad2a5e43",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Crete, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.84868&longitude=24.11829&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:53+00:00",
+      "file": "data/raw/rain_daily/rain_daily_gavdos.csv",
+      "sha256": "c555efe4f6f52e86e8d7f8538ef1a435fc8c19d6abbde0f4214b66fbe99f145f",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Gavdos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.87351&longitude=25.70625&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:16:58+00:00",
+      "file": "data/raw/rain_daily/rain_daily_chrysi.csv",
+      "sha256": "acefe50746d568625a5c0d5ef6a9f023d932cde9e336aa06bb399372a0b6341b",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Chrysi, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=34.93727&longitude=26.14055&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:17:04+00:00",
+      "file": "data/raw/rain_daily/rain_daily_koufonisi-crete.csv",
+      "sha256": "2bd62cc4f5e661313ffd93b4b812ddabd4551fac791586131f438b84764a98e0",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Koufonisi (Crete), 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.34464&longitude=26.17532&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:17:10+00:00",
+      "file": "data/raw/rain_daily/rain_daily_dragonada.csv",
+      "sha256": "cf5b94ba0f2f8f7612e8fc35f61f9a80daef431806f379022f27939e7f22aaed",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Dragonada, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=38.46227&longitude=23.59461&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:17:46+00:00",
+      "file": "data/raw/rain_daily/rain_daily_evia.csv",
+      "sha256": "8a449a777feef15d283ade550630742dd4d2416027987a982201a1603a90d517",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Evia, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.29954&longitude=22.96202&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:17:51+00:00",
+      "file": "data/raw/rain_daily/rain_daily_kythera.csv",
+      "sha256": "78cc0275893d9042e252b46d8f6f429b706198c563d33571835d320475d39ec9",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Kythera, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=36.50903&longitude=22.97833&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:17:57+00:00",
+      "file": "data/raw/rain_daily/rain_daily_elafonisos.csv",
+      "sha256": "94d3c1bdc9b530d049a6b559fdc23b86cad838a215f846d283c9bbafb050f05f",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Elafonisos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=35.88163&longitude=23.28927&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:18:03+00:00",
+      "file": "data/raw/rain_daily/rain_daily_antikythera.csv",
+      "sha256": "95821b6018679a768714e3d0c632cd12628285a4765b215bafb119b5f4add78c",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Antikythera, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.96544&longitude=23.49302&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:18:09+00:00",
+      "file": "data/raw/rain_daily/rain_daily_salamina.csv",
+      "sha256": "e15126e4c0383320a792ebde8a22fade4852e04721b5a86798034ba41b731aca",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Salamina, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.7467&longitude=23.43063&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:18:14+00:00",
+      "file": "data/raw/rain_daily/rain_daily_aegina.csv",
+      "sha256": "53217cf60efabed77047a15d9e0aac6fce895581dcf48ef5a82d963e0d825884",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Aegina, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.26443&longitude=23.15771&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:18:20+00:00",
+      "file": "data/raw/rain_daily/rain_daily_spetses.csv",
+      "sha256": "04093d3bbe825e0df82de2cbb149f5d18faf4b2cccb99d888bf3d6b54cb6c9ac",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Spetses, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.49954&longitude=23.45296&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:18:56+00:00",
+      "file": "data/raw/rain_daily/rain_daily_poros.csv",
+      "sha256": "04093d3bbe825e0df82de2cbb149f5d18faf4b2cccb99d888bf3d6b54cb6c9ac",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Poros, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.34962&longitude=23.46612&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:19:01+00:00",
+      "file": "data/raw/rain_daily/rain_daily_hydra.csv",
+      "sha256": "1377f923626ca7aba62a2cac0340b98ce6a56cd44b0615092d0ec5ac7f3d1f07",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Hydra, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.71102&longitude=23.34658&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:19:07+00:00",
+      "file": "data/raw/rain_daily/rain_daily_agistri.csv",
+      "sha256": "04093d3bbe825e0df82de2cbb149f5d18faf4b2cccb99d888bf3d6b54cb6c9ac",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Agistri, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.68474&longitude=23.32196&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:19:13+00:00",
+      "file": "data/raw/rain_daily/rain_daily_aponisos.csv",
+      "sha256": "04093d3bbe825e0df82de2cbb149f5d18faf4b2cccb99d888bf3d6b54cb6c9ac",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Aponisos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://archive-api.open-meteo.com/v1/archive?latitude=37.33546&longitude=23.3225&start_date=1991-01-01&end_date=2026-10-31&models=era5&daily=precipitation_sum&timezone=Europe%2FAthens",
+      "retrieved": "2026-11-23T07:19:18+00:00",
+      "file": "data/raw/rain_daily/rain_daily_dokos.csv",
+      "sha256": "04093d3bbe825e0df82de2cbb149f5d18faf4b2cccb99d888bf3d6b54cb6c9ac",
+      "licence": "ERA5 (Copernicus C3S) via Open-Meteo, CC BY 4.0",
+      "note": "rain Dokos, 1991-01-01 to 2026-10-31, model era5"
+    },
+    {
+      "url": "https://meteosearch.meteo.gr/Raw%20Materials/RECORDS_STATIONS_METEO_2006-2025.xlsx",
+      "retrieved": "2026-11-23T07:22:54+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "NOA meteo.gr (terms not stated)",
+      "note": "HTTP 522 (server timeout); no file. Not retried"
+    }
+  ]
+}
