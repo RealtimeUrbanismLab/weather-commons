@@ -45,6 +45,8 @@
   ol.timeline time { font-weight: 600; font-size: 15px; }
   @media (max-width: 480px) { ol.timeline li { grid-template-columns: 1fr; } }
   /* Situate: islands as cisterns */
+  .chart .keybg { fill: var(--bg); fill-opacity: .85; }
+  .chart .land { fill: var(--soft); stroke: var(--muted); stroke-width: .5; stroke-opacity: .6; }
   .chart .glyph { fill: var(--bg); stroke: var(--fg); stroke-width: 1; }
   .chart .glyph.none { stroke-dasharray: 2 2; stroke-opacity: .6; }
   .chart .glyph-fill { fill: var(--fg); }
@@ -232,7 +234,8 @@ Patmos in November 2025; Astypalaia in May 2026 <span class="kind">documented</s
 municipalities in a water emergency.</p>
 
 <h3>Every island as a cistern</h3>
-<p class="small">Each island is drawn as a small tank at the position of its main village.
+<p class="small">Each island is drawn as a small tank at the position of its main village,
+on the island's outline.
 The tank is filled either with one winter's October–March rain, as a share of that island's
 1991–2020 average (full at 150%), or with its desalination capacity in litres per resident a
 day (full at 1,000). Hover over or tab to an island for its numbers.</p>
@@ -242,8 +245,8 @@ day (full at 1,000). Hover over or tab to an island for its numbers.</p>
   <label><input type="radio" name="fill" value="desal"> desalination capacity per resident</label>
 </fieldset>
 <div class="chart"><svg id="islands-map" role="img" aria-label="Map of the Aegean islands"></svg></div>
-<p class="label">Positions: each island's main village (cartographic, OpenStreetMap); no coastlines
-yet. Rain: reanalysed (ERA5). Desalination: documented capacity, the most the plants can make,
+<p class="label">Positions: each island's main village (cartographic, OpenStreetMap). Land: Natural
+Earth 1:10m, with OpenStreetMap outlines for 30 small islands it leaves out (cartographic). Rain: reanalysed (ERA5). Desalination: documented capacity, the most the plants can make,
 divided by 2021 residents; summer visitors are not counted, so it overstates what each person
 has in August. "No plant listed" means none in the sources used, not that there is none.</p>
 <details><summary>Numbers</summary>
@@ -358,7 +361,10 @@ in the 1980s; six did in 2022, four of them over 75 <span class="kind">reported<
   <li>Residents: observed, ELSTAT 2021 census.</li>
   <li>Situate, island positions: cartographic. The OpenStreetMap place node of each island's
     main village (© OpenStreetMap contributors, ODbL), matched to the 2021 census; retrieved
-    2026-11-23. No coastlines are drawn yet.</li>
+    2026-11-23. Land: Natural Earth 1:10m land and minor islands, version 5.1.1 (public
+    domain), with OpenStreetMap outlines (ODbL) for the 30 small islands it leaves out, such
+    as Agistri, Therasia and the Koufonisia; clipped to the Aegean and simplified to about
+    600 m (<code>tools/build_coastline.py</code>), downloaded 2026-11-23.</li>
   <li>Situate, winter rain on 105 islands: reanalysed. ERA5 October–March totals, one grid cell
     per island, against each island's average for winters 1991–92 to 2019–20.</li>
   <li>Situate, desalination: documented. Capacity reconciled plant by plant for 13 islands
@@ -378,8 +384,8 @@ in the 1980s; six did in 2022, four of them over 75 <span class="kind">reported<
 </ul>
 <p>What this sketch cannot show: water quality, leaks, evaporation from open cisterns, or
 how people change their use in a dry year. The model has no first-flush diverter and treats
-every roof as the same. One ERA5 cell stands for all of Sifnos. The map shows where islands
-are, not their shape or size, and an island with no plant listed may still have one.</p>
+every roof as the same. One ERA5 cell stands for all of Sifnos. The coastlines are simplified
+to about 600 m (150 m for small islands), and an island with no plant listed may still have one.</p>
 
 <footer class="site-footer">
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>

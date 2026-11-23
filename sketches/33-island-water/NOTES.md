@@ -63,8 +63,7 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   edit the copy. Copy rule (author, 2026-11-23): precise, concrete language modelled on
   Zepou & Matsaganis 2024 (counts, places, dates, named practices), no sweeping phrases.
   The README's first sentence (shown on the shared site) is long; shorten when editing.
-- Situate, next: coastlines (Natural Earth or OSM land polygons, clipped to the Aegean;
-  ask before downloading); dates for the Serifos, Poros, Spetses and Leros 2024
+- Situate, next: dates for the Serifos, Poros, Spetses and Leros 2024
   emergencies; the other 2026 emergency islands (Reuters names seven); the "storage
   already in place" layer from `docs/design.md`; the island glyph's supply-mix bands
   (needs per-island source shares, not yet collected).
@@ -131,6 +130,15 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: coastlines on the Situate map. Natural Earth 1:10m land and minor islands
+  v5.1.1 (public domain, 3.6 MB zipped, `tools/fetch_coastlines.py`) leaves out 30 of the
+  sketch's islands (Agistri, Therasia, Schinoussa, the Koufonisia, Delos, Telendos and
+  small islets), found by testing each island's OSM bounding box against the Natural Earth
+  rings. Their outlines came from one Overpass request (`tools/fetch_osm_outlines.py`,
+  1.1 MB, ODbL). `tools/build_coastline.py` clips both to the Aegean, drops holes and
+  simplifies (0.006°, 0.0015° for small islands) → `data/page/aegean_land.json`, 202
+  rings, 50 KB. Raw files git-ignored and logged in the manifest.
 
 - 2026-11-23: Situate and Narrate drafted; the page now works end to end.
   - Situate map (`situate.js`): 105 islands as small tanks at their main village, filled

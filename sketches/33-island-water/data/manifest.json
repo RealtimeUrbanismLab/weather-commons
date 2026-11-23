@@ -1032,6 +1032,30 @@
       "sha256": "",
       "licence": "Diavgeia open data",
       "note": "HTTP 302, no document (probably revoked or replaced); same-day decision ΨΘΙΟ46ΝΠΙΘ-91Μ used"
+    },
+    {
+      "url": "https://naciscdn.org/naturalearth/10m/physical/ne_10m_land.zip",
+      "retrieved": "2026-11-23T08:06:20+00:00",
+      "file": "data/raw/natural_earth/ne_10m_land.zip",
+      "sha256": "e547d749445eaa0964aba76738090ec88f5e63c4585122170f98c67a7ea922dc",
+      "licence": "Public domain (Natural Earth)",
+      "note": "1:10m physical, version as served"
+    },
+    {
+      "url": "https://naciscdn.org/naturalearth/10m/physical/ne_10m_minor_islands.zip",
+      "retrieved": "2026-11-23T08:06:20+00:00",
+      "file": "data/raw/natural_earth/ne_10m_minor_islands.zip",
+      "sha256": "47c0b3ce26df7b4dbabdbb251023918cb2f5c83462a426288f1f253da7284db2",
+      "licence": "Public domain (Natural Earth)",
+      "note": "1:10m physical, version as served"
+    },
+    {
+      "url": "https://overpass-api.de/api/interpreter?data=%5Bout%3Ajson%5D%5Btimeout%3A180%5D%3B%28relation%28530749%29%3Brelation%28533902%29%3Brelation%28530783%29%3Brelation%28531131%29%3Brelation%28530781%29%3Brelation%28530750%29%3Brelation%28541084%29%3Brelation%28452622%29%3Brelation%28531651%29%3Brelation%28530706%29%3Brelation%28531437%29%3Brelation%28531351%29%3Brelation%2817900993%29%3Brelation%28531430%29%3Brelation%28541476%29%3Brelation%2817823058%29%3Brelation%28541109%29%3Brelation%28531352%29%3Brelation%28531316%29%3Brelation%28531347%29%3Brelation%28541475%29%3Brelation%281462719%29%3Brelation%281726376%29%3Brelation%28532274%29%3Brelation%28568988%29%3Brelation%28548233%29%3Brelation%28855921%29%3Brelation%28543488%29%3Brelation%2817897768%29%3Brelation%28543213%29%3B%29%3Bout%20geom%3B",
+      "retrieved": "2026-11-23T08:08:17+00:00",
+      "file": "data/raw/osm_islands/outlines.json",
+      "sha256": "28792156a870eee2fbeb6a73aef09e5c7eb73a542ac62e031fa4df6a490be6d4",
+      "licence": "ODbL (© OpenStreetMap contributors)",
+      "note": "Outlines (out geom) of 30 islands missing from Natural Earth 1:10m"
     }
   ]
 }

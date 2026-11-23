@@ -1,5 +1,6 @@
 // Situate: Sifnos among the Aegean islands.
-// 1. A map: each island drawn as a small cistern, filled with either a winter's rain
+// 1. A map (land: Natural Earth, public domain, and OSM outlines for 30 small islands, ODbL;
+//    cartographic): each island drawn as a small cistern, filled with either a winter's rain
 //    (reanalysed, ERA5) or desalination capacity per resident (documented capacity /
 //    observed residents = calculated). Positions: the main village (cartographic, OSM).
 // 2. Desalination over time: every record per island, 1970-2026 (documented).
@@ -61,6 +62,7 @@
     return rows;
   }
 
+  let LAND = null;
   function drawMap(d) {
     const svg = $("islands-map"), wrap = svg.parentElement;
     clear(svg);
@@ -73,12 +75,23 @@
     svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
     const X = (lon) => pad + (lon - lon0) * k * sx, Y = (lat) => pad + (lat1 - lat) * sx;
     const gw = W < 520 ? 6 : 9, gh = W < 520 ? 10 : 15;
+    if (LAND) {
+      const cp = el("clipPath", { id: "map-frame" }, el("defs", {}, svg));
+      el("rect", { x: 0, y: 0, width: W, height: H }, cp);
+      let path = "";
+      for (const r of LAND.rings) {
+        for (let j = 0; j < r.length; j += 2) path += (j ? "L" : "M") + X(r[j]).toFixed(1) + "," + Y(r[j + 1]).toFixed(1);
+        path += "Z";
+      }
+      el("path", { d: path, class: "land", "clip-path": "url(#map-frame)" }, svg);
+    }
 
     // key, top right (open sea and the Anatolian coast: no islands in the list there)
     const narrow = W < 520;
     const kx = W - pad - (narrow ? 104 : 170), ky = pad + 4, key = el("g", {}, svg);
     const top = mode === "rain" ? RAIN_TOP : DESAL_TOP;
     const KH = 48;
+    el("rect", { x: kx - 6, y: ky - 8, width: W - kx + 6 - 2, height: KH + (mode === "desal" ? 64 : 40), class: "keybg" }, key);
     glyph(key, kx, ky + KH, 12, KH, mode === "rain" ? 100 / RAIN_TOP : 0.5, mode === "rain" ? 100 / RAIN_TOP : null, false, false);
     text(key, kx + 20, ky + 4, mode === "rain" ? (narrow ? `${RAIN_TOP}%+` : `${RAIN_TOP}% of normal or more`) : `${fmt(DESAL_TOP)} L or more`, { class: "tick" });
     text(key, kx + 20, ky + KH + 4, "0", { class: "tick" });
@@ -280,8 +293,9 @@
   }
 
   // ------------------------------------------------------------------ wiring
-  Promise.all(["situate_islands", "situate_desal", "situate_costs"].map((f) =>
-    fetch(`data/page/${f}.json`).then((r) => r.json()))).then(([isl, desal, costs]) => {
+  Promise.all(["situate_islands", "situate_desal", "situate_costs", "aegean_land"].map((f) =>
+    fetch(`data/page/${f}.json`).then((r) => r.json()))).then(([isl, desal, costs, land]) => {
+    LAND = land;
     const sel = $("map-winter");
     isl.winters.forEach((w, j) => { const o = new Option(dash(w), j); sel.add(o); });
     sel.value = isl.winters.indexOf("2023-24");

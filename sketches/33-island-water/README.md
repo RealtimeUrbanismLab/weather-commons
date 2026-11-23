@@ -64,6 +64,7 @@ ERA5). Water emergencies found so far: seven islands, 2024–26 (documented for 
 reported for the others). Three views:
 
 - a map with each island drawn as a small tank at its main village (cartographic, OSM),
+  over Natural Earth land with OSM outlines for 30 small islands,
   filled with one winter's rain as a share of its average, or with desalination capacity
   per 2021 resident (Sifnos 810 L a day; seven islands above 1,000);
 - desalination over time: capacity still listed in 2020 by year online (a survivor count,
@@ -106,11 +107,12 @@ For every dataset: who made it, which version and date, when you downloaded it, 
 - Full list of datasets, licences and downloads: `data/datasets.csv`, `data/sources.csv`,
   `data/manifest.json`.
 
-- Situate: island positions (cartographic, OpenStreetMap, ODbL); water emergencies
+- Situate: island positions (cartographic, OpenStreetMap, ODbL); land (cartographic,
+  Natural Earth 1:10m v5.1.1, public domain, plus OSM outlines for 30 small islands, ODbL); water emergencies
   (documented for Sifnos, reported elsewhere, `data/emergencies.csv`); costs (reported,
   `data/water_costs.csv`); Sifnos visitors and electricity (reported, The Press Project 2025).
 
 The sketch cannot show water quality, leaks, evaporation from open cisterns, or how people
 change their use in a dry year. One ERA5 cell stands for all of Sifnos, and ERA5 has not yet
-been checked against a Sifnos station. The map has no coastlines yet, and an island with no
-plant listed may still have one.
+been checked against a Sifnos station. Coastlines are simplified to about 600 m, and an island
+with no plant listed may still have one.
