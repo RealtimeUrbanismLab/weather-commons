@@ -246,7 +246,7 @@
         }
       });
       sel.value = "2022";
-      document.querySelectorAll("#cisterns input, #cisterns select").forEach((e) => e.addEventListener("input", update));
+      document.querySelectorAll("#storing input, #storing select").forEach((e) => e.addEventListener("input", update));
       let lastW = 0, timer;
       window.addEventListener("resize", () => {
         clearTimeout(timer);

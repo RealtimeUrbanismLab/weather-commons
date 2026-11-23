@@ -130,6 +130,21 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: tabs renamed by the author: "Mapping" (`#mapping`, was Aegean freshwater map) and
+  "Storing" (`#storing`, was Cisterns); `tabs.js` maps the old addresses. Sifnos timeline cut to
+  five events (March 2021 unit and summer tankers; June 2024 breakdown; the emergency 20 Jun -
+  22 Aug 2024; July 2026 mains ban; 13 Nov 2026 tender cancelled); dropped: July 2021
+  restrictions, 15 Jul 2024 council, Dec 2024 pool licensing (all still in the CSV).
+  - Map rebuilt as an explorer: measure buttons (winter rain / desal per resident / rain on
+    roofs), winter slider with Play, group chips, a residents slider, emergency and desal
+    filters (non-matching tanks fade), a ranked bar list and a card for the selected island
+    (35-winter column chart, desal and roof meters, emergencies) instead of popups; "Reset
+    view" control on the map. Wider than the text column on screens >= 900 px.
+  - Scatter under the map ("Two measures at once"): choose across / up from winter rain,
+    desal per resident, rain on roofs, residents. Desal, roofs and residents on log axes: desal
+    per resident runs from 7 L (Kalymnos) to 20,000 L (Ro: 1 resident, a 20 m3/day plant).
+    Islands with no value (mostly no plant listed) are left out and counted in the note.
+
 - 2026-11-23: roofs extended to every island (author approved the 106 MB download): 48 Microsoft
   tiles; `tools/build_roofs_islands.py` gives each building to an island by rasterised land
   (Natural Earth 1:10m + OSM outlines, ~220 m cells; shore buildings within 660 m; within 300 m

@@ -4,9 +4,9 @@
 
 The author replaced the four workshop parts with three tabs, each written as a narrative:
 **The Sifnos case** (first called Sifnos in crisis; formerly Event; adds a topographic map of Sifnos and Poulati as
-diagrams), **Cisterns** (formerly Simulate; the school roof view removed; first
+diagrams), **Storing** (formerly Simulate, then Cisterns; the school roof view removed; first
 called "Cisterns know", renamed by the author) and
-**Aegean freshwater map** (formerly Situate; first tab since 2026-11-23). "What not to conclude" notes removed by the author. Narrate is removed; its points went into the tab
+**Mapping** (formerly Situate, then Aegean freshwater map; first tab since 2026-11-23; map rebuilt as an explorer with filters, a ranking and an island card). "What not to conclude" notes removed by the author. Narrate is removed; its points went into the tab
 each belongs to, each tab with its own "what not to conclude" and sources. Visual identity:
 one colour, a water blue (#1a5fb4 light, #4b95e2 dark; both pass the dataviz validator),
 used only for water. A predictive "this winter" outlook for the Aegean map was proposed and

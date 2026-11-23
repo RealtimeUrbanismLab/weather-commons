@@ -202,9 +202,8 @@
   Promise.all(["situate_islands", "situate_desal", "situate_costs", "aegean_land"].map((f) =>
     fetch(`data/page/${f}.json`).then((r) => r.json()))).then(([isl, desal, costs, land]) => {
     LAND = land;
-    const sel = $("map-winter");
-    isl.winters.forEach((w, j) => { const o = new Option(dash(w), j); sel.add(o); });
-    sel.value = isl.winters.indexOf("2023-24");
+    const sel = $("map-winter");   // a range over the winters; aegean-map.js labels it
+    sel.max = isl.winters.length - 1;
     const redraw = () => mapTable(isl);
     document.querySelectorAll("input[name=fill], #map-winter").forEach((e) => e.addEventListener("input", redraw));
     redraw();

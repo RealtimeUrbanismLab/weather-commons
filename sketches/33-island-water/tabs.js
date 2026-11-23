@@ -1,11 +1,13 @@
-// Three tabs on one page: #crisis, #cisterns, #aegean. Each tab has its own address, so a
-// link can open it directly. Charts in a hidden tab redraw at their real width when shown.
+// Three tabs on one page: #mapping, #sifnos, #storing. Each tab has its own address, so a
+// link can open it directly; the older addresses #aegean and #cisterns still work. Charts in a hidden tab redraw at their real width when shown.
 (function () {
   "use strict";
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const ids = tabs.map((t) => t.getAttribute("aria-controls"));
 
+  const OLD = { aegean: "mapping", cisterns: "storing" };
   function show(id, focus) {
+    if (OLD[id]) { id = OLD[id]; history.replaceState(null, "", "#" + id); }
     if (!ids.includes(id)) id = ids[0];
     tabs.forEach((t) => {
       const on = t.getAttribute("aria-controls") === id;

@@ -20,7 +20,7 @@ python -m http.server 8000
 
 Then open http://localhost:8000.
 
-The page has three tabs, each with its own address (`#aegean`, `#sifnos`, `#cisterns`, in that order;
+The page has three tabs, each with its own address (`#mapping`, `#sifnos`, `#storing`, in that order; the older `#aegean` and `#cisterns` still open them;
 `tabs.js`). Its one colour, a water blue, is used only for water: rain, tank water, springs,
 cisterns and flow lines. This departs from the shared black-and-white look (CONTRIBUTING §9);
 the author chose it on 2026-11-23, while the sketch is `Publish: no`.
@@ -40,7 +40,7 @@ The tab shows:
 - a topographic map of Sifnos (Copernicus DEM GLO-30: contours, relief shading, flow lines
   computed from the terrain), with villages, the desalination units and the Poulati valley;
 - October–March rain for every winter since 1991–92;
-- a timeline, 2021–2026 (`data/sifnos_timeline.csv`);
+- a timeline of the five main events, 2021–2026 (the full record is `data/sifnos_timeline.csv`);
 - Poulati, from Zepou & Matsaganis (2024) and DECA: a long profile of the valley with its
   nine springs in order of altitude and five communal cisterns (spacing schematic), the week
   as fourteen twelve-hour "waters" with the rights the chapter describes, and the 34
@@ -50,7 +50,7 @@ Page data: `sifnos_topo.json` and `sifnos_hillshade.png` (`tools/fetch_dem_sifno
 `tools/build_sifnos_topo.py`), `poulati.json`, `event_winters.json`; drawn by `event.js` and
 `poulati.js`.
 
-## Cisterns (`#cisterns`)
+## Storing (`#storing`)
 
 A rooftop cistern on Sifnos, run day by day on the rain that fell there from 1991-01-01 to
 2026-10-31. Each day the tank fills with roof area × runoff (0.8) × rain, spills what does
@@ -65,7 +65,7 @@ overstates station rain on Chios. The model (`sim-core.js`) gives the same resul
 paper's settings and ERA5 rain it reproduces the 54 house cases of Kakoulas et al. (2022)
 within 1.5–6.9 points (`tools/check_cistern_reference.py`).
 
-## Aegean freshwater map (`#aegean`)
+## Mapping (`#mapping`)
 
 105 Aegean islands. In October–March 2022–23 all 105 had less rain than their 1991–2020
 average and 28 had a drier winter than Sifnos, relative to their own average (reanalysed,
@@ -75,7 +75,13 @@ Leros, Crete (eight municipalities), northern Evia and Andros; Lesvos and Chios 
 2025 (documented, full-text search of Diavgeia, `data/civil_protection_water.csv`). Leros,
 Patmos and Astypalaia in 2025–26: reported. Three views:
 
-- an interactive satellite map (Leaflet on Sentinel-2 cloudless 2024, EOX, CC BY-NC-SA 4.0),
+- an interactive satellite map with controls to compare the islands (Leaflet on Sentinel-2
+  cloudless 2024, EOX, CC BY-NC-SA 4.0): choose a measure (winter rain, desalination per resident,
+  rain on roofs), play or scrub through the winters, filter by group, residents, emergency and
+  desalination; a ranked list and a card for the selected island sit beside the map;
+  a "Reset view" button returns to all islands;
+- a scatter plot under the map: any two of winter rain, desalination per resident, rain on roofs
+  and residents, for the islands the filters keep, linked to the map, list and card;
   each island a small tank filled with one winter's rain as a share of its average, or with
   desalination capacity per 2021 resident; zoomed in, every building footprint on 85 islands
   (613,641 Microsoft ML footprints, ODbL) as a possible cistern, each island's file loaded when
