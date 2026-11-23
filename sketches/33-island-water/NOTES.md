@@ -59,9 +59,10 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - Tidy the data (see Questions): island names, status values, `residents` as numbers only.
 - T1.8 left: the ZAF22 full text (library access or ask the authors); the reason for the
   2026 tender cancellation (decision 206/2026 text); the reservoir ZAF22 mentions.
-- Page: Simulate is built (see Done). Still template text: the lede (the sketch's question),
-  Event, Situate and Narrate in `index.html`, and the README's first sentence, Event,
-  Situate and Narrate.
+- Page: Event and Simulate are drafted (see Done). Still template text: Situate and
+  Narrate in `index.html` and the README, and the README's first sentence (it feeds the
+  shared site's sketch list). The lede uses the question from `docs/brief.md`; change it
+  if the author wants other wording.
 - Simulate, later: let the reader pick another island (page data is Sifnos only; run
   `build_page_data.py` per island); show drinking use only with a treatment note.
 
@@ -125,6 +126,16 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: Event section drafted in `index.html` (and the README's Event section).
+  - The lede is the question from `docs/brief.md`, followed by a key to the evidence tags.
+  - Text: the June 2024 breakdown and the emergency, with a tag after every claim.
+  - A chart of October–March rain on Sifnos for every winter from 1991–92 to 2025–26
+    against the 1991–2020 average (334 mm), with 2022–23 to 2024–25 in full black
+    (`event.js`, `data/page/event_winters.json` from `build_page_data.py`).
+  - A timeline of ten dated events, 2021–2026, each tagged.
+  - Poulati as counterpoint, with one tagged interpretive sentence.
+  - Event sources added to Sources and limits. Checked in light mode and at phone width.
 
 - 2026-11-23: T1.8 Sifnos detail, for the Event section.
   - Diavgeia metadata for 1,301 Sifnos water decisions, 2010–2026 (66 requests;

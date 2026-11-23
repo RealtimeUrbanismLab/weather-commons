@@ -64,8 +64,18 @@ def main():
         "runoff": {"value": 0.8, "kind": "synthetic (assumed)", "note": "KAKOULAS22 used 0.9 x 0.95 = 0.855"},
     }
     (OUT / "simulate_context.json").write_text(json.dumps(ctx, ensure_ascii=False, indent=1), encoding="utf-8")
+
+    # Event: October-March rain on Sifnos, each complete winter, against the 1991-2020 average
+    wint = [r for r in read(DATA / "derived" / "rain_winters.csv") if r["island"] == "Sifnos" and r["complete"] == "yes"]
+    base = [float(r["oct_mar_mm"]) for r in wint if "1991-92" <= r["winter"] <= "2019-20"]
+    (OUT / "event_winters.json").write_text(json.dumps({
+        "island": "Sifnos", "months": "October-March", "kind": "reanalysed", "source": "ERA5 via Open-Meteo",
+        "normal_mm": round(sum(base) / len(base), 1), "normal_period": "winters 1991-92 to 2019-20",
+        "winters": [{"winter": r["winter"], "mm": float(r["oct_mar_mm"])} for r in wint],
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+
     kb = (OUT / "sifnos_rain_daily.json").stat().st_size / 1024
-    print(f"Wrote data/page/sifnos_rain_daily.json ({len(mm)} days, {kb:.0f} KB) and simulate_context.json")
+    print(f"Wrote data/page/sifnos_rain_daily.json ({len(mm)} days, {kb:.0f} KB), simulate_context.json, event_winters.json")
 
 
 if __name__ == "__main__":

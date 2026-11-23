@@ -33,6 +33,17 @@
          padding: 6px 8px; font-size: 13px; line-height: 1.35; white-space: nowrap; }
   details { margin: 8px 0; font-size: 15px; }
   details table { font-size: 13px; }
+  .chart .bar.soft { fill-opacity: .3; }
+  .chart .bar:focus { outline: none; fill-opacity: 1; stroke: var(--fg); }
+  /* evidence kind, as a small tag after a claim */
+  .kind { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .06em;
+          color: var(--muted); white-space: nowrap; }
+  /* Event timeline: date in its own column */
+  ol.timeline { list-style: none; padding: 0; margin: 12px 0; }
+  ol.timeline li { display: grid; grid-template-columns: 9.5rem 1fr; gap: 0 12px; padding: 8px 0;
+                   border-top: 1px solid var(--line); border-top-color: color-mix(in srgb, var(--fg) 20%, transparent); }
+  ol.timeline time { font-weight: 600; font-size: 15px; }
+  @media (max-width: 480px) { ol.timeline li { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -51,9 +62,84 @@
 
 <h1>Island Water</h1>
 
-<!-- 1. Event: what are you looking at, and what do you want to find out? -->
-<p class="lede">Write your question here. Which weather event, practice or intervention is this about, and what do you want to understand?</p>
-<p class="muted small">33 · Jacob Moe · started 2026-11-23</p>
+<p class="lede">Where does an Aegean island's water come from, who decides, and what would a
+fairer and less fragile water future look like?</p>
+<p class="muted small">33 · Jacob Moe · started 2026-11-23 · draft</p>
+<p class="small">Every claim on this page says what kind of evidence it rests on:
+<span class="kind">documented</span> (a public decision or official dataset),
+<span class="kind">reported</span> (news or a study we have read but not checked against a primary record),
+<span class="kind">reanalysed</span> (weather model data), <span class="kind">calculated</span>,
+<span class="kind">synthetic</span> (an assumption) or <span class="kind">interpretive</span> (our reading).</p>
+
+<!-- 1. Event: Sifnos, summer 2024, and the years around it. -->
+<section id="event">
+<h2>Event</h2>
+<p>In June 2024 a desalination unit broke down at Platys Gialos, on the south coast of
+Sifnos. Some settlements went without tap water for ten to fifteen days, and at some points
+on the island June use was up to twice the previous August's
+<span class="kind">reported</span>. On 20 June the state declared a water emergency on
+Sifnos, the first on a Cycladic island <span class="kind">documented</span>
+<span class="kind">reported</span>.</p>
+
+<h3>The winters before</h3>
+<p class="small">Sifnos depends on winter rain to refill its aquifers, springs and cisterns.
+The winter before the breakdown brought about three-quarters of the usual rain, after a
+winter that brought two-thirds. Winters 2022–23 to 2024–25 are drawn in full black.</p>
+<div class="chart"><svg id="winters" role="img" aria-label="October to March rain on Sifnos for each winter from 1991–92 to 2025–26, against the 1991–2020 average"></svg></div>
+<p class="label">October–March rain on Sifnos. Reanalysed (ERA5), one grid cell for the island.</p>
+<details><summary>Numbers</summary>
+<table id="winters-table"><thead><tr><th>Winter</th><th>Rain, mm</th><th>Share of the 1991–2020 average</th></tr></thead><tbody></tbody></table>
+</details>
+
+<h3>What happened, 2021–2026</h3>
+<ol class="timeline">
+  <li><time datetime="2021-03">March 2021</time><div>A portable desalination unit of 1,000 m³ a
+    day arrives at Platys Gialos, next to an older 500 m³ unit. A third plant, at the port of
+    Kamares, treats brackish water. <span class="kind">documented</span></div></li>
+  <li><time datetime="2021-07">July 2021</time><div>The municipality restricts water use because
+    of "prolonged drought". <span class="kind">documented</span></div></li>
+  <li><time datetime="2021">Summers 2021–2026</time><div>Tanker trucks are hired every summer to
+    carry water from the coastal plants up to the village tanks, as they were in 2014 and
+    2016. <span class="kind">documented</span></div></li>
+  <li><time datetime="2024-06">June 2024</time><div>The Platys Gialos breakdown; some settlements
+    without water for 10–15 days. <span class="kind">reported</span></div></li>
+  <li><time datetime="2024-06-20">20 June 2024</time><div>At the municipality's request, Civil
+    Protection declares a one-month emergency, for consequences that "may arise" from water
+    shortage. Local reporters found no public notice of it on the island.
+    <span class="kind">documented</span> <span class="kind">reported</span></div></li>
+  <li><time datetime="2024-07-15">15 July 2024</time><div>The council discusses proposals against
+    waste, to share water fairly between residents and visitors.
+    <span class="kind">documented</span></div></li>
+  <li><time datetime="2024-07-22">22 July 2024</time><div>The emergency is extended to 22 August,
+    because the works to deal with the shortage are not finished.
+    <span class="kind">documented</span></div></li>
+  <li><time datetime="2024-12">December 2024</time><div>The council takes up the licensing of
+    swimming pools. <span class="kind">documented</span></div></li>
+  <li><time datetime="2026-07">July 2026</time><div>Mains water may no longer be used for gardens,
+    yards, cars or pools, with fines for breaches; residents are asked to use their own
+    cisterns. <span class="kind">reported</span></div></li>
+  <li><time datetime="2026">February–November 2026</time><div>A new 1,000 m³-a-day unit with solar
+    panels for Platys Gialos: study approved, €1.05 million of regional funding, works permit,
+    then a tender (€850,000 plus VAT), cancelled on 13 November to be run again.
+    <span class="kind">documented</span> <span class="kind">reported</span></div></li>
+</ol>
+
+<h3>A few kilometres away: Poulati</h3>
+<p>On the east coast, the valley of Poulati still shares the water of nine springs through
+more than thirty stone cisterns and channels. Each property gets the water for set
+twelve-hour turns on set weekdays, and the right to it belongs to the land, not the owner.
+The rules were unwritten until the early twentieth century, when they began to appear in
+deeds. In 2022 six farmers were still working there, four of them over 75
+<span class="kind">reported</span>.</p>
+<p>Two ways of meeting a dry summer sit side by side on one island: a rota agreed among
+neighbours and kept for generations, and an emergency declared by the state, met with
+trucks and new machines <span class="kind">interpretive</span>.</p>
+
+<p class="label">Decisions: Diavgeia, the Greek government's public register of decisions
+(Municipality of Sifnos; General Secretariat for Civil Protection). Press: Ethnos (July
+2024), Sustainable Cyclades (July 2024), Kykladiki (June and July 2026), Naxos Times
+(November 2026). Poulati: Zepou &amp; Matsaganis (2024). Full list under Sources and limits.</p>
+</section>
 
 <!-- 2. Simulate: a rooftop cistern on Sifnos, filled by the rain that fell, day by day. -->
 <section id="simulate">
@@ -126,6 +212,20 @@ would be empty. The school case follows a study of a school on Chios, where it c
 
 <h2>Sources and limits</h2>
 <ul>
+  <li>Event, decisions: documented. Diavgeia (public register of government decisions,
+    Law 4210/2013): 1,301 decisions on water by the Municipality of Sifnos and by other bodies
+    naming Sifnos, 2010–2026, read by title; the texts of four Civil Protection emergency
+    decisions (20 June 2024, 22 July 2024, 8 December 2021, 5 November 2026) read in full.
+    Downloaded 2026-11-23. The December 2021 emergency, still in force, is for coastal
+    erosion and landslides, not water.</li>
+  <li>Event, press: reported. Ethnos, 3 July 2024 (the breakdown, outages and June use);
+    Sustainable Cyclades, 23 July 2024 (no public notice on the island); Kykladiki,
+    26 June and 1 July 2026 (funding; 2026 restrictions); Naxos Times, 17 November 2026
+    (tender). Facts only; no text copied.</li>
+  <li>Poulati: reported. Zepou &amp; Matsaganis, "Governing the commons on an Aegean
+    island", Edward Elgar, 2024 (CC BY-NC-ND 4.0). Facts only, with credit.</li>
+  <li>Winter rain: reanalysed. ERA5, October–March totals for the Sifnos grid cell; the
+    average is for winters 1991–92 to 2019–20 (334 mm).</li>
   <li>Daily rain on Sifnos, 1991-01-01 to 2026-10-31: reanalysed. ERA5 (Copernicus Climate
     Change Service, ECMWF), via the Open-Meteo historical weather API, grid cell 37.00 N,
     24.75 E, 3.7 km from Apollonia; downloaded 2026-11-23; CC BY 4.0. Not changed except
@@ -153,6 +253,7 @@ every roof as the same. One ERA5 cell stands for all of Sifnos.</p>
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>
 </footer>
 </main>
+<script src="event.js"></script>
 <script src="sim-core.js"></script>
 <script src="sim.js"></script>
 </body>

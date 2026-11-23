@@ -19,7 +19,19 @@ Then open http://localhost:8000.
 
 ## 1. Event
 
-Which weather event, practice or intervention is this about? When and where did it happen, and who was involved?
+Sifnos, summer 2024. In June a desalination unit at Platys Gialos broke down; some
+settlements were without water for 10–15 days, and at some points June use was up to twice
+the previous August's (reported, Ethnos). On 20 June 2024, at the municipality's request,
+the General Secretariat for Civil Protection declared a one-month water emergency, the first
+on a Cycladic island, extended on 22 July to 22 August (documented, Diavgeia). It followed
+two dry winters: 66% and 74% of the 1991–2020 October–March average (reanalysed, ERA5).
+
+The page sets this in 2021–2026: drought restrictions in 2021, tanker trucks every summer,
+a 1,000 m³/day portable unit in 2021, pool licensing in 2024, restrictions with fines in
+2026, and a new solar-assisted unit whose tender was cancelled in November 2026. The
+counterpoint is Poulati, a valley a few kilometres away that still shares nine springs in
+twelve-hour turns (reported, Zepou & Matsaganis 2024). Timeline with sources:
+`data/sifnos_timeline.csv`; notes: `docs/sifnos.md`.
 
 ## 2. Simulate
 
