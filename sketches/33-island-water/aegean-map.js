@@ -8,7 +8,6 @@
 // - Zoomed in, every building footprint on the 85 islands with buildings is drawn as a possible
 //   cistern (Microsoft ML footprints, ODbL; cartographic); each island's file loads when it
 //   comes into view.
-// - A scatter plot below the map sets two measures against each other for the same islands.
 (function () {
   "use strict";
   const NS = "http://www.w3.org/2000/svg";
@@ -23,9 +22,9 @@
 
   // ---- the three measures: value, how full a tank is, a reference line, the label
   const MEASURES = {
-    rain: { top: 150, ref: 100, unit: "%", head: (w) => `winter rain, ${w}, % of average` },
-    desal: { top: 1000, ref: null, unit: " L", head: () => "desalination, litres per resident a day" },
-    roofs: { top: 200, ref: 100, unit: "%", head: () => "rain on roofs, average year, % of residents' use" },
+    rain: { top: 150, ref: 100, unit: "%", head: (w) => `rain ${w}, % of average` },
+    desal: { top: 1000, ref: null, unit: " L", head: () => "litres per resident a day" },
+    roofs: { top: 200, ref: 100, unit: "%", head: () => "roof rain, % of use" },
   };
 
   function tankIcon(f, opts) {
@@ -115,7 +114,6 @@
       const value = (i, mode = st.mode) => {
         if (mode === "rain") return i.rain_pct[st.wi];
         if (mode === "desal") return perRes(i);
-        if (mode === "residents") return i.residents || null;
         const r = roofBy[i.name];
         return r && r.buildings ? roofPct(r, r.catch_normal_m3) : null;
       };
@@ -179,7 +177,7 @@
         const kept = d.islands.filter(passes);
         const known = kept.filter((i) => value(i) != null).sort((a, b) => value(b) - value(a));
         const scale = Math.max(M.ref || 0, ...known.map((i) => value(i)), 1);
-        $("map-rank-head").textContent = `${kept.length} of ${d.islands.length} islands, by ${M.head(dash(d.winters[st.wi]))}`;
+        $("map-rank-head").textContent = `${kept.length} of ${d.islands.length} islands · ${M.head(dash(d.winters[st.wi]))}`;
         for (const i of known) {
           const v = value(i), li = h("li"), b = h("button");
           b.type = "button"; b.dataset.name = i.name;
@@ -204,89 +202,6 @@
       function hot(name, on) {
         const b = $("map-rank").querySelector(`button[data-name="${CSS.escape(name)}"]`);
         if (b) b.classList.toggle("hot", on);
-        const g = $("map-scatter").querySelector(`g[data-name="${CSS.escape(name)}"]`);
-        if (g) g.classList.toggle("hot", on);
-      }
-
-      // ---- scatter: two measures at once, for the islands the filters keep
-      const AXES = {
-        rain: { name: "Winter rain", short: () => `Rain ${dash(d.winters[st.wi])}, % of average`, title: () => `Winter rain ${dash(d.winters[st.wi])}, % of the island's average`, ref: 100, refName: "average", unit: "%" },
-        desal: { name: "Desalination per resident", short: () => "Desalination, L per resident a day (log)", title: () => "Desalination capacity, litres per resident a day (log scale)", log: true, unit: " L" },
-        roofs: { name: "Rain on roofs", short: () => "Rain on roofs, % of residents' use (log)", title: () => "Rain on roofs, average year, % of residents' use (log scale)", ref: 100, refName: "residents' use", log: true, unit: "%" },
-        residents: { name: "Residents", short: () => "Residents, 2021 (log)", title: () => "Residents, 2021 (log scale)", log: true, unit: "" },
-      };
-      function niceStep(v) {
-        const e = 10 ** Math.floor(Math.log10(v)), m = v / e;
-        return (m <= 1 ? 1 : m <= 2 ? 2 : m <= 2.5 ? 2.5 : m <= 5 ? 5 : 10) * e;
-      }
-      function axis(key, vals, a, b) {
-        const A = AXES[key];
-        if (A.log) {   // whole decades around the data; 2 and 5 between them when there are few
-          const lo = Math.floor(Math.log10(Math.min(...vals, A.ref || Infinity))), hi = Math.ceil(Math.log10(Math.max(...vals, A.ref || 0)));
-          const span = Math.max(1, hi - lo), ticks = [];
-          for (let k = lo; k <= hi; k++) for (const m of span <= 2 ? [1, 2, 5] : [1]) if (k < hi || m === 1) ticks.push(m * 10 ** k);
-          return { f: (v) => a + (Math.log10(v) - lo) / span * (b - a), ticks };
-        }
-        const max = Math.max(...vals, (A.ref || 0) * 1.05, 1), step = niceStep(max / 5), top = Math.ceil(max / step) * step, ticks = [];
-        for (let t = 0; t <= top + 1e-9; t += step) ticks.push(t);
-        return { f: (v) => a + v / top * (b - a), ticks };
-      }
-      function drawScatter() {
-        const svg = $("map-scatter"), wrap = svg.parentElement, sx = $("sc-x").value, sy = $("sc-y").value;
-        while (svg.firstChild) svg.removeChild(svg.firstChild);
-        const W = Math.round(Math.max(320, Math.min(1100, wrap.clientWidth || 680))), H = W < 520 ? 340 : 420;
-        svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-        const Lm = 52, R = 16, T = 26, B = 40;
-        const kept = d.islands.filter(passes);
-        const pts = kept.map((i) => ({ i, x: value(i, sx), y: value(i, sy) })).filter((p) => p.x != null && p.y != null);
-        const X = axis(sx, pts.map((p) => p.x), Lm, W - R), Y = axis(sy, pts.map((p) => p.y), H - B, T);
-        const el = (n, a, parent = svg) => { const e = document.createElementNS(NS, n); for (const k in a) e.setAttribute(k, a[k]); parent.appendChild(e); return e; };
-        const tx = (x, y, str, a = {}, parent = svg) => { const t = el("text", Object.assign({ x, y }, a), parent); t.textContent = str; return t; };
-        const tick = (v, key) => (AXES[key].log ? fmt(v) : fmt(v) + (AXES[key].unit === "%" ? "%" : ""));
-        for (const t of X.ticks) { el("line", { x1: X.f(t), x2: X.f(t), y1: T, y2: H - B, class: "grid" }); tx(X.f(t), H - B + 16, tick(t, sx), { class: "tick", "text-anchor": "middle" }); }
-        for (const t of Y.ticks) { el("line", { x1: Lm, x2: W - R, y1: Y.f(t), y2: Y.f(t), class: "grid" }); tx(Lm - 6, Y.f(t) + 4, tick(t, sy), { class: "tick", "text-anchor": "end" }); }
-        if (AXES[sx].ref != null) { el("line", { x1: X.f(100), x2: X.f(100), y1: T, y2: H - B, class: "line thin" }); tx(X.f(100) + 4, T + 10, AXES[sx].refName, { class: "tick" }); }
-        if (AXES[sy].ref != null) { el("line", { x1: Lm, x2: W - R, y1: Y.f(100), y2: Y.f(100), class: "line thin" }); tx(W - R, Y.f(100) - 5, AXES[sy].refName, { class: "tick", "text-anchor": "end" }); }
-        const ttl = (k) => (W < 620 ? AXES[k].short() : AXES[k].title());
-        tx(W - R, H - 4, ttl(sx) + " →", { class: "direct", "text-anchor": "end" });
-        tx(Math.min(Lm, 8), T - 12, "↑ " + ttl(sy), { class: "direct" });
-        const order = pts.slice().sort((a, b) => (a.i.name === st.sel) - (b.i.name === st.sel));   // the selected island on top
-        for (const p of order) {
-          const cx = X.f(p.x), cy = Y.f(p.y), sel = p.i.name === st.sel;
-          const g = el("g", { class: "pt" + (sel ? " sel" : ""), "data-name": p.i.name });
-          if (p.i.emergencies.length) el("circle", { cx, cy, r: 8, class: "em-ring" }, g);
-          el("circle", { cx, cy, r: sel ? 6.5 : 5, class: "dot water" }, g);
-          if (sel || p.i.name === "Sifnos") tx(cx + 10, cy + 4, short(p.i.name), { class: sel ? "direct strong" : "direct" }, g);
-          el("circle", { cx, cy, r: 11, class: "hit" }, g);
-          const rows = [`${AXES[sx].name}: ${fmt(p.x)}${AXES[sx].unit}`, `${AXES[sy].name}: ${fmt(p.y)}${AXES[sy].unit}`];
-          if (p.i.emergencies.length) rows.push("Water emergency, 2024–26");
-          g.addEventListener("pointerenter", () => { scTip(wrap, svg, cx, cy, short(p.i.name), rows); markerBy[p.i.name].openTooltip(); hot(p.i.name, true); });
-          g.addEventListener("pointerleave", () => { scHide(wrap); markerBy[p.i.name].closeTooltip(); hot(p.i.name, false); });
-          g.addEventListener("click", () => { select(p.i.name); map.panTo([p.i.lat, p.i.lon]); });
-        }
-        const out = kept.filter((i) => value(i, sx) == null || value(i, sy) == null);
-        const noPlant = (sx === "desal" || sy === "desal") ? out.filter((i) => !i.desal_m3d).length : 0;
-        const why = noPlant ? ` (${noPlant === out.length ? "all" : noPlant} with no desalination plant listed)` : "";
-        $("sc-note").textContent = `${pts.length} islands${out.length ? `; ${out.length} more are left out for lack of a value${why}` : ""}. ` +
-          "The filters above apply, and the axes rescale to the islands they keep. Ring: a water emergency, 2024–26. Click a dot to select the island.";
-      }
-      function scTip(wrap, svg, px, py, title, rows) {
-        let t = wrap.querySelector(".tip");
-        if (!t) { t = h("div", "tip"); wrap.appendChild(t); }
-        t.replaceChildren(h("strong", null, title), ...rows.map((r) => h("div", null, r)));
-        const box = svg.getBoundingClientRect(), k = box.width / svg.viewBox.baseVal.width;
-        t.hidden = false;
-        let left = px * k + 14;
-        if (left + t.offsetWidth > box.width) left = px * k - t.offsetWidth - 14;
-        t.style.left = Math.max(0, left) + "px";
-        t.style.top = Math.max(0, py * k - t.offsetHeight / 2) + "px";
-      }
-      function scHide(wrap) { const t = wrap.querySelector(".tip"); if (t) t.hidden = true; }
-      for (const [id, def] of [["sc-x", "rain"], ["sc-y", "desal"]]) {
-        const sel = $(id);
-        for (const k in AXES) sel.add(new Option(AXES[k].name, k));
-        sel.value = def;
-        sel.addEventListener("input", drawScatter);
       }
 
       // ---- the selected island
@@ -295,61 +210,70 @@
         c.replaceChildren();
         c.appendChild(h("h4", null, short(i.name)));
         c.appendChild(h("p", "meta", `${i.group} · ${i.residents != null ? fmt(i.residents) + " residents (2021)" : "residents not known"}`));
-        const sec = (title) => { const s = h("div", "sec"); s.appendChild(h("div", "sec-h", title)); c.appendChild(s); return s; };
-        const meter = (s, pct, ref, soft) => {
-          const m = h("div", "meter"), f = h("i", soft ? "soft" : null);
-          f.style.width = Math.min(100, pct).toFixed(1) + "%"; m.appendChild(f);
-          if (ref != null) { const b = h("b"); b.style.left = ref.toFixed(1) + "%"; m.appendChild(b); }
-          s.appendChild(m);
+        // one block per measure: a label and the headline number, a small graphic, a note
+        const stat = (label, big) => {
+          const b = h("div", "stat"), top = h("div", "stat-h");
+          top.append(h("span", null, label), h("strong", null, big));
+          b.appendChild(top); c.appendChild(b); return b;
         };
-        // winter rain, every winter: a small column chart; click a column to choose that winter
-        const s1 = sec("Winter rain, every winter since 1991–92 (reanalysed)");
-        const svg = document.createElementNS(NS, "svg"), n = d.winters.length, W = 300, H = 56, TOP = 200;
+        const meter = (pct, ref) => {
+          const m = h("div", "meter"), f = h("i");
+          f.style.width = Math.max(0, Math.min(100, pct)).toFixed(1) + "%"; m.appendChild(f);
+          if (ref != null) { const b = h("b"); b.style.left = ref.toFixed(1) + "%"; m.appendChild(b); }
+          return m;
+        };
+
+        // winter rain: every winter since 1991-92, the chosen one dark; click a column to choose it
+        const p = i.rain_pct[st.wi];
+        const s1 = stat(`Winter rain, ${dash(d.winters[st.wi])}`, p != null ? `${p}%` : "–");
+        const svg = document.createElementNS(NS, "svg"), n = d.winters.length, W = 300, H = 34, TOP = 200;
         svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.setAttribute("class", "spark"); svg.setAttribute("preserveAspectRatio", "none");
-        svg.setAttribute("role", "img"); svg.setAttribute("aria-label", `Winter rain on ${short(i.name)}, 1991–92 to 2025–26`);
-        i.rain_pct.forEach((p, j) => {
-          if (p == null) return;
-          const bh = Math.min(p, TOP) / TOP * H, rc = document.createElementNS(NS, "rect");
+        svg.setAttribute("role", "img"); svg.setAttribute("aria-label", `Winter rain on ${short(i.name)}, each winter from 1991–92 to 2025–26`);
+        i.rain_pct.forEach((v, j) => {
+          if (v == null) return;
+          const bh = Math.min(v, TOP) / TOP * H, rc = document.createElementNS(NS, "rect");
           rc.setAttribute("x", (j * W / n + 0.5).toFixed(1)); rc.setAttribute("width", (W / n - 1).toFixed(1));
           rc.setAttribute("y", (H - bh).toFixed(1)); rc.setAttribute("height", bh.toFixed(1));
           if (j === st.wi) rc.setAttribute("class", "on");
-          const t = document.createElementNS(NS, "title"); t.textContent = `${dash(d.winters[j])}: ${p}%`; rc.appendChild(t);
+          const t = document.createElementNS(NS, "title"); t.textContent = `${dash(d.winters[j])}: ${v}%`; rc.appendChild(t);
           rc.addEventListener("click", () => setWinter(j, true));
           svg.appendChild(rc);
         });
         const ln = document.createElementNS(NS, "line");
-        ln.setAttribute("x1", 0); ln.setAttribute("x2", W); ln.setAttribute("y1", H - 100 / TOP * H); ln.setAttribute("y2", H - 100 / TOP * H);
+        ln.setAttribute("x1", 0); ln.setAttribute("x2", W); ln.setAttribute("y1", H / 2); ln.setAttribute("y2", H / 2);
         ln.setAttribute("vector-effect", "non-scaling-stroke");
         svg.appendChild(ln); s1.appendChild(svg);
-        const p = i.rain_pct[st.wi];
-        s1.appendChild(h("div", "val", p != null ? `${dash(d.winters[st.wi])}: ${p}% of the average ${fmt(i.normal_mm)} mm (line)` : "Not known"));
-        // desalination
-        const s2 = sec("Desalination capacity (documented)");
+        s1.appendChild(h("div", "stat-n", `of the 1991–2020 average, ${fmt(i.normal_mm)} mm (line); one column per winter since 1991–92`));
+
+        // desalination per resident
         const v = perRes(i);
+        const s2 = stat("Desalination per resident", v != null ? `${fmt(v)} L/day` : "none listed");
         if (v != null) {
-          meter(s2, 100 * v / 2100, null);
-          s2.appendChild(h("div", "val", `${fmt(i.desal_m3d)} m³/day = ${fmt(v)} L per resident a day`));
-        } else s2.appendChild(h("div", "val", "No plant listed in the sources used"));
-        if (i.temp_permits) s2.appendChild(h("div", "val", `${i.temp_permits} temporary permit${i.temp_permits > 1 ? "s" : ""}${i.temp_permit_m3d ? ", " + fmt(i.temp_permit_m3d) + " m³/day" : ""} (2024–26)`));
-        if (i.desal_cost_2025) s2.appendChild(h("div", "val", `Cost in 2025: €${fmt(i.desal_cost_2025, 2)}/m³ (reported)`));
-        // roofs
-        const s3 = sec("Rain on all its roofs vs residents' use (calculated, upper bound)");
+          s2.appendChild(meter(100 * v / 2000));
+          const notes = [`${fmt(i.desal_m3d)} m³/day of capacity`];
+          if (i.desal_cost_2025) notes.push(`€${fmt(i.desal_cost_2025, 2)}/m³ in 2025 (reported)`);
+          if (i.temp_permits) notes.push(`${i.temp_permits} temporary permit${i.temp_permits > 1 ? "s" : ""} 2024–26${i.temp_permit_m3d ? ", " + fmt(i.temp_permit_m3d) + " m³/day" : ""}`);
+          s2.appendChild(h("div", "stat-n", notes.join(" · ")));
+        } else s2.appendChild(h("div", "stat-n", "No plant in the sources used."));
+
+        // rain on roofs: average and driest year, against residents' use (the line)
         if (r && r.buildings && r.residents_use_m3) {
-          const a = roofPct(r, r.catch_normal_m3), b = roofPct(r, r.catch_driest_m3), top = Math.max(200, a);
-          const m = h("div", "meter"), fa = h("i", "lite"), fb = h("i"), ref = h("b");   // pale: average year; solid: driest
-          fa.style.width = (100 * a / top).toFixed(1) + "%"; fb.style.width = (100 * b / top).toFixed(1) + "%";
-          ref.style.left = (100 * 100 / top).toFixed(1) + "%"; m.append(fa, fb, ref); s3.appendChild(m);
-          s3.appendChild(h("div", "val", `Average year ${fmt(a)}% (pale) · driest, ${r.driest_year}, ${fmt(b)}% (solid)`));
-          s3.appendChild(h("div", "val", `${fmt(r.buildings)} buildings, ${fmt(r.roof_m2 / 1e4, 1)} ha of roof; use at 150 L a day (line)`));
-        } else s3.appendChild(h("div", "val", r ? "No building footprints in the dataset" : "Not counted for this island"));
+          const a = roofPct(r, r.catch_normal_m3), b = roofPct(r, r.catch_driest_m3), top = Math.max(200, Math.ceil(a / 50) * 50);
+          const s3 = stat("Rain on roofs, % of residents' use", `${fmt(a)}%`);
+          const pair = h("div", "pair");
+          pair.append(h("span", null, "average year"), meter(100 * a / top, 100 * 100 / top), h("span", "v", `${fmt(a)}%`),
+                      h("span", null, `driest, ${r.driest_year}`), meter(100 * b / top, 100 * 100 / top), h("span", "v", `${fmt(b)}%`));
+          s3.appendChild(pair);
+          s3.appendChild(h("div", "stat-n", `${fmt(r.buildings)} buildings, ${fmt(r.roof_m2 / 1e4, 1)} ha of roof; line: use at 150 L a day; upper bound`));
+        } else stat("Rain on roofs", "–").appendChild(h("div", "stat-n", r ? "No building footprints in the dataset." : "Not counted for this island."));
+
         // emergencies
         if (i.emergencies.length) {
-          const s4 = sec("Water emergencies");
-          const em = i.emergencies;
-          if (em.length > 3) {
-            const doc = em.filter((e) => e.kind === "documented");
-            s4.appendChild(h("div", "val", `${doc.length} municipalities, declared ${doc[0].start} to ${doc[doc.length - 1].start} (documented)`));
-          } else for (const e of em) s4.appendChild(h("div", "val", `${e.start}${e.end ? " to " + e.end : ""}${e.place && e.place !== i.name ? ", " + e.place : ""}, ${e.by} (${e.kind})`));
+          const em = i.emergencies, s4 = stat("Water emergencies, 2024–26", "");
+          const lines = em.length > 3
+            ? [`${em.filter((e) => e.kind === "documented").length} municipalities, declared ${em[0].start} to ${em[em.length - 1].start}`]
+            : em.map((e) => `${e.start}${e.end ? " to " + e.end : ""}${e.place && e.place !== i.name ? ", " + e.place : ""} (${e.kind})`);
+          s4.appendChild(h("div", "stat-n", lines.join("; ")));
         }
         if (r && r.buildings) {
           const b = h("button", "ex-btn", "Zoom to its roofs"); b.type = "button";
@@ -358,7 +282,7 @@
         }
       }
 
-      function update() { drawMarks(); drawRank(); drawCard(); drawScatter(); }
+      function update() { drawMarks(); drawRank(); drawCard(); }
       function select(name) { st.sel = name; update(); }
 
       // ---- controls
@@ -462,11 +386,6 @@
       set("roof-desal-normal", fmt(roofs.catch_normal_m3 / roofs.desal_capacity_m3d));
       set("roof-desal-dry", fmt(roofs.catch_2022_23_m3 / roofs.desal_capacity_m3d));
 
-      let lastW = 0, rt;
-      window.addEventListener("resize", () => {
-        map.invalidateSize();
-        clearTimeout(rt);
-        rt = setTimeout(() => { const w = $("map-scatter").parentElement.clientWidth; if (w && w !== lastW) { lastW = w; drawScatter(); } }, 150);
-      });
+      window.addEventListener("resize", () => map.invalidateSize());
     }).catch((e) => { const m = $("aegean-map"); if (m) m.textContent = "The map did not load (" + e.message + ")."; });
 })();

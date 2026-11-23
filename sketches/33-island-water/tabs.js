@@ -1,11 +1,11 @@
-// Three tabs on one page: #mapping, #sifnos, #storing. Each tab has its own address, so a
-// link can open it directly; the older addresses #aegean and #cisterns still work. Charts in a hidden tab redraw at their real width when shown.
+// Three tabs on one page: #freshwater, #cisterns, #sifnos. Each tab has its own address, so a
+// link can open it directly; the older addresses #aegean, #mapping and #storing still work. Charts in a hidden tab redraw at their real width when shown.
 (function () {
   "use strict";
   const tabs = [...document.querySelectorAll('[role="tab"]')];
   const ids = tabs.map((t) => t.getAttribute("aria-controls"));
 
-  const OLD = { aegean: "mapping", cisterns: "storing" };
+  const OLD = { aegean: "freshwater", mapping: "freshwater", storing: "cisterns" };
   function show(id, focus) {
     if (OLD[id]) { id = OLD[id]; history.replaceState(null, "", "#" + id); }
     if (!ids.includes(id)) id = ids[0];
@@ -38,5 +38,10 @@
   window.addEventListener("popstate", () => show(location.hash.slice(1)));
   show(location.hash.slice(1));
   // a link to a tab opens the page at the top, with the title and tabs in view
-  if (location.hash) { history.scrollRestoration = "manual"; window.scrollTo(0, 0); requestAnimationFrame(() => window.scrollTo(0, 0)); }
+  if (location.hash) {
+    history.scrollRestoration = "manual";
+    const top = () => { if (window.scrollY < 4000) window.scrollTo(0, 0); };   // not if the reader has already scrolled far
+    top(); requestAnimationFrame(top);
+    window.addEventListener("load", () => setTimeout(top, 0), { once: true });   // the browser jumps to the anchor on load
+  }
 })();

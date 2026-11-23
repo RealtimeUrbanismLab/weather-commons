@@ -99,9 +99,9 @@
   .leaflet-map { height: 560px; margin: 8px 0 0; border: 1px solid var(--line); background: #0b2236; }
   @media (max-width: 480px) { .leaflet-map { height: 460px; } }
   /* map explorer: wider than the text column on large screens */
-  #mapping { max-width: none; }
-  #mapping > * { max-width: var(--text); }
-  #mapping > .explorer { max-width: none; }
+  #freshwater { max-width: none; }
+  #freshwater > * { max-width: var(--text); }
+  #freshwater > .explorer { max-width: none; }
   .ex-controls, .ex-filters { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: center; margin: 10px 0; font-size: 14px; }
   .seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); }
   .seg label { position: relative; }
@@ -124,25 +124,30 @@
   .ex-res input { vertical-align: middle; width: 120px; accent-color: var(--water); }
   .ex-filters input[type=checkbox] { accent-color: var(--water); }
   .ex-body { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
-  @media (min-width: 900px) { .ex-body { grid-template-columns: minmax(0, 1fr) 320px; }
-                              .ex-body .leaflet-map { height: 640px; margin: 0; } }
+  @media (min-width: 900px) { .ex-body { grid-template-columns: minmax(0, 1fr) 330px; }
+                              .ex-body .leaflet-map { height: 660px; margin: 0; } .ex-side { height: 660px; }
+                              .ex-rank { flex: 1 1 auto; height: auto; } }
   .ex-side { display: flex; flex-direction: column; min-height: 0; font-size: 14px; }
-  .ex-card { border: 1px solid var(--line); padding: 10px 12px; }
-  .ex-card h4 { margin: 0; font-size: 18px; }
-  .ex-card .meta { color: var(--muted); font-size: 13px; margin: 0 0 6px; }
-  .ex-card .sec { margin-top: 6px; }
-  .ex-card .sec-h { font-size: 12px; color: var(--muted); margin-bottom: 2px; }
-  .ex-card .val { font-size: 13px; line-height: 1.3; }
-  .ex-card .spark { display: block; width: 100%; height: 44px; }
+  .ex-card { border: 1px solid var(--line); padding: 10px 12px 12px; flex: none; }
+  .ex-card h4 { margin: 0; font-size: 18px; line-height: 1.2; }
+  .ex-card .meta { color: var(--muted); font-size: 13px; margin: 0; }
+  .stat { margin-top: 8px; padding-top: 7px; border-top: 1px solid color-mix(in srgb, var(--fg) 12%, transparent); }
+  .stat-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; font-size: 13px; }
+  .stat-h strong { font-size: 18px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .stat-n { font-size: 12px; color: var(--muted); line-height: 1.3; margin-top: 3px; }
+  .ex-card .spark { display: block; width: 100%; height: 34px; margin-top: 4px; overflow: visible; }
   .ex-card .spark rect { fill: var(--water); fill-opacity: .3; cursor: pointer; }
   .ex-card .spark rect.on { fill-opacity: 1; }
   .ex-card .spark line { stroke: var(--fg); stroke-width: 1; }
-  .meter { position: relative; height: 8px; background: color-mix(in srgb, var(--fg) 8%, transparent); margin: 3px 0; }
+  .meter { position: relative; height: 8px; background: color-mix(in srgb, var(--fg) 9%, transparent); margin-top: 5px; }
   .meter i { position: absolute; left: 0; top: 0; bottom: 0; background: var(--water); }
-  .meter i.lite { opacity: .35; }
-  .meter b { position: absolute; top: -3px; bottom: -3px; width: 1px; background: var(--fg); }
+  .meter b { position: absolute; top: -3px; bottom: -3px; width: 1.5px; background: var(--fg); }
+  .pair { display: grid; grid-template-columns: 5.6rem 1fr 2.8rem; gap: 3px 8px; align-items: center; font-size: 12px; margin-top: 5px; }
+  .pair .meter { margin: 0; }
+  .pair .v { text-align: right; font-variant-numeric: tabular-nums; }
   .ex-card .ex-btn { margin-top: 10px; }
-  .ex-rank-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 10px 0 4px; }
+  .ex-rank-head { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin: 8px 0 4px; }
+  .ex-rank-head .ex-link { white-space: nowrap; }
   .ex-link { font: 13px var(--font); background: none; border: 0; padding: 0; color: var(--water); cursor: pointer; text-decoration: underline; }
   .ex-rank { list-style: none; margin: 0; padding: 0; overflow-y: auto; height: 300px;
              border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
@@ -159,13 +164,6 @@
   .ex-rank .v { text-align: right; font-variant-numeric: tabular-nums; }
   .ex-rank .none { color: var(--muted); padding: 6px 4px; font-size: 12px; }
   .map-reset { margin-top: 0; }
-  .ex-scatter { margin-top: 24px; }
-  .ex-scatter h4 { margin: 0; font-size: 18px; }
-  .ex-scatter .chart { max-width: none; }
-  .chart .pt { cursor: pointer; }
-  .chart .pt .em-ring { fill: none; stroke: var(--fg); stroke-width: 1.5; }
-  .chart .pt.hot .dot, .chart .pt.sel .dot { stroke: var(--fg); stroke-width: 2; }
-  .chart .pt .hit { cursor: pointer; }
   .leaflet-container canvas { border: 0; width: auto; }   /* style.css frames every canvas; not map tiles */
   .tank-icon { background: none; border: 0; }
   .map-card { font: 13px/1.4 var(--font); }
@@ -207,12 +205,23 @@
 
 <p class="lede">Where does an Aegean island's water come from, who decides, and what would a
 fairer and less fragile water future look like?</p>
+<p>About 87% of the islands' rain falls between October and March, and in the winter of
+2022–23 all 105 islands in this sketch got less than their 1991–2020 average
+<span class="kind">reanalysed</span>. Desalination capacity has grown fast: of the
+94,400 m³ a day listed on the islands in 2020, 3,200 m³ had come online by 1990
+<span class="kind">documented</span>. In 2024–26 water emergencies were declared or reported
+on 12 of the 105 islands <span class="kind">documented</span> <span class="kind">reported</span>.
+The sketch has three parts. <strong>Freshwater map</strong> sets the islands side by side: rain
+each winter since 1991, desalination per resident, emergencies, and the rain that lands on every
+roof. <strong>Cisterns</strong> fills a rooftop cistern on Sifnos with the rain of each day
+from 1991 to 2026. <strong>The Sifnos case</strong> follows the island's 2024 emergency, and
+Poulati, a valley where nine springs are shared in twelve-hour turns written into contracts.</p>
 <p class="muted small">33 · Jacob Moe · started 2026-11-23 · draft</p>
 
 <nav class="tabs" role="tablist" aria-label="Parts of the page">
-  <a role="tab" id="tab-mapping" href="#mapping" aria-controls="mapping">Mapping</a>
+  <a role="tab" id="tab-freshwater" href="#freshwater" aria-controls="freshwater">Freshwater map</a>
+  <a role="tab" id="tab-cisterns" href="#cisterns" aria-controls="cisterns">Cisterns</a>
   <a role="tab" id="tab-sifnos" href="#sifnos" aria-controls="sifnos">The Sifnos case</a>
-  <a role="tab" id="tab-storing" href="#storing" aria-controls="storing">Storing</a>
 </nav>
 <p class="small muted">Every claim says what kind of evidence it rests on:
 <span class="kind">documented</span> (a public decision or official dataset),
@@ -220,12 +229,12 @@ fairer and less fragile water future look like?</p>
 <span class="kind">reanalysed</span> (weather model data), <span class="kind">calculated</span>,
 <span class="kind">synthetic</span> (an assumption) or <span class="kind">interpretive</span> (our reading).</p>
 
-<!-- ============================================================ 1. Mapping -->
-<section id="mapping" role="tabpanel" aria-labelledby="tab-mapping">
-<h2>Mapping</h2>
-<p>This sketch covers 105 Aegean islands. In October–March 2022–23 all 105 received less
-rain than their 1991–2020 average, and 100 received less than 80% of it; 28 had a drier
-winter than Sifnos, relative to their own average. In 2023–24, 104 of the 105 were below
+<!-- ============================================================ 1. Freshwater map -->
+<section id="freshwater" role="tabpanel" aria-labelledby="tab-freshwater">
+<h2>Freshwater map</h2>
+<p>In October–March 2022–23, 100 of the 105 islands received less than 80% of their
+1991–2020 average rain, and 28 had a drier winter than Sifnos, relative to their own
+average. In 2023–24, 104 of the 105 were below
 average <span class="kind">reanalysed</span>.</p>
 <p>In 2024 the General Secretariat for Civil Protection declared water emergencies in 33 municipalities across Greece, on eight of the
 sketch's islands: Serifos (30 April), Spetses (4 June), Poros, Sifnos (both 20 June), Leros
@@ -275,15 +284,6 @@ for that island. Zoom in to see every building, each roof a possible cistern.</p
       <ol id="map-rank" class="ex-rank"></ol>
     </aside>
   </div>
-  <div class="ex-scatter">
-    <h4>Two measures at once</h4>
-    <div class="ex-controls">
-      <label>Across <select id="sc-x"></select></label>
-      <label>Up <select id="sc-y"></select></label>
-    </div>
-    <div class="chart"><svg id="map-scatter" role="img" aria-label="Scatter plot of the islands kept by the filters, one measure against another; the ranked list above gives the same values"></svg></div>
-    <p class="label" id="sc-note"></p>
-  </div>
 </div>
 <p class="label">Imagery: Sentinel-2 cloudless 2024, EOX IT Services (modified Copernicus Sentinel
 data; CC BY-NC-SA 4.0). Tanks at each island's main village (OpenStreetMap). A full tank is
@@ -304,7 +304,7 @@ with <span id="roof-ha">59</span> ha of roof; the median roof is <span id="roof-
 150 litres a day each <span class="kind">synthetic</span>, or <span id="roof-desal-normal">78</span>
 and <span id="roof-desal-dry">56</span> days of its desalination capacity. It is an upper bound:
 it counts every roof, drained to a tank large enough to hold a winter's rain. Most of the rain
-falls between October and March; the Storing tab shows how much one house can keep into
+falls between October and March; the Cisterns tab shows how much one house can keep into
 summer.</p>
 <p>The same count on the other islands finds <span id="roofs-n">613,641</span> buildings on
 <span id="roofs-islands">85</span> islands, with <span id="roofs-ha">6,838</span> ha of roof
@@ -354,22 +354,6 @@ for its source.</p>
 <table id="desal-table"><thead><tr><th>Island</th><th>First record</th><th>Plant records</th><th>Permits and decisions</th><th>Temporary permits 2024–26</th></tr></thead><tbody></tbody></table>
 </details>
 
-<h3>What a cubic metre costs</h3>
-<p>The eight figures below come from four sources and measure four different things: a
-plant's running cost, its full production cost, the price users pay, and the cost of water
-shipped by tanker. Around 2012 the running cost of 30 island seawater plants ranged from
-€0.13 a cubic metre (Leros) to €3.50 (Sifnos), with an average of €0.85. In 2025 the
-production cost ranged from €2.56 (Mykonos) to €6.69 (Symi); Sifnos's was €3.55
-<span class="kind">reported</span>. On Chios, a 5 m³ house tank costing about €1,900 pays
-for itself in 21–36 years at the 2019 tariff <span class="kind">reported</span>.</p>
-<div class="chart"><svg id="costs" role="img" aria-label="Water costs in euros per cubic metre, from €0.13 to €12"></svg></div>
-<p class="label">Euros per cubic metre, not adjusted for inflation. All reported. Sources: Zotalis et al. 2014;
-Proto Thema 2025 (a University of the Aegean study); Kakoulas et al. 2022; Bertsiou 2023.</p>
-<details><summary>Numbers</summary>
-<table id="costs-table"><thead><tr><th>What</th><th>Year</th><th>€/m³</th><th>Measures</th><th>Evidence</th></tr></thead><tbody></tbody></table>
-</details>
-
-
 <h3>Sources and limits</h3>
 <ul class="small">
   <li>Island positions: cartographic. The OpenStreetMap place node of each island's main
@@ -403,11 +387,85 @@ Proto Thema 2025 (a University of the Aegean study); Kakoulas et al. 2022; Berts
     end date (<code>data/civil_protection_water.csv</code>). Emergencies on the same islands for
     floods, a forest fire and coastal erosion are left out. Leros and Patmos (November 2025)
     and Astypalaia (May 2026): reported (Naftemporiki; Reuters).</li>
-  <li>Costs: reported, collected in <code>data/water_costs.csv</code> with year and source:
-    Zotalis et al. 2014; Proto Thema, September 2025 (a University of the Aegean study);
-    Kakoulas et al. 2022; Bertsiou 2023 (a doctoral thesis, NTUA). Not adjusted for inflation.</li>
   <li>Residents: observed, ELSTAT 2021 census. Sifnos visitors: reported, The Press Project, 2025.</li>
 </ul>
+</section>
+
+<!-- ============================================================ 2. Cisterns -->
+<section id="cisterns" role="tabpanel" aria-labelledby="tab-cisterns" hidden>
+<h2>Cisterns</h2>
+<p>In July 2026 the municipality asked residents to use their own cisterns
+<span class="kind">reported</span>. How much can one give? Below, a rooftop cistern on Sifnos
+is filled by the rain that fell there each day from 1991 to 2026. Choose a roof, a tank and a
+household. Each day the tank fills with what the roof catches, overflows when full, and gives
+what the household needs until it runs dry.</p>
+
+<div class="fields">
+  <label>Roof <output id="roof-out"></output><input id="roof" type="range" min="20" max="200" step="5" value="100"></label>
+  <label>Tank <output id="tank-out"></output><input id="tank" type="range" min="1" max="40" step="1" value="10"></label>
+  <label>People <output id="people-out"></output><input id="people" type="range" min="1" max="8" step="1" value="3"></label>
+  <label>Litres each a day <output id="litres-out"></output><input id="litres" type="range" min="80" max="250" step="10" value="150"></label>
+</div>
+<fieldset class="choice">
+  <legend>Rainwater is used for</legend>
+  <label><input type="radio" name="use" value="0.3333" checked> toilets and garden only, about a third of household use</label>
+  <label><input type="radio" name="use" value="1"> everything, drinking included (rainwater must then be treated)</label>
+</fieldset>
+
+<p class="lede" id="headline" aria-live="polite">Loading the rain…</p>
+
+<h3>Bigger tanks stop helping</h3>
+<p class="small">Share of the household's use that rain covers, by tank size. The curve
+flattens once the tank is larger than the rain can fill. Two lines: ERA5 rain as it is, and
+ERA5 reduced by the amount it overstates rain on Chios, where it was checked against
+weather stations.</p>
+<div class="chart"><svg id="curve" role="img" aria-label="Share of use met by tank size, with the cost of a house system below"></svg></div>
+<p class="label">Rain: reanalysed (ERA5). Roof, tank and use: synthetic, your choice. Share: calculated. Cost: reported (Chios, 2022).</p>
+<details><summary>Numbers</summary>
+<table id="curve-table"><thead><tr><th>Tank, m³</th><th>Use met, ERA5</th><th>Use met, ERA5 adjusted</th><th>Cost of a house system</th></tr></thead><tbody></tbody></table>
+</details>
+
+<h3>One year of rain and tank</h3>
+<p class="small">A water year runs from October, when the rains start, to September. The tank
+runs on what winter left it.</p>
+<label class="small">Water year <select id="wyear"></select></label>
+<div class="chart"><svg id="year" role="img" aria-label="Daily rain and the water in the tank through one water year"></svg></div>
+<p class="small" id="year-note" aria-live="polite"></p>
+<p class="label">Black strip under the tank: days it could not cover. Rain: reanalysed (ERA5, as it is). Tank: calculated, run without a break from January 1991.</p>
+
+<h3>More cisterns, as a reservoir</h3>
+<label class="small">Houses with a cistern: <output id="houses-out"></output>
+  <input id="houses" type="range" min="0" max="1500" step="50" value="300"></label>
+<p id="reservoir" aria-live="polite"></p>
+<p class="label">Desalination capacity: documented, the most the plants can make, not what they make. Sifnos had 2,777 residents in 2021 (census).</p>
+
+<div class="note">
+  <p><strong>How far to trust this.</strong> The same model, run on ERA5 rain for Chios,
+  comes within 1.5–6.9 percentage points of all 54 house cases in a published Chios study
+  (Kakoulas et al. 2022), always a little higher, because ERA5 there is about 14% wetter
+  than the stations. ERA5 has not yet been checked against a station on Sifnos.</p>
+</div>
+
+<h3>Sources and limits</h3>
+<ul class="small">
+  <li>Daily rain on Sifnos, 1991-01-01 to 2026-10-31: reanalysed. ERA5 (Copernicus Climate
+    Change Service, ECMWF), via the Open-Meteo historical weather API, grid cell 37.00 N,
+    24.75 E, 3.7 km from Apollonia; downloaded 2026-11-23; CC BY 4.0. Rounded to 0.1 mm. ERA5
+    is a weather model fitted to observations on a 0.25° grid (about 25 km); it is not a rain
+    gauge.</li>
+  <li>The adjustment of ERA5 by −12%: calculated from Chios station rain, 2013–2019 (581.7 mm a
+    year), published in Kakoulas, Golfinopoulos, Koumparou &amp; Alexakis, "The Effectiveness of
+    Rainwater Harvesting Infrastructure in a Mediterranean Island", <i>Water</i> 14 (2022) 716,
+    CC BY 4.0, against ERA5 for the same island and years (664 mm). Measured on Chios only.</li>
+  <li>House system costs: reported, from the same study (Chios prices, 2022).</li>
+  <li>Roof, tank, household size and use: synthetic, set by you. A third of household use for
+    toilets and garden follows the same study.</li>
+  <li>Sifnos desalination capacity, 2,250 m³ a day: documented (see The Sifnos case).
+    Residents: observed, ELSTAT 2021 census.</li>
+</ul>
+<p class="small">The model does not show water quality, leaks, evaporation from open cisterns,
+or how people change their use in a dry year. It has no first-flush diverter and treats every
+roof as the same. One ERA5 cell stands for all of Sifnos.</p>
 </section>
 
 <!-- ============================================================ 2. The Sifnos case -->
@@ -548,82 +606,6 @@ was allocated by the weekday turns recorded in deeds <span class="kind">interpre
 </ul>
 </section>
 
-<!-- ============================================================ 3. Storing -->
-<section id="storing" role="tabpanel" aria-labelledby="tab-storing" hidden>
-<h2>Storing</h2>
-<p>In July 2026 the municipality asked residents to use their own cisterns
-<span class="kind">reported</span>. How much can one give? Below, a rooftop cistern on Sifnos
-is filled by the rain that fell there each day from 1991 to 2026. Choose a roof, a tank and a
-household. Each day the tank fills with what the roof catches, overflows when full, and gives
-what the household needs until it runs dry.</p>
-
-<div class="fields">
-  <label>Roof <output id="roof-out"></output><input id="roof" type="range" min="20" max="200" step="5" value="100"></label>
-  <label>Tank <output id="tank-out"></output><input id="tank" type="range" min="1" max="40" step="1" value="10"></label>
-  <label>People <output id="people-out"></output><input id="people" type="range" min="1" max="8" step="1" value="3"></label>
-  <label>Litres each a day <output id="litres-out"></output><input id="litres" type="range" min="80" max="250" step="10" value="150"></label>
-</div>
-<fieldset class="choice">
-  <legend>Rainwater is used for</legend>
-  <label><input type="radio" name="use" value="0.3333" checked> toilets and garden only, about a third of household use</label>
-  <label><input type="radio" name="use" value="1"> everything, drinking included (rainwater must then be treated)</label>
-</fieldset>
-
-<p class="lede" id="headline" aria-live="polite">Loading the rain…</p>
-
-<h3>Bigger tanks stop helping</h3>
-<p class="small">Share of the household's use that rain covers, by tank size. The curve
-flattens once the tank is larger than the rain can fill. Two lines: ERA5 rain as it is, and
-ERA5 reduced by the amount it overstates rain on Chios, where it was checked against
-weather stations.</p>
-<div class="chart"><svg id="curve" role="img" aria-label="Share of use met by tank size, with the cost of a house system below"></svg></div>
-<p class="label">Rain: reanalysed (ERA5). Roof, tank and use: synthetic, your choice. Share: calculated. Cost: reported (Chios, 2022).</p>
-<details><summary>Numbers</summary>
-<table id="curve-table"><thead><tr><th>Tank, m³</th><th>Use met, ERA5</th><th>Use met, ERA5 adjusted</th><th>Cost of a house system</th></tr></thead><tbody></tbody></table>
-</details>
-
-<h3>One year of rain and tank</h3>
-<p class="small">A water year runs from October, when the rains start, to September. The tank
-runs on what winter left it.</p>
-<label class="small">Water year <select id="wyear"></select></label>
-<div class="chart"><svg id="year" role="img" aria-label="Daily rain and the water in the tank through one water year"></svg></div>
-<p class="small" id="year-note" aria-live="polite"></p>
-<p class="label">Black strip under the tank: days it could not cover. Rain: reanalysed (ERA5, as it is). Tank: calculated, run without a break from January 1991.</p>
-
-<h3>More cisterns, as a reservoir</h3>
-<label class="small">Houses with a cistern: <output id="houses-out"></output>
-  <input id="houses" type="range" min="0" max="1500" step="50" value="300"></label>
-<p id="reservoir" aria-live="polite"></p>
-<p class="label">Desalination capacity: documented, the most the plants can make, not what they make. Sifnos had 2,777 residents in 2021 (census).</p>
-
-<div class="note">
-  <p><strong>How far to trust this.</strong> The same model, run on ERA5 rain for Chios,
-  comes within 1.5–6.9 percentage points of all 54 house cases in a published Chios study
-  (Kakoulas et al. 2022), always a little higher, because ERA5 there is about 14% wetter
-  than the stations. ERA5 has not yet been checked against a station on Sifnos.</p>
-</div>
-
-<h3>Sources and limits</h3>
-<ul class="small">
-  <li>Daily rain on Sifnos, 1991-01-01 to 2026-10-31: reanalysed. ERA5 (Copernicus Climate
-    Change Service, ECMWF), via the Open-Meteo historical weather API, grid cell 37.00 N,
-    24.75 E, 3.7 km from Apollonia; downloaded 2026-11-23; CC BY 4.0. Rounded to 0.1 mm. ERA5
-    is a weather model fitted to observations on a 0.25° grid (about 25 km); it is not a rain
-    gauge.</li>
-  <li>The adjustment of ERA5 by −12%: calculated from Chios station rain, 2013–2019 (581.7 mm a
-    year), published in Kakoulas, Golfinopoulos, Koumparou &amp; Alexakis, "The Effectiveness of
-    Rainwater Harvesting Infrastructure in a Mediterranean Island", <i>Water</i> 14 (2022) 716,
-    CC BY 4.0, against ERA5 for the same island and years (664 mm). Measured on Chios only.</li>
-  <li>House system costs: reported, from the same study (Chios prices, 2022).</li>
-  <li>Roof, tank, household size and use: synthetic, set by you. A third of household use for
-    toilets and garden follows the same study.</li>
-  <li>Sifnos desalination capacity, 2,250 m³ a day: documented (see The Sifnos case).
-    Residents: observed, ELSTAT 2021 census.</li>
-</ul>
-<p class="small">The model does not show water quality, leaks, evaporation from open cisterns,
-or how people change their use in a dry year. It has no first-flush diverter and treats every
-roof as the same. One ERA5 cell stands for all of Sifnos.</p>
-</section>
 
 <footer class="site-footer">
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>

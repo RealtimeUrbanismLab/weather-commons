@@ -4,7 +4,6 @@
 //    (reanalysed, ERA5) or desalination capacity per resident (documented capacity /
 //    observed residents = calculated). Positions: the main village (cartographic, OSM).
 // 2. Desalination over time: every record per island, 1970-2026 (documented).
-// 3. One EUR/m3 scale for every water cost on the page (reported).
 (function () {
   "use strict";
   const NS = "http://www.w3.org/2000/svg";
@@ -162,45 +161,9 @@
   }
 
   // ------------------------------------------------------- 3. one EUR/m3 scale
-  function drawCosts(rows) {
-    const svg = $("costs"), wrap = svg.parentElement;
-    clear(svg);
-    const W = chartWidth(svg), L = 8, R = 16, top = 12, rh = 50;
-    const x = (v) => L + v * (W - L - R) / 12;
-    const sorted = rows.slice().sort((a, b) => a.low_eur_m3 - b.low_eur_m3);
-    const H = top + sorted.length * rh + 26;
-    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-    for (let t = 0; t <= 12; t += 2) {
-      el("line", { x1: x(t), x2: x(t), y1: top - 4, y2: H - 22, class: "grid faint" }, svg);
-      text(svg, x(t), H - 6, "€" + t, { class: "tick", "text-anchor": "middle" });
-    }
-    sorted.forEach((c, j) => {
-      const y = top + j * rh + 26;
-      text(svg, L, y - 12, `${c.label}, ${c.year}`, { class: "direct" });
-      const g = el("g", { tabindex: 0 }, svg);
-      if (c.high_eur_m3 > c.low_eur_m3) el("line", { x1: x(c.low_eur_m3), x2: x(c.high_eur_m3), y1: y, y2: y, class: "line" }, g);
-      el("circle", { cx: x(c.low_eur_m3), cy: y, r: 3.5, class: "dot" }, g);
-      if (c.high_eur_m3 > c.low_eur_m3) el("circle", { cx: x(c.high_eur_m3), cy: y, r: 3.5, class: "dot" }, g);
-      if (c.mid_eur_m3 != null) {
-        el("line", { x1: x(c.mid_eur_m3), x2: x(c.mid_eur_m3), y1: y - 6, y2: y + 6, class: "line" }, g);
-        text(g, x(c.mid_eur_m3), y + 16, `${c.mid_label} €${fmt(c.mid_eur_m3, 2)}`, { class: "tick", "text-anchor": "middle" });
-      }
-      const range = c.high_eur_m3 > c.low_eur_m3 ? `€${fmt(c.low_eur_m3, 2)}–${fmt(c.high_eur_m3, 2)}` : `€${fmt(c.low_eur_m3, 2)}`;
-      el("title", {}, g).textContent = `${c.label}, ${c.year}: ${range} per m³. ${c.what}. ${c.evidence_kind}, ${c.source_ids}` +
-        (c.note ? `. ${c.note}` : "");
-    });
-    const tb = $("costs-table").tBodies[0];
-    tb.replaceChildren();
-    for (const c of sorted) {
-      const tr = tb.insertRow();
-      [c.label, c.year, c.high_eur_m3 > c.low_eur_m3 ? `${fmt(c.low_eur_m3, 2)}–${fmt(c.high_eur_m3, 2)}` : fmt(c.low_eur_m3, 2),
-       c.what, `${c.evidence_kind} (${c.source_ids})`].forEach((s) => (tr.insertCell().textContent = s));
-    }
-  }
-
   // ------------------------------------------------------------------ wiring
-  Promise.all(["situate_islands", "situate_desal", "situate_costs", "aegean_land"].map((f) =>
-    fetch(`data/page/${f}.json`).then((r) => r.json()))).then(([isl, desal, costs, land]) => {
+  Promise.all(["situate_islands", "situate_desal", "aegean_land"].map((f) =>
+    fetch(`data/page/${f}.json`).then((r) => r.json()))).then(([isl, desal, land]) => {
     LAND = land;
     const sel = $("map-winter");   // a range over the winters; aegean-map.js labels it
     sel.max = isl.winters.length - 1;
@@ -208,13 +171,12 @@
     document.querySelectorAll("input[name=fill], #map-winter").forEach((e) => e.addEventListener("input", redraw));
     redraw();
     drawDesal(desal); desalTable(desal);
-    drawCosts(costs);
     let last = 0, timer;
     window.addEventListener("resize", () => {
       clearTimeout(timer);
       timer = setTimeout(() => {
         const w = $("desal-time").parentElement.clientWidth;
-        if (w !== last) { last = w; drawDesal(desal); drawCosts(costs); }
+        if (w !== last) { last = w; drawDesal(desal); }
       }, 150);
     });
   }).catch(() => {});
