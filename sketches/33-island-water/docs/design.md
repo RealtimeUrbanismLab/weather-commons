@@ -3,10 +3,10 @@
 ## Structure (revised 2026-11-23)
 
 The author replaced the four workshop parts with three tabs, each written as a narrative:
-**Sifnos in crisis** (formerly Event; adds a topographic map of Sifnos and Poulati as
-diagrams), **Cistern networks** (formerly Simulate; the school roof view removed; first
+**The Sifnos case** (first called Sifnos in crisis; formerly Event; adds a topographic map of Sifnos and Poulati as
+diagrams), **Cisterns** (formerly Simulate; the school roof view removed; first
 called "Cisterns know", renamed by the author) and
-**Aegean water map** (formerly Situate). Narrate is removed; its points went into the tab
+**Aegean freshwater map** (formerly Situate; first tab since 2026-11-23). "What not to conclude" notes removed by the author. Narrate is removed; its points went into the tab
 each belongs to, each tab with its own "what not to conclude" and sources. Visual identity:
 one colour, a water blue (#1a5fb4 light, #4b95e2 dark; both pass the dataviz validator),
 used only for water. A predictive "this winter" outlook for the Aegean map was proposed and

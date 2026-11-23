@@ -1,6 +1,6 @@
 # 33 · Island Water
 
-Author: Jacob Moe · Started: 2026-11-23 · Status: sketch · Stack: static HTML + JS · Publish: no
+Author: Jacob Moe · Started: 2026-11-23 · Status: sketch · Stack: static HTML + JS
 
 Sifnos ran short of water in June 2024, after two winters of 66% and 74% of its usual rain
 and the breakdown of a desalination unit; this sketch sets that summer against daily rain
@@ -20,12 +20,12 @@ python -m http.server 8000
 
 Then open http://localhost:8000.
 
-The page has three tabs, each with its own address (`#crisis`, `#cisterns`, `#aegean`;
+The page has three tabs, each with its own address (`#aegean`, `#sifnos`, `#cisterns`, in that order;
 `tabs.js`). Its one colour, a water blue, is used only for water: rain, tank water, springs,
 cisterns and flow lines. This departs from the shared black-and-white look (CONTRIBUTING §9);
 the author chose it on 2026-11-23, while the sketch is `Publish: no`.
 
-## Sifnos in crisis (`#crisis`)
+## The Sifnos case (`#sifnos`)
 
 Sifnos, summer 2024. In June a desalination unit at Platys Gialos broke down; some
 settlements were without water for 10–15 days, and at some points June use was up to twice
@@ -50,7 +50,7 @@ Page data: `sifnos_topo.json` and `sifnos_hillshade.png` (`tools/fetch_dem_sifno
 `tools/build_sifnos_topo.py`), `poulati.json`, `event_winters.json`; drawn by `event.js` and
 `poulati.js`.
 
-## Cistern networks (`#cisterns`)
+## Cisterns (`#cisterns`)
 
 A rooftop cistern on Sifnos, run day by day on the rain that fell there from 1991-01-01 to
 2026-10-31. Each day the tank fills with roof area × runoff (0.8) × rain, spills what does
@@ -65,7 +65,7 @@ overstates station rain on Chios. The model (`sim-core.js`) gives the same resul
 paper's settings and ERA5 rain it reproduces the 54 house cases of Kakoulas et al. (2022)
 within 1.5–6.9 points (`tools/check_cistern_reference.py`).
 
-## Aegean water map (`#aegean`)
+## Aegean freshwater map (`#aegean`)
 
 105 Aegean islands. In October–March 2022–23 all 105 had less rain than their 1991–2020
 average and 28 had a drier winter than Sifnos, relative to their own average (reanalysed,

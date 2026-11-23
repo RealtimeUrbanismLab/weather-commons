@@ -130,6 +130,12 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: published to the author's own GitHub Pages (fork j-moe, `main`); `Publish: no`
+  removed from the README header, because the Pages build skips such sketches on the fork too.
+  The shared site is unaffected unless a pull request goes to RealtimeUrbanismLab. Tabs
+  renamed and reordered by the author: Aegean freshwater map (first, `#aegean`), The Sifnos
+  case (`#sifnos`), Cisterns (`#cisterns`); "What not to conclude" notes removed.
+
 - 2026-11-23: three-tab redesign (author's decisions: visual ID option A, one water blue;
   no predictive outlook; Poulati as diagrams from the chapter and DECA).
   - `index.html` rebuilt: tabs Sifnos in crisis / Cisterns know / Aegean water map
