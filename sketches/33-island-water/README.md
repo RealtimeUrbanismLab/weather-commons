@@ -23,7 +23,7 @@ Then open http://localhost:8000.
 The page has three tabs, each with its own address (`#freshwater`, `#cisterns`, `#sifnos`, in that order; the older `#aegean`, `#mapping` and `#storing` still open them;
 `tabs.js`). Its one colour, a water blue, is used only for water: rain, tank water, springs,
 cisterns and flow lines. This departs from the shared black-and-white look (CONTRIBUTING §9);
-the author chose it on 2026-11-23, while the sketch is `Publish: no`.
+the author chose it on 2026-11-23 and asks the facilitators to keep it.
 
 ## Freshwater map (`#freshwater`)
 
@@ -117,6 +117,13 @@ For every dataset: who made it, which version and date, when you downloaded it, 
   (CC BY 3.0), Diavgeia decisions of the Municipality of Sifnos (public, Law 4210/2013) and
   press reports, reconciled in `data/desal_reconciled.csv`.
 - Residents: observed, ELSTAT 2021 census (re-use approved by ELSTAT).
+- Licence of the data files derived from ODbL sources: these stay under the Open Database
+  Licence (ODbL 1.0), not CC BY 4.0: `data/page/roofs/*.json`, `data/page/roofs_islands.json`
+  and `data/page/roofs_sifnos.json` (from Microsoft Global ML Building Footprints), and the
+  OpenStreetMap-derived parts of `data/page/sifnos_topo.json` (places, monastery),
+  `data/page/aegean_land.json` (outlines of 30 small islands) and `data/derived/islands_geo_osm.csv`.
+  © OpenStreetMap contributors; © Microsoft. The satellite imagery (EOX, CC BY-NC-SA 4.0) is
+  loaded as map tiles and not stored here. Everything else follows LICENSE-CONTENT.md.
 - Full list of datasets, licences and downloads: `data/datasets.csv`, `data/sources.csv`,
   `data/manifest.json`.
 
