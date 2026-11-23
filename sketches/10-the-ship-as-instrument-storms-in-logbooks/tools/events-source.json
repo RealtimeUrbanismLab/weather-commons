@@ -1,0 +1,1105 @@
+[
+ {
+  "name": "Siege of Fort St David / Pocock's Coromandel campaign",
+  "date": "1758-05-09/1758-05-25",
+  "lat": 11.4,
+  "lon": 81.6,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "NEWCASTLE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/N101"
+   }
+  ],
+  "evidence": "Pocock's squadron off Coromandel after the Battle of Cuddalore (29 Apr 1758). Daily positions 11.0-12.6N 80.4-82.6E, landmarks 'SADERASS' and 'FORT ST DAVIDS'. EncRem 'ALL THE FLEET IN COMPANY', 'ADMIRAL BORE DOWN TO THE...'. Fort St David fell on 2 Jun 1758. Newcastle (Capt. John Lloyd) sailed out with Steevens's reinforcement in 1757 (EncRem: Elizabeth, Yarmouth, Weymouth).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Cuddalore_(1758)",
+   "https://en.wikipedia.org/wiki/Siege_of_Fort_St._David"
+  ],
+  "confidence": "probable"
+ },
+ {
+  "name": "Capture of the Warwick by HMS Minerva",
+  "date": "1761-01-23/1761-01-24",
+  "lat": 45.33,
+  "lon": -7.83,
+  "radius_km": 60,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "MINERVA",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/M195"
+   }
+  ],
+  "evidence": "WarsAndFightsMemo, 23 Jan: 'BATTLE WITH FRENCH SHIP' at 45.33N 7.83W. EncRem, 24 Jan: 'WHAT WAS FORMALY THE WARWICK', then 'PRIZE IN COMPANY'. Capt. Alexander Hood.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/HMS_Minerva_(1759)",
+   "https://en.wikipedia.org/wiki/HMS_Warwick_(1733)"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Berbice slave uprising suppressed (Dutch naval expedition)",
+  "date": "1763-12-05/1764-03-03",
+  "lat": 6.3,
+  "lon": -57.6,
+  "radius_km": 80,
+  "type": "other",
+  "ships": [
+   {
+    "ship": "ZEPHYR",
+    "nat": "DUTCH",
+    "logbook": "ADM_177_1161"
+   }
+  ],
+  "evidence": "Anchored at 'POST ST ANDRIES' / Rio Berbice with the frigate St Maartensdijk (Capt. Maarten Haringman). Memo, 5 Dec 1763: 'REBELLEN!'. OtherRem: 'ZE GAAN EEN AANTAL PLANTAGES AF OM DE NEGEROPSTAND TE ONDERDRUKKEN'. CargoMemo, 1 Feb 1764: 72 'NEGERSLAVEN' shipped. 29 Jan 1764: 'EINDE EXPEDITIE'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Berbice_slave_uprising"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Byron takes possession of the Falklands (Port Egmont)",
+  "date": "1765-01-12/1765-01-28",
+  "lat": -51.35,
+  "lon": -60.1,
+  "radius_km": 120,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "DOLPHIN",
+    "nat": "BRITISH",
+    "logbook": "PRO ADM/51/4536"
+   }
+  ],
+  "evidence": "Dolphin (Cdre John Byron) at 51.45S 61.35W on 12 Jan 1765, then at anchor (no positions 13-26 Jan); landmark 'PORT EGMONT' from 27 Jan. Byron claimed the islands at Port Egmont on 23 Jan 1765.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/John_Byron",
+   "https://en.wikipedia.org/wiki/Port_Egmont"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Cook's first voyage arrives at Tahiti (Transit of Venus expedition)",
+  "date": "1769-04-13",
+  "lat": -17.49,
+  "lon": -149.5,
+  "radius_km": 40,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "ENDEAVOUR",
+    "nat": "BRITISH",
+    "logbook": "BEAGLEHOLE C4752"
+   }
+  ],
+  "evidence": "Positions approaching Tahiti 10-12 Apr 1769 (17.6S 148.97W). On 13 Apr anchored at 'ROYAL BAY, GEORGES ISLAND' (Matavai Bay).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/First_voyage_of_James_Cook"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Dutch guard-ship policing the Gold/Slave Coast trade",
+  "date": "1771-03-29/1773-04-11",
+  "lat": 6.3,
+  "lon": 2.1,
+  "radius_km": 400,
+  "type": "patrol",
+  "ships": [
+   {
+    "ship": "BOREAS",
+    "nat": "DUTCH",
+    "logbook": "ADM_193_16"
+   }
+  ],
+  "evidence": "Memo, 5 Jul 1771 at OUIDAH: 'CONTROLEREN PORTUGESE SCHEPEN OF ZE WEL TOL BETAALD HEBBEN TE ELMINA'. EncRem, 8 May 1771: a French snow from Gabon 'HAD 110 SLAVEN AAN BOORD'.",
+  "sources": [
+   "https://www.slavevoyages.org/"
+  ],
+  "confidence": "probable"
+ },
+ {
+  "name": "Cook's second voyage: first crossing of the Antarctic Circle",
+  "date": "1773-01-17",
+  "lat": -66.6,
+  "lon": 39.58,
+  "radius_km": 100,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "RESOLUTION",
+    "nat": "BRITISH",
+    "logbook": "NMM BEAGLEHOLE"
+   }
+  ],
+  "evidence": "Position 66.60S 39.58E on 17 Jan 1773. OtherRem, 18 Jan: 'NOTHING TO THE S BUT ICE'. Easter Island landmark on 11 Mar 1774.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Second_voyage_of_James_Cook"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Phipps's Arctic expedition to Svalbard",
+  "date": "1773-07-01/1773-08-05",
+  "lat": 80,
+  "lon": 10,
+  "radius_km": 200,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "RACEHORSE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/R1"
+   }
+  ],
+  "evidence": "Capt. Constantine John Phipps. Reached 80.8N in Jul 1773; anchored in 'VOGLE SOUND' 14-18 Jul; landmarks Hakluyt's Headland and Cloven Cliff.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Constantine_Phipps,_2nd_Baron_Mulgrave"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Cevallos expedition: Spanish capture of Santa Catarina Island",
+  "date": "1777-02-15/1777-03-05",
+  "lat": -27.45,
+  "lon": -48.55,
+  "radius_km": 100,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "PODEROSO",
+    "nat": "SPANISH",
+    "logbook": "MS. 153 (3)"
+   },
+   {
+    "ship": "PODEROSO",
+    "nat": "SPANISH",
+    "logbook": "MS. 630"
+   },
+   {
+    "ship": "PODEROSO",
+    "nat": "SPANISH",
+    "logbook": "MS. 408"
+   },
+   {
+    "ship": "PODEROSO",
+    "nat": "SPANISH",
+    "logbook": "MS. 2235"
+   },
+   {
+    "ship": "MARTE",
+    "nat": "SPANISH",
+    "logbook": "MS. 958"
+   },
+   {
+    "ship": "EL MONARCA",
+    "nat": "SPANISH",
+    "logbook": "MS. 209"
+   },
+   {
+    "ship": "SAN DÁMASO",
+    "nat": "SPANISH",
+    "logbook": "MS. 153 (2)"
+   },
+   {
+    "ship": "SAN DÁMASO",
+    "nat": "SPANISH",
+    "logbook": "MS. 213"
+   },
+   {
+    "ship": "ANDALUZ",
+    "nat": "SPANISH",
+    "logbook": "MS. 232"
+   },
+   {
+    "ship": "EL ANDALUZ",
+    "nat": "SPANISH",
+    "logbook": "MS. 214"
+   },
+   {
+    "ship": "EL SEPTENTRIÓN",
+    "nat": "SPANISH",
+    "logbook": "MS. 939"
+   },
+   {
+    "ship": "EL SEPTENTRIÓN",
+    "nat": "SPANISH",
+    "logbook": "MS. 1792"
+   },
+   {
+    "ship": "SAN JOSEPH (PODEROSO)",
+    "nat": "SPANISH",
+    "logbook": "MS. 2005"
+   },
+   {
+    "ship": "DESCONOCIDO-15",
+    "nat": "SPANISH",
+    "logbook": "MS. 965"
+   }
+  ],
+  "evidence": "Fourteen Spanish logbooks put ships 15-97 km from the island on 15-23 Feb 1777, anchored at 'SANTA CATALINA'. Poderoso, 18-19 Feb: 'COMBATE CON LA ESCUADRA ENEMIGA'. Marte, 21 Feb: 'NARRA LA RENDICIÓN DE LA ISLA DE SANTA CATHALINA'. Desconocido-15, 26 Feb: 'ENTREGA DE LA PLAZA POR PARTE DE LOS ENEMIGOS (PORTUGUESES)'. The expedition left Cádiz on 13 Nov 1776 under Casa Tilly in Poderoso; memos in Santa Teresa (MS. 1621) and Perpetua (MS. 2024) give '96 EMBARCACIONES MARCHANTES Y 20 DE GUERRA'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Spanish_invasion_of_Santa_Catarina_Island",
+   "https://en.wikipedia.org/wiki/Spanish–Portuguese_War_(1776–1777)"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "First Battle of Ushant",
+  "date": "1778-07-23/1778-07-28",
+  "lat": 48.4,
+  "lon": -7.9,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "PLUTO",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/P143"
+   }
+  ],
+  "evidence": "Fireship Pluto (James Bradby) with Keppel's fleet. 24 Jul: 'OUR FLEET AND 40 SAILS OF FRENCH FLEET'; 25-29 Jul: 'BOTH FLEETS'. 27 Jul at 48.50N 8.38W, landmark Ushant.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/First_Battle_of_Ushant"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Great Siege of Gibraltar: Spanish naval blockade",
+  "date": "1779-06-22/1779-10-22",
+  "lat": 36,
+  "lon": -5.6,
+  "radius_km": 100,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "FENIX",
+    "nat": "SPANISH",
+    "logbook": "MS. 210"
+   }
+  ],
+  "evidence": "OtherRem, 8 Oct 1779 at 35.63N 8.20W: 'SALIDA DE CÁDIZ PARA EL BLOQUEO DE LA PLAZA DE GIBRALTAR... AL MANDO DEL EXCMO. SR. D. ANTONIO ULLOA'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Great_Siege_of_Gibraltar"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Moonlight Battle (Cape St Vincent)",
+  "date": "1780-01-16",
+  "lat": 36.8,
+  "lon": -8.6,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "RESOLUTION",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/R99"
+   }
+  ],
+  "evidence": "Resolution 74 (Sir Chaloner Ogle) in Rodney's fleet, 'FLEET IN COMPANY' daily. 15 Jan at 37.58N 10.95W; landmark 'ST VINCENT' on 16 Jan and 'CAPE SPARTEL' on 18 Jan.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Cape_St._Vincent_(1780)"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Battle of the Chesapeake (aftermath)",
+  "date": "1781-09-05/1781-09-14",
+  "lat": 36.9,
+  "lon": -75.7,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "MONTAGUE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/M13"
+   }
+  ],
+  "evidence": "Montagu 74 (George Bowen) in Graves's fleet, landmark 'CAPE HENRY'. EncRem, 12 Sep 1781 at 36.62N 74.47W: 'TERRIBLE (BLOWN UP)'. HMS Terrible was scuttled after the battle on 11 Sep.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_the_Chesapeake"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Battle of Cape Spartel",
+  "date": "1782-10-20",
+  "lat": 35.6,
+  "lon": -6.4,
+  "radius_km": 120,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "EL RAYO",
+    "nat": "SPANISH",
+    "logbook": "MS. 1689"
+   }
+  ],
+  "evidence": "11 Oct: 'SE PREPARAN PARA COMBATE NAVAL'. 20 Oct 1782 at 35.48N 6.88W: 'DESCRIBE CON DETALLE LA SITUACIÓN CON RELACIÓN A LA ESCUADRA ENEMIGA INGLESA Y LAS MANIOBRAS DE COMBATE'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Cape_Spartel"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Relief of Malacca and conquest of Selangor (Van Braam's squadron)",
+  "date": "1784-05-29/1784-08-02",
+  "lat": 2.2,
+  "lon": 102.25,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "WASSENAAR",
+    "nat": "DUTCH",
+    "logbook": "ADM_177_1203"
+   },
+   {
+    "ship": "JUNO",
+    "nat": "DUTCH",
+    "logbook": "ADM_177_3374"
+   }
+  ],
+  "evidence": "Juno on the Malacca roads, 29 May 1784. Wassenaar off 'PONGER' (2.1N 102.3E), 5 Jun: 'DE AANVAL WAS HEVIG, DUURDE 3,5 UUR, VUURDEN 705 SCHOTEN'. 18 Jun: 'MET 23 LANDINGSVAARTUIGEN EN 700 MANSCHAPPEN... DE HELE SLAG OM MALAKKA WORDT VERTELD'. 2 Aug at Selangor: 'VEROVEREN SELANGOR'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Siege_of_Malacca_(1784)",
+   "https://en.wikipedia.org/wiki/Raja_Haji_Fisabilillah"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "La Pérouse reaches Botany Bay as the First Fleet founds Sydney",
+  "date": "1788-01-23/1788-01-24",
+  "lat": -34,
+  "lon": 151.2,
+  "radius_km": 80,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "LA BOUSSOLE",
+    "nat": "FRENCH",
+    "logbook": "NIWI-F-1573"
+   }
+  ],
+  "evidence": "Positions 33.72S 151.97E (23 Jan) and 34.19S 151.80E (24 Jan 1788). Voyage 'AVATSCHA -> NOUVELLE HOLLANDE'; memo on the 'LONGITUDE VRAIE D'ARRIVÉE À LA NOUVELLE HOLLANDE'. The French arrived on 24-26 Jan, while Phillip was moving the fleet to Port Jackson.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Jean-François_de_Galaup,_comte_de_Lapérouse",
+   "https://en.wikipedia.org/wiki/First_Fleet"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Nootka Crisis: Martínez occupies Nootka Sound",
+  "date": "1789-05-03/1789-10-31",
+  "lat": 49.59,
+  "lon": -126.62,
+  "radius_km": 60,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "LA PRINCESA",
+    "nat": "SPANISH",
+    "logbook": "MS. 732"
+   }
+  ],
+  "evidence": "Arrived 3-4 May 1789 (49.67N 127.00W). OtherRem: 'EL DÍA 24 DE JUNIO SE TOMÓ POSESIÓN DEL PUERTO DE SAN LORENZO, SU COSTA E ISLAS ADYACENTES EN NOMBRE DEL REY'. Left on 31 Oct.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nootka_Crisis",
+   "https://en.wikipedia.org/wiki/Esteban_José_Martínez"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Spanish refortify Nootka; Fidalgo's Alaska expedition",
+  "date": "1790-04-04/1790-10-25",
+  "lat": 49.59,
+  "lon": -126.62,
+  "radius_km": 60,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "SAN CARLOS",
+    "nat": "SPANISH",
+    "logbook": "MS. 271 DOC 16"
+   }
+  ],
+  "evidence": "Salvador Fidalgo anchored at 'NUTKA' on 4 Apr 1790. 8-17 Apr: 'SE DEDICAN A PONER UNA BATERIA EN LA PUNTA QUE RESGUARDA LA BOCA DEL PUERTO'. Then to Alaska; in Aug 1790 the log notes the Russian chief 'NESTRAT DELAROF' (Delarov).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Salvador_Fidalgo",
+   "https://en.wikipedia.org/wiki/Santa_Cruz_de_Nuca"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Nootka Convention talks (Bodega y Quadra and Vancouver)",
+  "date": "1792-09-07/1792-10-03",
+  "lat": 49.59,
+  "lon": -126.62,
+  "radius_km": 60,
+  "type": "other",
+  "ships": [
+   {
+    "ship": "NA SA DE ARANZAZU",
+    "nat": "SPANISH",
+    "logbook": "MS. 2193"
+   }
+  ],
+  "evidence": "Jacinto Caamaño anchored at 'NOKA' 7 Sep-3 Oct 1792, during Vancouver's stay (28 Aug-12 Oct 1792).",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Nootka_Convention",
+   "https://en.wikipedia.org/wiki/Jacinto_Caamaño"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Dutch East Indiamen captured off St Helena",
+  "date": "1795-06-13/1795-06-14",
+  "lat": -15.3,
+  "lon": -6.2,
+  "radius_km": 200,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "MENTOR",
+    "nat": "DUTCH",
+    "logbook": "AAN_1229_988"
+   }
+  ],
+  "evidence": "13 Jun 1795 at 15.3S 6.2W: 'ZIEN ZWARE SCHEPEN EN MAKEN KLAAR VOOR BATAILLE'. 14 Jun: 'WORDEN OPGEBRACHT DOOR DE ENGELSEN' (the data switches the ship's nationality to BRITISH).",
+  "sources": [
+   "https://morethannelson.com/the-capture-of-a-dutch-east-indiaman-fleet-14-june-1795",
+   "https://resources.huygens.knaw.nl/das/detailVoyage/99168",
+   "https://images.rmg.co.uk/asset/20201"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Capitulation of Saldanha Bay (Lucas's Batavian squadron)",
+  "date": "1796-08-01/1796-08-17",
+  "lat": -33.05,
+  "lon": 17.95,
+  "radius_km": 50,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "DORDRECHT",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_44"
+   },
+   {
+    "ship": "REVOLUTIE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_58"
+   },
+   {
+    "ship": "TROMP",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_49"
+   },
+   {
+    "ship": "CASTOR",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_40"
+   },
+   {
+    "ship": "BELLONE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_37"
+   },
+   {
+    "ship": "BRAAVE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_33"
+   },
+   {
+    "ship": "GREENE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_39"
+   },
+   {
+    "ship": "HAVICK",
+    "nat": "DUTCH",
+    "logbook": "FAM_C22253_6"
+   },
+   {
+    "ship": "VROUWE MARIA",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23318_42"
+   }
+  ],
+  "evidence": "All nine ships are at or within 50 km of Saldanha Bay on 1-8 Aug 1796, anchored at 'SALDANHA BAAI'. Dordrecht is Lucas's own ship. Havick, 2 Aug: 'MAAKTEN KLAAR VOOR GEVECHT'. Revolutie is still at 'SALDANHA BAAY' on 17 Aug, the day of the surrender.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Capitulation_of_Saldanha_Bay"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Action off Madeira: HMS Aimable against Sirène and Bergère",
+  "date": "1799-12-17/1799-12-18",
+  "lat": 31.25,
+  "lon": -17.55,
+  "radius_km": 150,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "L'AIMABLE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/A251"
+   }
+  ],
+  "evidence": "Capt. Henry Raper, escorting a convoy from Cork to Barbados. EncRem, 18 Dec 1799 at 31.25N 17.55W: 'ENGAGEMENT WITH FRENCH FRIGATE AND CORVETTE'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/HMS_Aimable_(1782)",
+   "https://en.wikipedia.org/wiki/French_frigate_Sirène_(1795)"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Spanish frigate Orbe captures British whalers at the Galápagos",
+  "date": "1800-04-03/1800-04-10",
+  "lat": -0.5,
+  "lon": -91.1,
+  "radius_km": 120,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "LA ORBE",
+    "nat": "SPANISH",
+    "logbook": "MS. 271 DOC 15"
+   }
+  ],
+  "evidence": "No positions in the log; the place is given as 'ISLA DE ALBIMOR EN LAS GALAPAGOS' (Albemarle, now Isabela). 7 Apr 1800: 'EL COMBATE EMPIEZA... ABORDAJE DE LAS NAVES ENEMIGAS (CASTOR Y BRETAÑA)'. Castor surrenders while her commander, William Anderson, is ashore.",
+  "sources": [],
+  "confidence": "probable"
+ },
+ {
+  "name": "Battle of Trafalgar",
+  "date": "1805-10-20/1805-10-21",
+  "lat": 36.2,
+  "lon": -6.25,
+  "radius_km": 60,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "SWIFTSURE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/S597"
+   }
+  ],
+  "evidence": "3rd rate Swiftsure, Capt. William (Gordon) Rutherford, 'FLEET IN COMPANY' off Cádiz through Oct 1805. Position 36.00N 6.62W on 20 Oct; an entry for 21 Oct; anchored at Cádiz from 26 Oct.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Battle_of_Trafalgar",
+   "https://en.wikipedia.org/wiki/HMS_Swiftsure_(1804)"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Action of 13 March 1806 (capture of Marengo and Belle Poule)",
+  "date": "1806-03-13",
+  "lat": 26.77,
+  "lon": -29.03,
+  "radius_km": 100,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "AMAZON",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/A106"
+   }
+  ],
+  "evidence": "Capt. William Parker. WarsAndFightsMemo, 13 Mar 1806: 'A BATTLE', at 26.77N 29.03W.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Action_of_13_March_1806"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "British invasions of the Río de la Plata",
+  "date": "1806-10-03/1807-08-02",
+  "lat": -34.9,
+  "lon": -55.5,
+  "radius_km": 300,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "LANCASTER",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/L110"
+   },
+   {
+    "ship": "RAISONABLE",
+    "nat": "BRITISH",
+    "logbook": "NMM ADM/L/R28"
+   }
+  ],
+  "evidence": "Lancaster (William Fothergill) brings a convoy from the Cape: Oct 1806 off Cape Santa Maria (34.0S 52.6W), 'CONVOY IN COMPANY'; at Maldonado in Apr 1807. Raisonable (Josias Rowley), voyage 'MONTEVIDEO -> TABLE BAY', 88 km from Montevideo on 2 Aug 1807.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/British_invasions_of_the_River_Plate"
+  ],
+  "confidence": "probable"
+ },
+ {
+  "name": "French/Dutch frigate Nimph seizes a Spanish slaving schooner",
+  "date": "1811-01-19",
+  "lat": 6.3,
+  "lon": -16.3,
+  "radius_km": 100,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "NIMPH",
+    "nat": "FRENCH",
+    "logbook": "ADM_190_3"
+   }
+  ],
+  "evidence": "WarsAndFightsMemo: 'NAMEN SPAANS SCHIP, EEN SCHOENER, IN BESLAG MET 11 NEGERJONGENS EN ENIGE VERVERSING, DE KAPITEIN MOCHT ZIJN REIS VERVOLGEN'. Capt. J.P.D. Scheidius, sailing from France to the Dutch East Indies.",
+  "sources": [],
+  "confidence": "probable"
+ },
+ {
+  "name": "British invasion of Java",
+  "date": "1811-08-13/1811-09-27",
+  "lat": -6.7,
+  "lon": 108.6,
+  "radius_km": 500,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "NISUS",
+    "nat": "BRITISH",
+    "logbook": "NMM RUSI/NM/180/10"
+   }
+  ],
+  "evidence": "Capt. Philip Beaver, with 'PRESIDENT & PHOEBE IN COMPANY'. Reaches 'JAVA, E-END' (7.90S 115.75E) on 13 Aug 1811; no positions while operating off Java; leaves via Button Rock (Sunda Strait) on 27 Sep. The London Gazette has Nisus, President and Phoebe taking Cheribon.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Invasion_of_Java_(1811)",
+   "https://en.wikipedia.org/wiki/HMS_Nisus",
+   "https://www.thegazette.co.uk/London/issue/16563/page/116/data.pdf"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Barbados slave revolt (Bussa's Rebellion): Dutch brig sent",
+  "date": "1816-05-26/1816-05-30",
+  "lat": 13.1,
+  "lon": -59.6,
+  "radius_km": 60,
+  "type": "other",
+  "ships": [
+   {
+    "ship": "IRENE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23905_2187"
+   }
+  ],
+  "evidence": "Memo: the brig Irene goes 'VIA BRABADOS (OM DAAR EEN SLAVENOPSTAND NEER TE SLAAN)'. 30 May, at Barbados: 'BLIJKT DE SLAVENOPSTAND AL GELUWD TE ZIJN'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Bussa's_rebellion"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "British hand Makassar back to the Dutch",
+  "date": "1816-10-07",
+  "lat": -5.13,
+  "lon": 119.41,
+  "radius_km": 30,
+  "type": "colonial capture",
+  "ships": [
+   {
+    "ship": "ADMIRAAL EVERTSEN",
+    "nat": "DUTCH",
+    "logbook": "A2419(1)_1-300"
+   }
+  ],
+  "evidence": "Anchored at 'MAKASSER' 4 Sep-28 Oct 1816. 7 Oct: 'ENGELSCHE VLAG NEER, NEDERLANDSCHE VLAG GEHESEN... HET GOUVERNEMENT DOOR DEN ENGELSCHE RESIDENT... AAN DEN NED. GOUV. DEN HEER KRUITHOF OVERGING'; 'KONINNG VAN GOAH... KWAMEN TROUW ZWEREN'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Anglo-Dutch_Treaty_of_1814"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Pattimura uprising suppressed (Saparua and Haruku)",
+  "date": "1817-05-23/1817-11-18",
+  "lat": -3.58,
+  "lon": 128.66,
+  "radius_km": 60,
+  "type": "battle",
+  "ships": [
+   {
+    "ship": "ADMIRAAL EVERTSEN",
+    "nat": "DUTCH",
+    "logbook": "A2419(1)_1-300"
+   }
+  ],
+  "evidence": "25 May 1817, at HAROEKOE: 'VERDEDIGING ERVAN TEGEN OPSTANDELINGEN'. 26 Oct, at 'FORT DUURSTEDE, SAPAROEA': 'SCHIETEN OP OPSTANDELINGEN'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Pattimura"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "Dutch punitive expedition to the Gold Coast (Ahanta)",
+  "date": "1838-06-07/1838-08-22",
+  "lat": 5.08,
+  "lon": -1.35,
+  "radius_km": 120,
+  "type": "expedition",
+  "ships": [
+   {
+    "ship": "AMPHITRITE",
+    "nat": "DUTCH",
+    "logbook": "MAR_D23905_99"
+   }
+  ],
+  "evidence": "At ST GEORGE D'ELMINA on 8 Jun and 29 Jul, and at BOUTRY on 17 Jul 1838. LifeOnBoard, 22 Aug: 'OVERLEED DE HEER GENERAAL MAJOOR J. VERVEER, OPPERBEVELHEBBER DER EXPEDITIE TER KUSTE VAN GUINEA'.",
+  "sources": [
+   "https://en.wikipedia.org/wiki/Dutch_Gold_Coast",
+   "https://en.wikipedia.org/wiki/Badu_Bonsu_II"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: GRENADIER (Middle Passage)",
+  "date": "1751-10-21/1752-01-04",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "GRENADIER",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_461"
+   }
+  ],
+  "evidence": "Elmina to Berbice: 'MET EEN LADING VAN 289 SLAVEN'; deaths numbered 'NO. 3, 4...'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: PRINS WILLEM V (Middle Passage)",
+  "date": "1752-08-27/1752-10-19",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "PRINS WILLEM V",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_968"
+   }
+  ],
+  "evidence": "'OVERSTEEK NAAR SURINAME MET 256 LEVENDE SLAVEN'; deaths logged day by day in LifeOnBoard. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: PHILADELPHIA (Middle Passage)",
+  "date": "1753-10-27/1754-01-03",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "PHILADELPHIA",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_896"
+   }
+  ],
+  "evidence": "Guinea to Suriname: '224 SLAVEN AAN BOORD'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: DRIE GESUSTERS (Middle Passage)",
+  "date": "1756-04-18/1756-06-06",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "DRIE GESUSTERS",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_329"
+   }
+  ],
+  "evidence": "Guinea to Suriname: '234 SLAVEN'; 12 death entries. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VLIEGENDE FAAM (Middle Passage)",
+  "date": "1756-12-21/1757-06-19",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VLIEGENDE FAAM",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1153"
+   }
+  ],
+  "evidence": "Klein Popo/Elmina to Suriname. Revolt on board, 21 Dec 1756: 'OPSTAND ONDER DE SLAVEN OP HET SCHIP, DE MEESTER KOK EN DE SMID WORDEN DOODGESLAGEN'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VROUWE JOHANNA CORES (Middle Passage)",
+  "date": "1756-12-25/1757-04-25",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VROUWE JOHANNA CORES",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1217"
+   }
+  ],
+  "evidence": "Gulf of Guinea to Suriname: deaths numbered up to 'NO. 66-70' (38 CargoMemo entries). From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: EENIGHEIJT (Middle Passage)",
+  "date": "1762-05-10/1762-06-26",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "EENIGHEIJT",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_383"
+   }
+  ],
+  "evidence": "Elmina to Suriname: '319 SLAVEN'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: EENIGHEIJT (Middle Passage)",
+  "date": "1764-10-29/1764-12-26",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "EENIGHEIJT",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_391"
+   }
+  ],
+  "evidence": "Ivory Coast to Suriname: '203 LEVENDIGE SLAVEN AAN BOORD. ZE HEBBER ER 256 GEKOCHT. ER ZIJN ER INMIDDELS 53 OVERLEDEN'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VROUWE JOHANNA CORES (Middle Passage)",
+  "date": "1765-01-04/1765-02-21",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VROUWE JOHANNA CORES",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1239"
+   }
+  ],
+  "evidence": "Elmina to Suriname. 18 Jan 1765: 'EEN OPSTAND DOOR DE SLAVEN WERD DOOR ENKELE SLAVINNEN BEKEND GEMAAKT'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VLIEGENDE FAAM (Middle Passage)",
+  "date": "1771-04-15/1771-06-10",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VLIEGENDE FAAM",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1189"
+   }
+  ],
+  "evidence": "Guinea to Suriname: 'NU 203 SLAVEN IN HET SCHIP'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: HAAST U LANGZAAM (Middle Passage)",
+  "date": "1775-12-08/1776-02-27",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "HAAST U LANGZAAM",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_537"
+   }
+  ],
+  "evidence": "West Africa to Suriname: 'LADING VAN 262 SLAVEN (MINUS 7 OVERLEDEN)'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: HAAST U LANGZAAM (Middle Passage)",
+  "date": "1778-01-30/1778-03-28",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "HAAST U LANGZAAM",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_542"
+   }
+  ],
+  "evidence": "West Africa to Suriname: 'LADING VAN 281 (MINUS 6) SLAVEN'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: GEERTUIJDA EN CHRISTINA (Middle Passage)",
+  "date": "1785-04-29/1785-07-03",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "GEERTUIJDA EN CHRISTINA",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_429"
+   }
+  ],
+  "evidence": "'VERTREKKEN MET 276 SLAVEN VAN ELMINA NAAR SURINAME. ER ZIJN VOOR DE AFRIKAANSE KUST 34 SLAVEN OVERLEDEN'; deaths numbered to 128. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VERGENOEGEN (Middle Passage)",
+  "date": "1789-11-06/1790-01-05",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VERGENOEGEN",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1097"
+   }
+  ],
+  "evidence": "Elmina to Suriname: '242 SLAVEN', counted down day by day. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: STANDVASTIGHEID (Middle Passage)",
+  "date": "1792-03-06/1792-04-20",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "STANDVASTIGHEID",
+    "nat": "DUTCH",
+    "logbook": "MCC_20_1070"
+   }
+  ],
+  "evidence": "Elmina to Suriname: '101 MANNEN, 78 VROUWEN, 27 JONGENS EN 20 MEISJES' (226). From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ },
+ {
+  "name": "MCC slave voyage: VERGENOEGEN (Middle Passage)",
+  "date": "1795-01-12/1795-02-24",
+  "lat": 1.5,
+  "lon": -20,
+  "radius_km": 3000,
+  "type": "slave trade",
+  "ships": [
+   {
+    "ship": "VERGENOEGEN",
+    "nat": "DUTCH",
+    "logbook": "MMR_MER_H100"
+   }
+  ],
+  "evidence": "Loango to Suriname: '393 SLAVEN INGEKOCHT, 26 DAARVAN AAN POKKEN EN BLOEDLOOP VERLOREN'. From the logbook of the Middelburgsche Commercie Compagnie; track runs from the Gulf of Guinea to the Guianas.",
+  "sources": [
+   "https://www.slavevoyages.org/voyage/database",
+   "https://www.zeeuwsarchief.nl/en/"
+  ],
+  "confidence": "secure"
+ }
+]
