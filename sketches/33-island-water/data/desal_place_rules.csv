@@ -1,0 +1,60 @@
+field,pattern,island,note
+comm_name,^Rodou$,Rhodes,
+comm_name,^Syrou - Ermoupolis$,Syros,
+comm_name,^Mykonou$,Mykonos,
+comm_name,^Thiras$,Santorini (Thira),Municipality also covers Therasia
+comm_name,^Chiou$,Chios,
+comm_name,^Tinou$,Tinos,
+comm_name,^Sifnou$,Sifnos,
+comm_name,^Kalymnion$,Kalymnos,"Municipality also covers Pserimos, Telendos and islets"
+comm_name,^Symis$,Symi,
+comm_name,^Naxou kai Mikron Kykladon$,Naxos,"Municipality also covers Donousa, Iraklia, Koufonisia, Schinoussa"
+comm_name,^Nisyrou$,Nisyros,
+comm_name,^Spetson$,Spetses,
+comm_name,^Antiparou$,Antiparos,
+comm_name,^Folegandrou$,Folegandros,
+comm_name,^Parou$,Paros,
+comm_name,^Lerou$,Leros,
+comm_name,^Iiton$,Ios,
+comm_name,^Agkistriou$,Agistri,
+comm_name,^Aiginas$,Aegina,
+comm_name,^Amorgou$,Amorgos,
+comm_name,^Karpathou$,Karpathos,
+comm_name,^Agathonisiou$,Agathonisi,
+comm_name,^Ydras$,Hydra,
+comm_name,^Chalkis$,Chalki,Chalki island (not Chalkida)
+comm_name,^Limnou$,Lemnos,
+comm_name,^Milou$,Milos,
+comm_name,^Kythnou$,Kythnos,
+comm_name,^Keas$,Kea,
+comm_name,^Megistis$,Kastellorizo (Megisti),
+comm_name,^Kimolou$,Kimolos,
+comm_name,^(Irakleiou|Agiou Nikolaou|Ierapetras)$,Crete,
+comm_name,^Kymis - Aliveriou$,Evia,
+comm_name,^Chalkideon$,Evia,Chalkida municipality also has mainland units (Avlida/Anthidona)
+comm_name,^(Athinaion)?$,,Placeholder or blank: use text rules below
+comm_name,.*,(outside),Any other municipality: mainland or Ionian
+text,\b(Crete|Creta|Kriti|Ierapetra|Elounda|Alounda|Linoperamata|Almyros|Arina|Foinikia|Heraklion|Iraklion)\b,Crete,
+text,\bKos\b,Kos,
+text,\b(Rhodes|Rodos|Lindos)\b,Rhodes,
+text,\b(Santorini|Thira)\b,Santorini (Thira),
+text,\bPatmos\b,Patmos,
+text,\bNaxos\b,Naxos,
+text,\bKoufon[ií]si\b,Ano Koufonisi,"Assumed Cycladic Koufonisia (inhabited), not Crete's Koufonisi; verify"
+text,\bIraklia\b,Iraklia,
+text,\bSikinos\b,Sikinos,
+text,\b(Skiros|Skyros)\b,Skyros,
+text,\b(Tzia|Kea)\b,Kea,Tzia is Kea's other name
+text,\b(Nisirow|Nisiros|Nisyros)\b,Nisyros,"""Nisirow"" is a typo in the source"
+text,\b(Foumoi|Fourni|Fournoi)\b,Fournoi,"""Foumoi"" is a typo in the source"
+text,\bGavdos\b,Gavdos,
+text,"\bRo, Megistis\b",Ro,"Source says ""Ro, Megistis island""; verify whether on Ro islet or Megisti"
+text,\bMegist,Kastellorizo (Megisti),
+text,\bAstypal,Astypalaia,
+text,\bMykonos\b,Mykonos,
+text,\bHotel Sifnos\b,,"A hotel named Sifnos, location not stated: not known"
+text,\b(Corfu|Kerkyra|Kefalonia|Zante|Zakynthos|Paxo[si]?|Paxoi|Ithac|Ithak)\w*,(outside),Ionian
+text,\b(Athens|Athena SA|Piraeus|Peloponnese|Porto Heli|Kalamata|Argos|Argolid\w*|Argol\w*|Ermioni|Fthiot\w*|Atalanti|Thisvi|Avl[oó]na|Agioi Theodoroi|Central Greece)\b,(outside),Mainland
+text,\b(Offshore|Cruise ship)\b,(outside),Not on an island
+text,\bCyclades\b,,Cyclades: island not known
+text,\bAegean\b,,Aegean islands: island not known

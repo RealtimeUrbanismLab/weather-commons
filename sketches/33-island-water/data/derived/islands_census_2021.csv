@@ -1,0 +1,106 @@
+island,island_el,group,scope,residents_2021,inhabited,settlements,inhabited_settlements,main_settlement,main_settlement_code,main_settlement_residents,census_codes,notes,source_ids
+Syros,Σύρος,Cyclades,base,21124,yes,39,31,"Ερμούπολις,η",5801010101,11039,58,,ELSTAT21
+Naxos,Νάξος,Cyclades,base,19597,yes,67,65,"Νάξος,η",6702010101,8551,670201;670203,Drymalia unit (Naxos),ELSTAT21
+Santorini (Thira),Σαντορίνη (Θήρα),Cyclades,base,15231,yes,42,35,"Εμπορείον,το",6001010501,1785,6001,,ELSTAT21
+Paros,Πάρος,Cyclades,base,14520,yes,76,58,"Πάρος,η",6801000101,4166,6801,,ELSTAT21
+Mykonos,Μύκονος,Cyclades,base,10689,yes,20,12,"Μύκονος,η",6601000101,4808,66,,ELSTAT21
+Tinos,Τήνος,Cyclades,base,8934,yes,64,61,"Τήνος,η",7001010101,4936,70,,ELSTAT21
+Andros,Άνδρος,Cyclades,base,8826,yes,92,85,"Άνδρος,η",5901010101,1560,59,,ELSTAT21
+Milos,Μήλος,Cyclades,base,5302,yes,36,27,"Αδάμας,ο",6501000201,1268,6501,,ELSTAT21
+Sifnos,Σίφνος,Cyclades,base,2777,yes,13,12,"Απολλωνία,η",6504000101,918,6504,,ELSTAT21
+Kea,Κέα,Cyclades,base,2329,yes,36,35,"Κορησσία,η",6301000201,742,6301,,ELSTAT21
+Ios,Ίος,Cyclades,base,2299,yes,9,8,"Ίος,η",6003000001,1957,6003,,ELSTAT21
+Amorgos,Αμοργός,Cyclades,base,1959,yes,36,23,"Αμοργός,η",6701000101,441,6701,,ELSTAT21
+Kythnos,Κύθνος,Cyclades,base,1568,yes,18,16,"Κύθνος,η",6302000101,621,6302,,ELSTAT21
+Antiparos,Αντίπαρος,Cyclades,base,1265,yes,11,4,"Αντίπαρος,η",6802000001,1077,6802,,ELSTAT21
+Serifos,Σέριφος,Cyclades,base,1241,yes,19,16,"Λιβάδιον,το",6503000010,505,6503,,ELSTAT21
+Kimolos,Κίμωλος,Cyclades,base,807,yes,10,7,"Κίμωλος,η",6502000001,718,6502,,ELSTAT21
+Folegandros,Φολέγανδρος,Cyclades,base,719,yes,8,6,"Φολέγανδρος,η",6005000101,370,6005,,ELSTAT21
+Ano Koufonisi,Άνω Κουφονήσι,Cyclades,base,390,yes,12,2,"Κουφονήσιον,το (νησίς)",6702050101,389,670205;6702050101,Tagged islet; same island as its unit,ELSTAT21
+Anafi,Ανάφη,Cyclades,base,293,yes,6,3,"Ανάφη,η",6002000001,284,6002,,ELSTAT21
+Sikinos,Σίκινος,Cyclades,base,253,yes,6,2,"Σίκινος,η",6004000001,180,6004,,ELSTAT21
+Therasia,Θηρασία,Cyclades,base,249,yes,5,5,"Θηρασία,η",6001020201,140,60010202,Community; not tagged as islet in the census,ELSTAT21
+Schinoussa,Σχοινούσα,Cyclades,base,229,yes,6,2,"Σχοινούσσα,η",6702060101,211,670206,,ELSTAT21
+Donousa,Δονούσα,Cyclades,base,213,yes,9,4,"Δονούσα,η",6702020101,185,670202,,ELSTAT21
+Iraklia,Ηρακλειά,Cyclades,base,148,yes,5,2,"Άγιος Γεώργιος,ο",6702040102,111,670204,,ELSTAT21
+Delos,Δήλος,Cyclades,base,15,yes,1,1,"Δήλος,η (νησίς)",6601000104,15,6601000104,Islet (Mykonos),ELSTAT21
+Makronisos,Μακρόνησος,Cyclades,base,6,yes,1,1,"Μακρόνησος,η (νησίς)",6301000205,6,6301000205,"Islet (Kea municipality), off Attica",ELSTAT21
+Polyaigos,Πολύαιγος,Cyclades,base,3,yes,1,1,"Πολύαιγος,η (νησίς)",6502000008,3,6502000008,Islet (Kimolos),ELSTAT21
+Kato Antikeri,Κάτω Αντικέρι,Cyclades,base,2,yes,1,1,"Κάτω Αντικέρι,το (νησίς)",6701000603,2,6701000603,"Islet (Amorgos); OSM name Drima (Δρίμα), alt Kato Antikeri",ELSTAT21
+Kato Koufonisi,Κάτω Κουφονήσι,Cyclades,base,1,yes,1,1,"Κάτω Κουφονήσιον,το (νησίς)",6702050106,1,6702050106,Islet (Koufonisia),ELSTAT21
+Rhodes,Ρόδος,Dodecanese,base,125113,yes,71,68,"Ρόδος,η",6901010101,54562,6901,,ELSTAT21
+Kos,Κως,Dodecanese,base,37089,yes,16,16,"Κως,η",6401010101,21430,6401,,ELSTAT21
+Kalymnos,Κάλυμνος,Dodecanese,base,17586,yes,17,12,"Κάλυμνος,η (Ποθαία)",6101000001,13529,6101,,ELSTAT21
+Leros,Λέρος,Dodecanese,base,7962,yes,18,10,"Αγία Μαρίνα,η",6105000001,2380,6105,,ELSTAT21
+Karpathos,Κάρπαθος,Dodecanese,base,6521,yes,37,25,"Κάρπαθος,η",6201010101,2815,6201,,ELSTAT21
+Patmos,Πάτμος,Dodecanese,base,3235,yes,24,4,"Σκάλα,η",6106000017,1804,6106,,ELSTAT21
+Symi,Σύμη,Dodecanese,base,2601,yes,15,8,"Σύμη,η",6903000001,2322,6903,,ELSTAT21
+Astypalaia,Αστυπάλαια,Dodecanese,base,1371,yes,22,4,"Αστυπάλαια,η",6103000001,1084,6103,,ELSTAT21
+Kasos,Κάσος,Dodecanese,base,1220,yes,23,5,"Αγία Μαρίνα,η",6202000002,549,6202,,ELSTAT21
+Nisyros,Νίσυρος,Dodecanese,base,1041,yes,11,5,"Μανδράκιον,το",6402000101,784,6402,,ELSTAT21
+Lipsi,Λειψοί,Dodecanese,base,778,yes,2,1,"Λειψοί,οι",6104000001,778,6104,,ELSTAT21
+Tilos,Τήλος,Dodecanese,base,746,yes,6,4,"Λιβάδια,τα",6904000201,419,6904,,ELSTAT21
+Kastellorizo (Megisti),Καστελλόριζο (Μεγίστη),Dodecanese,base,582,yes,10,1,"Μεγίστη,η",6902000001,582,6902,,ELSTAT21
+Chalki,Χάλκη,Dodecanese,base,475,yes,15,2,"Χάλκη,η",6905000001,474,6905,,ELSTAT21
+Agathonisi,Αγαθονήσι,Dodecanese,base,202,yes,6,2,"Μεγάλο Χωριό,το",6102000001,189,6102,,ELSTAT21
+Pserimos,Ψέριμος,Dodecanese,base,84,yes,1,1,"Ψέριμος,η (νησίς)",6101000021,84,6101000021,Islet (Kalymnos),ELSTAT21
+Telendos,Τέλενδος,Dodecanese,base,66,yes,1,1,"Τέλενδος,η (νησίς)",6101000020,66,6101000020,Islet (Kalymnos),ELSTAT21
+Saria,Σαρία,Dodecanese,base,46,yes,1,1,"Σαριά,η (νησίς)",6201020104,46,6201020104,Islet (Karpathos),ELSTAT21
+Arkoi,Αρκοί,Dodecanese,base,38,yes,1,1,"Αρκοί,οι (νησίς)",6106000007,38,6106000007,Islet (Patmos),ELSTAT21
+Farmakonisi,Φαρμακονήσι,Dodecanese,base,21,yes,1,1,"Φαρμακονήσιον,το (νησίς)",6105000022,21,6105000022,Islet (Leros),ELSTAT21
+Kalolimnos,Καλόλιμνος,Dodecanese,base,15,yes,1,1,"Καλόλιμνος,η (νησίς)",6101000011,15,6101000011,Islet (Kalymnos),ELSTAT21
+Marathos,Μάραθος,Dodecanese,base,10,yes,1,1,"Μάραθος,η (νησίς)",6106000014,10,6106000014,Islet (Patmos),ELSTAT21
+Gyali,Γυαλί,Dodecanese,base,7,yes,1,1,"Γυαλί,το (νησίς)",6402000102,7,6402000102,Islet (Nisyros),ELSTAT21
+Levitha,Λέβιθα,Dodecanese,base,5,yes,1,1,"Λέβιθα,τα (νησίς)",6105000012,5,6105000012,Islet (Leros),ELSTAT21
+Syrna,Σύρνα,Dodecanese,base,2,yes,1,1,"Σύρνα,η (νησίς)",6103000022,2,6103000022,Islet (Astypalaia),ELSTAT21
+Archangelos,Αρχάγγελος,Dodecanese,base,2,yes,1,1,"Αρχάγγελος,ο (νησίς)",6105000003,2,6105000003,Islet (Leros),ELSTAT21
+Kinaros,Κίναρος,Dodecanese,base,2,yes,1,1,"Κίναρος,η (νησίς)",6105000009,2,6105000009,Islet (Leros),ELSTAT21
+Astakidopoulo,Αστακιδόπουλο,Dodecanese,base,2,yes,1,1,"Αστακιδόπουλο,το (νησίς)",6202000006,2,6202000006,Islet (Kasos),ELSTAT21
+Seskli,Σεσκλί,Dodecanese,base,2,yes,1,1,"Σεσκλίον,το (νησίς)",6903000014,2,6903000014,Islet (Symi),ELSTAT21
+Nera,Νερά,Dodecanese,base,1,yes,1,1,"Νερά,τα (νησίς)",6101000014,1,6101000014,Islet (Kalymnos),ELSTAT21
+Zafora,Ζαφοράς,Dodecanese,base,1,yes,1,1,"Ζαφοράς,ο (νησίς)",6103000008,1,6103000008,Islet (Astypalaia),ELSTAT21
+Kounoupoi,Κουνούποι,Dodecanese,base,1,yes,1,1,"Κουνούποι,οι (νησίς)",6103000012,1,6103000012,Islet (Astypalaia),ELSTAT21
+Ofidousa,Οφιδούσσα,Dodecanese,base,1,yes,1,1,"Οφιδούσσα,η (νησίς)",6103000017,1,6103000017,Islet (Astypalaia),ELSTAT21
+Astakida,Αστακίδα,Dodecanese,base,1,yes,1,1,"Αστακίδα,η (νησίς)",6202000005,1,6202000005,Islet (Kasos),ELSTAT21
+Ro,Ρω,Dodecanese,base,1,yes,1,1,"Ρω,η (νησίς)",6902000007,1,6902000007,Islet (Megisti),ELSTAT21
+Strongyli,Στρογγυλή,Dodecanese,base,1,yes,1,1,"Στρογγυλή,η (νησίς)",6902000009,1,6902000009,Islet (Megisti),ELSTAT21
+Kavalliani,Καβαλλιανή,Evia islets,base,1,yes,1,1,"Καβαλλιανή,η (νησίς)",2905040202,1,2905040202,Islet off south Evia,ELSTAT21
+Lesvos,Λέσβος,North Aegean,base,83755,yes,201,185,"Μυτιλήνη,η",5301010101,31714,53,,ELSTAT21
+Chios,Χίος,North Aegean,base,50361,yes,134,114,"Χίος,η",5701010101,27015,5701,,ELSTAT21
+Samos,Σάμος,North Aegean,base,32642,yes,122,111,"Νέον Καρλοβάσιον,το",5602010101,7141,56,,ELSTAT21
+Lemnos,Λήμνος,North Aegean,base,16411,yes,57,52,"Μύρινα,η",5501010101,6190,5501,,ELSTAT21
+Thasos,Θάσος,North Aegean,base,13104,yes,37,34,"Θάσος,η",0401000101,3331,04,Regional unit = island,ELSTAT21
+Ikaria,Ικαρία,North Aegean,base,8843,yes,90,89,"Άγιος Κήρυκος,ο",5401010101,1201,5401,,ELSTAT21
+Samothraki,Σαμοθράκη,North Aegean,base,2596,yes,15,15,"Καμαριώτισσα,η",0304000007,1067,0304,Municipality in Evros regional unit,ELSTAT21
+Fournoi,Φούρνοι,North Aegean,base,1161,yes,20,10,"Φούρνοι,οι",5402000001,898,5402,,ELSTAT21
+Oinousses,Οινούσσες,North Aegean,base,911,yes,17,3,"Οινούσσαι,αι",5703000001,844,5703,,ELSTAT21
+Ammouliani,Αμμουλιανή,North Aegean,base,521,yes,4,3,"Αμμουλιανή,η",1302010201,487,13020102,Community in Chalkidiki; borderline: Mount Athos gulf (Singitic Gulf) is part of the Aegean,ELSTAT21
+Psara,Ψαρά,North Aegean,base,420,yes,9,1,"Ψαρά,τα",5702000001,420,5702,,ELSTAT21
+Agios Efstratios,Άγιος Ευστράτιος,North Aegean,base,257,yes,3,1,"Άγιος Ευστράτιος,ο",5502000001,257,5502,,ELSTAT21
+Thymaina,Θύμαινα,North Aegean,base,179,yes,1,1,"Θύμαινα,η",5402000007,179,5402000007,Not tagged as islet in the census,ELSTAT21
+Agios Minas,Άγιος Μηνάς,North Aegean,base,3,yes,1,1,"Άγιος Μηνάς,ο (νησίς)",5402000003,3,5402000003,Islet (Fournoi),ELSTAT21
+Skiathos,Σκιάθος,Sporades,base,5802,yes,14,12,"Σκίαθος,η",2501000001,4897,2501,,ELSTAT21
+Skopelos,Σκόπελος,Sporades,base,4518,yes,11,11,"Σκόπελος,η",2503000101,2942,2503,,ELSTAT21
+Alonnisos,Αλόννησος,Sporades,base,3105,yes,14,10,"Πατητήριον,το",2502000001,1387,2502,,ELSTAT21
+Skyros,Σκύρος,Sporades,base,3052,yes,19,14,"Σκύρος,η",2908000001,1725,2908,Municipality in Evia regional unit,ELSTAT21
+Palaio Trikeri,Παλαιό Τρίκερι,Sporades,base,36,yes,1,1,"Παλαιόν Τρικέριον,το (νησίς)",2404050109,36,2404050109,Islet in the Pagasetic Gulf (Magnesia); borderline group,ELSTAT21
+Peristera,Περιστέρα,Sporades,base,18,yes,1,1,"Περιστέρα,η (νησίς)",2502000013,18,2502000013,Islet (Alonnisos),ELSTAT21
+Kyra Panagia,Κυρά Παναγιά,Sporades,base,9,yes,1,1,"Κυρά Παναγιά,η (νησίς)",2502000010,9,2502000010,Islet (Alonnisos),ELSTAT21
+Piperi,Πιπέρι,Sporades,base,6,yes,1,1,"Πιπέριον,το (νησίς)",2502000014,6,2502000014,Islet (Alonnisos),ELSTAT21
+Crete,Κρήτη,Crete,context,624259,yes,1585,1486,"Ηράκλειον,το",7101010001,145440,71;72;73;74,Context only (docs/scope.md),ELSTAT21
+Gavdos,Γαύδος,Crete,context,142,yes,6,5,"Καραβέ,η",7403000005,61,7403,Libyan Sea,ELSTAT21
+Chrysi,Χρυσή,Crete,context,4,yes,1,1,"Χρυσή,η (νησίς)",7202010112,4,7202010112,"Islet (Lasithi), Libyan Sea",ELSTAT21
+Koufonisi (Crete),Κουφονήσι Κρήτης,Crete,context,2,yes,1,1,"Κουφονήσιον,το (νησίς)",7204040202,2,7204040202,"Islet (Lasithi), Libyan Sea",ELSTAT21
+Dragonada,Δραγονάδα,Crete,context,1,yes,1,1,"Δραγονάδα,η (νησίς)",7204010105,1,7204010105,Islet (Lasithi),ELSTAT21
+Evia,Εύβοια,Evia,context,190433,yes,400,377,"Χαλκίς,η",2901010101,64490,29,Context only (docs/scope.md),ELSTAT21
+Kythera,Κύθηρα,Kythera,context,3605,yes,61,61,"Ποταμός,ο",5204011101,443,520401,,ELSTAT21
+Elafonisos,Ελαφόνησος,Kythera,context,743,yes,1,1,"Ελαφόνησος,η (νησίς)",4303000001,743,4303000001,Laconia; borderline: Laconian Gulf / Kythera strait,ELSTAT21
+Antikythera,Αντικύθηρα,Kythera,context,39,yes,3,3,"Ποταμός,ο",5204020101,23,520402,,ELSTAT21
+Salamina,Σαλαμίνα,Saronic,context,37220,yes,29,16,"Σαλαμίς,η",5201010101,24537,5201,,ELSTAT21
+Aegina,Αίγινα,Saronic,context,12911,yes,26,21,"Αίγινα,η",5203000101,6633,5203,,ELSTAT21
+Spetses,Σπέτσες,Saronic,context,3748,yes,7,5,"Σπέτσαι,αι",5206000001,3661,5206,,ELSTAT21
+Poros,Πόρος,Saronic,context,3261,yes,10,10,"Πόρος,ο",5205000001,2806,5205,,ELSTAT21
+Hydra,Ύδρα,Saronic,context,2055,yes,25,12,"Ύδρα,η",5208000001,1988,5208,,ELSTAT21
+Agistri,Αγκίστρι,Saronic,context,1084,yes,4,4,"Μεγαλοχώρι,το",5202000001,627,5202,,ELSTAT21
+Aponisos,Απόνησος,Saronic,context,47,yes,1,1,"Απόνησος,η (νησίς)",5202000002,47,5202000002,Islet (Agistri),ELSTAT21
+Dokos,Δοκός,Saronic,context,15,yes,1,1,"Δοκός,η (νησίς)",5208000008,15,5208000008,Islet (Hydra),ELSTAT21

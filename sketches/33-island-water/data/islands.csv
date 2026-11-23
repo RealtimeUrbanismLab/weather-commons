@@ -1,0 +1,106 @@
+island,group,scope,map_symbol,residents,peak_population,main_sources,desal_cost_eur_m3,user_price_eur_m3,tanker_m3_older_contract,emergencies,other_facts,notes,source_ids
+Syros,Cyclades,base,cistern,21124,,desalination,4.04,,,,,,PROTO25;ELSTAT21
+Naxos,Cyclades,base,cistern,19597,,reservoirs; groundwater; desalination,,,,,Reservoirs at a third of the previous year's level in 2024,,REUTERS24;ELSTAT21
+Santorini (Thira),Cyclades,base,cistern,15231,,"desalination (13 units in 2024, ~23,000 m3/day)",4.19,,,,Peak demand 125-160% of desal capacity (NTUA); tourist water use up 63% in five years,,PROTO25;ELSTAT21
+Paros,Cyclades,base,cistern,14520,,,,,,,~10% of water estimated to go to pools; difficult situation 2024,,PROTO25;POPAGANDA24;ELSTAT21
+Mykonos,Cyclades,base,cistern,10689,,"desalination; nature-based rainwater systems (HYDROUSA, CARDIMED)",2.56,,,,,,PROTO25;CLIMADAPT25;ELSTAT21
+Tinos,Cyclades,base,cistern,8934,,,,,,,,,ELSTAT21
+Andros,Cyclades,base,cistern,8826,,springs; groundwater,,,,,"200+ springs, watermills; 'difficult situation' reported 2024 despite abundance",,ANDROSROUTES;POPAGANDA24;ELSTAT21
+Milos,Cyclades,base,cistern,5302,,,,4.5 (before VAT),,,"A small rental was billed EUR 1,485.81 for Apr-Jun 2025",,PROTO25;NEWMONEY25;ELSTAT21
+Sifnos,Cyclades,base,cistern,2777,up to 39000 tourists at peak,"groundwater; springs; rainwater cisterns; a storage reservoir; desalination (2 seawater units at Platys Gialos, 1 brackish at Kamares)",3.55,,,"20 Jun - 22 Aug 2024 (1 month, extended) (Civil Protection); water-saving measures Jul 2026","~80% of electricity from an oil-fired plant; new 1,000 m3/day RO unit with 50.84 kWp PV funded Jun 2026, tender re-run Nov 2026; one of 7 islands in national demand study (2024)","residents replaced by ELSTAT 2021 final; kit had 2755 (2021 census, prelim.)",ZEPOU24;ZAF22;ETHNOS24;PRESSPROJ;PROTO25;NAXOSTIMES26;KYKLADIKI26;PROTO_EN24;ELSTAT21
+Kea,Cyclades,base,cistern,2329,,,,,,,,,ELSTAT21
+Ios,Cyclades,base,cistern,2299,,,,,,,,,ELSTAT21
+Amorgos,Cyclades,base,cistern,1959,,tankers,,,23500,,One of 7 islands in national demand study,,IEFIM19;PROTO_EN24;ELSTAT21
+Kythnos,Cyclades,base,cistern,1568,,,,,,,,,ELSTAT21
+Antiparos,Cyclades,base,cistern,1265,,,,,,,,,ELSTAT21
+Serifos,Cyclades,base,cistern,1241,,,,,,Summer 2024 (Civil Protection),One of 7 islands in national demand study,,ETHNOS24B;PROTO_EN24;ELSTAT21
+Kimolos,Cyclades,base,cistern,807,,tankers,,,25600,,,,IEFIM19;ELSTAT21
+Folegandros,Cyclades,base,cistern,719,,desalination,2.99,,,,,,PROTO25;ELSTAT21
+Ano Koufonisi,Cyclades,base,cistern,390,,,,1.95 -> 9.67 within a year,,,~700% rise,"facts reported for 'Koufonisia and Small Cyclades' (PROTO25); may also cover Donousa, Iraklia, Schinoussa",PROTO25;ELSTAT21
+Anafi,Cyclades,base,cistern,293,,,,,,,,,ELSTAT21
+Sikinos,Cyclades,base,cistern,253,,,,,,,,,ELSTAT21
+Therasia,Cyclades,base,cistern,249,,,,,,,,,ELSTAT21
+Schinoussa,Cyclades,base,cistern,229,,,,,,,,,ELSTAT21
+Donousa,Cyclades,base,cistern,213,,,,,,,,,ELSTAT21
+Iraklia,Cyclades,base,cistern,148,,,,,,,,,ELSTAT21
+Delos,Cyclades,base,cistern,15,,,,,,,,,ELSTAT21
+Makronisos,Cyclades,base,dot,6,,,,,,,,,ELSTAT21
+Polyaigos,Cyclades,base,dot,3,,,,,,,,,ELSTAT21
+Kato Antikeri,Cyclades,base,dot,2,,,,,,,,,ELSTAT21
+Kato Koufonisi,Cyclades,base,dot,1,,,,,,,,,ELSTAT21
+Rhodes,Dodecanese,base,cistern,125113,,,,,,,,,ELSTAT21
+Kos,Dodecanese,base,cistern,37089,,,,,,,,,ELSTAT21
+Kalymnos,Dodecanese,base,cistern,17586,,,,,,,,,ELSTAT21
+Leros,Dodecanese,base,cistern,7962,,desalination; boreholes; Navy tankers,,,15000,"Jun 2024 (Civil Protection); Nov 2025 (ministerial, with Patmos and Attica), still in force 2026",Major project listed in 2026 national programme,,IEFIM_LEROS;NAFTEMP25;FLASH26;IEFIM19;IEFIM26;ELSTAT21
+Karpathos,Dodecanese,base,cistern,6521,,,,,,,,,ELSTAT21
+Patmos,Dodecanese,base,cistern,3235,,,,,36000,Nov 2025 (ministerial),,,NAFTEMP25;IEFIM19;ELSTAT21
+Symi,Dodecanese,base,cistern,2601,,desalination,6.69,,,,Highest production cost in the study,,PROTO25;ELSTAT21
+Astypalaia,Dodecanese,base,cistern,1371,7000 in midsummer,one reservoir (mid-1990s); desalination at Analipsi; temporary 600 m3/day unit at Chora (2026); bottled water for drinking,,,,May 2026 (municipal/state),"Reservoir at ~150,000 m3 = 1/6 capacity in Jul 2026; summer use ~900 m3/day; irrigation to Livadi farmers cut; EDO drought map orange in Jun 2026; EUR 1.5m from EUR 15m national package",residents replaced by ELSTAT 2021 final; kit had 1400,REUTERS26;ELSTAT21
+Kasos,Dodecanese,base,cistern,1220,,,,,,,One of 7 islands in national demand study,,PROTO_EN24;ELSTAT21
+Nisyros,Dodecanese,base,cistern,1041,,,,,,,,,ELSTAT21
+Lipsi,Dodecanese,base,cistern,778,,tankers,,,23300,,,,IEFIM19;ELSTAT21
+Tilos,Dodecanese,base,cistern,746,,,,,,,,,ELSTAT21
+Kastellorizo (Megisti),Dodecanese,base,cistern,582,,tankers,,,17600,,,,IEFIM19;ELSTAT21
+Chalki,Dodecanese,base,cistern,475,,,,,,,,,ELSTAT21
+Agathonisi,Dodecanese,base,cistern,202,,,,,,,One of 7 islands in national demand study,,PROTO_EN24;ELSTAT21
+Pserimos,Dodecanese,base,cistern,84,,,,,,,,,ELSTAT21
+Telendos,Dodecanese,base,cistern,66,,,,,,,,,ELSTAT21
+Saria,Dodecanese,base,cistern,46,,,,,,,,,ELSTAT21
+Arkoi,Dodecanese,base,cistern,38,,,,,,,,,ELSTAT21
+Farmakonisi,Dodecanese,base,cistern,21,,,,,,,,,ELSTAT21
+Kalolimnos,Dodecanese,base,cistern,15,,,,,,,,,ELSTAT21
+Marathos,Dodecanese,base,cistern,10,,,,,,,,,ELSTAT21
+Gyali,Dodecanese,base,dot,7,,,,,,,,,ELSTAT21
+Levitha,Dodecanese,base,dot,5,,,,,,,,,ELSTAT21
+Syrna,Dodecanese,base,dot,2,,,,,,,,,ELSTAT21
+Archangelos,Dodecanese,base,dot,2,,,,,,,,,ELSTAT21
+Kinaros,Dodecanese,base,dot,2,,,,,,,,,ELSTAT21
+Astakidopoulo,Dodecanese,base,dot,2,,,,,,,,,ELSTAT21
+Seskli,Dodecanese,base,dot,2,,,,,,,,,ELSTAT21
+Nera,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Zafora,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Kounoupoi,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Ofidousa,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Astakida,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Ro,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Strongyli,Dodecanese,base,dot,1,,,,,,,,,ELSTAT21
+Kavalliani,Evia islets,base,dot,1,,,,,,,,,ELSTAT21
+Lesvos,North Aegean,base,cistern,83755,,,,,,,Nature-based wastewater reuse demo (CARDIMED),,CLIMADAPT25;ELSTAT21
+Chios,North Aegean,base,cistern,50361,,,,"0 for the first 20 m3; then 1.15 / 1.73 / 1.80 / 1.99 by block (21-45, 46-70, 71-100, >100 m3), incl. sewerage and VAT (Chios water utility, 2019 decision, as cited 2022)",,,"Chios town: mains water only a few hours a day and a few days a week, especially in summer (2022); households run their own storage tanks and pumps. Groundwater over-pumped, salinising",,ELSTAT21;KAKOULAS22
+Samos,North Aegean,base,cistern,32642,,,,,,,,,ELSTAT21
+Lemnos,North Aegean,base,cistern,16411,,,,,,,,,ELSTAT21
+Thasos,North Aegean,base,cistern,13104,,,,,,,,,ELSTAT21
+Ikaria,North Aegean,base,cistern,8843,,,,,,,,,ELSTAT21
+Samothraki,North Aegean,base,cistern,2596,,,,,,,,,ELSTAT21
+Fournoi,North Aegean,base,cistern,1161,4000 (August; municipal technical service),rain cisterns (main village has no network); public tap; bottled water; desalination at Chrysomilia (100 m3/day since 2008); private wells,,,,,"Domestic demand ~91,500 m3/yr (5,000 m3/month Oct-Apr to 16,000 in August); no municipal irrigation, private wells salinising; power by submarine cable from Samos, with blackouts; whole island Natura 2000","Thesis gives 1,400 permanent residents (technical service) vs 1,161 in the 2021 census",ELSTAT21;BERTSIOU23
+Oinousses,North Aegean,base,cistern,911,,,,,,,,,ELSTAT21
+Ammouliani,North Aegean,base,cistern,521,,,,,,,,,ELSTAT21
+Psara,North Aegean,base,cistern,420,,,,,,,,,ELSTAT21
+Agios Efstratios,North Aegean,base,cistern,257,,,,,,,,,ELSTAT21
+Thymaina,North Aegean,base,cistern,179,,"groundwater from a 94 m deep source, RO-treated since 2009; 3,000 m3 reservoir + 400 m3 tank (3-4 days)",,,,,,"Thesis gives 151 residents (Thymaina 140, Keramidou 11) vs 179 in the 2021 census",ELSTAT21;BERTSIOU23
+Agios Minas,North Aegean,base,dot,3,,,,,,,,,ELSTAT21
+Skiathos,Sporades,base,cistern,5802,,,,,,,,,ELSTAT21
+Skopelos,Sporades,base,cistern,4518,,,,,,,,,ELSTAT21
+Alonnisos,Sporades,base,cistern,3105,,,,,,,,,ELSTAT21
+Skyros,Sporades,base,cistern,3052,,,,,,,,,ELSTAT21
+Palaio Trikeri,Sporades,base,cistern,36,,,,,,,,,ELSTAT21
+Peristera,Sporades,base,cistern,18,,,,,,,,,ELSTAT21
+Kyra Panagia,Sporades,base,dot,9,,,,,,,,,ELSTAT21
+Piperi,Sporades,base,dot,6,,,,,,,,,ELSTAT21
+Crete,Crete,context,context,624259,,,,,,,,,ELSTAT21
+Gavdos,Crete,context,context,142,,,,,,,,,ELSTAT21
+Chrysi,Crete,context,context,4,,,,,,,,,ELSTAT21
+Koufonisi (Crete),Crete,context,context,2,,,,,,,,,ELSTAT21
+Dragonada,Crete,context,context,1,,,,,,,,,ELSTAT21
+Evia,Evia,context,context,190433,,,,,,,,,ELSTAT21
+Kythera,Kythera,context,context,3605,,,,,,,,,ELSTAT21
+Elafonisos,Kythera,context,context,743,,,,,,,,,ELSTAT21
+Antikythera,Kythera,context,context,39,,,,,,,,,ELSTAT21
+Salamina,Saronic,context,context,37220,,,,,,,,,ELSTAT21
+Aegina,Saronic,context,context,12911,,"undersea pipeline from mainland (2022); boreholes; tankers since Feb 2026 (~1,000 m3/day)",,,,,Pipeline failed for the third time 16 Dec 2025; Navy tanker runs weather-dependent,,NEWSBOMB26;PARL26;AEGINAPORTAL26;ELSTAT21
+Spetses,Saronic,context,context,3748,,,,,,Summer 2024 (Civil Protection),,,INGR24;ELSTAT21
+Poros,Saronic,context,context,3261,,,,,,Summer 2024 (Civil Protection),,,INGR24;ELSTAT21
+Hydra,Saronic,context,context,2055,,,,,,,,,ELSTAT21
+Agistri,Saronic,context,context,1084,,,,,,,,,ELSTAT21
+Aponisos,Saronic,context,context,47,,,,,,,,,ELSTAT21
+Dokos,Saronic,context,context,15,,,,,,,,,ELSTAT21

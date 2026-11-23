@@ -1,0 +1,48 @@
+date,event,category,source_ids,notes
+Byzantine era,Poulati water-sharing system established; persists under Venetian (1207-1617) and Ottoman (1617-1821) rule,commons,ZEPOU24,Rules possibly codified in 14th-c. Cycladic 'Customs'
+1865-1872,Poulati monastery built; owners donate water time ('each proprietor had his day and his hours'),commons,ZEPOU24,Quoted from Vernikos 1933
+early 20th c.,Water rights begin to be written into land contracts and inheritance deeds,commons,ZEPOU24,
+1980s,More than 25 farmers in Poulati,commons,ZEPOU24,
+2011-09-23,"Municipality buys parts to maintain the ""old desalination units"" at Kamares",desalination,DIAVGEIA_SIF,ADA 4Α8ΙΩ1Τ-ΘΜΨ
+2014-08-12,"Water trucked from the Kamares desalination plant up to the Apollonia tank, and to the Agios Merkourios tank for Artemonas; repeated into September",logistics,DIAVGEIA_SIF,ADA 6ΧΥ2Ω1Τ-8ΨΚ
+2014-08-28,A Hoh desalination unit of 250 m3/day is named in a spare-parts order,desalination,DIAVGEIA_SIF,ADA 7ΑΡΝΩ1Τ-3ΓΣ
+2015,"Cadastre splits plots, separating a communal cistern from its spring",commons,ZEPOU24,
+2016-05-30,Equipment bought to manage brine at the Kamares desalination plants,desalination,DIAVGEIA_SIF,ADA ΩΨΧ5Ω1Τ-ΧΘΠ
+2017-08-09,"Municipality hires support to license its two existing desalination installations, at Kamares and Platys Gialos, and two sewage plants",desalination,DIAVGEIA_SIF,ADA Ω9ΕΗΩ1Τ-Φ01
+2018-11-13,"Council adds a portable reverse-osmosis unit of at least 1,000 m3/day to a funding bid (Filodimos programme)",desalination,DIAVGEIA_SIF,ADA Ω161Ω1Τ-ΘΒΨ
+2019-07-05,Ministry of Maritime Affairs grants a temporary installation and operating permit for a desalination unit at Platys Gialos,desalination,DIAVGEIA,ADA 9ΙΞ54653ΠΩ-ΩΔ8
+2019-07-15,"Tender for a portable 1,000 m3/day seawater reverse-osmosis unit",desalination,DIAVGEIA_SIF,ADA 6ΩΜΚΩ1Τ-4ΤΥ
+2020-05-06,"Interior Ministry pays EUR 77,670 towards running the desalination plants; such grants recur (2021, 2024, 2025)",funding,DIAVGEIA_SIF,ADA ΩΙΘΕΩ1Τ-ΞΛ7
+2021-03-25,"The portable 1,000 m3/day unit is received",desalination,DIAVGEIA_SIF,ADA ΩΚΟΗΩ1Τ-Ζ08
+2021-05-18,Ministry funds the repair and modernisation of the existing 500 m3/day unit at Platys Gialos and the rebuilding of its site,desalination,DIAVGEIA_SIF,ADA 909Ε4653ΠΩ-ΥΡ1
+2021-06-25,"Seasonal operating contracts: the brackish-water unit at Kamares for five months, the seawater unit at Platys Gialos",desalination,DIAVGEIA_SIF,ADA 6ΖΜΦΩ1Τ-Γ86
+2021-07-06,Municipal decision 104/2021: measures to cut water use because of prolonged drought,crisis,DIAVGEIA_SIF,ADA 66ΑΣΩ1Τ-ΩΙ2
+2021-07-31,Tanker truck hired to carry water from the Platys Gialos plant to the Agios Merkourios tank,logistics,DIAVGEIA_SIF,ADA 94ΕΒΩ1Τ-99Ε
+2021-10-12,The old reverse-osmosis container at Platys Gialos is shipped away for repair,desalination,DIAVGEIA_SIF,ADA 6ΨΚΕΩ1Τ-Ι05
+2021-12-08,"Civil Protection emergency for coastal erosion (29 Nov 2021) that damaged coastal roads; landslides of 21-26 Nov 2023 added later; extended every six months, now to 4 May 2027. Not a water emergency",other emergency,DIAVGEIA_SIF,ADA 6Ε9Μ46ΝΠΙΘ-ΙΣΡ; latest extension ADA ΨΝ3Π46ΝΠΙΘ-ΨΔΘ
+2021-2022,"STARTS4Water 'Cisterns Know' residency; artwork in the main square, summer 2022",community,STARTS_DECA;ZEPOU24,
+2022,"Six farmers left, four over 75",commons,ZEPOU24,
+2022,Study proposes 20-year water plan with wastewater reuse,planning,ZAF22,
+2022-05-09,Ministry funds the upgrade and running of the desalination units for three years,funding,DIAVGEIA_SIF,ADA 6Ψ4Η4653ΠΩ-ΔΗ8
+2022-07-15,"A 14 m3 tanker truck hired for tourist-season demand, carrying water from both plants to the village tanks; ministry pays for tanker hire",logistics,DIAVGEIA_SIF,ADA ΡΞ6ΝΩ1Τ-4ΧΦ
+2023-08-28,"Tankers hired to fill the tanks at Kades, Apelaiti, Faros and Katavati (school); hired again in 2024, 2025 and 2026",logistics,DIAVGEIA_SIF,ADA Ψ54ΦΩ1Τ-15Ω
+2023-09,Karavos merominia interview (rain and seed),weather knowledge,KPT23,See merominia-sifnos project
+2024-06,Desalination breakdown at Platys Gialos; some settlements without water for 10-15 days; at some points June use was up to double the previous August (13 to 25 m3 an hour at one seaside spot),crisis,ETHNOS24;PRESSPROJ,
+2024-06-20,"Civil Protection declares a water emergency for one month, to 22 Jul 2024, for consequences that ""may arise"" from water shortage",emergency,NAXOSPRESS24;NAFTEMP24;SUSTCYC24;DIAVGEIA_SIF,"ADA ΨΘΙΟ46ΝΠΙΘ-91Μ. Press called it the first Cycladic island, but Serifos had been under a water emergency since 30 Apr 2024 (DIAVGEIA_GSCP); local reporting notes no public information on the island. Extended to 22 Aug (see 2024-07-22)"
+2024-07-15,"Council decision 104/2024 on proposals against wasteful use, for sharing water fairly between residents and visitors during the emergency",crisis,DIAVGEIA_SIF,ADA 6ΥΠΔΩ1Τ-Α5Ε
+2024-07-22,"Civil Protection extends the water emergency by one month, to 22 Aug 2024, because the works to deal with the shortage are not finished",emergency,DIAVGEIA_SIF,ADA 6ΛΡΨ46ΝΠΙΘ-7ΣΒ
+2024-07-31,"Tender for materials to repair and upgrade the desalination units, EUR 170,000 incl. VAT",desalination,DIAVGEIA_SIF,ADA Ψ40ΒΩ1Τ-4ΥΔ
+2024-08,Sifnos named among 7 islands for a national demand study to 2030,planning,PROTO_EN24,
+2024-08,Karavos's forecast article closes on drought harming harvests,weather knowledge,KPT24,
+2024-12-18,Council takes up the licensing of swimming pools on Sifnos (postponed),demand,DIAVGEIA_SIF,ADA 9Β5ΞΩ1Τ-ΟΨΕ
+2025,CARDIMED demo revives stone check dams,nature-based,CLIMADAPT25,Date of works to confirm
+2025-02-17,Technical adviser hired to prepare a bid for a new desalination unit,desalination,DIAVGEIA_SIF,ADA Ρ8ΩΚΩ1Τ-ΛΕ3
+2026-01-05,"Consultation on a portable 1,000 m3/day RO unit powered by renewables",desalination,NAXOSPRESS26,
+2026-02-17,"Committee approves the study for a portable 1,000 m3/day solar-assisted reverse-osmosis unit and applies for funding",desalination,DIAVGEIA_SIF,ADA 6ΥΓΡΩ1Τ-2ΥΡ
+2026-03-30,Standard environmental commitments set for a municipal desalination unit on Sifnos,desalination,DIAVGEIA_SIF,ADA ΡΕΧ07ΛΞ-61Ζ
+2026-06-26,"Region includes ""Extension of the Platys Gialos desalination installations"" (OPS 6051846) in the South Aegean 2021-2027 programme: a 1,000 m3/day RO unit with 50.84 kWp of solar, EUR 1.05m",desalination,KYKLADIKI_FUND;NAXOSPRESS_FUND;DIAVGEIA_SIF,"ADA 9Ξ1Α7ΛΞ-ΔΨΞ. Probably the same unit as the portable solar-assisted one (study Feb 2026, permit Sep 2026)"
+2026-07,"Emergency water-saving measures: no network water for gardens, washing yards or cars, or filling pools; fines and possible cuts for repeat offenders; residents urged to use private cisterns; possible rotating cuts",crisis,KYKLADIKI26,
+2026-09-01,"Works permit for the 1,000 m3/day solar-assisted portable unit at Platys Gialos",desalination,DIAVGEIA_SIF,ADA 90ΟΦ46ΝΚΟΤ-1ΘΡ
+2026-10-15,"Open tender for ""Extension of the Platys Gialos desalination installations"", estimated EUR 850,000 + 24% VAT (EUR 1,054,000)",desalination,DIAVGEIA_SIF,ADA 943ΖΩ1Τ-ΥΨΓ
+2026-11-13,Extension tender cancelled and to be re-run (municipal committee decision 206/2026); well-drilling company due on the island,desalination,NAXOSTIMES26;KPT26;DIAVGEIA_SIF,ADA 94ΕΟΩ1Τ-ΛΛΗ. Reason not stated in the title
+2026-11-17,Backup network installed for the Kamares desalination plants,desalination,DIAVGEIA_SIF,ADA Ρ37ΡΩ1Τ-Κ3Β

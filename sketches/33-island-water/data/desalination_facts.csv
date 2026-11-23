@@ -1,0 +1,28 @@
+topic,fact,source_ids,notes
+Technology,Reverse osmosis (RO) pushes pre-treated seawater through membranes; a concentrated brine is returned to the sea,MDPI22,Explain with a diagram
+Energy,Modern RO plants use about 3-5 kWh per m3 depending on salinity and operation,SCIEPUB,One Greek study cites ~2.3 kWh/m3; show as a range
+Energy,Thermal desalination uses 23-25 kWh per m3,MDPI22,
+Energy,Sifnos makes ~80% of its electricity from an oil-fired plant,PRESSPROJ,So desal water is partly oil-made
+Cost,Production costs on islands range from EUR 2.56 (Mykonos) to 6.69 (Symi) per m3,PROTO25,
+Losses,Network losses of 35-40%; average non-revenue water ~50% in Greece,NEWMONEY25;ANGELAKIS25,Every new m3 loses up to half before the tap
+Scale,University of the Aegean study counts 57 island desal plants; demand exceeds resources on 39 islands,PROTO25,Original study to locate
+Policy,25 new temporary desal permits in 2024; 35 fast-track units for 27+ islands by 2026,PROTO_EN24;TOVIMA26,
+Policy,"103 projects in 61 island municipalities, EUR 9.073m (Ministry of Maritime Affairs)",POWERGAME26,
+Policy,National Water Strategy in consultation (2026); ~70 providers to merge into EYDAP and EYATH,IEFIM26,
+Futures,National target: cover current demand and 2030 summer demand at 100%,PROTO_EN24,
+Futures,Demokritos: drought could worsen by 2049,REUTERS26,
+Futures,Spatial analysis assumes 173 L per person per day,EGU26,
+Alternatives,"Wastewater reuse, rainwater harvesting, check dams and aquifer recharge piloted on Lesvos, Mykonos, Sifnos, Tinos",CLIMADAPT25;HYDROUSA,
+Scale,"IDA 2011 inventory, Greece: 157 operating plants, 109,115 m3/day; 35 more contracted (40,135 m3/day); 5 under construction (32,800 m3/day)",HELLEXP14;IDA11,"National, all uses; a snapshot to compare with EMODnet 2020"
+Scale,"Greek desalinated water by feed: 56% seawater, 41% brackish; by use: 48% municipal, 31% industry, 16% tourism; by technology: RO 74%, ED 10%, MED 8%, MSF 7% (2011)",HELLEXP14;IDA11,
+History,"Earliest island plants in the sources: Syros MSF 1970 (1,000 m3/day, now presumed offline); Mykonos and Ithaki RO 1981; Nisyros RO 1991 (out of operation by c. 2008)",EMODNET;HELLEXP14,See data/derived/desal_timeline.csv
+Cost,"Operating cost of 30 island seawater RO plants averaged 0.85 EUR/m3 (range 0.13 Leros to 3.5 Sifnos), c. 2012",HELLEXP14,Operating cost only; 2025 production costs are much higher (PROTO25)
+Cost,"Shipping water to islands cost 4.91-8.32 EUR/m3 (c. 2012); the water shipped was mostly not potable, so households also bought bottled water",HELLEXP14,
+Cost,Tanker water 7-12 EUR/m3 (literature cited in a 2023 thesis); RO energy 3.7-8 kWh/m3,BERTSIOU23,"reported, citing Bardis 2020 and Myronidis 2021"
+Energy,"Renewable desal on islands by 2014: Symi vapour compression with a 750 kW wind turbine (450 m3/day, from 2009); Kimolos geothermal MED (80 m3/day, built 2000); Milos wind-powered RO (3,360 m3/day, 1.80 EUR/m3); Iraklia removable RO with wind and PV",HELLEXP14,
+Futures,Modelled cost of desalinated water in hybrid renewable scenarios for Fournoi: 1.257-1.705 EUR/m3,BERTSIOU23,"modelled, not observed"
+Alternatives,"Chios town rooftop rain tanks for toilets and garden (a third of a 200 L/person/day use), 2013-2019 station rain (582 mm/yr): a 5 m3 tank meets 37-62% of that use depending on roof (75-125 m2) and household (2-4 people); EUR 1,900; payback 21-36 years at EUR 2/m3 (text says 21-35; Table 5 has 36)",KAKOULAS22,calculated (their model); our ERA5 rerun is within 1.5-6.9 points
+Alternatives,"Bigger tanks stop helping: on Chios, gains flatten above 10-15 m3 because there is not enough rain to fill them; a 4-person house with a 75 m2 roof tops out at 38% whatever the tank",KAKOULAS22,The key visual: a curve that flattens
+Alternatives,"A school roof (600 m2, 24 m3 tank, ~100 people, 20 L/day each) meets ~60% of its non-drinking use and pays back in ~14 years, because demand stops in summer when the tank is empty",KAKOULAS22,Public roofs suit rain better than houses
+Alternatives,"Chios municipality estimate: rain tanks on 25% of homes would be worth a 370,000 m3 dam costing about EUR 1.5m",KAKOULAS22,"reported (municipal decision 442/2019, as cited)"
+Alternatives,Cutting use from 200 to 150 L/person/day raises the share a given roof can supply by a third,KAKOULAS22,calculated (their Figure 5)

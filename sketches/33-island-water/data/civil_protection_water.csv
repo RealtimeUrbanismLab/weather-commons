@@ -1,0 +1,44 @@
+declared,municipality,municipality_el,regional_unit_el,island,first_ada,first_until,decisions_in_chain,last_decision,last_ada,end,end_note,evidence_kind,source_ids
+2024-01-18,Velo-Vocha,Δήμος Βέλου-Βόχας,Κορινθίας,,Ψ1ΗΜ46ΝΠΙΘ-Θ2Υ,2024-02-15,19,2025-07-25,6ΔΘΝ46ΝΠΙΘ-69Ν,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-02-20,Loutraki-Perachora-Agioi Theodoroi,Δήμος Λουτρακίου-Περαχώρας-Αγίων Θεοδώρων,Κορινθίας,,9ΔΗΤ46ΝΠΙΘ-ΦΩΙ,2024-03-20,1,2024-02-20,9ΔΗΤ46ΝΠΙΘ-ΦΩΙ,2024-03-20,no extension found,documented,DIAVGEIA_GSCP
+2024-04-30,Serifos,Δήμος Σερίφου,Σερίφου,Serifos,9Ρ5446ΝΠΙΘ-9ΨΡ,2024-05-30,8,2024-12-04,Ψ8ΟΒ46ΝΠΙΘ-ΕΥΝ,2025-01-07,,documented,DIAVGEIA_GSCP
+2024-06-04,Spetses,Δήμος Σπετσών,Νήσων,Spetses,94ΕΑ46ΝΠΙΘ-ΑΔ6,2024-07-04,1,2024-06-04,94ΕΑ46ΝΠΙΘ-ΑΔ6,2024-07-04,no extension,documented,DIAVGEIA_GSCP
+2024-06-20,Phaistos,Δήμος Φαιστού,Ηρακλείου,Crete,ΨΕΣ546ΝΠΙΘ-ΙΡΩ,2024-07-22,14,2025-07-29,6ΥΜΡ46ΝΠΙΘ-15Κ,2025-12-31,,documented,DIAVGEIA_GSCP
+2024-06-20,Poros,Δήμος Πόρου,Νήσων,Poros,6ΑΩΦ46ΝΠΙΘ-8ΕΒ,2024-07-22,1,2024-06-20,6ΑΩΦ46ΝΠΙΘ-8ΕΒ,2024-07-22,no extension,documented,DIAVGEIA_GSCP
+2024-06-20,Sifnos,Δήμος Σίφνου,Μήλου,Sifnos,ΨΘΙΟ46ΝΠΙΘ-91Μ,2024-07-22,2,2024-07-22,6ΛΡΨ46ΝΠΙΘ-7ΣΒ,2024-08-22,,documented,DIAVGEIA_GSCP
+2024-06-25,Leros,Δήμος Λέρου,Καλύμνου,Leros,6ΦΖΓ46ΝΠΙΘ-ΨΡΡ,2024-07-25,2,2024-07-25,91ΟΠ46ΝΠΙΘ-00Θ,2024-08-26,,documented,DIAVGEIA_GSCP
+2024-06-26,Myki,Δήμος Μύκης,Ξάνθης,,98ΖΑ46ΝΠΙΘ-Μ51,2024-07-26,1,2024-06-26,98ΖΑ46ΝΠΙΘ-Μ51,2024-07-26,no extension found,documented,DIAVGEIA_GSCP
+2024-07-03,Sami,Δήμος Σάμης,Κεφαλληνίας,outside the sketch: Kefalonia,6ΝΝΔ46ΝΠΙΘ-Τ0Σ,2024-08-05,4,2024-10-07,9ΓΝΗ46ΝΠΙΘ-1ΓΝ,2024-11-07,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-07-05,Viannos,Δήμος Βιάννου,Ηρακλείου,Crete,Ρ9ΔΟ46ΝΠΙΘ-ΓΓ0,2024-08-05,13,2025-07-11,6ΖΜΥ46ΝΠΙΘ-ΣΔ8,2025-12-31,,documented,DIAVGEIA_GSCP
+2024-07-09,Minoa Pediadas,Δήμος Μινώα Πεδιάδας,Ηρακλείου,Crete,ΨΤΡ346ΝΠΙΘ-ΕΥ8,2024-08-09,13,2025-07-15,9Θ0046ΝΠΙΘ-Θ4Ο,2026-01-14,,documented,DIAVGEIA_GSCP
+2024-07-19,Gortyna,Δήμος Γόρτυνας,Ηρακλείου,Crete,Ρ51Φ46ΝΠΙΘ-3ΜΠ,2024-08-19,12,2025-06-23,ΡΜ1646ΝΠΙΘ-ΓΗΝ,2025-07-23,,documented,DIAVGEIA_GSCP
+2024-07-19,Kissamos,Δήμος Κισσάμου,Χανίων,Crete,ΡΟΥΜ46ΝΠΙΘ-0ΧΥ,2024-08-19,13,2025-07-21,Ψ04546ΝΠΙΘ-854,2025-12-31,,documented,DIAVGEIA_GSCP
+2024-07-22,Alexandroupoli,Δήμος Αλεξανδρούπολης,Έβρου,,9ΕΤ146ΝΠΙΘ-Β91,2024-08-22,1,2024-07-22,9ΕΤ146ΝΠΙΘ-Β91,2024-08-22,no extension found,documented,DIAVGEIA_GSCP
+2024-08-01,Polygyros,Δήμος Πολυγύρου,Χαλκιδικής,,ΨΣΠΚ46ΝΠΙΘ-ΗΜΧ,2024-09-02,12,2025-07-18,6Α5946ΝΠΙΘ-4ΚΓ,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-08-06,Evrotas,Δήμος Ευρώτα,Λακωνίας,,ΡΤΕΥ46ΝΠΙΘ-ΑΗΤ,2024-09-06,1,2024-08-06,ΡΤΕΥ46ΝΠΙΘ-ΑΗΤ,2024-09-06,no extension found,documented,DIAVGEIA_GSCP
+2024-08-07,Archanes-Asterousia,Δήμος Αρχανών-Αστερουσιών,Ηρακλείου,Crete,ΨΚ3Ζ46ΝΠΙΘ-Ο7Ω,2024-09-09,1,2024-08-07,ΨΚ3Ζ46ΝΠΙΘ-Ο7Ω,2024-09-09,no extension,documented,DIAVGEIA_GSCP
+2024-08-07,Platanias,Δήμος Πλατανιά,Χανίων,Crete,ΨΠΙΖ46ΝΠΙΘ-ΛΦΘ,2024-09-09,12,2025-07-09,9ΟΡΠ46ΝΠΙΘ-7ΝΛ,2025-12-31,,documented,DIAVGEIA_GSCP
+2024-08-14,Soufli,Δήμος Σουφλίου,Έβρου,,ΨΝ1Ξ46ΝΠΙΘ-ΩΨΞ,2024-09-16,1,2024-08-14,ΨΝ1Ξ46ΝΠΙΘ-ΩΨΞ,2024-09-16,no extension found,documented,DIAVGEIA_GSCP
+2024-08-16,Aliartos-Thespies,Δήμος Αλιάρτου-Θεσπιέων,Βοιωτίας,,ΡΥΞ746ΝΠΙΘ-5ΕΚ,2024-09-16,12,2025-07-17,ΨΝ6Ξ46ΝΠΙΘ-ΛΨΧ,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-08-16,Orchomenos,Δήμος Ορχομενού,Βοιωτίας,,Ψ4ΓΧ46ΝΠΙΘ-Ο6Ν,2024-09-16,12,2025-07-17,ΨΞ9046ΝΠΙΘ-ΒΩΙ,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-08-27,Nea Propontida,Δήμος Νέας Προποντίδας,Χαλκιδικής,,Ρ1ΣΝ46ΝΠΙΘ-ΤΤΓ,2024-09-27,12,2025-07-24,ΡΙΑΝ46ΝΠΙΘ-Υ5Ο,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-09-04,Kassandra,Δήμος Κασσάνδρας,Χαλκιδικής,,ΨΗΛΙ46ΝΠΙΘ-Σ73,2024-10-04,1,2024-09-04,ΨΗΛΙ46ΝΠΙΘ-Σ73,2024-10-04,no extension found,documented,DIAVGEIA_GSCP
+2024-09-04,Sithonia,Δήμος Σιθωνίας,Χαλκιδικής,,6ΖΜΩ46ΝΠΙΘ-ΞΦΖ,2024-10-04,10,2025-06-06,ΡΟΚ546ΝΠΙΘ-ΒΘΩ,2025-07-07,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-09-05,Evrotas,Δήμος Ευρώτα,Λακωνίας,,ΨΤΧΜ46ΝΠΙΘ-Η44,2024-10-07,1,2024-09-05,ΨΤΧΜ46ΝΠΙΘ-Η44,2024-10-07,no extension found,documented,DIAVGEIA_GSCP
+2024-09-09,Mylopotamos,Δήμος Μυλοποτάμου,Ρεθύμνης,Crete,ΡΖΥ746ΝΠΙΘ-ΟΑΞ,2024-10-09,1,2024-09-09,ΡΖΥ746ΝΠΙΘ-ΟΑΞ,2024-10-09,no extension,documented,DIAVGEIA_GSCP
+2024-09-24,Aktio-Vonitsa,Δήμος Ακτίου-Βόνιτσας,Αιτωλοακαρνανίας,,6ΓΝΑ46ΝΠΙΘ-ΞΕΣ,2024-10-24,11,2025-07-25,ΡΦΙΕ46ΝΠΙΘ-5ΝΕ,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-10-02,Istiaia-Aidipsos,Δήμος Ιστιαίας-Αιδηψού,Ευβοίας,Evia,9ΡΖ546ΝΠΙΘ-4ΥΦ,2024-11-04,3,2024-12-02,9ΗΧ246ΝΠΙΘ-ΡΗΤ,2025-01-07,last extension covers the Aidipsos and Istiaia units only,documented,DIAVGEIA_GSCP
+2024-11-06,Distomo-Arachova-Antikyra,Δήμος Διστόμου-Αράχωβας-Αντίκυρας,Βοιωτίας,,ΨΟ0846ΝΠΙΘ-ΕΞ5,2024-12-06,1,2024-11-06,ΨΟ0846ΝΠΙΘ-ΕΞ5,2024-12-06,no extension found,documented,DIAVGEIA_GSCP
+2024-11-12,Andros,Δήμος Άνδρου,Άνδρου,Andros,6ΕΩΣ46ΝΠΙΘ-Θ1Χ,2024-12-12,9,2025-07-08,60ΕΨ46ΝΠΙΘ-8ΟΓ,2025-12-31,,documented,DIAVGEIA_GSCP
+2024-11-18,Central Corfu and Diapontia Islands,Δήμος Κεντρικής Κέρκυρας και Διαποντίων Νήσων,Κέρκυρας,outside the sketch: Corfu,9ΔΡΠ46ΝΠΙΘ-ΖΝΑ,2024-12-18,4,2025-02-17,ΨΣΩΔ46ΝΠΙΘ-1ΩΤ,2025-03-20,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-11-18,South Corfu,Δήμος Νότιας Κέρκυρας,Κέρκυρας,outside the sketch: Corfu,96ΤΧ46ΝΠΙΘ-Π52,2024-12-18,8,2025-06-23,ΡΔ2746ΝΠΙΘ-ΔΨΖ,2025-07-23,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2024-11-19,North Corfu,Δήμος Βόρειας Κέρκυρας,Κέρκυρας,outside the sketch: Corfu,ΡΞΜΨ46ΝΠΙΘ-ΑΗΥ,2024-12-18,2,2024-12-18,Ψ3ΔΘ46ΝΠΙΘ-ΑΞΤ,2025-01-20,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2025-01-30,Ierapetra,Δήμος Ιεράπετρας,Λασιθίου,Crete,9Σ3Κ46ΝΠΙΘ-6ΟΙ,2025-03-03,6,2025-07-03,93ΡΛ46ΝΠΙΘ-ΘΣΕ,,last decision (3 Jul 2025) states no end date,documented,DIAVGEIA_GSCP
+2025-03-27,Poros,Δήμος Πόρου,Νήσων,Poros,ΨΟ3946ΝΠΙΘ-Ο5Ω,2025-04-28,4,2025-07-28,6ΑΑΥ46ΝΠΙΘ-Ζ70,2025-12-31,,documented,DIAVGEIA_GSCP
+2025-04-03,Kantanos-Selino,Δήμος Καντάνου-Σελίνου,Χανίων,Crete,ΨΞ0346ΝΠΙΘ-Ο69,2025-05-02,3,2025-05-29,6ΚΧΙ46ΝΠΙΘ-ΠΝΓ,2025-07-02,,documented,DIAVGEIA_GSCP
+2025-04-16,Sami,Δήμος Σάμης,Κεφαλληνίας & Ιθάκης,outside the sketch: Kefalonia,6Ζ1046ΝΠΙΘ-ΔΣΡ,,4,2025-07-14,ΡΛΗΓ46ΝΠΙΘ-ΒΙΕ,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2025-04-25,West Lesvos,Δήμος Δυτικής Λέσβου,Λέσβου,Lesvos,ΨΤΘΨ46ΝΠΙΘ-ΙΦΙ,2025-05-23,4,2025-07-23,98ΚΤ46ΝΠΙΘ-096,2025-12-31,,documented,DIAVGEIA_GSCP
+2025-04-28,Mytilene,Δήμος Μυτιλήνης,Λέσβου,Lesvos,99ΜΚ46ΝΠΙΘ-Ψ91,2025-05-28,4,2025-07-25,9Λ7Ρ46ΝΠΙΘ-Ε23,2025-12-31,,documented,DIAVGEIA_GSCP
+2025-06-23,Paxoi (Lakka),Δήμος Παξών,Κέρκυρας,outside the sketch: Paxoi,ΨΜ2Ψ46ΝΠΙΘ-Ρ4Α,,1,2025-06-23,ΨΜ2Ψ46ΝΠΙΘ-Ρ4Α,2025-07-23,end date from the last decision in the chain,documented,DIAVGEIA_GSCP
+2025-07-03,Chios,Δήμος Χίου,Χίου,Chios,9ΗΙ446ΝΠΙΘ-ΣΓΥ,2025-10-03,2,2025-10-03,604146ΝΠΙΘ-Ξ2Χ,2025-12-31,,documented,DIAVGEIA_GSCP
+2025-07-04,Ermionida,Δήμος Ερμιονίδας,Αργολίδας,,6ΣΚΤ46ΝΠΙΘ-Ε5Π,,2,2025-09-30,6ΑΨ346ΝΠΙΘ-Ι04,2025-12-31,end date from the last decision in the chain,documented,DIAVGEIA_GSCP

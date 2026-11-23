@@ -1,0 +1,50 @@
+{
+ "residents_2021": {
+  "value": 2777,
+  "kind": "observed (census)",
+  "source": "ELSTAT21"
+ },
+ "desal_capacity_m3d": {
+  "value": 2250,
+  "kind": "documented (capacity, not output)",
+  "source": "EMODNET;HELLEXP14;ETHNOS24;DIAVGEIA_SIF (reconciled, data/desal_reconciled.csv)"
+ },
+ "house_cost_eur_by_tank_m3": {
+  "value": {
+   "3": 1750,
+   "5": 1900,
+   "10": 2600,
+   "15": 3400,
+   "20": 4300,
+   "25": 5300
+  },
+  "kind": "reported (Chios prices, 2022)",
+  "source": "KAKOULAS22 Table 2"
+ },
+ "era5_vs_station_factor": {
+  "value": 0.876,
+  "kind": "calculated",
+  "source": "KAKOULAS22 station mean 581.7 mm/yr vs ERA5 664 mm/yr, Chios 2013-2019",
+  "note": "Measured on Chios only; not checked on Sifnos"
+ },
+ "model_check": {
+  "cases": 54,
+  "mean_abs_diff_pts": 3.3,
+  "max_abs_diff_pts": 6.9,
+  "source": "KAKOULAS22 Table 5",
+  "note": "Our model with ERA5 rain vs the paper's 54 household cases (tools/check_cistern_reference.py)"
+ },
+ "school": {
+  "roof_m2": 600,
+  "people": 100,
+  "litres_per_person_day": 20,
+  "tank_m3": 24,
+  "source": "KAKOULAS22 (Chios school case)",
+  "kind": "reported parameters"
+ },
+ "runoff": {
+  "value": 0.8,
+  "kind": "synthetic (assumed)",
+  "note": "KAKOULAS22 used 0.9 x 0.95 = 0.855"
+ }
+}

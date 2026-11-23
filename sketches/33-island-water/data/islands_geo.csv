@@ -1,0 +1,106 @@
+island,group,scope,map_symbol,residents_2021,lat,lon,precision,point_name,osm_name_en,island_osm_id,village_osm_id,notes,source_ids
+Syros,Cyclades,base,cistern,21124,37.44457,24.94232,approximate: OSM place node of main village,Ερμούπολη,Syros,relation/531999,node/416862341,,ELSTAT21;OSM
+Naxos,Cyclades,base,cistern,19597,37.10207,25.37625,approximate: OSM place node of main village,Νάξος,Naxos,relation/453091,node/1842979116,,ELSTAT21;OSM
+Santorini (Thira),Cyclades,base,cistern,15231,36.35717,25.44612,approximate: OSM place node of main village,Εμπορείο,Santorini,relation/453964,node/330428509,,ELSTAT21;OSM
+Paros,Cyclades,base,cistern,14520,37.08424,25.1504,approximate: OSM place node of main village,Παροικιά,Paros,relation/453214,node/62009657,,ELSTAT21;OSM
+Mykonos,Cyclades,base,cistern,10689,37.44504,25.32597,approximate: OSM place node of main village,Μύκονος,Mykonos,relation/531115,node/62009652,,ELSTAT21;OSM
+Tinos,Cyclades,base,cistern,8934,37.53783,25.16125,approximate: OSM place node of main village,Τήνος,Tinos,relation/531102,node/367854320,,ELSTAT21;OSM
+Andros,Cyclades,base,cistern,8826,37.83674,24.93678,approximate: OSM place node of main village,Άνδρος,Andros,relation/531101,node/1847222997,,ELSTAT21;OSM
+Milos,Cyclades,base,cistern,5302,36.72626,24.44721,approximate: OSM place node of main village,Αδάμαντας,Milos,relation/531969,node/287555072,,ELSTAT21;OSM
+Sifnos,Cyclades,base,cistern,2777,36.97392,24.72338,approximate: OSM place node of main village,Απολλωνία,Sifnos,relation/531978,node/298364926,,ELSTAT21;OSM
+Kea,Cyclades,base,cistern,2329,37.65707,24.31298,approximate: OSM place node of main village,Κορησσία,Kea,relation/531990,node/480911557,,ELSTAT21;OSM
+Ios,Cyclades,base,cistern,2299,36.72212,25.28131,approximate: OSM place node of main village,Χώρα,Ios,relation/542011,node/1042365594,,ELSTAT21;OSM
+Amorgos,Cyclades,base,cistern,1959,36.83172,25.89816,approximate: OSM place node of main village,Χώρα Αμοργού,Amorgos,relation/530748,node/1842870872,,ELSTAT21;OSM
+Kythnos,Cyclades,base,cistern,1568,37.41256,24.43049,approximate: OSM place node of main village,Κύθνος,Kythnos,relation/531997,node/481603158,,ELSTAT21;OSM
+Antiparos,Cyclades,base,cistern,1265,36.99442,25.05284,approximate: OSM bounding-box centre,,Antiparos,relation/453077,,box centre: no village match,ELSTAT21;OSM
+Serifos,Cyclades,base,cistern,1241,37.1425,24.51406,approximate: OSM place node of main village,Λιβάδι,Serifos,relation/532001,node/281594761,,ELSTAT21;OSM
+Kimolos,Cyclades,base,cistern,807,36.79357,24.57376,approximate: OSM place node of main village,Χωριό,Kimolos,relation/531971,node/1845735637,,ELSTAT21;OSM
+Folegandros,Cyclades,base,cistern,719,36.62812,24.91966,approximate: OSM place node of main village,Χώρα,Folegandros,relation/531974,node/1470738515,,ELSTAT21;OSM
+Ano Koufonisi,Cyclades,base,cistern,390,36.93277,25.60094,approximate: OSM place node of main village,Κουφονήσι,Pano Koufonisi,relation/530749,node/1842979111,,ELSTAT21;OSM
+Anafi,Cyclades,base,cistern,293,36.35094,25.76737,approximate: OSM place node of main village,Χώρα,Anafi,relation/531065,node/1842740510,,ELSTAT21;OSM
+Sikinos,Cyclades,base,cistern,253,36.69518,25.11848,approximate: OSM place node of main village,Σίκινος,Sikinos,relation/531977,node/9386402594,,ELSTAT21;OSM
+Therasia,Cyclades,base,cistern,249,36.43457,25.34483,approximate: OSM place node of main village,Θηρασία,Thirasia,relation/533902,node/1842749617,,ELSTAT21;OSM
+Schinoussa,Cyclades,base,cistern,229,36.87001,25.51869,approximate: OSM place node of main village,Σχοινούσσα,Schinousa,relation/530783,node/1842893447,,ELSTAT21;OSM
+Donousa,Cyclades,base,cistern,213,37.10067,25.79599,approximate: OSM place node of main village,Σταυρός,Donousa,relation/530746,node/1941138048,,ELSTAT21;OSM
+Iraklia,Cyclades,base,cistern,148,36.86095,25.46792,approximate: OSM place node of main village,Άγιος Γεώργιος,Iraklia,relation/530790,node/1842889604,,ELSTAT21;OSM
+Delos,Cyclades,base,cistern,15,37.39081,25.27058,approximate: OSM bounding-box centre,,Delos,relation/531131,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Makronisos,Cyclades,base,dot,6,37.70122,24.12763,approximate: OSM bounding-box centre,,Makronisos,relation/531998,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Polyaigos,Cyclades,base,dot,3,36.76628,24.63533,approximate: OSM bounding-box centre,,Polyegos,relation/531972,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kato Antikeri,Cyclades,base,dot,2,36.8398,25.66699,approximate: OSM bounding-box centre,,Drima,relation/530781,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kato Koufonisi,Cyclades,base,dot,1,36.91094,25.57528,approximate: OSM bounding-box centre,,Kato Koufonisi,relation/530750,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Rhodes,Dodecanese,base,cistern,125113,36.44372,28.22737,approximate: OSM place node of main village,Ρόδος,Rhodes,relation/452614,node/126244310,,ELSTAT21;OSM
+Kos,Dodecanese,base,cistern,37089,36.89403,27.28666,approximate: OSM place node of main village,Κως,Kos,relation/536480,node/28490587,,ELSTAT21;OSM
+Kalymnos,Dodecanese,base,cistern,17586,36.95158,26.98207,approximate: OSM place node of main village,Πόθια,Kalymnos,relation/541100,node/1842633752,,ELSTAT21;OSM
+Leros,Dodecanese,base,cistern,7962,37.15658,26.85175,approximate: OSM place node of main village,Αγία Μαρίνα,Leros,relation/531360,node/266399744,,ELSTAT21;OSM
+Karpathos,Dodecanese,base,cistern,6521,35.50658,27.21271,approximate: OSM place node of main village,Κάρπαθος,Karpathos,relation/452619,node/1841457645,,ELSTAT21;OSM
+Patmos,Dodecanese,base,cistern,3235,37.32297,26.54316,approximate: OSM place node of main village,Σκάλα,Patmos,relation/533714,node/436596232,,ELSTAT21;OSM
+Symi,Dodecanese,base,cistern,2601,36.61329,27.83803,approximate: OSM place node of main village,Σύμη,Symi,relation/541610,node/1832440972,,ELSTAT21;OSM
+Astypalaia,Dodecanese,base,cistern,1371,36.54787,26.35194,approximate: OSM place node of main village,Αστυπάλαια,Astypalea,relation/531294,node/1842669830,,ELSTAT21;OSM
+Kasos,Dodecanese,base,cistern,1220,35.41195,26.91166,approximate: OSM place node of main village,Αγία Μαρίνα,Kasos,relation/542586,node/1576193523,,ELSTAT21;OSM
+Nisyros,Dodecanese,base,cistern,1041,36.61093,27.13193,approximate: OSM place node of main village,Μανδράκι,Nisyros,relation/530701,node/269163289,,ELSTAT21;OSM
+Lipsi,Dodecanese,base,cistern,778,37.29555,26.76873,approximate: OSM place node of main village,Λειψοί,Lipsi,relation/531539,node/1842659750,,ELSTAT21;OSM
+Tilos,Dodecanese,base,cistern,746,36.41585,27.38474,approximate: OSM place node of main village,Λιβάδια,Tilos,relation/530652,node/1842576051,,ELSTAT21;OSM
+Kastellorizo (Megisti),Dodecanese,base,cistern,582,36.14856,29.58971,approximate: OSM place node of main village,Μεγίστη,Megisti,relation/455014,node/669647791,,ELSTAT21;OSM
+Chalki,Dodecanese,base,cistern,475,36.22279,27.61147,approximate: OSM place node of main village,Χάλκη,Chalki,relation/542568,node/1842518511,,ELSTAT21;OSM
+Agathonisi,Dodecanese,base,cistern,202,37.45808,26.97233,approximate: OSM place node of main village,Μεγάλο Χωριό,Agathonisi,relation/532284,node/1842659755,,ELSTAT21;OSM
+Pserimos,Dodecanese,base,cistern,84,36.93233,27.13453,approximate: OSM place node of main village,Αυλάκια,Pserimos,relation/532297,node/1842576060,,ELSTAT21;OSM
+Telendos,Dodecanese,base,cistern,66,36.99808,26.92115,approximate: OSM place node of main village,Τέλενδος,Telendos,relation/541084,node/1842633757,,ELSTAT21;OSM
+Saria,Dodecanese,base,cistern,46,35.86759,27.21357,approximate: OSM bounding-box centre,,Saria,relation/452622,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Arkoi,Dodecanese,base,cistern,38,37.38271,26.73592,approximate: OSM place node of main village,Αρκοί,Arki,relation/531648,node/1842659740,,ELSTAT21;OSM
+Farmakonisi,Dodecanese,base,cistern,21,37.29111,27.09105,approximate: OSM bounding-box centre,,Farmakonisi,relation/531442,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kalolimnos,Dodecanese,base,cistern,15,37.06123,27.08908,approximate: OSM bounding-box centre,,Kalolimnos,relation/541105,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Marathos,Dodecanese,base,cistern,10,37.36859,26.72435,approximate: OSM bounding-box centre,,Marathi,relation/531651,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Gyali,Dodecanese,base,dot,7,36.66081,27.1241,approximate: OSM bounding-box centre,,Gyali,relation/530706,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Levitha,Dodecanese,base,dot,5,37.00574,26.46454,approximate: OSM place node of main village,Λέβιθα,Levitha,relation/531437,node/1842669832,,ELSTAT21;OSM
+Syrna,Dodecanese,base,dot,2,36.34291,26.67588,approximate: OSM bounding-box centre,,Syrna,relation/531351,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Archangelos,Dodecanese,base,dot,2,37.20327,26.7768,approximate: OSM bounding-box centre,,Archangelos,relation/17900993,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kinaros,Dodecanese,base,dot,2,36.98045,26.28974,approximate: OSM bounding-box centre,,Kinaros,relation/531430,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Astakidopoulo,Dodecanese,base,dot,2,35.87548,26.82501,approximate: OSM bounding-box centre,,Astakidopoulo,relation/541476,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Seskli,Dodecanese,base,dot,2,36.52376,27.86394,approximate: OSM bounding-box centre,,Seskli,relation/17823058,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Nera,Dodecanese,base,dot,1,36.91436,26.93866,approximate: OSM bounding-box centre,,Nera,relation/541109,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Zafora,Dodecanese,base,dot,1,36.0738,26.39942,approximate: OSM bounding-box centre,,Zaforas,relation/531352,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kounoupoi,Dodecanese,base,dot,1,36.5351,26.46877,approximate: OSM bounding-box centre,,Kounoupi,relation/531316,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Ofidousa,Dodecanese,base,dot,1,36.54473,26.1396,approximate: OSM bounding-box centre,,Ofidoussa,relation/531347,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Astakida,Dodecanese,base,dot,1,35.88683,26.81978,approximate: OSM bounding-box centre,,Astakida,relation/541475,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Ro,Dodecanese,base,dot,1,36.15504,29.50037,approximate: OSM bounding-box centre,,Ro,relation/533727,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Strongyli,Dodecanese,base,dot,1,36.11386,29.6369,approximate: OSM bounding-box centre,,Strongyli,relation/1462719,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kavalliani,Evia islets,base,dot,1,38.22533,24.10316,approximate: OSM bounding-box centre,,Kavalliani,relation/1726376,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Lesvos,North Aegean,base,cistern,83755,39.10374,26.55479,approximate: OSM place node of main village,Μυτιλήνη,Lesbos,relation/6830778,node/1606160775,,ELSTAT21;OSM
+Chios,North Aegean,base,cistern,50361,38.37224,26.13298,approximate: OSM place node of main village,Χίος,Chios,relation/3188280,node/2370546748,,ELSTAT21;OSM
+Samos,North Aegean,base,cistern,32642,37.79034,26.7055,approximate: OSM place node of main village,Νέο Καρλόβασι,Samos,relation/452381,node/1840064251,,ELSTAT21;OSM
+Lemnos,North Aegean,base,cistern,16411,39.87542,25.06345,approximate: OSM place node of main village,Μύρινα,Lemnos,relation/537221,node/267618134,,ELSTAT21;OSM
+Thasos,North Aegean,base,cistern,13104,40.7782,24.70588,approximate: OSM place node of main village,Θάσος,Thasos,relation/537593,node/1704973093,,ELSTAT21;OSM
+Ikaria,North Aegean,base,cistern,8843,37.61236,26.29417,approximate: OSM place node of main village,Άγιος Κήρυκος,Icaria,relation/3304440,node/1307906703,,ELSTAT21;OSM
+Samothraki,North Aegean,base,cistern,2596,40.47529,25.47355,approximate: OSM place node of main village,Καμαριώτισσα,Samothraki,relation/537592,node/61738203,,ELSTAT21;OSM
+Fournoi,North Aegean,base,cistern,1161,37.57675,26.48005,approximate: OSM place node of main village,Φούρνοι,Fourni,relation/532273,node/1840094819,,ELSTAT21;OSM
+Oinousses,North Aegean,base,cistern,911,38.51483,26.22155,approximate: OSM place node of main village,Οινούσσες,Oinousses,relation/542027,node/303624102,,ELSTAT21;OSM
+Ammouliani,North Aegean,base,cistern,521,40.33248,23.92126,approximate: OSM place node of main village,Αμμουλιανή,Ammouliani,relation/1726960,node/280887835,,ELSTAT21;OSM
+Psara,North Aegean,base,cistern,420,38.53991,25.56345,approximate: OSM place node of main village,Ψαρά,Psara,relation/533059,node/1832767441,,ELSTAT21;OSM
+Agios Efstratios,North Aegean,base,cistern,257,39.53908,24.9904,approximate: OSM place node of main village,Άγιος Ευστράτιος,Agios Efstratios,relation/958519,node/303625789,,ELSTAT21;OSM
+Thymaina,North Aegean,base,cistern,179,37.58192,26.45242,approximate: OSM place node of main village,Θύμαινα,Thymena,relation/532261,node/1840094773,,ELSTAT21;OSM
+Agios Minas,North Aegean,base,dot,3,37.5957,26.54532,approximate: OSM place node of main village,Άγιος Μηνάς,Agios Minas,relation/532274,node/1840094760,,ELSTAT21;OSM
+Skiathos,Sporades,base,cistern,5802,39.1662,23.48889,approximate: OSM place node of main village,Σκιάθος,Skiathos,relation/536707,node/299851133,,ELSTAT21;OSM
+Skopelos,Sporades,base,cistern,4518,39.12217,23.72725,approximate: OSM place node of main village,Σκόπελος,Skopelos,relation/548215,node/17408908,,ELSTAT21;OSM
+Alonnisos,Sporades,base,cistern,3105,39.14602,23.86435,approximate: OSM place node of main village,Πατητήρι,Alonissos,relation/548227,node/1794773236,,ELSTAT21;OSM
+Skyros,Sporades,base,cistern,3052,38.90635,24.56604,approximate: OSM place node of main village,Σκύρος,Skyros,relation/965446,node/364238652,,ELSTAT21;OSM
+Palaio Trikeri,Sporades,base,cistern,36,39.15486,23.07645,approximate: OSM place node of main village,Παλαιό Τρίκερι,Paleo Trikeri,relation/568988,node/3029483977,,ELSTAT21;OSM
+Peristera,Sporades,base,cistern,18,39.20208,23.96532,approximate: OSM bounding-box centre,,Peristera,relation/548233,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Kyra Panagia,Sporades,base,dot,9,39.33123,24.06949,approximate: OSM bounding-box centre,,Kyra Panagia,relation/548236,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Piperi,Sporades,base,dot,6,39.3506,24.32254,approximate: OSM bounding-box centre,,Piperi,relation/11803552,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Crete,Crete,context,context,624259,35.33908,25.13328,approximate: OSM place node of main village,Ηράκλειο,Crete,relation/453129,node/29438069,,ELSTAT21;OSM
+Gavdos,Crete,context,context,142,34.84868,24.11829,approximate: OSM place node of main village,Καραβές,Gavdos,relation/861780,node/1450692304,,ELSTAT21;OSM
+Chrysi,Crete,context,context,4,34.87351,25.70625,approximate: OSM bounding-box centre,,Chrissi,relation/11308966,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Koufonisi (Crete),Crete,context,context,2,34.93727,26.14055,approximate: OSM bounding-box centre,,Koufonisi,relation/858146,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Dragonada,Crete,context,context,1,35.34464,26.17532,approximate: OSM bounding-box centre,,Dragonara,relation/855921,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Evia,Evia,context,context,190433,38.46227,23.59461,approximate: OSM place node of main village,Χαλκίδα,Euboea,relation/3301815,node/1907438353,,ELSTAT21;OSM
+Kythera,Kythera,context,context,3605,36.29954,22.96202,approximate: OSM place node of main village,Ποταμός,Kythira,relation/957728,node/1769225564,,ELSTAT21;OSM
+Elafonisos,Kythera,context,context,743,36.50903,22.97833,approximate: OSM place node of main village,Ελαφόνησος,Elafonisos,relation/3752846,node/286077636,,ELSTAT21;OSM
+Antikythera,Kythera,context,context,39,35.88163,23.28927,approximate: OSM place node of main village,Ποταμός,Antikythera,relation/957729,node/1530751541,,ELSTAT21;OSM
+Salamina,Saronic,context,context,37220,37.96544,23.49302,approximate: OSM place node of main village,Σαλαμίνα,Salamis,relation/957707,node/1854259941,,ELSTAT21;OSM
+Aegina,Saronic,context,context,12911,37.7467,23.43063,approximate: OSM place node of main village,Αίγινα,Aegina,relation/543490,node/229848335,,ELSTAT21;OSM
+Spetses,Saronic,context,context,3748,37.26443,23.15771,approximate: OSM place node of main village,Σπέτσες,Spetses,relation/543203,node/352986735,,ELSTAT21;OSM
+Poros,Saronic,context,context,3261,37.49954,23.45296,approximate: OSM place node of main village,Πόρος,Poros,relation/543486,node/352995254,,ELSTAT21;OSM
+Hydra,Saronic,context,context,2055,37.34962,23.46612,approximate: OSM place node of main village,Ύδρα,Hydra,relation/543466,node/239984852,,ELSTAT21;OSM
+Agistri,Saronic,context,context,1084,37.71102,23.34658,approximate: OSM place node of main village,Μεγαλοχώρι,Agistri,relation/543488,node/1854210062,,ELSTAT21;OSM
+Aponisos,Saronic,context,context,47,37.68474,23.32196,approximate: OSM bounding-box centre,,Aponisos,relation/17897768,,box centre: islet: no village point in OSM,ELSTAT21;OSM
+Dokos,Saronic,context,context,15,37.33546,23.3225,approximate: OSM bounding-box centre,,Dokos,relation/543213,,box centre: islet: no village point in OSM,ELSTAT21;OSM
