@@ -3,7 +3,7 @@
 // Rain: reanalysed. Roof, tank, people, use: synthetic (the reader's choice). Results: calculated.
 (function () {
   "use strict";
-  const { simulate, days, schoolDay } = window.SimCore;
+  const { simulate, days } = window.SimCore;
   const NS = "http://www.w3.org/2000/svg";
   const $ = (id) => document.getElementById(id);
   const fmt = (x, d = 0) => x.toLocaleString("en-GB", { maximumFractionDigits: d, minimumFractionDigits: d });
@@ -17,7 +17,7 @@
   const TANKS = Array.from({ length: 40 }, (_, i) => i + 1);
   const MONTHS = ["Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep"];
 
-  let rain, ctx, dates, years, schoolNeed, factor;
+  let rain, ctx, dates, years, factor;
 
   // ---- small SVG helpers (text always set with textContent)
   function el(name, attrs, parent) {
@@ -86,14 +86,14 @@
     // band between the two rain versions
     el("path", { d: linePath(TANKS, hi, x, y) + linePath([...TANKS].reverse(), [...lo].reverse(), x, y).replace("M", "L") + "Z",
                  class: "band" }, g);
-    el("path", { d: linePath(TANKS, hi, x, y), class: "line" }, g);
-    el("path", { d: linePath(TANKS, lo, x, y), class: "line thin" }, g);
+    el("path", { d: linePath(TANKS, hi, x, y), class: "line water" }, g);
+    el("path", { d: linePath(TANKS, lo, x, y), class: "line thin water" }, g);
     text(g, W - R + 8, y(hi[39]) + 4, "ERA5 rain", { class: "direct" });
     text(g, W - R + 8, y(lo[39]) + 16, `ERA5 −${fmt(100 * (1 - factor))}%`, { class: "direct" });
     text(g, W - R + 8, y(lo[39]) + 30, "(Chios check)", { class: "direct muted-text" });
     // the chosen tank
     el("line", { x1: x(s.tank), x2: x(s.tank), y1: T, y2: T + H1, class: "pick" }, g);
-    el("circle", { cx: x(s.tank), cy: y(hi[s.tank - 1]), r: 4.5, class: "dot" }, g);
+    el("circle", { cx: x(s.tank), cy: y(hi[s.tank - 1]), r: 4.5, class: "dot water" }, g);
     el("circle", { cx: x(s.tank), cy: y(lo[s.tank - 1]), r: 4.5, class: "dot hollow" }, g);
     // cost panel
     const costs = ctx.house_cost_eur_by_tank_m3.value;
@@ -151,12 +151,12 @@
     const bw = Math.max(1, (W - R - L) / n - 0.4);
     for (let i = i0; i < i1; i++) {
       const v = rain.mm[i] || 0;
-      if (v > 0) el("rect", { x: x(i - i0), y: yr(v), width: bw, height: yr(0) - yr(v), class: "bar" }, g);
+      if (v > 0) el("rect", { x: x(i - i0), y: yr(v), width: bw, height: yr(0) - yr(v), class: "bar water" }, g);
     }
     let d = "", dry = 0;
     for (let i = i0; i < i1; i++) d += (i === i0 ? "M" : "L") + x(i - i0 + 0.5).toFixed(1) + "," + yt(run.level[i]).toFixed(1);
-    el("path", { d: d + `L${x(n - 0.5)},${yt(0)}L${x(0.5)},${yt(0)}Z`, class: "band" }, g);
-    el("path", { d, class: "line" }, g);
+    el("path", { d: d + `L${x(n - 0.5)},${yt(0)}L${x(0.5)},${yt(0)}Z`, class: "band water" }, g);
+    el("path", { d, class: "line water" }, g);
     const ry = T + H1 + gap + H2 + 4;
     for (let i = i0; i < i1; i++) {
       if (run.got[i] < s.need / 1000 - 1e-9) { dry++; el("rect", { x: x(i - i0), y: ry, width: bw, height: rug - 6, class: "bar" }, g); }
@@ -189,28 +189,7 @@
       `The tank could not cover the day's use on ${dry} of ${n} days.`;
   }
 
-  // ---- 3. a house beside a school roof
-  function drawCompare(s) {
-    const nYears = rain.mm.length / 365.25;
-    const sch = ctx.school;
-    const cases = [
-      ["Your house", { roof: s.roof, tank: s.tank, need: s.need }],
-      [`School roof (${sch.roof_m2} m², ${sch.tank_m3} m³ tank)`, { roof: sch.roof_m2, tank: sch.tank_m3, need: schoolNeed }],
-    ];
-    const tb = $("compare").tBodies[0];
-    tb.replaceChildren();
-    const out = [];
-    for (const [name, o] of cases) {
-      const a = simulate(rain.mm, o), b = simulate(rain.mm, Object.assign({ factor }, o));
-      out.push(a);
-      const tr = tb.insertRow();
-      [name, fmt(a.demand / nYears) + " m³", pctRange(b.share, a.share),
-       range(b.short / nYears, a.short / nYears, (v) => fmt(v))].forEach((v) => (tr.insertCell().textContent = v));
-    }
-    return out[0];
-  }
-
-  // ---- 4. more cisterns, as a reservoir
+  // ---- 3. more cisterns, as a reservoir
   function drawReservoir(s, house) {
     const n = +$("houses").value;
     const nYears = rain.mm.length / 365.25;
@@ -246,8 +225,7 @@
       `With a ${s.roof} m² roof and a ${s.tank} m³ tank, rain covers ${pctRange(c.lo[s.tank - 1], c.hi[s.tank - 1])} ` +
       `of ${fmt(s.need)} litres a day over 1991–2026. In the worst year, ${worst.label}, it covered ${pct(worst.share)}.`;
     drawYear(s, run);
-    const house = drawCompare(s);
-    drawReservoir(s, house);
+    drawReservoir(s, simulate(rain.mm, { roof: s.roof, tank: s.tank, need: s.need }));
   }
 
   Promise.all([fetch("data/page/sifnos_rain_daily.json").then((r) => r.json()),
@@ -255,8 +233,6 @@
     .then(([r, c]) => {
       rain = r; ctx = c; factor = ctx.era5_vs_station_factor.value;
       dates = days(rain.start, rain.mm.length);
-      const sch = ctx.school;
-      schoolNeed = dates.map((d) => (schoolDay(d) ? sch.people * sch.litres_per_person_day : 0));
       // water years October-September that are complete in the data
       years = {};
       const sel = $("wyear");
@@ -270,7 +246,7 @@
         }
       });
       sel.value = "2022";
-      document.querySelectorAll("#simulate input, #simulate select").forEach((e) => e.addEventListener("input", update));
+      document.querySelectorAll("#cisterns input, #cisterns select").forEach((e) => e.addEventListener("input", update));
       let lastW = 0, timer;
       window.addEventListener("resize", () => {
         clearTimeout(timer);

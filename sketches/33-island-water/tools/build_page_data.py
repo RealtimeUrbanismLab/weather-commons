@@ -161,6 +161,24 @@ def situate():
                      "temp_permit_m3d": int(float(r["temp_permit_capacity_m3d"]))} for r in years],
     }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 
+    # Poulati, from the chapter (ZEPOU24) and DECA: springs in altitude order and the counts the diagrams use
+    springs = [{"n": int(r["spring"]), "name": r["name"], "communal": r["communal_cistern"], "facts": r["facts"],
+                "pages": r["pages"]} for r in read(DATA / "poulati_springs.csv")]
+    (OUT / "poulati.json").write_text(json.dumps({
+        "springs": springs, "spring_top_m": 140, "communal_near": [1, 3, 5, 6, 7],
+        "cisterns": {"open_air": 21, "open_air_m3": [15, 20], "communal": 5, "troughs": 10, "trough_m3": 3},
+        "open_storage_m3": [21 * 15 + 10 * 3, 21 * 20 + 10 * 3],
+        "spring5_waters_per_week": 14, "spring5_families": 5,
+        "contracts": [{"waters": 4, "days": ["Tue", "Wed", "Sat", "Sun"], "from": "a spring outside the plot"},
+                      {"waters": 2, "days": [], "from": "the communal cistern of spring 1"},
+                      {"waters": 1, "days": [], "from": "the cisterns of spring 6, by pipe two terraces down"},
+                      {"waters": 1, "days": [], "from": "the seller's spring"}],
+        "properties": {"total": 34, "farmed": 5, "summer_houses": 6, "abandoned": 23, "over_0_4_ha": 14},
+        "farmers": {"1980s": 25, "2022": 6, "2022_over_75": 4, "deca_recent_past": 100},
+        "irrigated_ha": 15.5, "cultivated_ha": 1, "stone_m3": 21000,
+        "kind": "reported", "source": "ZEPOU24 (Zepou & Matsaganis 2024, CC BY-NC-ND; facts only); DECA",
+    }, ensure_ascii=False, indent=1), encoding="utf-8")
+
     costs = []
     for r in read(DATA / "water_costs.csv"):
         costs.append({k: (float(r[k]) if r[k] else None) if k.endswith("_eur_m3") else r[k] for k in r})

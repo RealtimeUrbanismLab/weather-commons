@@ -130,6 +130,45 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: three-tab redesign (author's decisions: visual ID option A, one water blue;
+  no predictive outlook; Poulati as diagrams from the chapter and DECA).
+  - `index.html` rebuilt: tabs Sifnos in crisis / Cisterns know / Aegean water map
+    (`tabs.js`, hash addresses, arrow keys, opens at the top); Narrate removed; school roof
+    removed from `sim.js`; a cistern mark beside the title; water blue on rain bars, tank
+    water, the share curve, island tank fills, flow lines and Poulati's springs and cisterns.
+  - New `poulati.js`: Sifnos topo map (hillshade, 50 m contours, D8 flow lines, OSM
+    villages, desal units at their villages, the Poulati valley line ending 170 m from the
+    monastery, OSM way 401645635); valley long profile (887 m, 171 m to the sea) with the
+    nine springs in altitude order, evenly spaced (schematic), communal cisterns at 1, 3, 5,
+    6, 7; the week as 14 waters with the chapter's rights; the 34 properties.
+  - Data: `data/poulati.csv`, `data/poulati_springs.csv` (chapter facts with pages; no
+    landowner names); `data/page/poulati.json`. Open storage 345-450 m3 = 4-5 h of the
+    island's desal capacity (calculated).
+  - Conflicts recorded: DECA says Poulati ends at the "Northwestern coast" (the chapter and
+    the monastery say east); DECA "at least 100 farmers" vs chapter "more than 25 in the 1980s".
+  - The repo's look rule (CONTRIBUTING §9: black and white) is broken on purpose by the water
+    blue; raise with the maintainers before publishing.
+  - Checked: light and dark at 760 px, phone at 390 px; all checks pass.
+
+- 2026-11-23: groundwork for the three-tab redesign (author's request: tabs "Sifnos in
+  crisis", "Cisterns know", "Aegean water map"; no Narrate; no school roof; stronger visual ID).
+  - Sifnos terrain: Copernicus DEM GLO-30 read by HTTP range requests from the public COGs
+    (only the internal tiles over Sifnos, 451 KB; `tools/fetch_dem_sifnos.py`, stdlib TIFF/
+    DEFLATE/predictor-3 reader). 685 x 577 cells, highest 675 m. `tools/build_sifnos_topo.py`
+    → `data/page/sifnos_topo.json` (50 m contours + 1 m coast, 100 KB) and
+    `data/page/sifnos_hillshade.png` (114 KB). Settlement points: 13 OSM place nodes in
+    `data/raw/osm_islands/villages.json` (use these, never typed coordinates).
+  - Poulati: not in OSM (no name, no springs) or Wikidata; the chapter's repository copy
+    is behind a Cloudflare check. Asset positions need the chapter PDF (location from the
+    text; its figures are ND and cannot be redrawn) or DECA's survey.
+  - Predictive groundwork: Open-Meteo seasonal API (ECMWF SEAS5, 51 members, daily, to
+    May 2027) works per island. Sifnos test: ERA5 1 Oct - 17 Nov 2026 = 80.5 mm; plus
+    forecast to 31 Mar, projected winter 77-136% of normal (10th-90th pct; median 107%);
+    5 of 51 members below 75%. Raw SEAS5, not bias-corrected; ERA5 lags 5 days.
+  - Did dry winters predict 2024 emergencies? Of 27 islands below 70% of normal over
+    2022-24, 5 declared; of 78 wetter islands, 3. Islands with emergencies are larger
+    (median 7,962 residents vs 582). A risk signal, not a rule.
+
 - 2026-11-23: every Civil Protection water emergency, 2024–2026. Diavgeia searches decision
   texts (`content:"λειψυδρίας"`; stemmed, so λειψυδρία/λειψυδρίες give the same; ανομβρίας,
   ξηρασίας, "έλλειψη νερού" add nothing). Monthly queries, organisation 100068650,

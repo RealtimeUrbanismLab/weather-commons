@@ -1,0 +1,20 @@
+topic,fact,evidence_kind,source_ids,pages
+place,"Valley with a partly dry riverbed on the eastern coast of Sifnos; U-shaped, opening to the sea; named after the monastery of Panagia Poulati (built 1865-1872); formerly called 'The Garden' (ο κήπος)",reported,ZEPOU24;DECA,"214, 217, 223"
+place,"DECA: a territory of about 300,000 m2 from the outskirts of Artemonas to the coast (DECA writes 'Northwestern coast'; the monastery and the chapter place it on the east coast)",reported,DECA,
+place,"Monastery of Panagia Poulati: OSM way 401645635, 36.98404 N, 24.73667 E",cartographic,OSM,
+area,Irrigated terraces and fields ~15.5 ha; still cultivated <6% (~1 ha),reported,ZEPOU24,214
+springs,9 known springs from sea level to 140 m; flow varies by season and year; water is common whatever land the spring is on,reported,ZEPOU24,215
+tanks,"Over 30 stone tanks: about 10 troughs (γούρνες, ~3 m3) and 21 open-air cisterns (χαβούζες, 15-20 m3), of which 5 communal (near springs 1, 3, 5, 6, 7) feeding secondary cisterns below",reported,ZEPOU24,"215-216, 218"
+tanks,Open storage: 21 x 15-20 m3 + ~10 x 3 m3 = about 345-450 m3,calculated,ZEPOU24,
+tanks,"The cisterns were not covered, so everyone knew how much water was stored",reported,DECA;STARTS_DECA,
+furrows,"Stone furrows (κουτέντο, probably from Latin contentum) link the cisterns; most replaced by plastic pipe; old furrows serve as evidence of rights in disputes",reported,ZEPOU24,"216, 220"
+rule,"Each plot opens the outlet to its own cistern for agreed 12-hour spans ('waters') on set weekdays; e.g. one contract: four waters a week, Tuesday, Wednesday, Saturday, Sunday; others: once a week",reported,ZEPOU24,"218-219, 223"
+rule,"Rights belong to the land, not the owner; written in sale and inheritance contracts from the early 20th century; plots holding a spring or communal cistern do not mention them",reported,ZEPOU24,"218-219, 223"
+rule,Overflows and drain-offs (στραγγίδια) shared by unwritten agreement: 'no water is ever lost',reported,ZEPOU24,219-220
+rule,"In a drought, farmed plots are watered first; active farmers tacitly use the rights of abandoned plots",reported,ZEPOU24,220
+rule,An elder who holds the memory of the rules acts as informal monitor; going to court is 'unthinkable',reported,ZEPOU24,224-225
+history,Water time recorded on stone tiles when plot owners donated water to build the monastery (1865-1872): 'Each proprietor had his day and his hours',reported,ZEPOU24,223
+stone,"Hand-built stone infrastructure ~21,000 m3; more than 30 local words for stone; the top terrace owner rebuilds a fallen wall",reported,ZEPOU24,217
+people,"34 properties: 6 with summer houses, 5 farmed, 23 abandoned-looking; 14 over 0.4 ha (eligible for a building permit)",reported,ZEPOU24,217-218
+people,"Farmers: more than 25 in the 1980s (ZEPOU24; DECA says at least 100 in the recent past); 6 in September 2022, 4 of them over 75",reported,ZEPOU24;DECA,221
+threats,"Unauthorised building; drilling into the springs' aquifer; the 2015 cadastre placing the main old communal cistern on private land, separated from its spring; tourism",reported,ZEPOU24,"221, 227"

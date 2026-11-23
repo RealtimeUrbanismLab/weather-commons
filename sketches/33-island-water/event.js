@@ -1,6 +1,6 @@
 // Event: October-March rain on Sifnos for every winter since 1991, against the 1991-2020
 // average. Rain: reanalysed (ERA5). The three dry winters around the 2024 emergency are
-// drawn in full ink; the others are lighter.
+// drawn in full colour; the others are lighter.
 (function () {
   "use strict";
   const NS = "http://www.w3.org/2000/svg";
@@ -36,7 +36,7 @@
     d.winters.forEach((w, i) => {
       const hi = HIGHLIGHT.includes(w.winter);
       const bar = el("rect", { x: L + i * step + 1, y: y(w.mm), width: bw, height: y(0) - y(w.mm),
-                               class: hi ? "bar" : "bar soft", tabindex: 0 }, svg);
+                               class: hi ? "bar water" : "bar water soft", tabindex: 0 }, svg);
       const pct = Math.round(100 * w.mm / d.normal_mm);
       const tip = `${label(w.winter)}: ${fmt(w.mm)} mm, ${pct}% of the 1991–2020 average`;
       el("title", {}, bar).textContent = tip;

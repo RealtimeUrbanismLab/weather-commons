@@ -1760,6 +1760,22 @@
       "sha256": "7ed9891160c97456797f9915ab44432b0f39a7210e506a4620c0cd4481ed947a",
       "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
       "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N36_00_E024_00_DEM/Copernicus_DSM_COG_10_N36_00_E024_00_DEM.tif",
+      "retrieved": "2026-11-23T08:52:02+00:00",
+      "file": "data/raw/dem/sifnos_glo30.json",
+      "sha256": "",
+      "licence": "Copernicus DEM GLO-30 (free, with attribution: DLR / Airbus, under COPERNICUS by EU and ESA)",
+      "note": "Range requests only: internal tiles covering (24.62, 36.86, 24.78, 37.05), 376 KB"
+    },
+    {
+      "url": "https://copernicus-dem-30m.s3.amazonaws.com/Copernicus_DSM_COG_10_N37_00_E024_00_DEM/Copernicus_DSM_COG_10_N37_00_E024_00_DEM.tif",
+      "retrieved": "2026-11-23T08:52:03+00:00",
+      "file": "data/raw/dem/sifnos_glo30.json",
+      "sha256": "",
+      "licence": "Copernicus DEM GLO-30 (free, with attribution: DLR / Airbus, under COPERNICUS by EU and ESA)",
+      "note": "Range requests only: internal tiles covering (24.62, 36.86, 24.78, 37.05), 75 KB"
     }
   ]
 }
