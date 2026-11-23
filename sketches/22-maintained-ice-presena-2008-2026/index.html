@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>22 · Do glaciers breathe? · Realtime Weather</title>
+<meta name="description" content="Maintained ice, Presena 2008–2026. Every summer since 2008 white fleece is laid on the Presena glacier. What is documented, claimed, reported, observed and calculated about the covers, and what is not known.">
+<!-- style.css is the shared Realtime Weather look, copied into this folder. views.css styles the shared views. -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="views.css">
+</head>
+<body>
+<main>
+<header class="site-header">
+  <div class="brand"><a class="wordmark" href="../">Realtime Weather</a><span class="tagline">Part of <a href="https://tba21.org/uni_weathercommons">Weather Commons</a>, TBA21–Academy UNI</span></div>
+  <nav aria-label="Site">
+    <a href="../">Sketches</a>
+    <a href="../guide/">Guide</a>
+    <a href="../catalog/">Catalog</a>
+    <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
+    <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
+  </nav>
+</header>
+
+<h1>Do glaciers breathe?</h1>
+<p class="lede">Maintained ice, Presena 2008–2026. What have nearly twenty summers of covers left on the Presena glacier, and how far does that match what the operator, the Province and the studies say? Who maintains a public glacier, who pays, and who decides?</p>
+<p class="muted small">22 · Luca · started 2026-11-02 · updated 2026-11-23</p>
+<p class="note small">Every element carries its kind: <span class="tag">Documented</span> in a study or record, <span class="tag soft">Claimed (operator)</span> by the operator, <span class="tag soft">Reported</span> by others, <span class="tag">Observed</span> in an image, <span class="tag calc">Calculated</span> by this sketch, <span class="tag calc">Reanalysed</span> weather, <span class="tag calc">Synthetic</span> placeholders and projections, <span class="tag">Cartographic</span> base maps, <span class="tag dot">Not known</span>. The explorable stack of summers is on <a href="explore.html">explore.html</a>.</p>
+
+<h2 id="where">Where, who, why</h2>
+<div class="intro">
+<figure><img src="img/map_alps.svg" alt="Map of the Alps, white on black, with the Presena glacier above Passo del Tonale, and Trento, Milan, Bolzano, Venice and Linz" width="520" height="329">
+<figcaption class="small"><span class="tag">Cartographic</span>Natural Earth (public domain): borders, lakes and the generalised extent of the Alps. Other places marked are those linked to the covers, explained further down.</figcaption></figure>
+<p>The Presena glacier lies between about 2,700 and 3,000 m above Passo del Tonale, in the municipality of Vermiglio (Trentino), on the border with Lombardy. Lifts reached it in 1963 and summer skiing began in 1966–67; in 1987 the municipality bought the lifts. As the glacier shrank, from 82 ha in 1961 to 26 ha in 2011, the summer season ended earlier and rock began to break through the ski run. In 2008 the Province approved an experimental programme with the lift company and two universities: every summer since, white geotextile has been laid on the run to slow its melt (in 2010, from 28 June to 14 September).<sup><a href="#s2">2</a></sup><sup>,</sup><sup><a href="#s9">9</a></sup> The operator says the covered area grew to 110,000 m² and that the work costs up to €350,000 a year, partly paid by the Province.<sup><a href="#s1">1</a></sup> This sketch asks what nearly twenty summers of covers have left on the ice, how far the figures hold, and who maintains a public glacier.</p>
+</div>
+
+<h2 id="breaths">Eleven breaths</h2>
+<p>Seen from Sentinel-2, the covered run fills in every June and July and empties every September: the fleece appears as the snow melts off it, and disappears when the sheets are taken up. One curve per summer, 2016–2026.</p>
+<div id="v-breaths" class="full"></div>
+
+<!-- 1. Event -->
+<h2 id="event">Event</h2>
+<p>How large is the covered area, summer by summer? Four kinds of source answer, and they do not agree.</p>
+<figure class="chart full" id="v-area"></figure>
+<p class="small"><span class="tag">Documented</span>Covers did not start in 2008: white geotextiles were already laid on the right-hand side of the glacier at the end of the 1990s, after straw mulching and moved or artificial snow, to keep the ski lifts to Passo Presena running.<sup><a href="#s2">2</a></sup></p>
+<p class="small"><span class="tag dot">Not known</span>2012, 2013 and 2015: no covered area in any source (2012 has a materials test). Before 2016 there is no outline of the covers, only areas; the satellite count starts in 2016.</p>
+
+<!-- 2. Simulate -->
+<h2 id="simulate">Simulate</h2>
+<h3>The satellite sees the cover</h3>
+<p>On 14 August 2021, Sentinel-2 shows a bright strip along the ski run. In visible light fleece and clean ice look alike; in shortwave infrared they do not: ice absorbs it, the fleece reflects it.</p>
+<table class="ledger">
+  <tr><th>Surface</th><th>Visible (green)</th><th>Shortwave infrared (1.6 µm)</th></tr>
+  <tr><td>Fleece</td><td>46–54%</td><td>37–47%</td></tr>
+  <tr><td>Clean ice</td><td>51–55%</td><td>3–4%</td></tr>
+</table>
+<p class="small"><span class="tag">Observed</span>Sentinel-2 top-of-atmosphere reflectance, scene 20210814T102031_T32TPS, two small areas per surface, one date.<sup><a href="#s8">8</a></sup></p>
+<p><span class="tag calc">Calculated</span>The standard cloud mask (s2cloudless) mistakes the fleece for cloud. On that clear day it finds 0.26% cloud on a 300 m ring around the run, and 11.1% on the run itself. A filter that trusts the mask throws away the very scenes that show the cover; this sketch judges cloud on the ring instead.<sup><a href="#s8">8</a></sup></p>
+
+<h3>How much does a cover save?</h3>
+<p>One summer of melt on three surfaces, with the albedos measured on Presena: the bare glacier, new fleece and reused fleece.</p>
+<div id="v-model" class="full"></div>
+
+<h3>The plinth: what twenty summers could have kept</h3>
+<p>Ice under a cover melts less than the ice beside it, so the covered run should rise above its surroundings, summer after summer, like a plinth. How tall could it be by now? Move the year.</p>
+<div id="v-plinth" class="full"></div>
+
+<!-- 3. Situate -->
+<h2 id="situate">Situate</h2>
+<h3>Who maintains the glacier</h3>
+<p>The covering began as an experimental programme approved by the Province, with a convention between the Province and the lift company, and conventions with the Universities of Milan and Trento.<sup><a href="#s2">2</a></sup> Who owns the lifts today, what share the Province pays, and who has supplied the fabric since 2012 are not documented.</p>
+<figure class="chart full" id="v-actors"></figure>
+<p><span class="tag soft">Reported</span>About 34 t of fabric are laid on the mountain each year and 17 t burned each year in Bolzano.<sup><a href="#s10">10</a></sup> <span class="tag calc">Calculated</span>100,000 m² × 340 g/m² = 34 t, consistent with the reported weight.</p>
+
+<!-- 4. Narrate -->
+<h2 id="narrate">Narrate</h2>
+<ol>
+  <li>The cover is visible from orbit in every summer from 2016 to 2026, and the standard cloud mask mistakes it for cloud.</li>
+  <li>Documented covers grew from 28,000 m² in 2008 to 76,400 m² in 2010; for 2016–2026 the satellite gives a range, and the operator's figures sit inside it in 2016 and above it in 2017, 2019, 2020 and 2021.</li>
+  <li>One summer under the cover left a step of about 1.5–2 m in 2010; about 34 t of plastic are laid each year and 17 t burned, according to Betti and Fleck (2021).</li>
+</ol>
+<p>Statements by others, and how far they hold: <b id="v-counts">…</b>.</p>
+<details class="small"><summary>The claims ledger</summary><div id="v-ledger"></div></details>
+<p><a class="primary" href="explore.html"><strong>Open the evidence stack →</strong>One plate per summer, 2008–2026: outlines, areas, observations and the images behind them.</a></p>
+
+<h2 id="sources">Sources and limits</h2>
+<ol class="small">
+  <li id="s1">Consorzio Pontedilegno–Tonale, “The protection of Presena glacier”, read 3–4 November 2026. <a href="https://pontedilegnotonale.com/en/pontedilegno-tonale-what-to-see/the-protection-of-presena-glacier">pontedilegnotonale.com</a>. The operator's own statements (Claimed).</li>
+  <li id="s2">Diolaiuti G., Senese A., Mosconi B., D'Agata C., Mihalcea C., Smiraglia C. (University of Milan), Trenti A. (Province of Trento), “Effetti delle misure di protezione glaciale attiva sul bilancio energetico puntuale del Ghiacciaio Presena”, AINEVA <i>Neve e Valanghe</i> 74. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista74/nv74_6.pdf">aineva.it (full text)</a>. Field measurement, cover areas 2008–2011, glacier areas 1961–2011.</li>
+  <li id="s3">Senese et al. 2020, <i>Cold Regions Science and Technology</i>, doi:10.1016/j.coldregions.2020.103007. <a href="https://air.unimi.it/handle/2434/715669">air.unimi.it</a>. Field measurement.</li>
+  <li id="s4">AINEVA, <i>Neve e Valanghe</i> 80, 2012 materials test. <a href="https://aineva.it/wp-content/uploads/Pubblicazioni/Rivista80/nv80_rivista-9.pdf">aineva.it</a>.</li>
+  <li id="s5">Oerlemans et al. 2017, MortAlive feasibility study. <a href="https://ideas.repec.org/a/spr/climat/v145y2017i1d10.1007_s10584-017-2102-1.html">ideas.repec.org</a>.</li>
+  <li id="s6">Huss et al., EGU 2022, doi:10.5194/egusphere-egu22-1808. <a href="https://meetingorganizer.copernicus.org/EGU22/EGU22-1808.html">meetingorganizer.copernicus.org</a>.</li>
+  <li id="s7">Enhanced temperature-index model after Pellicciotti et al. 2005, <i>Journal of Glaciology</i> 51(175); factors to verify, see <a href="data/parameters.json">data/parameters.json</a>.</li>
+  <li id="s8">Sentinel-2 Level-1C, ESA / Copernicus, via Google Earth Engine (COPERNICUS/S2_HARMONIZED). Copernicus licence. Script <code>tools/gee_presena_v3_6.js</code>, snapshot <a href="https://code.earthengine.google.com/f8e14116f7fcb7becc513334a3ccfc29">code.earthengine.google.com</a>, run 23 November 2026. Derived values: calculated, preliminary, not validated against independent images.</li>
+  <li id="s9">PhD thesis, Università degli Studi di Milano, January 2013 (R08686), on active glacier protection at Presena; author to confirm. Copy consulted 23 November 2026.</li>
+  <li id="s10">Betti G., Fleck K., “La montagna invisibile / The invisible mountain”, 2021, written with materials from the operator. <a href="https://www.theinvisiblemountain.com">theinvisiblemountain.com</a>. Photos not reproduced.</li>
+</ol>
+<ul class="small">
+  <li>Data: <a href="data/years.json">years.json</a>, <a href="data/area_s2.json">area_s2.json</a>, <a href="data/observations_s2.json">observations_s2.json</a>, <a href="data/qa.csv">qa.csv</a> (visual check), <a href="data/claims.json">claims.json</a>, <a href="data/actors.json">actors.json</a>, <a href="data/parameters.json">parameters.json</a>, <a href="data/weather_summers.json">weather_summers.json</a> (ERA5 via Open-Meteo, CC BY 4.0, 28 June–14 September 2008–2026, fetched 2026-11-23); catalogue <a href="data/DATA_CATALOG.md">DATA_CATALOG.md</a>. Raw Earth Engine exports are archived with SHA-256 checksums.</li>
+  <li><b>Method of the satellite count.</b> One late-summer scene per year (19 July–28 August, chosen by cloud on a ring, shadow and fresh snow on the run). Fleece fraction by linear unmixing of five surfaces. Lowest = pixels at least 75% fleece; highest = every pixel at least 15% fleece; best = sum of fractions; all inside a zone where fleece appears in at least 30% of fairly clear scenes 2016–2026 (130,587 m²). Fleece outside the zone is reported as an error measure; part of it is real fleece just past the zone edge.</li>
+  <li><b>Visual check.</b> Each yearly scene was checked by eye (qa.csv). 2018 (fresh snow), 2020, 2021 and 2024 (residual snow) did not pass and are drawn in grey.</li>
+  <li><b>What this sketch cannot establish:</b> the true covered area in any year (visible area is not fabric area: sheets can lie under snow, in shadow or outside the zone), the money, the permits, the ownership, or any effect downstream.</li>
+</ul>
+
+<footer class="site-footer">
+  <p>Do glaciers breathe? Maintained ice, Presena 2008–2026 · Luca · Realtime Weather working group, Weather Commons</p>
+</footer>
+</main>
+<script src="views.js"></script>
+<script>
+V22.load().then(function (D) {
+  V22.breaths(document.getElementById("v-breaths"), D);
+  V22.areaChart(document.getElementById("v-area"), D);
+  V22.model(document.getElementById("v-model"), D);
+  V22.plinth(document.getElementById("v-plinth"), D);
+  V22.actors(document.getElementById("v-actors"), D);
+  document.getElementById("v-counts").textContent = V22.counts(D);
+  V22.ledger(document.getElementById("v-ledger"), D);
+}).catch(function (e) { document.querySelector("main").insertAdjacentHTML("beforeend", "<p><b>Data could not be loaded:</b> " + e.message + ". Open the page through a web server.</p>"); });
+</script>
+</body>
+</html>

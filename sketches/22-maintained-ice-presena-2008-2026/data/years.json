@@ -1,0 +1,170 @@
+{
+ "about": "One record per summer, 2008-2026. Areas in m2. Every value says what kind it is. 'calc_run1' is a first satellite count that is NOT validated (known errors); it is hidden by default on the page.",
+ "reference_area_m2": 170000,
+ "years": [
+  {
+   "year": 2008,
+   "events": [
+    {
+     "text": "First covers on the Presena glacier (and on the Diavolezza ski run).",
+     "kind": "Documented",
+     "source": "s1"
+    }
+   ],
+   "documented_m2": 28000,
+   "documented_note": "Cover along the ski-lift line and the central 'knee' (AINEVA, Neve e Valanghe 74).",
+   "documented_source": "s2"
+  },
+  {
+   "year": 2009,
+   "documented_m2": 37300,
+   "documented_note": "Cover extended (AINEVA, Neve e Valanghe 74).",
+   "documented_source": "s2"
+  },
+  {
+   "year": 2010,
+   "documented_m2": 76400,
+   "documented_note": "Laid 28 June, removed 14 September (PhD thesis UniMi 2013, which gives about 70,000 m²); about 52% less ablation under the cover; albedo 0.64 on the cover vs 0.43 on the glacier; a step of about 1.5–2 m at the end of summer.",
+   "documented_source": "s2"
+  },
+  {
+   "year": 2011,
+   "documented_m2": 57800,
+   "documented_note": "Smaller than 2010 (AINEVA, Neve e Valanghe 74).",
+   "documented_source": "s2"
+  },
+  {
+   "year": 2012,
+   "events": [
+    {
+     "text": "Materials test at about 2,765 m: up to 69% less melt.",
+     "kind": "Documented",
+     "source": "s3"
+    },
+    {
+     "text": "Traditional cover (TenCate Toptex GLS 340, reused) has albedo about 0.43–0.44, like the glacier; experimental fabrics cut melt by 62–94% (PhD thesis UniMi 2013).",
+     "kind": "Documented",
+     "source": "s9"
+    }
+   ]
+  },
+  {
+   "year": 2013
+  },
+  {
+   "year": 2014,
+   "claimed_m2": 40000,
+   "claim": "C10"
+  },
+  {
+   "year": 2015,
+   "note": "Sentinel-2 starts (June 2015). Late-summer scenes exist; not yet counted."
+  },
+  {
+   "year": 2016,
+   "claimed_m2": 50000,
+   "claim": "C10",
+   "calc_run1_m2": 25893
+  },
+  {
+   "year": 2017,
+   "claimed_m2": 65000,
+   "claim": "C10",
+   "calc_run1_m2": 52334
+  },
+  {
+   "year": 2018,
+   "claimed_m2": 80000,
+   "claim": "C10",
+   "calc_run1_m2": 40491
+  },
+  {
+   "year": 2019,
+   "claimed_m2": 100000,
+   "claim": "C10",
+   "calc_run1_m2": 60793
+  },
+  {
+   "year": 2020,
+   "claimed_m2": 110000,
+   "claim": "C10",
+   "calc_run1_m2": 55247,
+   "reported_m2": 100000,
+   "reported_note": "'More than 100,000 m²' (Betti and Fleck 2021, with materials from the operator)."
+  },
+  {
+   "year": 2021,
+   "claimed_m2": 110000,
+   "claim": "C10",
+   "calc_run1_m2": 94687,
+   "calc_note": "Training year of the classifier: the most favourable case.",
+   "scene": "20210814T102031_20210814T102609_T32TPS",
+   "events": [
+    {
+     "text": "Used sheets shown at the Venice Architecture Biennale, according to the operator.",
+     "kind": "Reported",
+     "source": "s1"
+    },
+    {
+     "text": "About 34 t of fabric on the mountain; 17 t a year sent to the Bolzano waste-to-energy plant; sheets used for two seasons (Betti and Fleck 2021).",
+     "kind": "Reported",
+     "source": "s10"
+    }
+   ]
+  },
+  {
+   "year": 2022,
+   "calc_run1_m2": 31988
+  },
+  {
+   "year": 2023,
+   "calc_run1_m2": 50635
+  },
+  {
+   "year": 2024,
+   "calc_run1_m2": 161101,
+   "calc_flag": "Anomalous: larger than any claimed year. Likely cloud or snow counted as fleece. To check by eye."
+  },
+  {
+   "year": 2025,
+   "calc_run1_m2": 80051
+  },
+  {
+   "year": 2026,
+   "calc_run1_m2": 11124,
+   "calc_flag": "Anomalous: scene error or real change. To check by eye."
+  }
+ ],
+ "calc_run1_about": "Random forest on Sentinel-2 L1C, trained on 2021-08-14 (fleece, ice, shadow); sunlit debris had no class; area of interest 1.51 km2. Run on 2026-11-04. Not validated.",
+ "pending_tests": [
+  {
+   "id": "lidar0609",
+   "label": "LiDAR 2006-09",
+   "year": 2008,
+   "text": "First province-wide LiDAR. If flown over Presena before summer 2008, it is the surface before the covers. Flight date to check.",
+   "status": "pending"
+  },
+  {
+   "id": "lidar1418",
+   "label": "LiDAR 2014 / 2018",
+   "year": 2014,
+   "text": "Second LiDAR. Differencing with 2006-09 tests claim C09 (uncovered ice 11 m lower after six seasons). A step of about 1.5-2 m after the single summer 2010 is documented (AINEVA).",
+   "status": "pending"
+  }
+ ],
+ "before_2008": {
+  "text": "White geotextiles were already laid on the right-hand side of the glacier at the end of the 1990s, after straw mulching and moved or artificial snow, to keep the ski lifts to Passo Presena running (AINEVA, Neve e Valanghe 74).",
+  "kind": "Documented",
+  "source": "s2"
+ },
+ "glacier_area_ha": {
+  "about": "Presena Occidentale glacier area (AINEVA, Neve e Valanghe 74, citing the 1961 CGI cadastre, PAT and SAT).",
+  "values": {
+   "1961": 82,
+   "1987": 68,
+   "2003": 33,
+   "2011": 26
+  },
+  "kind": "Documented"
+ }
+}

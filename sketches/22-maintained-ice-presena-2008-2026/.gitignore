@@ -1,0 +1,2 @@
+# raw downloads stay out of git (fetch them again with the scripts)
+tools/*_raw.xml

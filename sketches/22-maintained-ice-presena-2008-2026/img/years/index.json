@@ -1,0 +1,79 @@
+{
+ "2016": {
+  "date": "2016-07-18",
+  "scene": "20160718T101028_20160718T155027_T32TPS",
+  "nat": "img/years/nat_2016.png",
+  "swir": "img/years/swir_2016.png",
+  "frac": "img/years/frac_2016.png"
+ },
+ "2017": {
+  "date": "2017-07-28",
+  "scene": "20170728T101029_20170728T101024_T32TPS",
+  "nat": "img/years/nat_2017.png",
+  "swir": "img/years/swir_2017.png",
+  "frac": "img/years/frac_2017.png"
+ },
+ "2018": {
+  "date": "2018-08-27",
+  "scene": "20180827T101021_20180827T101023_T32TPS",
+  "nat": "img/years/nat_2018.png",
+  "swir": "img/years/swir_2018.png",
+  "frac": "img/years/frac_2018.png"
+ },
+ "2019": {
+  "date": "2019-08-27",
+  "scene": "20190827T101029_20190827T101554_T32TPS",
+  "nat": "img/years/nat_2019.png",
+  "swir": "img/years/swir_2019.png",
+  "frac": "img/years/frac_2019.png"
+ },
+ "2020": {
+  "date": "2020-07-30",
+  "scene": "20200730T102031_20200730T102706_T32TPS",
+  "nat": "img/years/nat_2020.png",
+  "swir": "img/years/swir_2020.png",
+  "frac": "img/years/frac_2020.png"
+ },
+ "2021": {
+  "date": "2021-07-20",
+  "scene": "20210720T101559_20210720T101617_T32TPS",
+  "nat": "img/years/nat_2021.png",
+  "swir": "img/years/swir_2021.png",
+  "frac": "img/years/frac_2021.png"
+ },
+ "2022": {
+  "date": "2022-08-14",
+  "scene": "20220814T101559_20220814T102248_T32TPS",
+  "nat": "img/years/nat_2022.png",
+  "swir": "img/years/swir_2022.png",
+  "frac": "img/years/frac_2022.png"
+ },
+ "2023": {
+  "date": "2023-07-27",
+  "scene": "20230727T100559_20230727T101435_T32TPS",
+  "nat": "img/years/nat_2023.png",
+  "swir": "img/years/swir_2023.png",
+  "frac": "img/years/frac_2023.png"
+ },
+ "2024": {
+  "date": "2024-07-31",
+  "scene": "20240731T100559_20240731T101303_T32TPS",
+  "nat": "img/years/nat_2024.png",
+  "swir": "img/years/swir_2024.png",
+  "frac": "img/years/frac_2024.png"
+ },
+ "2025": {
+  "date": "2025-08-05",
+  "scene": "20250805T100559_20250805T101206_T32TPS",
+  "nat": "img/years/nat_2025.png",
+  "swir": "img/years/swir_2025.png",
+  "frac": "img/years/frac_2025.png"
+ },
+ "2026": {
+  "date": "2026-07-24",
+  "scene": "20260724T101559_20260724T101659_T32TPS",
+  "nat": "img/years/nat_2026.png",
+  "swir": "img/years/swir_2026.png",
+  "frac": "img/years/frac_2026.png"
+ }
+}
