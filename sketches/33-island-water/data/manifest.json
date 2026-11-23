@@ -1648,6 +1648,118 @@
       "sha256": "92a7e9002cf31bb9134737af1208343ead793ee54df5fa29454f6a586356bafb",
       "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
       "note": "Metadata only: 257 decisions; 35 API requests"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΔΘΝ46ΝΠΙΘ-69Ν",
+      "retrieved": "2026-11-23T08:26:56+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΔΘΝ46ΝΠΙΘ-69Ν.pdf",
+      "sha256": "0df3563bfbbdbc08064c26a85e5972214e7401546378fdc90582dc50e7a51922",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΓΝΗ46ΝΠΙΘ-1ΓΝ",
+      "retrieved": "2026-11-23T08:26:59+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΓΝΗ46ΝΠΙΘ-1ΓΝ.pdf",
+      "sha256": "d8444496a09c999c5866eb82483cf088c258625068d65c56131f825852d024a9",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6Α5946ΝΠΙΘ-4ΚΓ",
+      "retrieved": "2026-11-23T08:27:01+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6Α5946ΝΠΙΘ-4ΚΓ.pdf",
+      "sha256": "468c6ca68ac94ad09a360f519671616c57d953cdfc66f675a4ab6544d12d8e41",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΝ6Ξ46ΝΠΙΘ-ΛΨΧ",
+      "retrieved": "2026-11-23T08:27:04+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΝ6Ξ46ΝΠΙΘ-ΛΨΧ.pdf",
+      "sha256": "57ce350216b98bb27963ee685fa22aca7474c474fee2fe70f2c4d6859fcbebdb",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΞ9046ΝΠΙΘ-ΒΩΙ",
+      "retrieved": "2026-11-23T08:27:06+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΞ9046ΝΠΙΘ-ΒΩΙ.pdf",
+      "sha256": "e2e54de51e42db62584541a2b69267e916d3539216c0d1b5b9282a2a34a39dcb",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΙΑΝ46ΝΠΙΘ-Υ5Ο",
+      "retrieved": "2026-11-23T08:27:10+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΙΑΝ46ΝΠΙΘ-Υ5Ο.pdf",
+      "sha256": "26263611b272166a435a976a2d04d083007e1f85c994766b78184ae7e48a8c10",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΟΚ546ΝΠΙΘ-ΒΘΩ",
+      "retrieved": "2026-11-23T08:27:12+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΟΚ546ΝΠΙΘ-ΒΘΩ.pdf",
+      "sha256": "f933e608cb8700ce5d6a65eebc86c361657058856207ee96f434e90a7fb12fb1",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΦΙΕ46ΝΠΙΘ-5ΝΕ",
+      "retrieved": "2026-11-23T08:27:15+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΦΙΕ46ΝΠΙΘ-5ΝΕ.pdf",
+      "sha256": "0343af9a8e543299c65cd7030823f15e55a1ee29c215bab7a7d6ac79a25c915c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΣΩΔ46ΝΠΙΘ-1ΩΤ",
+      "retrieved": "2026-11-23T08:27:17+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΣΩΔ46ΝΠΙΘ-1ΩΤ.pdf",
+      "sha256": "635f244188885a5c449fa8b5b1db92227c7b7f6b5ceb65cbdd4c1e02244f6603",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΔ2746ΝΠΙΘ-ΔΨΖ",
+      "retrieved": "2026-11-23T08:27:19+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΔ2746ΝΠΙΘ-ΔΨΖ.pdf",
+      "sha256": "940c59d0e2fefd3bf99d9b033737b0cfd9261cd59976ba007b3bad8d29c47c13",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ3ΔΘ46ΝΠΙΘ-ΑΞΤ",
+      "retrieved": "2026-11-23T08:27:22+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ3ΔΘ46ΝΠΙΘ-ΑΞΤ.pdf",
+      "sha256": "4ae9053e414350602987244b6865ca79ae05380107a914579dec0bda091fd1a7",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΛΗΓ46ΝΠΙΘ-ΒΙΕ",
+      "retrieved": "2026-11-23T08:27:24+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΛΗΓ46ΝΠΙΘ-ΒΙΕ.pdf",
+      "sha256": "323413a93fc3e9b010e95150345b544aa37efc84433ec6de1e60efb4e009ff57",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΜ2Ψ46ΝΠΙΘ-Ρ4Α",
+      "retrieved": "2026-11-23T08:27:26+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΜ2Ψ46ΝΠΙΘ-Ρ4Α.pdf",
+      "sha256": "667548ff5c745133d6419a3cf5b2381099df9a1abe8fa13ddc799af226333e54",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΑΨ346ΝΠΙΘ-Ι04",
+      "retrieved": "2026-11-23T08:27:29+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΑΨ346ΝΠΙΘ-Ι04.pdf",
+      "sha256": "7ed9891160c97456797f9915ab44432b0f39a7210e506a4620c0cd4481ed947a",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency, last decision of a chain (names officials; raw only)"
     }
   ]
 }

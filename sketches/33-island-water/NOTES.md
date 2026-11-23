@@ -145,8 +145,8 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   - The map now takes documented emergencies from this table, and only reported rows from
     `emergencies.csv` (whose documented rows duplicate it, with notes). Crete's tooltip
     summarises its 10 municipalities. Tooltips now wrap on phones.
-  - Open: end dates of 15 chains are not read (mostly mainland); the Ierapetra extension
-    of 3 Jul 2025 states no end date; whether Leros and Patmos (Nov 2025) and Astypalaia
+  - End dates read for all chains but one (2026-11-23, last decision of each chain): most
+    ran to 31 Dec 2025. Open: the Ierapetra extension of 3 Jul 2025 states no end date; whether Leros and Patmos (Nov 2025) and Astypalaia
     (2026) appear in Ministry of Environment decisions on Diavgeia.
 
 - 2026-11-23: dates of the 2024 water emergencies, from Civil Protection decisions on
