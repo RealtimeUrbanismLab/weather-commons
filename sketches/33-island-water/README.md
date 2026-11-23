@@ -25,8 +25,8 @@ Then open http://localhost:8000.
 Sifnos, summer 2024. In June a desalination unit at Platys Gialos broke down; some
 settlements were without water for 10–15 days, and at some points June use was up to twice
 the previous August's (reported, Ethnos). On 20 June 2024, at the municipality's request,
-the General Secretariat for Civil Protection declared a one-month water emergency, the first
-on a Cycladic island, extended on 22 July to 22 August (documented, Diavgeia). It followed
+the General Secretariat for Civil Protection declared a one-month water emergency, extended
+on 22 July to 22 August; Serifos had been under one since 30 April (documented, Diavgeia). It followed
 two dry winters: 66% and 74% of the 1991–2020 October–March average (reanalysed, ERA5).
 
 The page sets this in 2021–2026: drought restrictions in 2021, tanker trucks every summer,
@@ -60,8 +60,9 @@ within 1.5–6.9 points (`tools/check_cistern_reference.py`). Page data:
 
 105 Aegean islands. In October–March 2022–23 all 105 had less rain than their 1991–2020
 average and 28 had a drier winter than Sifnos, relative to their own average (reanalysed,
-ERA5). Water emergencies found so far: seven islands, 2024–26 (documented for Sifnos,
-reported for the others). Three views:
+ERA5). Civil Protection water emergencies in 2024: Serifos (30 April 2024 – 7 January
+2025), Spetses, Poros, Sifnos and Leros; Poros again in 2025 (documented, Diavgeia). Leros,
+Patmos and Astypalaia in 2025–26: reported. Three views:
 
 - a map with each island drawn as a small tank at its main village (cartographic, OSM),
   over Natural Earth land with OSM outlines for 30 small islands,
@@ -109,7 +110,8 @@ For every dataset: who made it, which version and date, when you downloaded it, 
 
 - Situate: island positions (cartographic, OpenStreetMap, ODbL); land (cartographic,
   Natural Earth 1:10m v5.1.1, public domain, plus OSM outlines for 30 small islands, ODbL); water emergencies
-  (documented for Sifnos, reported elsewhere, `data/emergencies.csv`); costs (reported,
+  (documented for 2024–2025 from Civil Protection decisions on Diavgeia, reported for
+  2025–26 elsewhere, `data/emergencies.csv`); costs (reported,
   `data/water_costs.csv`); Sifnos visitors and electricity (reported, The Press Project 2025).
 
 The sketch cannot show water quality, leaks, evaporation from open cisterns, or how people

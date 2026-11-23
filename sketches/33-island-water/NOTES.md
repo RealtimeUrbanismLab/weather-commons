@@ -63,8 +63,7 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   edit the copy. Copy rule (author, 2026-11-23): precise, concrete language modelled on
   Zepou & Matsaganis 2024 (counts, places, dates, named practices), no sweeping phrases.
   The README's first sentence (shown on the shared site) is long; shorten when editing.
-- Situate, next: dates for the Serifos, Poros, Spetses and Leros 2024
-  emergencies; the other 2026 emergency islands (Reuters names seven); the "storage
+- Situate, next: the other 2026 emergency islands (Reuters names seven); the "storage
   already in place" layer from `docs/design.md`; the island glyph's supply-mix bands
   (needs per-island source shares, not yet collected).
 - Simulate, later: let the reader pick another island (page data is Sifnos only; run
@@ -130,6 +129,24 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: dates of the 2024 water emergencies, from Civil Protection decisions on
+  Diavgeia (organisation 100068650; 25 decision texts read, PDFs in git-ignored
+  `data/raw/diavgeia/emergency_docs/`, logged in the manifest). Water shortage: Serifos
+  30 Apr 2024 – 7 Jan 2025 (one month, extended 7 times); Spetses 4 Jun – 4 Jul 2024;
+  Poros 20 Jun – 22 Jul 2024 and 27 Mar – 31 Dec 2025; Leros 25 Jun – 26 Aug 2024.
+  Not water, on the same islands: Serifos forest fire (29 Jun 2024), Spetses and Poros
+  floods (6 Sep 2023), Astypalaia floods (Nov 2022) and coastal erosion (Nov 2024), Leros
+  storm erosion (Feb 2026). Patmos has no Civil Protection decision; its November 2025
+  declaration was ministerial. No Civil Protection water emergency found for Astypalaia.
+  - Correction: Sifnos was not the first Cycladic island in a water emergency, as Ethnos
+    reported; Serifos was declared seven weeks earlier. Fixed in the page, README,
+    `design.md`, `sifnos_timeline.csv` and `emergencies.csv`. `docs/brief.md` still says
+    "first Cycladic water emergency" (author's file, left for the author). Iefimerida's
+    "first in the South Aegean" for Leros is wrong for the same reason.
+  - Searched by municipality name only; other islands may have had water emergencies in
+    2024 (in.gr counted 14 municipalities). Next: search all 2024–26 Civil Protection
+    declarations for island municipalities and test each text for λειψυδρία.
 
 - 2026-11-23: coastlines on the Situate map. Natural Earth 1:10m land and minor islands
   v5.1.1 (public domain, 3.6 MB zipped, `tools/fetch_coastlines.py`) leaves out 30 of the

@@ -1056,6 +1056,206 @@
       "sha256": "28792156a870eee2fbeb6a73aef09e5c7eb73a542ac62e031fa4df6a490be6d4",
       "licence": "ODbL (© OpenStreetMap contributors)",
       "note": "Outlines (out geom) of 30 islands missing from Natural Earth 1:10m"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΦΖΓ46ΝΠΙΘ-ΨΡΡ",
+      "retrieved": "2026-11-23T08:12:17+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΦΖΓ46ΝΠΙΘ-ΨΡΡ.pdf",
+      "sha256": "b1f6abac5b592ea4496faa4c1d896964d8c7d86b1323b03a6be4761f25fe8fa6",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΨΣΠ46ΝΠΙΘ-Ι2Θ",
+      "retrieved": "2026-11-23T08:12:19+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΨΣΠ46ΝΠΙΘ-Ι2Θ.pdf",
+      "sha256": "020ceca18022a93562e6aa8e8961743959d50455fca991a700f8f10b742c3f51",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΑΩΦ46ΝΠΙΘ-8ΕΒ",
+      "retrieved": "2026-11-23T08:12:21+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΑΩΦ46ΝΠΙΘ-8ΕΒ.pdf",
+      "sha256": "d354cf15e7f6968378aa21b8dcfcefcd2380b97321313a362c28497ce1ab9570",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΟ3946ΝΠΙΘ-Ο5Ω",
+      "retrieved": "2026-11-23T08:12:24+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΟ3946ΝΠΙΘ-Ο5Ω.pdf",
+      "sha256": "cd5befabc16964dad211728ab54f8d50d4c2dfd74b6199e57525b2975005727c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/94ΕΑ46ΝΠΙΘ-ΑΔ6",
+      "retrieved": "2026-11-23T08:12:26+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/94ΕΑ46ΝΠΙΘ-ΑΔ6.pdf",
+      "sha256": "1131f97ba8ce71b8c977b9c74973159017a567b9b382c473f8193c8c86361521",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Ρ5446ΝΠΙΘ-9ΨΡ",
+      "retrieved": "2026-11-23T08:12:28+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Ρ5446ΝΠΙΘ-9ΨΡ.pdf",
+      "sha256": "81fef4adfbbd9c92513f5986a24af0e7c663f18d07d788dfbd3055f6fdb1017a",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ0Γ046ΝΠΙΘ-ΣΔ2",
+      "retrieved": "2026-11-23T08:12:30+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ0Γ046ΝΠΙΘ-ΣΔ2.pdf",
+      "sha256": "a5869dcc53346ae6f493924a50681c7849c8ca7976d0bd45e8506b356ca576b1",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΩΤΦ46ΝΠΙΘ-Ο1Τ",
+      "retrieved": "2026-11-23T08:12:33+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΩΤΦ46ΝΠΙΘ-Ο1Τ.pdf",
+      "sha256": "1d5734a71af78a70244bb432ab13ca54b2d2a54d5ba17b5e5a62e3a53341e1ea",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΟΚ246ΝΠΙΘ-9Μ9",
+      "retrieved": "2026-11-23T08:12:35+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΟΚ246ΝΠΙΘ-9Μ9.pdf",
+      "sha256": "2b65a134b166383289e9f6f49f37581bc4719e80dbb4f1d22f3137db4ed6309c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/68ΙΥ46ΝΠΙΘ-ΡΟΣ",
+      "retrieved": "2026-11-23T08:12:37+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/68ΙΥ46ΝΠΙΘ-ΡΟΣ.pdf",
+      "sha256": "af49de7f036dfac554421601c309d0f5c0b79fdbdc3da01ab95b8484e24802e7",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΥΟΧ46ΝΠΙΘ-Υ9Σ",
+      "retrieved": "2026-11-23T08:13:20+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΥΟΧ46ΝΠΙΘ-Υ9Σ.pdf",
+      "sha256": "e9d3e8c78706d659f0ec078d7c6ac76cc2390489d59b424c737a39a83f2100c9",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ77Ε46ΝΠΙΘ-ΛΨ8",
+      "retrieved": "2026-11-23T08:13:22+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ77Ε46ΝΠΙΘ-ΛΨ8.pdf",
+      "sha256": "11f3e6fc750907c19a96a6c88ac407ad61b1c0056246a9c2da5a68ef7794a3b8",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ7ΨΩ46ΝΠΙΘ-Δ4Κ",
+      "retrieved": "2026-11-23T08:13:25+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ7ΨΩ46ΝΠΙΘ-Δ4Κ.pdf",
+      "sha256": "b48def7b365c1be62b041345da7d35e2c93afcbdea0c0c68070fd5f43a4bc0d0",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/957Ο46ΝΠΙΘ-ΑΡ9",
+      "retrieved": "2026-11-23T08:13:27+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/957Ο46ΝΠΙΘ-ΑΡ9.pdf",
+      "sha256": "712b0f4f815b58cba53b1878f6cb083394f6a25e0f25cb1fed733f880405c4bf",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6Θ1Ξ46ΝΠΙΘ-ΧΑΠ",
+      "retrieved": "2026-11-23T08:13:29+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6Θ1Ξ46ΝΠΙΘ-ΧΑΠ.pdf",
+      "sha256": "99826baccb25299c519cf5b2651d1fedf31c70df10dd7295f0a0384fec478323",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Υ2Η46ΝΠΙΘ-ΓΗ6",
+      "retrieved": "2026-11-23T08:13:31+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Υ2Η46ΝΠΙΘ-ΓΗ6.pdf",
+      "sha256": "e254bb8b3e236b3233d99a7901c21265585b5065ea2621f468e1daebaa8c965e",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ8ΟΒ46ΝΠΙΘ-ΕΥΝ",
+      "retrieved": "2026-11-23T08:13:33+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ8ΟΒ46ΝΠΙΘ-ΕΥΝ.pdf",
+      "sha256": "89aac7e5c94946b9af0344a3de4dcc73cb72b91544db36b1fb439028191f69c7",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/91ΟΠ46ΝΠΙΘ-00Θ",
+      "retrieved": "2026-11-23T08:13:36+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/91ΟΠ46ΝΠΙΘ-00Θ.pdf",
+      "sha256": "8df1a79ff159037ec11d366c03309b6d820ea21fceb85222621c63eae9622d53",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/94ΒΜ46ΝΠΙΘ-ΒΘΑ",
+      "retrieved": "2026-11-23T08:13:38+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/94ΒΜ46ΝΠΙΘ-ΒΘΑ.pdf",
+      "sha256": "8c59dc94724a3a455fd48d20da29312f87870f20b091f2e225ce4776aaef6938",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ρ5ΔΣ46ΝΠΙΘ-Ζ3Δ",
+      "retrieved": "2026-11-23T08:13:40+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ρ5ΔΣ46ΝΠΙΘ-Ζ3Δ.pdf",
+      "sha256": "f6788d2a1c0fc86a79c2e7e642cdecaa23f069d93955ed2d02cd57566dd1f143",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΓ5Ω46ΝΠΙΘ-Σ53",
+      "retrieved": "2026-11-23T08:13:43+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΓ5Ω46ΝΠΙΘ-Σ53.pdf",
+      "sha256": "af61cacda401b607d90ecc284e3a1f821d677e1681cad2a5e88f6f2c8ce552d4",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Θ4946ΝΠΙΘ-ΩΡΙ",
+      "retrieved": "2026-11-23T08:13:45+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Θ4946ΝΠΙΘ-ΩΡΙ.pdf",
+      "sha256": "103a5ee57792880ef7f8949cfdf6d42a5e75cbef3436ebb671aa013fed3c3334",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΑΑΥ46ΝΠΙΘ-Ζ70",
+      "retrieved": "2026-11-23T08:13:47+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΑΑΥ46ΝΠΙΘ-Ζ70.pdf",
+      "sha256": "65b7e007a4a004a75fe55b962d0d9dfa264239265d0cd7255245e965680ecd5a",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ2ΑΘ46ΝΠΙΘ-10Α",
+      "retrieved": "2026-11-23T08:13:50+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ2ΑΘ46ΝΠΙΘ-10Α.pdf",
+      "sha256": "a168744e9d4895a4539b758cce57defae5244aaf092ddf07a973f924050f0e06",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/67ΓΥ46ΝΠΙΘ-42Ε",
+      "retrieved": "2026-11-23T08:13:52+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/67ΓΥ46ΝΠΙΘ-42Ε.pdf",
+      "sha256": "c6c03de490bdcf1f12076ff103318556ff6568216a78bcbea6949f8088becda3",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency extension text (names officials; raw only)"
     }
   ]
 }
