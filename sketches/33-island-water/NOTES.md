@@ -59,10 +59,15 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - Tidy the data (see Questions): island names, status values, `residents` as numbers only.
 - T1.8 left: the ZAF22 full text (library access or ask the authors); the reason for the
   2026 tender cancellation (decision 206/2026 text); the reservoir ZAF22 mentions.
-- Page: Event and Simulate are drafted (see Done). Still template text: Situate and
-  Narrate in `index.html` and the README, and the README's first sentence (it feeds the
-  shared site's sketch list). The lede uses the question from `docs/brief.md`; change it
-  if the author wants other wording.
+- Page: all four parts are drafted as a working prototype (see Done); the author will
+  edit the copy. Copy rule (author, 2026-11-23): precise, concrete language modelled on
+  Zepou & Matsaganis 2024 (counts, places, dates, named practices), no sweeping phrases.
+  The README's first sentence (shown on the shared site) is long; shorten when editing.
+- Situate, next: coastlines (Natural Earth or OSM land polygons, clipped to the Aegean;
+  ask before downloading); dates for the Serifos, Poros, Spetses and Leros 2024
+  emergencies; the other 2026 emergency islands (Reuters names seven); the "storage
+  already in place" layer from `docs/design.md`; the island glyph's supply-mix bands
+  (needs per-island source shares, not yet collected).
 - Simulate, later: let the reader pick another island (page data is Sifnos only; run
   `build_page_data.py` per island); show drinking use only with a treatment note.
 
@@ -126,6 +131,24 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: Situate and Narrate drafted; the page now works end to end.
+  - Situate map (`situate.js`): 105 islands as small tanks at their main village, filled
+    with one winter's rain (share of the island's 1991–2020 average; any winter from
+    1991–92) or desalination capacity per 2021 resident; dots for water emergencies;
+    tooltips and a table view. No coastlines yet.
+  - Desalination over time: capacity still listed in 2020 by year online (survivor
+    count, 94,400 m³/day on base islands), one strip of records per island (48 islands,
+    353 records), the 29 temporary permits of 2024–26 (16,550 m³/day) noted apart.
+  - One €/m³ scale: eight reported costs in new `data/water_costs.csv`.
+  - Narrate: four paragraphs and a "what not to conclude" note. Event copy tightened
+    to the same precise register (winter percentages; the Poulati comparison sentence).
+  - `tools/build_page_data.py` writes `situate_islands.json`, `situate_desal.json`,
+    `situate_costs.json`. Checked in light and dark mode and at 390 px.
+  - Fixed: `data/islands.csv` and `docs/design.md` still gave 22 July as the end of the
+    Sifnos emergency; now 22 August.
+  - Figures: in 2022–23 all 105 islands were below their October–March average, 100
+    below 80%, and 28 drier than Sifnos relative to their own average (ERA5).
 
 - 2026-11-23: Event section drafted in `index.html` (and the README's Event section).
   - The lede is the question from `docs/brief.md`, followed by a key to the evidence tags.

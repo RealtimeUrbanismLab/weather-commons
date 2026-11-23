@@ -2,7 +2,10 @@
 
 Author: Jacob Moe · Started: 2026-11-23 · Status: sketch · Stack: static HTML + JS · Publish: no
 
-One or two sentences: what this sketch shows and the question it asks. The first sentence appears on the shared site.
+Sifnos ran short of water in June 2024, after two winters of 66% and 74% of its usual rain
+and the breakdown of a desalination unit; this sketch sets that summer against daily rain
+since 1991, a rooftop cistern model, and 105 other Aegean islands. It asks where an island's
+water comes from, who decides, and what a fairer and less fragile water future could look like.
 
 ## Run
 
@@ -55,11 +58,30 @@ within 1.5–6.9 points (`tools/check_cistern_reference.py`). Page data:
 
 ## 3. Situate
 
-Where does it sit in the world: places, infrastructure, institutions, history, politics?
+105 Aegean islands. In October–March 2022–23 all 105 had less rain than their 1991–2020
+average and 28 had a drier winter than Sifnos, relative to their own average (reanalysed,
+ERA5). Water emergencies found so far: seven islands, 2024–26 (documented for Sifnos,
+reported for the others). Three views:
+
+- a map with each island drawn as a small tank at its main village (cartographic, OSM),
+  filled with one winter's rain as a share of its average, or with desalination capacity
+  per 2021 resident (Sifnos 810 L a day; seven islands above 1,000);
+- desalination over time: capacity still listed in 2020 by year online (a survivor count,
+  94,400 m³/day on the base islands), and one strip of records per island, 1970–2026,
+  with the 29 temporary permits of 2024–26 (16,550 m³/day) shown apart;
+- one €/m³ scale for eight reported costs (`data/water_costs.csv`).
+
+Page data: `situate_islands.json`, `situate_desal.json`, `situate_costs.json`, built by
+`tools/build_page_data.py`; drawn by `situate.js`.
 
 ## 4. Narrate
 
-The story in a few sentences. What can a viewer learn here, and what should they not conclude?
+Four paragraphs on the page: the three conditions that coincided in June 2024; the
+municipality's measures 2021–2026 and the 29 temporary permits across the islands; what a
+default rooftop cistern meets (45–50% of toilet and garden use, 33% in 2000–01); and
+Poulati's allocation by twelve-hour weekday turns. A note lists what not to conclude:
+that Sifnos was drier than the other islands, that capacity is output, that no plant listed
+means none, that cistern water is drinking water, or that the costs compare one to one.
 
 ## Sources and limits
 
@@ -84,6 +106,11 @@ For every dataset: who made it, which version and date, when you downloaded it, 
 - Full list of datasets, licences and downloads: `data/datasets.csv`, `data/sources.csv`,
   `data/manifest.json`.
 
+- Situate: island positions (cartographic, OpenStreetMap, ODbL); water emergencies
+  (documented for Sifnos, reported elsewhere, `data/emergencies.csv`); costs (reported,
+  `data/water_costs.csv`); Sifnos visitors and electricity (reported, The Press Project 2025).
+
 The sketch cannot show water quality, leaks, evaporation from open cisterns, or how people
 change their use in a dry year. One ERA5 cell stands for all of Sifnos, and ERA5 has not yet
-been checked against a Sifnos station.
+been checked against a Sifnos station. The map has no coastlines yet, and an island with no
+plant listed may still have one.

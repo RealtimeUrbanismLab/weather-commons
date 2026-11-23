@@ -74,8 +74,88 @@ def main():
         "winters": [{"winter": r["winter"], "mm": float(r["oct_mar_mm"])} for r in wint],
     }, ensure_ascii=False, indent=1), encoding="utf-8")
 
+    situate()
     kb = (OUT / "sifnos_rain_daily.json").stat().st_size / 1024
-    print(f"Wrote data/page/sifnos_rain_daily.json ({len(mm)} days, {kb:.0f} KB), simulate_context.json, event_winters.json")
+    print(f"Wrote data/page/sifnos_rain_daily.json ({len(mm)} days, {kb:.0f} KB), simulate_context.json, "
+          "event_winters.json, situate_islands.json, situate_desal.json, situate_costs.json")
+
+
+def situate():
+    """Situate: every island on one map, desalination over time, one EUR/m3 scale."""
+    geo = read(DATA / "islands_geo.csv")
+    rec = {r["island"]: r for r in read(DATA / "derived" / "desal_reconciled_by_island.csv")}
+    emod = {r["island"]: r for r in read(DATA / "derived" / "desal_by_island.csv")}
+    hist = {r["island"]: r for r in read(DATA / "derived" / "desal_history_by_island.csv")}
+    cost = {r["island"]: r["desal_cost_eur_m3"] for r in read(DATA / "islands.csv")}
+    # water emergencies only: the Sifnos erosion emergency is listed in the file so it is not mistaken for one
+    emerg = {}
+    for r in read(DATA / "emergencies.csv"):
+        if "NOT a water emergency" in r["notes"]:
+            continue
+        emerg.setdefault(r["island_or_area"], []).append(
+            {"start": r["start"], "end": r["end"], "by": r["declared_by"], "trigger": r["trigger"],
+             "kind": "documented" if "DIAVGEIA" in r["source_ids"] else "reported", "source": r["source_ids"]})
+    winters = sorted({r["winter"] for r in read(DATA / "derived" / "rain_winters.csv") if r["complete"] == "yes"})
+    rain = {}
+    for r in read(DATA / "derived" / "rain_winters.csv"):
+        if r["complete"] == "yes":
+            rain.setdefault(r["island"], {})[r["winter"]] = float(r["oct_mar_mm"])
+    islands = []
+    for g in geo:
+        n = g["island"]
+        w = rain.get(n, {})
+        base = [w[x] for x in winters if "1991-92" <= x <= "2019-20" and x in w]
+        normal = sum(base) / len(base) if base else None
+        if n in rec:
+            cap, basis = int(rec[n]["reconciled_operating_m3d"]), "reconciled"
+        elif n in emod and emod[n]["capacity_online_m3d"]:
+            cap, basis = int(float(emod[n]["capacity_online_m3d"])), "EMODnet"
+        else:
+            cap, basis = None, None
+        h = hist.get(n, {})
+        islands.append({
+            "name": n, "group": g["group"], "scope": g["scope"], "lat": float(g["lat"]), "lon": float(g["lon"]),
+            "residents": int(g["residents_2021"]) if g["residents_2021"] else None,
+            "normal_mm": round(normal, 1) if normal else None,
+            "rain_pct": [round(100 * w[x] / normal) if normal and x in w else None for x in winters],
+            "desal_m3d": cap, "desal_basis": basis,
+            "temp_permits": int(h["temp_permits_2024_26"]) if h.get("temp_permits_2024_26") else 0,
+            "temp_permit_m3d": int(float(h["temp_permit_capacity_m3d"])) if h.get("temp_permit_capacity_m3d") else None,
+            "desal_cost_2025": float(cost[n]) if cost.get(n) else None,
+            "emergencies": emerg.get(n, []),
+        })
+    (OUT / "situate_islands.json").write_text(json.dumps({
+        "winters": winters, "normal_period": "winters 1991-92 to 2019-20",
+        "kinds": {"position": "cartographic (OSM place node of the main village)", "residents": "observed (ELSTAT 2021)",
+                  "rain": "reanalysed (ERA5)", "desal": "documented (capacity, not output)",
+                  "desal_cost_2025": "reported (PROTO25)"},
+        "islands": islands,
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    # desalination over time: every record per island (base scope), plus the yearly totals
+    ev = {}
+    for r in read(DATA / "derived" / "desal_timeline.csv"):
+        n = r["island"].split(";")[0].strip()
+        if not n or r["island_scope"] != "base" or not r["year"]:
+            continue
+        ev.setdefault(n, []).append({
+            "y": int(r["year"]), "t": r["track"], "e": r["event"],
+            "m3d": int(float(r["capacity_m3d"])) if r["capacity_m3d"] else None,
+            "place": r["place"], "k": r["evidence_kind"], "s": r["source_ids"]})
+    rows = sorted(ev.items(), key=lambda kv: (min(e["y"] for e in kv[1]), kv[0]))
+    years = [r for r in read(DATA / "derived" / "desal_by_year.csv") if r["scope"] == "base"]
+    (OUT / "situate_desal.json").write_text(json.dumps({
+        "scope": "islands in the sketch's base list (Crete, Evia and other context islands left out)",
+        "islands": [{"name": n, "events": sorted(e, key=lambda x: x["y"])} for n, e in rows],
+        "by_year": [{"year": int(r["year"]), "listed_m3d": int(float(r["emod_cumulative_listed_2020_m3d"])),
+                     "temp_permits": int(r["temp_permits"]),
+                     "temp_permit_m3d": int(float(r["temp_permit_capacity_m3d"]))} for r in years],
+    }, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+
+    costs = []
+    for r in read(DATA / "water_costs.csv"):
+        costs.append({k: (float(r[k]) if r[k] else None) if k.endswith("_eur_m3") else r[k] for k in r})
+    (OUT / "situate_costs.json").write_text(json.dumps(costs, ensure_ascii=False, indent=1), encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -7,7 +7,7 @@ limits, with an evidence-kind tag on every claim (`data/evidence_kinds.csv`).
 
 | Part | Shows | Main data | Evidence |
 | --- | --- | --- | --- |
-| 1. Event | Sifnos, June 2024: desal failure, June use doubles, first Cycladic water emergency (20 Jun - 22 Jul). Counterpoint: Poulati's 12-hour "waters" | `sifnos_timeline.csv` | documented, reported |
+| 1. Event | Sifnos, June 2024: desal failure, June use doubles, first Cycladic water emergency (20 Jun - 22 Aug, after one extension). Counterpoint: Poulati's 12-hour "waters" | `sifnos_timeline.csv` | documented, reported |
 | 2. Simulate | A rooftop cistern on Sifnos filled by real daily rain: the tank-size curve, one year of tank level, a house beside a public roof; sliders: more cisterns (as a reservoir), wastewater reuse, leak repair, fewer pools, lower use | `simulate_cistern.py`, ERA5, `rwh_reference_kakoulas22.csv` | reanalysed, calculated, synthetic |
 | 3. Situate | Aegean map, each island as a cistern glyph: supply mix, cost, emergencies; traditional systems and existing-storage layers; desalination over time; one €/m³ scale | `islands.csv`, `traditional_systems.csv`, `desal_timeline.csv`, OSM, EMODnet, Diavgeia | documented, reported, cartographic |
 | 4. Narrate | Sharing rules, rain readings, water habits | chapter quotes, interviews with consent | interpretive |

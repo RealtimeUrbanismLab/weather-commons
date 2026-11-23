@@ -1,0 +1,9 @@
+id,label,what,low_eur_m3,high_eur_m3,mid_eur_m3,mid_label,year,evidence_kind,source_ids,note
+tariff_chios,"Mains water tariff, Chios",what households pay per m3 above the first 20 m3 (free); incl. sewerage and VAT,1.15,1.99,,,2019,reported,KAKOULAS22,"Block tariff (Chios water utility decision, 2019, as cited 2022); first 20 m3 per period free"
+fournoi_hybrid,"Desalination with wind and solar, Fournoi",modelled cost of desalinated water in hybrid renewable scenarios,1.257,1.705,,,2023,reported,BERTSIOU23,"Modelled, not observed"
+desal_opex_2012,Desalination running cost,"operating cost of 30 island seawater RO plants, lowest to highest",0.13,3.5,0.85,average,c. 2012,reported,HELLEXP14,"Operating cost only (Leros lowest, Sifnos highest); excludes building the plant"
+desal_cost_2025,Desalination production cost,"production cost on Cycladic and Dodecanese islands, lowest to highest",2.56,6.69,3.55,Sifnos,2025,reported,PROTO25,"Mykonos lowest, Symi highest (University of the Aegean study, as reported)"
+user_milos,"Water price to users, Milos",price per m3 before VAT,4.5,4.5,,,2025,reported,PROTO25,
+user_koufonisia,"Water price to users, Koufonisia, before and after a rise",price per m3 before and after a rise within one year,1.95,9.67,,,2024-25,reported,PROTO25,"Reported for 'Koufonisia and Small Cyclades'"
+tanker_2012,Water shipped by tanker,cost of shipping water to islands,4.91,8.32,,,c. 2012,reported,HELLEXP14,Mostly not drinkable; households also bought bottled water
+tanker_later,"Water shipped by tanker, later figures",cost of tanker water,7,12,,,2020-21 (cited 2023),reported,BERTSIOU23,"Citing Bardis 2020 and Myronidis 2021"

@@ -44,6 +44,22 @@
                    border-top: 1px solid var(--line); border-top-color: color-mix(in srgb, var(--fg) 20%, transparent); }
   ol.timeline time { font-weight: 600; font-size: 15px; }
   @media (max-width: 480px) { ol.timeline li { grid-template-columns: 1fr; } }
+  /* Situate: islands as cisterns */
+  .chart .glyph { fill: var(--bg); stroke: var(--fg); stroke-width: 1; }
+  .chart .glyph.none { stroke-dasharray: 2 2; stroke-opacity: .6; }
+  .chart .glyph-fill { fill: var(--fg); }
+  .chart .glyph-normal, .chart .glyph-over { stroke: var(--fg); stroke-width: 1; }
+  .chart .isl.here .glyph { stroke-width: 2; }
+  .chart .isl:focus { outline: none; }
+  .chart .isl:focus .glyph { stroke-width: 2.5; }
+  .chart .emerg { fill: var(--fg); stroke: var(--bg); stroke-width: 1; }
+  .chart .isl .hit { cursor: default; }
+  .chart .strong { font-weight: 700; }
+  .chart .grid.faint { stroke-opacity: .15; }
+  .chart .kindtag { font-size: 10px; letter-spacing: .06em; }
+  .chart g[tabindex]:focus { outline: none; }
+  .chart g[tabindex]:focus .line { stroke-width: 3; }
+  .choice.inline label { display: inline-block; margin-right: 16px; }
 </style>
 </head>
 <body>
@@ -82,9 +98,10 @@ Sifnos, the first on a Cycladic island <span class="kind">documented</span>
 <span class="kind">reported</span>.</p>
 
 <h3>The winters before</h3>
-<p class="small">Sifnos depends on winter rain to refill its aquifers, springs and cisterns.
-The winter before the breakdown brought about three-quarters of the usual rain, after a
-winter that brought two-thirds. Winters 2022–23 to 2024–25 are drawn in full black.</p>
+<p class="small">The springs, wells and cisterns of Sifnos are refilled by rain that falls
+between October and March. In 2022–23 that rain was 66% of the 1991–2020 average for the
+island; in 2023–24, the winter before the breakdown, 74%. Winters 2022–23 to 2024–25 are
+drawn in full black.</p>
 <div class="chart"><svg id="winters" role="img" aria-label="October to March rain on Sifnos for each winter from 1991–92 to 2025–26, against the 1991–2020 average"></svg></div>
 <p class="label">October–March rain on Sifnos. Reanalysed (ERA5), one grid cell for the island.</p>
 <details><summary>Numbers</summary>
@@ -131,9 +148,9 @@ twelve-hour turns on set weekdays, and the right to it belongs to the land, not 
 The rules were unwritten until the early twentieth century, when they began to appear in
 deeds. In 2022 six farmers were still working there, four of them over 75
 <span class="kind">reported</span>.</p>
-<p>Two ways of meeting a dry summer sit side by side on one island: a rota agreed among
-neighbours and kept for generations, and an emergency declared by the state, met with
-trucks and new machines <span class="kind">interpretive</span>.</p>
+<p>In the same summers, water for the main settlements was allocated by municipal
+restrictions, tanker deliveries and an emergency decision of Civil Protection; in Poulati it
+was allocated by the weekday turns recorded in deeds <span class="kind">interpretive</span>.</p>
 
 <p class="label">Decisions: Diavgeia, the Greek government's public register of decisions
 (Municipality of Sifnos; General Secretariat for Civil Protection). Press: Ethnos (July
@@ -202,13 +219,108 @@ would be empty. The school case follows a study of a school on Chios, where it c
 </div>
 </section>
 
-<!-- 3. Situate: where, when, who. Add a map, places, institutions, dates. -->
+<!-- 3. Situate: Sifnos among the Aegean islands -->
+<section id="situate">
 <h2>Situate</h2>
-<p>Where and when does this happen? Who runs it, who is affected, and who decides?</p>
+<p>This sketch covers 105 Aegean islands. In October–March 2022–23 all 105 received less
+rain than their 1991–2020 average, and 100 received less than 80% of it; 28 had a drier
+winter than Sifnos, relative to their own average. In 2023–24, 104 of the 105 were below
+average <span class="kind">reanalysed</span>. Water emergencies have been found so far for
+seven of the islands: Sifnos, Leros, Serifos, Poros and Spetses in summer 2024; Leros and
+Patmos in November 2025; Astypalaia in May 2026 <span class="kind">documented</span>
+<span class="kind">reported</span>. The list is incomplete: one 2024 report counts 14
+municipalities in a water emergency.</p>
 
-<!-- 4. Narrate: the story in a few sentences, and what the model cannot show. -->
+<h3>Every island as a cistern</h3>
+<p class="small">Each island is drawn as a small tank at the position of its main village.
+The tank is filled either with one winter's October–March rain, as a share of that island's
+1991–2020 average (full at 150%), or with its desalination capacity in litres per resident a
+day (full at 1,000). Hover over or tab to an island for its numbers.</p>
+<fieldset class="choice inline">
+  <legend class="small">Fill each island with</legend>
+  <label><input type="radio" name="fill" value="rain" checked> winter rain, <select id="map-winter" aria-label="Winter"></select></label>
+  <label><input type="radio" name="fill" value="desal"> desalination capacity per resident</label>
+</fieldset>
+<div class="chart"><svg id="islands-map" role="img" aria-label="Map of the Aegean islands"></svg></div>
+<p class="label">Positions: each island's main village (cartographic, OpenStreetMap); no coastlines
+yet. Rain: reanalysed (ERA5). Desalination: documented capacity, the most the plants can make,
+divided by 2021 residents; summer visitors are not counted, so it overstates what each person
+has in August. "No plant listed" means none in the sources used, not that there is none.</p>
+<details><summary>Numbers</summary>
+<table id="map-table"><thead><tr><th>Island</th><th>Group</th><th>Residents 2021</th><th>Rain, winter <span id="map-table-winter"></span>, % of normal</th><th>Desalination, m³/day</th><th>Litres per resident a day</th><th>Water emergencies</th></tr></thead><tbody></tbody></table>
+</details>
+<p>Divided by the 2021 census population, desalination capacity exceeds 1,000 litres per
+resident a day on seven islands: Iraklia (2,030), Ano Koufonisi (1,540), Folegandros
+(1,500), Mykonos (1,400), Chalki (1,260), Symi (1,130) and Agistri (1,110). Sifnos has 810;
+Chios, 125 <span class="kind">calculated</span>. The census counts residents only. Sifnos
+has 2,777 residents and up to 39,000 visitors at the summer peak
+<span class="kind">reported</span>.</p>
+
+<h3>Desalination over time</h3>
+<p>The earliest island plant in the records is a 1,000 m³-a-day multi-stage flash (thermal)
+plant on Syros, online in 1970 and presumed offline by 2020. Of the plants still listed in
+2020, those online by 1990 add up to 3,200 m³ a day, and all of them to 94,400 m³ a day
+<span class="kind">documented</span>. Since 2024 the state has granted temporary permits to
+install and run portable units under a fast-track procedure: 29 decisions, 16,550 m³ a day
+<span class="kind">documented</span>.</p>
+<div class="chart"><svg id="desal-time" role="img" aria-label="Desalination capacity listed by year since 1970, and one strip of records per island"></svg></div>
+<p class="label">Documented: EMODnet Human Activities (records to 2020), Zotalis et al. 2014,
+Diavgeia decisions 2010–2026. The line is a survivor count: plants that closed before 2020 are
+mostly missing. Each mark below is a record, not a plant; one plant can appear in several
+sources. Islands in the sketch's base list only (Crete and Evia left out). Hover over a mark
+for its source.</p>
+<details><summary>Numbers</summary>
+<table id="desal-table"><thead><tr><th>Island</th><th>First record</th><th>Plant records</th><th>Permits and decisions</th><th>Temporary permits 2024–26</th></tr></thead><tbody></tbody></table>
+</details>
+
+<h3>What a cubic metre costs</h3>
+<p>The eight figures below come from four sources and measure four different things: a
+plant's running cost, its full production cost, the price users pay, and the cost of water
+shipped by tanker. Around 2012 the running cost of 30 island seawater plants ranged from
+€0.13 a cubic metre (Leros) to €3.50 (Sifnos), with an average of €0.85. In 2025 the
+production cost ranged from €2.56 (Mykonos) to €6.69 (Symi); Sifnos's was €3.55
+<span class="kind">reported</span>. On Chios, a 5 m³ house tank costing about €1,900 pays
+for itself in 21–36 years at the 2019 tariff; a 24 m³ school tank costing €5,700, in about
+14 <span class="kind">reported</span>.</p>
+<div class="chart"><svg id="costs" role="img" aria-label="Water costs in euros per cubic metre, from €0.13 to €12"></svg></div>
+<p class="label">Euros per cubic metre, not adjusted for inflation. All reported. Sources: Zotalis et al. 2014;
+Proto Thema 2025 (a University of the Aegean study); Kakoulas et al. 2022; Bertsiou 2023.</p>
+<details><summary>Numbers</summary>
+<table id="costs-table"><thead><tr><th>What</th><th>Year</th><th>€/m³</th><th>Measures</th><th>Evidence</th></tr></thead><tbody></tbody></table>
+</details>
+</section>
+
+<!-- 4. Narrate: the story in a few sentences, and what the page cannot show -->
+<section id="narrate">
 <h2>Narrate</h2>
-<p>Tell the story in a few sentences.</p>
+<p>In June 2024 three conditions coincided on Sifnos: October–March rain at 66% and then 74%
+of the 1991–2020 average in the two preceding winters <span class="kind">reanalysed</span>;
+the breakdown of a desalination unit at Platys Gialos; and June use up to twice that of the
+previous August <span class="kind">reported</span>. Rain alone does not account for the
+emergency: in 2022–23, 28 of the 105 islands had a drier winter than Sifnos relative to
+their own average <span class="kind">reanalysed</span>.</p>
+<p>Between 2021 and 2026 the municipality added a 1,000 m³-a-day portable unit, hired
+tanker trucks every summer, restricted use (with fines from July 2026) and put a second new
+unit out to tender <span class="kind">documented</span>. About 80% of the island's
+electricity comes from an oil-fired power station
+<span class="kind">reported</span>. Across the islands in this sketch, 29 temporary permits
+for portable units were issued in 2024–26 <span class="kind">documented</span>.</p>
+<p>With the page's default settings (a 100 m² roof, a 10 m³ tank, three people using 150
+litres each a day, a third of it for toilets and garden), a rooftop cistern on Sifnos meets
+45–50% of that third over 1991–2026, and 33% in the driest water year, 2000–01
+<span class="kind">calculated</span>. In Poulati, nine springs feed 21 open-air cisterns
+(χαβούζες) and about ten troughs (γούρνες); the water is divided into twelve-hour turns,
+called "waters", assigned by weekday; the right to a turn belongs to the plot, not its
+owner; and overflows (στραγγίδια) are shared on trust. More than 25 farmers worked the valley
+in the 1980s; six did in 2022, four of them over 75 <span class="kind">reported</span>.</p>
+<div class="note">
+  <p><strong>What not to conclude.</strong></p>
+  <p>That Sifnos was drier than the other islands: by ERA5, 28 were drier in 2022–23. That desalination capacity
+  is water delivered: it is the most the plants can make. That an island with no plant listed
+  has none. That the cistern results are drinking water: they are for toilets and garden unless
+  you choose otherwise. That the costs can be compared one to one: they measure different things.</p>
+</div>
+</section>
 
 <h2>Sources and limits</h2>
 <ul>
@@ -244,10 +356,30 @@ would be empty. The school case follows a study of a school on Chios, where it c
     press reports, reconciled plant by plant: 500 and 1,000 m³ a day at Platys Gialos (seawater),
     750 at Kamares (brackish).</li>
   <li>Residents: observed, ELSTAT 2021 census.</li>
+  <li>Situate, island positions: cartographic. The OpenStreetMap place node of each island's
+    main village (© OpenStreetMap contributors, ODbL), matched to the 2021 census; retrieved
+    2026-11-23. No coastlines are drawn yet.</li>
+  <li>Situate, winter rain on 105 islands: reanalysed. ERA5 October–March totals, one grid cell
+    per island, against each island's average for winters 1991–92 to 2019–20.</li>
+  <li>Situate, desalination: documented. Capacity reconciled plant by plant for 13 islands
+    (<code>data/desal_reconciled.csv</code>); EMODnet records to 2020 for the others. Records over
+    time: EMODnet, Zotalis et al. 2014, Bertsiou 2023 and Diavgeia decisions 2010–2026
+    (<code>data/derived/desal_timeline.csv</code>). The 29 temporary permits of 2024–26 are
+    Diavgeia decisions read by title.</li>
+  <li>Situate, water emergencies: documented for Sifnos (Diavgeia); reported for the others
+    (iefimerida and in.gr, 2024; Naftemporiki, November 2025; Reuters, July 2026). Dates for
+    Serifos, Poros, Spetses and the 2024 Leros emergency are not yet confirmed.</li>
+  <li>Situate, costs: reported, collected in <code>data/water_costs.csv</code> with year and
+    source: Zotalis et al. 2014; Proto Thema, September 2025 (a University of the Aegean
+    study); Kakoulas et al. 2022; Bertsiou 2023 (a doctoral thesis, NTUA). Not adjusted for
+    inflation.</li>
+  <li>Sifnos visitors (up to 39,000 at the summer peak) and electricity (about 80% from an
+    oil-fired power station): reported, The Press Project, 2025.</li>
 </ul>
 <p>What this sketch cannot show: water quality, leaks, evaporation from open cisterns, or
 how people change their use in a dry year. The model has no first-flush diverter and treats
-every roof as the same. One ERA5 cell stands for all of Sifnos.</p>
+every roof as the same. One ERA5 cell stands for all of Sifnos. The map shows where islands
+are, not their shape or size, and an island with no plant listed may still have one.</p>
 
 <footer class="site-footer">
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>
@@ -256,5 +388,6 @@ every roof as the same. One ERA5 cell stands for all of Sifnos.</p>
 <script src="event.js"></script>
 <script src="sim-core.js"></script>
 <script src="sim.js"></script>
+<script src="situate.js"></script>
 </body>
 </html>
