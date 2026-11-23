@@ -57,6 +57,8 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - Antiparos: its main village has no OSM place node inside the island outline; it sits at
   the box centre. Find the node and add it as `village_osm_id` in `data/island_rules.csv`.
 - Tidy the data (see Questions): island names, status values, `residents` as numbers only.
+- T1.8 left: the ZAF22 full text (library access or ask the authors); the reason for the
+  2026 tender cancellation (decision 206/2026 text); the reservoir ZAF22 mentions.
 - Page: Simulate is built (see Done). Still template text: the lede (the sketch's question),
   Event, Situate and Narrate in `index.html`, and the README's first sentence, Event,
   Situate and Narrate.
@@ -123,6 +125,27 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: T1.8 Sifnos detail, for the Event section.
+  - Diavgeia metadata for 1,301 Sifnos water decisions, 2010–2026 (66 requests;
+    `tools/fetch_diavgeia_sifnos.py`; raw, git-ignored because titles name people). Four
+    Civil Protection emergency decisions read in full (PDFs in raw; one ADA had no document).
+  - Corrections: the June 2024 water emergency ran to 22 August, not 22 July (extended
+    by one month). The Civil Protection emergency in force since December 2021 (to May
+    2027) is for coastal erosion and landslides, not water; recorded so it is not
+    mistaken for one.
+  - Plants: a 1,000 m³/day portable unit at Platys Gialos since March 2021 (after
+    EMODnet's snapshot), so Sifnos capacity is 2,250 m³/day, not 1,500 (reconciliation,
+    page and README updated). The Hoh 250 m³/day unit's present state is not known.
+  - Water was trucked from the coastal plants to the village tanks in 2014, 2016 and every
+    summer since 2021; drought restrictions already in July 2021; swimming-pool licensing
+    taken up by the council in Dec 2024.
+  - Tender: estimated EUR 850,000 + VAT; cancelled 13 Nov 2026 (206/2026), reason not
+    in the title.
+  - `data/sifnos_timeline.csv` now 47 rows, each Diavgeia row with its ADA; press details
+    added (ETHNOS24: 10–15 days without water; KYKLADIKI26: what the 2026 measures ban).
+    `docs/sifnos.md` rewritten (plants table, emergencies). ZAF22: full text behind
+    Springer's login; only the abstract was read.
 
 - 2026-11-23: T2.3 Simulate section built in `index.html` (`sim-core.js` model, `sim.js`
   views, styles in the page head; black and white, light and dark, phone width checked).

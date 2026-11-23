@@ -51,7 +51,7 @@ def main():
     ctx = {
         "residents_2021": {"value": int(sif["residents"]), "kind": "observed (census)", "source": "ELSTAT21"},
         "desal_capacity_m3d": {"value": int(desal["reconciled_operating_m3d"]), "kind": "documented (capacity, not output)",
-                               "source": "EMODNET;HELLEXP14;ETHNOS24 (reconciled, data/desal_reconciled.csv)"},
+                               "source": "EMODNET;HELLEXP14;ETHNOS24;DIAVGEIA_SIF (reconciled, data/desal_reconciled.csv)"},
         "house_cost_eur_by_tank_m3": {"value": costs, "kind": "reported (Chios prices, 2022)", "source": "KAKOULAS22 Table 2"},
         "era5_vs_station_factor": {"value": round(581.7 / 664.0, 3), "kind": "calculated",
                                    "source": "KAKOULAS22 station mean 581.7 mm/yr vs ERA5 664 mm/yr, Chios 2013-2019",

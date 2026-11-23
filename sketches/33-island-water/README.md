@@ -64,9 +64,10 @@ For every dataset: who made it, which version and date, when you downloaded it, 
 - Roof, tank, household and use: synthetic, set by the reader. The school calendar is an
   approximation (weekdays; no school 15 Jun–10 Sep, 24 Dec–7 Jan, Holy Week to the Sunday
   after Orthodox Easter).
-- Sifnos desalination capacity (1,500 m³/day): documented; EMODnet Human Activities
+- Sifnos desalination capacity (2,250 m³/day since 2021): documented; EMODnet Human Activities
   desalination plants (CC BY 4.0, records to 2020), Zotalis et al., *Water* 6 (2014) 1134
-  (CC BY 3.0) and press reports, reconciled in `data/desal_reconciled.csv`.
+  (CC BY 3.0), Diavgeia decisions of the Municipality of Sifnos (public, Law 4210/2013) and
+  press reports, reconciled in `data/desal_reconciled.csv`.
 - Residents: observed, ELSTAT 2021 census (re-use approved by ELSTAT).
 - Full list of datasets, licences and downloads: `data/datasets.csv`, `data/sources.csv`,
   `data/manifest.json`.

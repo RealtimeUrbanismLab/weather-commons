@@ -984,6 +984,54 @@
       "sha256": "",
       "licence": "NOA meteo.gr (terms not stated)",
       "note": "HTTP 522 (server timeout); no file. Not retried"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search/advanced (Sifnos water: org 6278 + subject terms; other bodies naming Sifnos) per half-year 2010-10-01..2026-11-23",
+      "retrieved": "2026-11-23T07:43:28+00:00",
+      "file": "data/raw/diavgeia/sifnos.json",
+      "sha256": "8b7a44704d3e2f93ee254093e80e547991a5d114cf414febfa538d94d718cc0c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Metadata only: 1301 decisions; 66 API requests"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6Ε9Μ46ΝΠΙΘ-ΙΣΡ",
+      "retrieved": "2026-11-23T07:48:48+00:00",
+      "file": "data/raw/diavgeia/sifnos_docs/6Ε9Μ46ΝΠΙΘ-ΙΣΡ.pdf",
+      "sha256": "5db51dae6ff3f5488be789b2b198b0435cf4d749f3b9a77a1c6931d07ef9e1ff",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision for Sifnos: read for cause and dates"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΛΡΨ46ΝΠΙΘ-7ΣΒ",
+      "retrieved": "2026-11-23T07:48:48+00:00",
+      "file": "data/raw/diavgeia/sifnos_docs/6ΛΡΨ46ΝΠΙΘ-7ΣΒ.pdf",
+      "sha256": "10aae93cffcb4697cc2cafa41f4e270045ee7d2685d91f95746b87d06c764b54",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision for Sifnos: read for cause and dates"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΘΙΟ46ΝΠΙΘ-91Μ",
+      "retrieved": "2026-11-23T07:48:48+00:00",
+      "file": "data/raw/diavgeia/sifnos_docs/ΨΘΙΟ46ΝΠΙΘ-91Μ.pdf",
+      "sha256": "f0e9c1144908b9eea86996b96fe3befe41227793ea0b446a49284e178f1d54ac",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision for Sifnos: read for cause and dates"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΝ3Π46ΝΠΙΘ-ΨΔΘ",
+      "retrieved": "2026-11-23T07:48:48+00:00",
+      "file": "data/raw/diavgeia/sifnos_docs/ΨΝ3Π46ΝΠΙΘ-ΨΔΘ.pdf",
+      "sha256": "4b4092f7870cdc12cb820a4bf1269af8002fd211c64c0985b6add3b4a09bd8aa",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection emergency decision for Sifnos: read for cause and dates"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΓΚΦ46ΝΠΙΘ-Ρ79",
+      "retrieved": "2026-11-23T07:48:48+00:00",
+      "file": "-",
+      "sha256": "",
+      "licence": "Diavgeia open data",
+      "note": "HTTP 302, no document (probably revoked or replaced); same-day decision ΨΘΙΟ46ΝΠΙΘ-91Μ used"
     }
   ]
 }

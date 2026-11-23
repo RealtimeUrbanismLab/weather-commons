@@ -5,9 +5,9 @@
   "source": "ELSTAT21"
  },
  "desal_capacity_m3d": {
-  "value": 1500,
+  "value": 2250,
   "kind": "documented (capacity, not output)",
-  "source": "EMODNET;HELLEXP14;ETHNOS24 (reconciled, data/desal_reconciled.csv)"
+  "source": "EMODNET;HELLEXP14;ETHNOS24;DIAVGEIA_SIF (reconciled, data/desal_reconciled.csv)"
  },
  "house_cost_eur_by_tank_m3": {
   "value": {
