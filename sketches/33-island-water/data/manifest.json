@@ -1784,6 +1784,382 @@
       "sha256": "7f579c2adff10ddaf13a171ec7bd502b109ad629acc3ec13931f19b759b6cff6",
       "licence": "ODbL (Microsoft Global ML Building Footprints)",
       "note": "Quadkey 122100233 for Sifnos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100231/part-00159-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:02:57+00:00",
+      "file": "data/raw/ms_buildings/122100231.csv.gz",
+      "sha256": "c53da79210cf021cfa113b6b5c0bf57d3809f6e8605b9c43ada629f00f70215e",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100231 for Syros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100320/part-00151-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:02:59+00:00",
+      "file": "data/raw/ms_buildings/122100320.csv.gz",
+      "sha256": "6e3f7ef45d71247ec0c4daaf2937cbb42face0ef631da707f12cc0538b582344",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100320 for Naxos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100322/part-00010-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:02+00:00",
+      "file": "data/raw/ms_buildings/122100322.csv.gz",
+      "sha256": "8ee0aa01e07fa67baa71d26687847112d9e188aacacd5c86772f8696633397b7",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100322 for Naxos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102100/part-00155-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:05+00:00",
+      "file": "data/raw/ms_buildings/122102100.csv.gz",
+      "sha256": "6fb59fb0a332068b4dadea92423bdfb1a0721a54ee6687c5b70e08b091933240",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102100 for Santorini (Thira); uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100213/part-00112-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:07+00:00",
+      "file": "data/raw/ms_buildings/122100213.csv.gz",
+      "sha256": "5d3c95e9cc077ba072b2e20179c435e99d4454cefc0f9ddbdb1929f0dc118f2c",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100213 for Andros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100232/part-00115-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:09+00:00",
+      "file": "data/raw/ms_buildings/122100232.csv.gz",
+      "sha256": "570b8ce18b944a4f9c352eaea0b89c76c55b3041711617fa7a286ce2afc2baa2",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100232 for Milos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100230/part-00139-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:12+00:00",
+      "file": "data/raw/ms_buildings/122100230.csv.gz",
+      "sha256": "f1587e62a57a73b6179c5f2b32008df9a0995eb17241a9ebbc405f5bc4882e06",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100230 for Kea; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100323/part-00137-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:13+00:00",
+      "file": "data/raw/ms_buildings/122100323.csv.gz",
+      "sha256": "0ada0c2059c4bf4c603b0acb25276672a7e7990ffe3eb6488129bfa897bf49d4",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100323 for Amorgos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102011/part-00086-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:14+00:00",
+      "file": "data/raw/ms_buildings/122102011.csv.gz",
+      "sha256": "7a22011545e0a86995fec66850af31e781245d5312c744041dc192810d1dc070",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102011 for Folegandros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100212/part-00035-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:27+00:00",
+      "file": "data/raw/ms_buildings/122100212.csv.gz",
+      "sha256": "b7851dd46163dfe1e4ef9e91aa904db80367dae48881e80e16df10434ad87e3f",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100212 for Makronisos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102111/part-00075-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:30+00:00",
+      "file": "data/raw/ms_buildings/122102111.csv.gz",
+      "sha256": "a2b11e60d59f4e30c28d1cfe63303c9a0f3d02506469c6b2a217169a49cd23a6",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102111 for Rhodes; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102113/part-00185-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:32+00:00",
+      "file": "data/raw/ms_buildings/122102113.csv.gz",
+      "sha256": "0cd08f2efbde60568997da21b2099bb3c70b2cbedd794e048139b9a49e34a97f",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102113 for Rhodes; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122103000/part-00029-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:37+00:00",
+      "file": "data/raw/ms_buildings/122103000.csv.gz",
+      "sha256": "6052bbe7d75907bfbc33938a76543241495e49e6a514edc8d2d50799bfbaca31",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122103000 for Rhodes; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100332/part-00152-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:41+00:00",
+      "file": "data/raw/ms_buildings/122100332.csv.gz",
+      "sha256": "da17e6b10943149e2c18df7a6da8a15648a2d7405554c6fce8b2802027c214c1",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100332 for Kos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100330/part-00192-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:44+00:00",
+      "file": "data/raw/ms_buildings/122100330.csv.gz",
+      "sha256": "a08f452be898aabe6065a3e0008c44cab693de23242f15df03716c9f05e7f880",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100330 for Leros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102112/part-00122-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:46+00:00",
+      "file": "data/raw/ms_buildings/122102112.csv.gz",
+      "sha256": "0ab70de5a80b01c18fce19c929527630ba4117c63420dc977f29dfa24ab49537",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102112 for Karpathos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102130/part-00168-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:47+00:00",
+      "file": "data/raw/ms_buildings/122102130.csv.gz",
+      "sha256": "9a125a4f18fdbd7323fbcf76b66a771dc23f619998e38189192b72535182f7a3",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102130 for Karpathos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100321/part-00182-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:50+00:00",
+      "file": "data/raw/ms_buildings/122100321.csv.gz",
+      "sha256": "1086f1efae3433ad971782d2d37616d91c740a65d9fade22202c34064ee5d6f3",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100321 for Patmos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100333/part-00173-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:51+00:00",
+      "file": "data/raw/ms_buildings/122100333.csv.gz",
+      "sha256": "eaf46e14439f71d23bd424915d8168750892c21210331c799d8bba95f60a3275",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100333 for Symi; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102101/part-00164-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:53+00:00",
+      "file": "data/raw/ms_buildings/122102101.csv.gz",
+      "sha256": "a30cfc6c12b7027f58f186fec4abb60f08368285800b1b62bad7aa1fc406553a",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102101 for Astypalaia; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122102110/part-00170-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:54+00:00",
+      "file": "data/raw/ms_buildings/122102110.csv.gz",
+      "sha256": "a1ab59582ed646f4e80a3d4dd9f39b3f3b7b57d5439dbb4a749da4b8923be723",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122102110 for Nisyros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122103010/part-00119-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:55+00:00",
+      "file": "data/raw/ms_buildings/122103010.csv.gz",
+      "sha256": "eaa014323d5ff0b360aff82bc6a0a06c929e00b3580a252892fac4d8c7334b3c",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122103010 for Kastellorizo (Megisti); uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122103001/part-00156-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:56+00:00",
+      "file": "data/raw/ms_buildings/122103001.csv.gz",
+      "sha256": "5dd756027c422e26efefb05404674a38e6d83f579f927ddffac43320de727fb2",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122103001 for Ro; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100120/part-00197-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:57+00:00",
+      "file": "data/raw/ms_buildings/122100120.csv.gz",
+      "sha256": "7e663dcd529cf0d6b22ca604626cf87c418b9dc883b4dfc4da28522e4e959d65",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100120 for Lesvos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100121/part-00114-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:03:59+00:00",
+      "file": "data/raw/ms_buildings/122100121.csv.gz",
+      "sha256": "0b38173fe7c1adc5773788143f3370f2d951170a2fe567458aca5b9d3396c976",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100121 for Lesvos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100122/part-00142-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:01+00:00",
+      "file": "data/raw/ms_buildings/122100122.csv.gz",
+      "sha256": "10ce7c97189cd962733d8ae29700d376c6bcb434cdfe44613b3a011eac845b98",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100122 for Lesvos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100123/part-00171-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:09+00:00",
+      "file": "data/raw/ms_buildings/122100123.csv.gz",
+      "sha256": "0817eb826dd0ecf375ef6efb2c685420352e3eb4418214a38dfef1e45fdf06b3",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100123 for Lesvos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100300/part-00199-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:11+00:00",
+      "file": "data/raw/ms_buildings/122100300.csv.gz",
+      "sha256": "bc934adeb9ef797e5cb3a9dcebd42dfe38591e31b8884d032b4f11f3c1c4a1d2",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100300 for Chios; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100301/part-00144-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:14+00:00",
+      "file": "data/raw/ms_buildings/122100301.csv.gz",
+      "sha256": "e196fa2a3dd5463b968d7df16a665ef628662cc9964b00962f7fb2ee5a064c5c",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100301 for Chios; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100302/part-00193-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:15+00:00",
+      "file": "data/raw/ms_buildings/122100302.csv.gz",
+      "sha256": "c900c81cd1720b0c84b624c983de875f9d1dfb13e523da271a17492c43e0268f",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100302 for Chios; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100303/part-00035-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:17+00:00",
+      "file": "data/raw/ms_buildings/122100303.csv.gz",
+      "sha256": "cc5e00a7e770404cc0b07f0d331c68ccc26c2660c0858c9fab298dbd30c0ad79",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100303 for Chios; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100312/part-00060-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:20+00:00",
+      "file": "data/raw/ms_buildings/122100312.csv.gz",
+      "sha256": "14323648f135a1aa9293543c9682fd018cceb29901e04d071b88572c53768b08",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100312 for Samos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100013/part-00115-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:22+00:00",
+      "file": "data/raw/ms_buildings/122100013.csv.gz",
+      "sha256": "05cb43c1a49206e7381ce5cce5f1766ba8cc85e33da2f0b6f28b36c6d7a7ee44",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100013 for Lemnos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100031/part-00181-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:24+00:00",
+      "file": "data/raw/ms_buildings/122100031.csv.gz",
+      "sha256": "2d2dbb19c45ad30deb454f5f1e9b8c811712942dcaacac141bcb5ef91ea87ce5",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100031 for Lemnos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100102/part-00170-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:25+00:00",
+      "file": "data/raw/ms_buildings/122100102.csv.gz",
+      "sha256": "13d7590a054edaff72f12aecf0d3044cc0ed477dd405ea456ec194943819bf1a",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100102 for Lemnos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100010/part-00077-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:30+00:00",
+      "file": "data/raw/ms_buildings/122100010.csv.gz",
+      "sha256": "1b930125cdd1b054154bdb40c3f67181a4764a247deea8fe612707b88ce2f1d6",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100010 for Thasos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100011/part-00133-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:33+00:00",
+      "file": "data/raw/ms_buildings/122100011.csv.gz",
+      "sha256": "9c0ca27b75d0c5d4071e27885c021e57e5d0547083fdfb4a802633bf0d7c06e2",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100011 for Thasos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100100/part-00106-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:36+00:00",
+      "file": "data/raw/ms_buildings/122100100.csv.gz",
+      "sha256": "000d2a8a2888e1757708c353b9fb6daddd6e78872be15e61a20a60b983f05257",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100100 for Samothraki; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100003/part-00060-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:40+00:00",
+      "file": "data/raw/ms_buildings/122100003.csv.gz",
+      "sha256": "04a4cf4bc10c6068a6992479b8d908b8cb19d606e21bc9231fa60ab233efb85d",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100003 for Ammouliani; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100012/part-00130-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:43+00:00",
+      "file": "data/raw/ms_buildings/122100012.csv.gz",
+      "sha256": "7c2285667eefa9c73ad28b6f175187e075a76ba3128a694a98e04dd1d7b79984",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100012 for Ammouliani; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100023/part-00158-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:46+00:00",
+      "file": "data/raw/ms_buildings/122100023.csv.gz",
+      "sha256": "384787f851edfe932aeba6c4a8638ae289ad7a6e1b388260bcda944a06b14e58",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100023 for Skiathos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100032/part-00117-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:48+00:00",
+      "file": "data/raw/ms_buildings/122100032.csv.gz",
+      "sha256": "1d9dc7948034612a4c1c156bfcf5b955dc9754369990c8f69088febc8e4ab228",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100032 for Alonnisos; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100033/part-00063-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:49+00:00",
+      "file": "data/raw/ms_buildings/122100033.csv.gz",
+      "sha256": "abca509ccf34617063b29f8bccae4529ca5a1b9096c76380c6add9d1ec3c62f9",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100033 for Skyros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100210/part-00059-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:52+00:00",
+      "file": "data/raw/ms_buildings/122100210.csv.gz",
+      "sha256": "eb7347af32b9c957bfa78652f97727d6f52783ecb7d78b3a282f9c422c271810",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100210 for Skyros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100211/part-00032-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:53+00:00",
+      "file": "data/raw/ms_buildings/122100211.csv.gz",
+      "sha256": "60513348c98f64a06f62078557dfd147f986436425dce9ac6cbaddd40233b892",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100211 for Skyros; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100022/part-00180-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:58+00:00",
+      "file": "data/raw/ms_buildings/122100022.csv.gz",
+      "sha256": "5df34ab88d81dcb5a912b665112be6f39339f5a797cfe846c30e53d8a68dc541",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100022 for Palaio Trikeri; uploaded 2026-02-23"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100030/part-00039-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T10:04:59+00:00",
+      "file": "data/raw/ms_buildings/122100030.csv.gz",
+      "sha256": "aa685326c63ff4b5bf3fa6b4308cd389d63307dc9851f18767c9f2f8e3a6e31a",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100030 for Kyra Panagia; uploaded 2026-02-23"
     }
   ]
 }

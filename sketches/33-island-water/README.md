@@ -77,9 +77,13 @@ Patmos and Astypalaia in 2025–26: reported. Three views:
 
 - an interactive satellite map (Leaflet on Sentinel-2 cloudless 2024, EOX, CC BY-NC-SA 4.0),
   each island a small tank filled with one winter's rain as a share of its average, or with
-  desalination capacity per 2021 resident; on Sifnos, every building footprint (Microsoft ML
-  footprints, ODbL) as a possible cistern, with the rain that lands on its roofs (upper bound;
-  `tools/fetch_ms_buildings.py`, `tools/build_roofs.py`, `aegean-map.js`);
+  desalination capacity per 2021 resident; zoomed in, every building footprint on 85 islands
+  (613,641 Microsoft ML footprints, ODbL) as a possible cistern, each island's file loaded when
+  it comes into view (`tools/fetch_ms_buildings.py`, `tools/build_roofs_islands.py`,
+  `tools/build_roofs.py`, `aegean-map.js`);
+- every roof a cistern?: the rain on each island's roofs in an average and in its driest water
+  year, against what its 2021 residents would use at 150 litres a day (upper bound; visitors not
+  counted; `roofs.js`);
 - desalination over time: capacity still listed in 2020 by year online (a survivor count,
   94,400 m³/day on the base islands), and one strip of records per island, 1970–2026,
   with the 29 temporary permits of 2024–26 (16,550 m³/day) shown apart;

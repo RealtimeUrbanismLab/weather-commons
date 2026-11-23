@@ -98,6 +98,7 @@
   /* interactive satellite map */
   .leaflet-map { height: 560px; margin: 8px 0 0; border: 1px solid var(--line); background: #0b2236; }
   @media (max-width: 480px) { .leaflet-map { height: 460px; } }
+  .leaflet-container canvas { border: 0; width: auto; }   /* style.css frames every canvas; not map tiles */
   .tank-icon { background: none; border: 0; }
   .map-card { font: 13px/1.4 var(--font); }
   .map-card strong { display: block; font-size: 14px; margin-bottom: 2px; }
@@ -174,13 +175,15 @@ May 2026 <span class="kind">reported</span>.</p>
 <p class="small">Each island is a small tank at its main village, on Sentinel-2 imagery. Fill
 the tanks with one winter's October–March rain, as a share of that island's 1991–2020 average
 (full at 150%), or with desalination capacity in litres per resident a day (full at 1,000).
-Click a tank for the island's numbers; zoom into Sifnos to see its roofs.</p>
+Click a tank for the island's numbers. Zoom in to see every building on the islands, each roof
+a possible cistern.</p>
 <fieldset class="choice inline">
   <legend class="small">Fill each island with</legend>
   <label><input type="radio" name="fill" value="rain" checked> winter rain, <select id="map-winter" aria-label="Winter"></select></label>
   <label><input type="radio" name="fill" value="desal"> desalination capacity per resident</label>
 </fieldset>
 <p class="map-buttons"><button type="button" id="zoom-sifnos">Zoom to the roofs of Sifnos</button>
+  <label class="small">Roofs of <select id="roof-island"><option value="">choose an island</option></select></label>
   <button type="button" id="zoom-aegean">All islands</button></p>
 <div id="aegean-map" class="leaflet-map" role="region" aria-label="Interactive satellite map of the Aegean islands"></div>
 <p class="label">Imagery: Sentinel-2 cloudless 2024, EOX IT Services (modified Copernicus Sentinel
@@ -189,8 +192,8 @@ data; CC BY-NC-SA 4.0). Tanks at each island's main village (OpenStreetMap). Rai
 residents; summer visitors are not counted. "No plant listed" means none in the sources used,
 not that there is none. Black dot: a water emergency, 2024–26.</p>
 
-<h3>Every roof a cistern? Sifnos</h3>
-<p>Footprints traced from aerial imagery show <span id="roof-n">7,111</span> buildings on Sifnos
+<h3>Every roof a cistern?</h3>
+<p>Footprints traced from aerial imagery show <span id="roof-n">7,113</span> buildings on Sifnos
 with <span id="roof-ha">59</span> ha of roof; the median roof is <span id="roof-median">55</span> m²
 <span class="kind">cartographic</span>. In an average water year about
 <span id="roof-normal">175,000</span> m³ of rain lands on them, and about
@@ -202,11 +205,27 @@ and <span id="roof-desal-dry">56</span> days of its desalination capacity. It is
 it counts every roof, drained to a tank large enough to hold a winter's rain. Most of the rain
 falls between October and March; the Cisterns tab shows how much one house can keep into
 summer.</p>
-<p class="label">Footprints: Microsoft Global ML Building Footprints (traced by machine learning
-from Bing imagery; ODbL), 7,111 on Sifnos against 1,916 in OpenStreetMap. Rain on roofs = roof
-area × 0.8 runoff × ERA5 rain for the water year (October–September); ERA5 is about 14% wetter
-than stations on Chios, so these may be high. Settlement totals: each building assigned to the
-nearest OSM village or hamlet. Roofs of hotels, churches and sheds are included.</p>
+<p>The same count on the other islands finds <span id="roofs-n">613,641</span> buildings on
+<span id="roofs-islands">85</span> islands, with <span id="roofs-ha">6,838</span> ha of roof
+<span class="kind">cartographic</span>. Of the <span id="roofs-big">37</span> islands with 1,000
+residents or more, <span id="roofs-big-normal">20</span> get more rain on their roofs in an
+average year than their residents would use at 150 litres a day; in each island's driest year
+since 1991–92, <span id="roofs-big-driest">1</span> does <span class="kind">calculated</span>.
+The driest year was 1999–2000 or 2000–01 on <span id="roofs-big-2000">23</span> of them.</p>
+<div class="chart"><svg id="roof-chart" role="group" aria-label="Rain on roofs as a share of residents' use, islands with 1,000 residents or more"></svg></div>
+<p class="label">Rain on roofs = roof area × 0.8 runoff × ERA5 rain for the water year
+(October–September), one ERA5 cell per island; ERA5 is about 14% wetter than stations on
+Chios, so these may be high. Residents' use = 2021 residents × 150 litres × 365 days. Summer
+visitors are not counted, and the roofs include hotels, holiday homes, churches and sheds, so
+islands with many visitors score high here. Footprints: Microsoft Global ML Building Footprints
+(traced by machine learning from Bing imagery; ODbL), 7,113 on Sifnos against 1,916 in
+OpenStreetMap; some sheds, ruins and shadows may be counted and some roofs missed. A building
+belongs to an island when it stands on that island's land in Natural Earth 1:10m or the
+OpenStreetMap outline, or within 660 m of its shore. Settlement totals on Sifnos: each building
+assigned to the nearest OSM village or hamlet.</p>
+<details><summary>Roofs, island by island</summary>
+<table id="roof-table"><thead><tr><th>Island</th><th>Residents 2021</th><th>Buildings</th><th>Roof, ha</th><th>Rain on roofs, average year, m³</th><th>Share of residents' use</th><th>Driest year</th><th>Share of residents' use</th></tr></thead><tbody></tbody></table>
+</details>
 <details><summary>Numbers</summary>
 <table id="map-table"><thead><tr><th>Island</th><th>Group</th><th>Residents 2021</th><th>Rain, winter <span id="map-table-winter"></span>, % of normal</th><th>Desalination, m³/day</th><th>Litres per resident a day</th><th>Water emergencies</th></tr></thead><tbody></tbody></table>
 </details>
@@ -260,10 +279,14 @@ Proto Thema 2025 (a University of the Aegean study); Kakoulas et al. 2022; Berts
     (150 m for small islands; <code>tools/build_coastline.py</code>).</li>
   <li>Satellite imagery: Sentinel-2 cloudless 2024 by EOX IT Services GmbH (modified Copernicus
     Sentinel data 2024), CC BY-NC-SA 4.0, loaded as map tiles; the map uses Leaflet 1.9.4.</li>
-  <li>Building footprints on Sifnos: Microsoft Global ML Building Footprints, tile 122100233
-    (uploaded 2026-02-23), ODbL; kept where they fall on Sifnos's land in Copernicus DEM GLO-30
-    (<code>tools/fetch_ms_buildings.py</code>, <code>tools/build_roofs.py</code>). Traced by machine
-    learning, so some sheds, ruins and tree shadows may be counted and some roofs missed.</li>
+  <li>Building footprints on 85 islands: Microsoft Global ML Building Footprints, the 48 Greek
+    zoom-9 tiles that cover the 88 islands in the set, ODbL; each building given to the island
+    whose land (Natural Earth 1:10m, or the OSM outline for small islands, rasterised at about
+    220 m) holds it or lies within 660 m (<code>tools/fetch_ms_buildings.py</code>,
+    <code>tools/build_roofs_islands.py</code>, <code>tools/build_roofs.py</code>). On Sifnos this
+    gives 7,113 buildings; keeping only those on land in Copernicus DEM GLO-30 gave 7,111. Traced
+    by machine learning, so some sheds, ruins and tree shadows may be counted and some roofs
+    missed.</li>
   <li>Winter rain on 105 islands: reanalysed. ERA5 October–March totals, one grid cell per
     island, against each island's average for winters 1991–92 to 2019–20.</li>
   <li>Desalination: documented. Capacity reconciled plant by plant for 13 islands
@@ -526,5 +549,6 @@ roof as the same. One ERA5 cell stands for all of Sifnos.</p>
 <script src="sim.js"></script>
 <script src="situate.js"></script>
 <script src="aegean-map.js"></script>
+<script src="roofs.js"></script>
 </body>
 </html>

@@ -130,6 +130,19 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: roofs extended to every island (author approved the 106 MB download): 48 Microsoft
+  tiles; `tools/build_roofs_islands.py` gives each building to an island by rasterised land
+  (Natural Earth 1:10m + OSM outlines, ~220 m cells; shore buildings within 660 m; within 300 m
+  of the island's OSM box). 613,641 buildings on 85 of 88 islands, 6,838 ha of roof. Sifnos
+  7,113 (DEM mask gave 7,111); `build_roofs.py` now reads `data/page/roofs/sifnos.json`.
+  - Footprints per island in `data/page/roofs/<slug>.json` (delta-encoded ~1 m integers;
+    20 MB in all, Lesvos 2.9 MB). The map draws them as canvas tiles (`L.GridLayer`) at
+    zoom >= 12 and fetches an island's file when a tile touches its box.
+  - Of 37 islands with >= 1,000 residents, 20 get more rain on roofs in an average water year
+    than residents' use at 150 L/day; in each island's driest year since 1991-92, only
+    Antiparos (102%). Driest year 1999-00 or 2000-01 on 23 of the 37.
+  - Fixed: `style.css` frames every `canvas`, which drew lines along map tile edges.
+
 - 2026-11-23: Aegean freshwater map rebuilt as an interactive satellite map (author chose ideas 2 + 5
   of ten): Leaflet 1.9.4 (cdnjs) on EOX Sentinel-2 cloudless 2024 tiles; islands as tank icons
   (winter rain or desal per resident; card on click, from `situate.js` `SituateRows`);
