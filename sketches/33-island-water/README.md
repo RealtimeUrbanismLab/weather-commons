@@ -1,6 +1,6 @@
 # 33 · Island Water
 
-Author: Jacob Moe · Started: 2026-11-23 · Status: sketch · Stack: static HTML + JS
+Author: Jacob Moe · Started: 2026-11-23 · Status: sketch · Stack: static HTML + JS · Publish: no
 
 One or two sentences: what this sketch shows and the question it asks. The first sentence appears on the shared site.
 
