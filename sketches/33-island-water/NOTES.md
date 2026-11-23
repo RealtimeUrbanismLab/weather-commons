@@ -57,8 +57,11 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - Antiparos: its main village has no OSM place node inside the island outline; it sits at
   the box centre. Find the node and add it as `village_osm_id` in `data/island_rules.csv`.
 - Tidy the data (see Questions): island names, status values, `residents` as numbers only.
-- Replace the template's synthetic wind placeholder in `index.html` and the README's
-  Event, Simulate, Situate and Narrate sections.
+- Page: Simulate is built (see Done). Still template text: the lede (the sketch's question),
+  Event, Situate and Narrate in `index.html`, and the README's first sentence, Event,
+  Situate and Narrate. Before any push to `main`, decide on `Publish: no` (Questions).
+- Simulate, later: let the reader pick another island (page data is Sifnos only; run
+  `build_page_data.py` per island); show drinking use only with a treatment note.
 
 ## Decisions
 
@@ -117,6 +120,22 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   `tools/fetch_census.py --booklet` if wanted.
 
 ## Done
+
+- 2026-11-23: T2.3 Simulate section built in `index.html` (`sim-core.js` model, `sim.js`
+  views, styles in the page head; black and white, light and dark, phone width checked).
+  Four views per `docs/design.md`:
+  - the tank-size curve with the cost of a house system in its own panel below;
+  - one water year of daily rain and tank level, with the days the tank fell short;
+  - a house beside a school roof;
+  - many houses' cisterns as reservoir volume and days of desalination capacity.
+  Every result is a range, ERA5 as it is and ERA5 −12% (the Chios station check). Each
+  chart has a crosshair readout, and the tank-size chart has a table of its numbers.
+  Default (100 m² roof, 10 m³ tank, 3 people, 150 L a day for toilets and garden): rain
+  covers 45–50% over 1991–2026, and 33% in the worst year, 2000–01. On Sifnos the school
+  roof covers less (39–43%) than on Chios (~60%), because Sifnos is much drier.
+  `tools/build_page_data.py` writes `data/page/` (56 KB). `node tools/check_page_sim.mjs`
+  confirms the page model matches `simulate_cistern.py`; that script gained `--no-write`.
+  Sources and limits filled in on the page and in the README.
 
 - 2026-11-23: desal plants reconciled for 13 islands (all with EMODnet, literature and
   Diavgeia except Crete). `data/desal_reconciled.csv` (64 rows) groups the records into

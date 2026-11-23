@@ -4,8 +4,36 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>33 · Island Water · Realtime Weather</title>
-<!-- style.css is the shared Realtime Weather look, copied into this folder. Add your own styles below it. -->
+<!-- style.css is the shared Realtime Weather look, copied into this folder. Sketch styles follow it. -->
 <link rel="stylesheet" href="style.css">
+<style>
+  /* Simulate section: controls, charts and tooltips, black and white */
+  .fields label { display: flex; flex-direction: column; gap: 2px; }
+  .fields output { color: var(--fg); font-weight: 600; font-size: 15px; }
+  .fields input[type=range] { width: 100%; padding: 0; border: 0; accent-color: var(--fg); }
+  fieldset.choice { border: 1px solid var(--line); padding: 8px 12px; margin: 12px 0; font-size: 15px; }
+  fieldset.choice label { display: block; }
+  select { font: 15px var(--font); background: var(--bg); color: var(--fg); border: 1px solid var(--line); padding: 2px 6px; }
+  .chart { position: relative; margin: 12px 0 0; max-width: none; }
+  .chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .chart .grid { stroke: var(--muted); stroke-opacity: .35; stroke-width: 1; }
+  .chart .tick, .chart .direct { font: 12px var(--font); fill: var(--muted); }
+  .chart .direct { fill: var(--fg); }
+  .chart .muted-text { fill: var(--muted); }
+  .chart .line { fill: none; stroke: var(--fg); stroke-width: 2; }
+  .chart .line.thin { stroke-width: 1.25; }
+  .chart .band { fill: var(--fg); fill-opacity: .08; stroke: none; }
+  .chart .bar { fill: var(--fg); }
+  .chart .dot { fill: var(--fg); stroke: var(--bg); stroke-width: 2; }
+  .chart .dot.hollow { fill: var(--bg); stroke: var(--fg); stroke-width: 1.5; }
+  .chart .pick { stroke: var(--fg); stroke-width: 1; stroke-opacity: .5; }
+  .chart .cross { stroke: var(--fg); stroke-width: 1; }
+  .chart .hit { fill: transparent; cursor: crosshair; }
+  .tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--line);
+         padding: 6px 8px; font-size: 13px; line-height: 1.35; white-space: nowrap; }
+  details { margin: 8px 0; font-size: 15px; }
+  details table { font-size: 13px; }
+</style>
 </head>
 <body>
 <main>
@@ -27,10 +55,66 @@
 <p class="lede">Write your question here. Which weather event, practice or intervention is this about, and what do you want to understand?</p>
 <p class="muted small">33 · Jacob Moe · started 2026-11-23</p>
 
-<!-- 2. Simulate: a first model. This placeholder shows dots drifting in one steady wind. -->
+<!-- 2. Simulate: a rooftop cistern on Sifnos, filled by the rain that fell, day by day. -->
+<section id="simulate">
 <h2>Simulate</h2>
-<canvas id="view" width="1200" height="600"></canvas>
-<p class="label">Synthetic: a steady east wind, made up for this template. Not observed data.</p>
+<p>A rooftop cistern on Sifnos, filled by the rain that fell there each day from 1991 to
+2026. Choose a roof, a tank and a household. Each day the tank fills with what the roof
+catches, overflows when full, and gives what the household needs until it runs dry.</p>
+
+<div class="fields">
+  <label>Roof <output id="roof-out"></output><input id="roof" type="range" min="20" max="200" step="5" value="100"></label>
+  <label>Tank <output id="tank-out"></output><input id="tank" type="range" min="1" max="40" step="1" value="10"></label>
+  <label>People <output id="people-out"></output><input id="people" type="range" min="1" max="8" step="1" value="3"></label>
+  <label>Litres each a day <output id="litres-out"></output><input id="litres" type="range" min="80" max="250" step="10" value="150"></label>
+</div>
+<fieldset class="choice">
+  <legend>Rainwater is used for</legend>
+  <label><input type="radio" name="use" value="0.3333" checked> toilets and garden only, about a third of household use</label>
+  <label><input type="radio" name="use" value="1"> everything, drinking included (rainwater must then be treated)</label>
+</fieldset>
+
+<p class="lede" id="headline" aria-live="polite">Loading the rain…</p>
+
+<h3>Bigger tanks stop helping</h3>
+<p class="small">Share of the household's use that rain covers, by tank size. The curve
+flattens once the tank is larger than the rain can fill. Two lines: ERA5 rain as it is, and
+ERA5 reduced by the amount it overstates rain on Chios, where it was checked against
+weather stations.</p>
+<div class="chart"><svg id="curve" role="img" aria-label="Share of use met by tank size, with the cost of a house system below"></svg></div>
+<p class="label">Rain: reanalysed (ERA5). Roof, tank and use: synthetic, your choice. Share: calculated. Cost: reported (Chios, 2022).</p>
+<details><summary>Numbers</summary>
+<table id="curve-table"><thead><tr><th>Tank, m³</th><th>Use met, ERA5</th><th>Use met, ERA5 adjusted</th><th>Cost of a house system</th></tr></thead><tbody></tbody></table>
+</details>
+
+<h3>One year of rain and tank</h3>
+<p class="small">A water year runs from October, when the rains start, to September. The tank
+runs on what winter left it.</p>
+<label class="small">Water year <select id="wyear"></select></label>
+<div class="chart"><svg id="year" role="img" aria-label="Daily rain and the water in the tank through one water year"></svg></div>
+<p class="small" id="year-note" aria-live="polite"></p>
+<p class="label">Black strip under the tank: days it could not cover. Rain: reanalysed (ERA5, as it is). Tank: calculated, run without a break from January 1991.</p>
+
+<h3>A house beside a school roof</h3>
+<p class="small">A school has a large roof, and stops using water in summer, when the tank
+would be empty. The school case follows a study of a school on Chios, where it covered about
+60% of the school's use; Chios gets far more rain than Sifnos.</p>
+<table id="compare"><thead><tr><th></th><th>Use a year</th><th>Share met</th><th>Days a year without enough rainwater</th></tr></thead><tbody></tbody></table>
+<p class="label">Ranges: ERA5 adjusted to ERA5 as it is. School: 100 people, 20 litres each on school days; the school calendar is approximate (synthetic).</p>
+
+<h3>More cisterns, as a reservoir</h3>
+<label class="small">Houses with a cistern: <output id="houses-out"></output>
+  <input id="houses" type="range" min="0" max="1500" step="50" value="300"></label>
+<p id="reservoir" aria-live="polite"></p>
+<p class="label">Desalination capacity: documented, the most the plants can make, not what they make. Sifnos had 2,777 residents in 2021 (census).</p>
+
+<div class="note">
+  <p><strong>How far to trust this.</strong> The same model, run on ERA5 rain for Chios,
+  comes within 1.5–6.9 percentage points of all 54 house cases in a published Chios study
+  (Kakoulas et al. 2022), always a little higher, because ERA5 there is about 14% wetter
+  than the stations. ERA5 has not yet been checked against a station on Sifnos.</p>
+</div>
+</section>
 
 <!-- 3. Situate: where, when, who. Add a map, places, institutions, dates. -->
 <h2>Situate</h2>
@@ -42,40 +126,32 @@
 
 <h2>Sources and limits</h2>
 <ul>
-  <li>Wind field: synthetic, made up for this template.</li>
-  <li>List each dataset here: who made it, when, its licence, and whether it is observed, modelled, synthetic or interpretive.</li>
+  <li>Daily rain on Sifnos, 1991-01-01 to 2026-10-31: reanalysed. ERA5 (Copernicus Climate
+    Change Service, ECMWF), via the Open-Meteo historical weather API, grid cell 37.00 N,
+    24.75 E, 3.7 km from Apollonia; downloaded 2026-11-23; CC BY 4.0. Not changed except
+    rounding to 0.1 mm. ERA5 is a weather model fitted to observations on a 0.25° grid
+    (about 25 km); it is not a rain gauge.</li>
+  <li>The adjustment of ERA5 by −12%: calculated from Chios station rain, 2013–2019 (581.7 mm a
+    year), published in Kakoulas, Golfinopoulos, Koumparou &amp; Alexakis, "The Effectiveness of
+    Rainwater Harvesting Infrastructure in a Mediterranean Island", <i>Water</i> 14 (2022) 716,
+    CC BY 4.0, against ERA5 for the same island and years (664 mm). Measured on Chios only.</li>
+  <li>House system costs and the school case: reported, from the same study (Chios prices, 2022).</li>
+  <li>Roof, tank, household size and use: synthetic, set by you. A third of household use for
+    toilets and garden follows the same study.</li>
+  <li>Sifnos desalination capacity, 1,500 m³ a day: documented, from EMODnet Human Activities
+    (desalination plants, CC BY 4.0, records to 2020), a 2014 review (Zotalis et al.,
+    <i>Water</i> 6 (2014) 1134, CC BY 3.0) and press reports, reconciled plant by plant.</li>
+  <li>Residents: observed, ELSTAT 2021 census.</li>
 </ul>
-<p>What this sketch cannot show: write it here.</p>
+<p>What this sketch cannot show: water quality, leaks, evaporation from open cisterns, or
+how people change their use in a dry year. The model has no first-flush diverter and treats
+every roof as the same. One ERA5 cell stands for all of Sifnos.</p>
 
 <footer class="site-footer">
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>
 </footer>
 </main>
-<script>
-  // A tiny simulation: dots carried by a steady wind, with a little random spread.
-  // Replace it with your own model. Load your own files with relative paths, e.g. fetch('data/my-file.json').
-  const canvas = document.getElementById('view');
-  const ctx = canvas.getContext('2d');
-  const ink = getComputedStyle(document.body).color;           // black, or white in dark mode
-  const paper = getComputedStyle(document.body).backgroundColor;
-  const wind = { east: 1.2, north: 0.2 }; // pixels per frame (synthetic)
-  const spread = 0.6;                      // random wobble per frame
-  const dots = Array.from({ length: 1500 }, () => ({ x: Math.random() * canvas.width, y: Math.random() * canvas.height }));
-
-  function step() {
-    ctx.globalAlpha = 0.15;                // fade old positions into trails
-    ctx.fillStyle = paper;
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.globalAlpha = 1;
-    ctx.fillStyle = ink;
-    for (const d of dots) {
-      d.x = (d.x + wind.east + (Math.random() - 0.5) * spread + canvas.width) % canvas.width;
-      d.y = (d.y - wind.north + (Math.random() - 0.5) * spread + canvas.height) % canvas.height;
-      ctx.fillRect(d.x, d.y, 2, 2);
-    }
-    requestAnimationFrame(step);
-  }
-  step();
-</script>
+<script src="sim-core.js"></script>
+<script src="sim.js"></script>
 </body>
 </html>

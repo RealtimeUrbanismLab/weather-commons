@@ -63,6 +63,7 @@ def main():
     ap.add_argument("--rule", choices=("yas", "ybs"), default="yas",
                     help="yas: overflow before use (conservative); ybs: use before overflow")
     ap.add_argument("--first-flush", type=float, default=0.0, help="mm diverted per rainy day")
+    ap.add_argument("--no-write", action="store_true", help="print the summary only")
     a = ap.parse_args()
     src = ROOT / "data" / "raw" / "rain_daily" / f"rain_daily_{slug(a.island)}.csv"
     if not src.exists():
@@ -71,14 +72,15 @@ def main():
     rows = simulate(rain, a.roof, a.tank, a.use, a.runoff, a.summer_factor, a.start_full,
                     a.rule, a.first_flush)
     tag = f"{a.island}_roof{a.roof:g}_tank{a.tank:g}_use{a.use:g}" + ("_ybs" if a.rule == "ybs" else "")
-    out = ROOT / "data" / "derived" / f"cistern_{tag}.csv"
-    with out.open("w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
-        w.writeheader()
-        w.writerows(rows)
+    if not a.no_write:
+        out = ROOT / "data" / "derived" / f"cistern_{tag}.csv"
+        with out.open("w", newline="", encoding="utf-8") as f:
+            w = csv.DictWriter(f, fieldnames=list(rows[0].keys()), lineterminator="\n")
+            w.writeheader()
+            w.writerows(rows)
+        print(f"Wrote {len(rows)} days to {out.relative_to(ROOT)}")
     dry = sum(r["dry"] for r in rows)
     caught = sum(r["inflow_m3"] for r in rows)
-    print(f"Wrote {len(rows)} days to {out.relative_to(ROOT)}")
     wse = 100 * sum(r["supplied_m3"] for r in rows) / max(sum(r["demand_m3"] for r in rows), 1e-9)
     print(f"Rain caught: {caught:.1f} m3; days short of water: {dry} of {len(rows)}; WSE {wse:.1f}%")
     print("Parameters are synthetic; rain is reanalysed (ERA5); results are calculated.")
