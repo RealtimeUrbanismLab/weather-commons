@@ -7,6 +7,7 @@
 <!-- style.css is the shared Realtime Weather look, copied into this folder. Sketch styles follow it.
      Departure from the shared look (author's choice, 2026-11-23): one colour, the water blue, used only for water. -->
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <style>
   :root { --water: #1a5fb4; }
   @media (prefers-color-scheme: dark) { :root { --water: #4b95e2; } }
@@ -94,6 +95,16 @@
   .chart g[tabindex]:focus { outline: none; }
   .chart g[tabindex]:focus .line { stroke-width: 3; }
   .choice.inline label { display: inline-block; margin-right: 16px; }
+  /* interactive satellite map */
+  .leaflet-map { height: 560px; margin: 8px 0 0; border: 1px solid var(--line); background: #0b2236; }
+  @media (max-width: 480px) { .leaflet-map { height: 460px; } }
+  .tank-icon { background: none; border: 0; }
+  .map-card { font: 13px/1.4 var(--font); }
+  .map-card strong { display: block; font-size: 14px; margin-bottom: 2px; }
+  .leaflet-container a { color: inherit; }
+  .map-buttons button { font: 14px var(--font); background: var(--bg); color: var(--fg); border: 1px solid var(--line);
+                        padding: 4px 10px; cursor: pointer; margin-right: 6px; }
+  .map-buttons button:hover { border-color: var(--water); color: var(--water); }
   /* Poulati diagrams */
   .chart .terrain { fill: var(--soft); stroke: var(--fg); stroke-width: 1; }
   .chart .cistern { fill: var(--bg); stroke: var(--fg); stroke-width: 1.2; }
@@ -159,22 +170,43 @@ again, and Lesvos (West Lesvos and Mytilene) and Chios were added
 ministerial decision in November 2025, and Astypalaia was reported in a water emergency in
 May 2026 <span class="kind">reported</span>.</p>
 
-<h3>Every island as a cistern</h3>
-<p class="small">Each island is drawn as a small tank at the position of its main village,
-on the island's outline. The tank is filled either with one winter's October–March rain, as a
-share of that island's 1991–2020 average (full at 150%), or with its desalination capacity in
-litres per resident a day (full at 1,000). Hover over or tab to an island for its numbers.</p>
+<h3>The islands from above</h3>
+<p class="small">Each island is a small tank at its main village, on Sentinel-2 imagery. Fill
+the tanks with one winter's October–March rain, as a share of that island's 1991–2020 average
+(full at 150%), or with desalination capacity in litres per resident a day (full at 1,000).
+Click a tank for the island's numbers; zoom into Sifnos to see its roofs.</p>
 <fieldset class="choice inline">
   <legend class="small">Fill each island with</legend>
   <label><input type="radio" name="fill" value="rain" checked> winter rain, <select id="map-winter" aria-label="Winter"></select></label>
   <label><input type="radio" name="fill" value="desal"> desalination capacity per resident</label>
 </fieldset>
-<div class="chart"><svg id="islands-map" role="img" aria-label="Map of the Aegean islands"></svg></div>
-<p class="label">Positions: each island's main village (cartographic, OpenStreetMap). Land: Natural
-Earth 1:10m, with OpenStreetMap outlines for 30 small islands it leaves out (cartographic).
-Rain: reanalysed (ERA5). Desalination: documented capacity, the most the plants can make,
-divided by 2021 residents; summer visitors are not counted, so it overstates what each person
-has in August. "No plant listed" means none in the sources used, not that there is none.</p>
+<p class="map-buttons"><button type="button" id="zoom-sifnos">Zoom to the roofs of Sifnos</button>
+  <button type="button" id="zoom-aegean">All islands</button></p>
+<div id="aegean-map" class="leaflet-map" role="region" aria-label="Interactive satellite map of the Aegean islands"></div>
+<p class="label">Imagery: Sentinel-2 cloudless 2024, EOX IT Services (modified Copernicus Sentinel
+data; CC BY-NC-SA 4.0). Tanks at each island's main village (OpenStreetMap). Rain: reanalysed
+(ERA5). Desalination: documented capacity, the most the plants can make, divided by 2021
+residents; summer visitors are not counted. "No plant listed" means none in the sources used,
+not that there is none. Black dot: a water emergency, 2024–26.</p>
+
+<h3>Every roof a cistern? Sifnos</h3>
+<p>Footprints traced from aerial imagery show <span id="roof-n">7,111</span> buildings on Sifnos
+with <span id="roof-ha">59</span> ha of roof; the median roof is <span id="roof-median">55</span> m²
+<span class="kind">cartographic</span>. In an average water year about
+<span id="roof-normal">175,000</span> m³ of rain lands on them, and about
+<span id="roof-dry">127,000</span> m³ in the dry year 2022–23 <span class="kind">reanalysed</span>
+<span class="kind">calculated</span>. That is <span id="roof-use-normal">115%</span> and
+<span id="roof-use-dry">83%</span> of what the island's 2,777 residents would use in a year at
+150 litres a day each <span class="kind">synthetic</span>, or <span id="roof-desal-normal">78</span>
+and <span id="roof-desal-dry">56</span> days of its desalination capacity. It is an upper bound:
+it counts every roof, drained to a tank large enough to hold a winter's rain. Most of the rain
+falls between October and March; the Cisterns tab shows how much one house can keep into
+summer.</p>
+<p class="label">Footprints: Microsoft Global ML Building Footprints (traced by machine learning
+from Bing imagery; ODbL), 7,111 on Sifnos against 1,916 in OpenStreetMap. Rain on roofs = roof
+area × 0.8 runoff × ERA5 rain for the water year (October–September); ERA5 is about 14% wetter
+than stations on Chios, so these may be high. Settlement totals: each building assigned to the
+nearest OSM village or hamlet. Roofs of hotels, churches and sheds are included.</p>
 <details><summary>Numbers</summary>
 <table id="map-table"><thead><tr><th>Island</th><th>Group</th><th>Residents 2021</th><th>Rain, winter <span id="map-table-winter"></span>, % of normal</th><th>Desalination, m³/day</th><th>Litres per resident a day</th><th>Water emergencies</th></tr></thead><tbody></tbody></table>
 </details>
@@ -226,6 +258,12 @@ Proto Thema 2025 (a University of the Aegean study); Kakoulas et al. 2022; Berts
     domain), with OpenStreetMap outlines (ODbL) for the 30 small islands it leaves out, such as
     Agistri, Therasia and the Koufonisia; clipped to the Aegean and simplified to about 600 m
     (150 m for small islands; <code>tools/build_coastline.py</code>).</li>
+  <li>Satellite imagery: Sentinel-2 cloudless 2024 by EOX IT Services GmbH (modified Copernicus
+    Sentinel data 2024), CC BY-NC-SA 4.0, loaded as map tiles; the map uses Leaflet 1.9.4.</li>
+  <li>Building footprints on Sifnos: Microsoft Global ML Building Footprints, tile 122100233
+    (uploaded 2026-02-23), ODbL; kept where they fall on Sifnos's land in Copernicus DEM GLO-30
+    (<code>tools/fetch_ms_buildings.py</code>, <code>tools/build_roofs.py</code>). Traced by machine
+    learning, so some sheds, ruins and tree shadows may be counted and some roofs missed.</li>
   <li>Winter rain on 105 islands: reanalysed. ERA5 October–March totals, one grid cell per
     island, against each island's average for winters 1991–92 to 2019–20.</li>
   <li>Desalination: documented. Capacity reconciled plant by plant for 13 islands
@@ -480,11 +518,13 @@ roof as the same. One ERA5 cell stands for all of Sifnos.</p>
   <p>Island Water · Jacob Moe · Realtime Weather working group, Weather Commons</p>
 </footer>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="tabs.js"></script>
 <script src="event.js"></script>
 <script src="poulati.js"></script>
 <script src="sim-core.js"></script>
 <script src="sim.js"></script>
 <script src="situate.js"></script>
+<script src="aegean-map.js"></script>
 </body>
 </html>

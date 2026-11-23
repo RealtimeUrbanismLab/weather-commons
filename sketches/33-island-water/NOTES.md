@@ -130,6 +130,17 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: Aegean freshwater map rebuilt as an interactive satellite map (author chose ideas 2 + 5
+  of ten): Leaflet 1.9.4 (cdnjs) on EOX Sentinel-2 cloudless 2024 tiles; islands as tank icons
+  (winter rain or desal per resident; card on click, from `situate.js` `SituateRows`);
+  zoom >= 12 on Sifnos shows 7,111 Microsoft ML footprints in water blue and settlement totals.
+  - OSM buildings are too patchy for roof totals (Leros 282 for 7,962 residents; Spetses 155;
+    Sifnos 1,916 vs Microsoft's 7,111). Microsoft footprints for all base islands = 49 tiles,
+    ~106 MB: not downloaded; asked the author first.
+  - Sifnos roofs 59.3 ha (median 55 m2); rain on roofs 175,000 m3 in an average water year
+    (ERA5 369 mm, runoff 0.8) and 127,000 m3 in 2022-23 = 115% / 83% of residents' use at
+    150 L/day, or 78 / 56 days of desal capacity. Upper bound (`tools/build_roofs.py`).
+
 - 2026-11-23: published to the author's own GitHub Pages (fork j-moe, `main`); `Publish: no`
   removed from the README header, because the Pages build skips such sketches on the fork too.
   The shared site is unaffected unless a pull request goes to RealtimeUrbanismLab. Tabs

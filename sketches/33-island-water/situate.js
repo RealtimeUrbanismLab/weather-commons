@@ -41,9 +41,6 @@
   function hideTip(wrap) { const t = wrap.querySelector(".tip"); if (t) t.hidden = true; }
 
   // ---------------------------------------------------------------- 1. the map
-  const LABELS = ["Sifnos", "Crete", "Evia", "Rhodes", "Chios", "Lesvos", "Lemnos", "Naxos", "Syros",
-                  "Mykonos", "Santorini (Thira)", "Milos", "Leros", "Patmos", "Astypalaia", "Kos",
-                  "Fournoi", "Serifos", "Spetses", "Poros", "Ikaria", "Samos", "Karpathos", "Folegandros"];
   const RAIN_TOP = 150, DESAL_TOP = 1000;   // a full glyph: 150% of a normal winter; 1,000 L per resident a day
   const short = (n) => n.replace(" (Thira)", "").replace(" (Megisti)", "");
   const perRes = (i) => (i.desal_m3d && i.residents ? 1000 * i.desal_m3d / i.residents : null);
@@ -69,104 +66,7 @@
   }
 
   let LAND = null;
-  function drawMap(d) {
-    const svg = $("islands-map"), wrap = svg.parentElement;
-    clear(svg);
-    const mode = document.querySelector("input[name=fill]:checked").value;
-    const wi = +$("map-winter").value;
-    $("map-winter").disabled = mode !== "rain";
-    const W = chartWidth(svg), pad = 14;
-    const lat0 = 34.75, lat1 = 40.9, lon0 = 22.85, lon1 = 29.75, k = Math.cos(37.8 * Math.PI / 180);
-    const sx = (W - 2 * pad) / ((lon1 - lon0) * k), H = Math.round((lat1 - lat0) * sx + 2 * pad);
-    svg.setAttribute("viewBox", `0 0 ${W} ${H}`);
-    const X = (lon) => pad + (lon - lon0) * k * sx, Y = (lat) => pad + (lat1 - lat) * sx;
-    const gw = W < 520 ? 6 : 9, gh = W < 520 ? 10 : 15;
-    if (LAND) {
-      const cp = el("clipPath", { id: "map-frame" }, el("defs", {}, svg));
-      el("rect", { x: 0, y: 0, width: W, height: H }, cp);
-      let path = "";
-      for (const r of LAND.rings) {
-        for (let j = 0; j < r.length; j += 2) path += (j ? "L" : "M") + X(r[j]).toFixed(1) + "," + Y(r[j + 1]).toFixed(1);
-        path += "Z";
-      }
-      el("path", { d: path, class: "land", "clip-path": "url(#map-frame)" }, svg);
-    }
-
-    // key, top right (open sea and the Anatolian coast: no islands in the list there)
-    const narrow = W < 520;
-    const kx = W - pad - (narrow ? 104 : 170), ky = pad + 4, key = el("g", {}, svg);
-    const top = mode === "rain" ? RAIN_TOP : DESAL_TOP;
-    const KH = 48;
-    el("rect", { x: kx - 6, y: ky - 8, width: W - kx + 6 - 2, height: KH + (mode === "desal" ? 64 : 40), class: "keybg" }, key);
-    glyph(key, kx, ky + KH, 12, KH, mode === "rain" ? 100 / RAIN_TOP : 0.5, mode === "rain" ? 100 / RAIN_TOP : null, false, false);
-    text(key, kx + 20, ky + 4, mode === "rain" ? (narrow ? `${RAIN_TOP}%+` : `${RAIN_TOP}% of normal or more`) : `${fmt(DESAL_TOP)} L or more`, { class: "tick" });
-    text(key, kx + 20, ky + KH + 4, "0", { class: "tick" });
-    if (mode === "rain") text(key, kx + 20, ky + KH - KH * 100 / RAIN_TOP + 4, narrow ? "normal" : "a normal winter", { class: "tick" });
-    else text(key, kx + 20, ky + KH / 2 + 4, narrow ? "per resident" : "per resident a day", { class: "tick" });
-    el("circle", { cx: kx + 6, cy: ky + KH + 20, r: 3.5, class: "emerg" }, key);
-    text(key, kx + 20, ky + KH + 24, narrow ? "emergency" : "water emergency, 2024–26", { class: "tick" });
-    if (mode === "desal") {
-      el("rect", { x: kx + 1, y: ky + KH + 34, width: 10, height: 14, class: "glyph none" }, key);
-      text(key, kx + 20, ky + KH + 46, "no plant listed", { class: "tick" });
-    }
-
-    // glyphs, smallest islands first so the larger ones sit on top
-    const order = d.islands.slice().sort((a, b) => (a.residents || 0) - (b.residents || 0));
-    const boxes = [];
-    for (const i of order) {
-      const x = X(i.lon), y = Y(i.lat);
-      boxes.push([x - gw / 2 - 1, y - gh - 1, x + gw / 2 + 1, y + 1]);
-      let f, none = false, over = false, normal = null;
-      if (mode === "rain") {
-        const p = i.rain_pct[wi];
-        if (p == null) { none = true; f = 0; } else { f = Math.min(1, p / RAIN_TOP); normal = 100 / RAIN_TOP; }
-      } else {
-        const v = perRes(i);
-        if (v == null) { none = true; f = 0; } else { f = Math.min(1, v / DESAL_TOP); over = v > DESAL_TOP; }
-      }
-      const g = el("g", { class: "isl" + (i.name === "Sifnos" ? " here" : ""), tabindex: 0,
-                          "aria-label": i.name }, svg);
-      glyph(g, x - gw / 2, y, gw, gh, f, normal, none, over);
-      if (i.emergencies.length) el("circle", { cx: x + gw / 2 + 3, cy: y - gh - 2, r: 3.5, class: "emerg" }, g);
-      el("circle", { cx: x, cy: y - gh / 2, r: 10, class: "hit" }, g);
-      const show = () => tip(wrap, svg, x, y - gh / 2, i.name, mapRows(i, d, wi));
-      g.addEventListener("pointerenter", show);
-      g.addEventListener("focus", show);
-      g.addEventListener("pointerleave", () => hideTip(wrap));
-      g.addEventListener("blur", () => hideTip(wrap));
-    }
-    // labels, in priority order, skipped where they would collide
-    const byName = Object.fromEntries(d.islands.map((i) => [i.name, i]));
-    const fits = (b) => b[0] >= 0 && b[2] <= W && b[1] >= 0 && b[3] <= H &&
-      !boxes.some((o) => b[0] < o[2] && b[2] > o[0] && b[1] < o[3] && b[3] > o[1]);
-    for (const n of LABELS) {
-      const i = byName[n];
-      if (!i) continue;
-      const x = X(i.lon), y = Y(i.lat), s = short(n), w = s.length * 6.4 + 2;
-      // right, left, above, below the glyph; Sifnos is always labelled
-      const spots = [[x + gw / 2 + 4, y - gh / 2 + 4, "start"], [x - gw / 2 - 4, y - gh / 2 + 4, "end"],
-                     [x, y - gh - 5, "middle"], [x, y + 13, "middle"]];
-      for (const [ax, ay, anchor] of spots) {
-        const x0 = anchor === "start" ? ax : anchor === "end" ? ax - w : ax - w / 2;
-        const b = [x0, ay - 10, x0 + w, ay + 3];
-        if (fits(b) || (n === "Sifnos" && anchor === "end")) {
-          boxes.push(b);
-          text(svg, ax, ay, s, { class: n === "Sifnos" ? "direct strong" : "tick", "text-anchor": anchor });
-          break;
-        }
-      }
-    }
-    const shown = mode === "rain" ? `winter ${dash(d.winters[wi])}` : "desalination capacity per resident";
-    svg.setAttribute("aria-label", `Map of ${d.islands.length} Aegean islands, each drawn as a cistern filled to its ${shown}`);
-  }
-
-  // one cistern: outline, fill from the bottom, an optional "normal" line, overflow tick
-  function glyph(g, x, yBottom, w, h, f, normal, none, over) {
-    el("rect", { x, y: yBottom - h, width: w, height: h, class: "glyph" + (none ? " none" : "") }, g);
-    if (f > 0) el("rect", { x, y: yBottom - h * f, width: w, height: h * f, class: "glyph-fill" }, g);
-    if (normal != null) el("line", { x1: x - 2, x2: x + w + 2, y1: yBottom - h * normal, y2: yBottom - h * normal, class: "glyph-normal" }, g);
-    if (over) el("line", { x1: x + w / 2, x2: x + w / 2, y1: yBottom - h - 1, y2: yBottom - h - 4, class: "glyph-over" }, g);
-  }
+  window.SituateRows = { mapRows, perRes };   // the island card, shared with aegean-map.js
 
   function mapTable(d) {
     const wi = +$("map-winter").value;
@@ -305,7 +205,7 @@
     const sel = $("map-winter");
     isl.winters.forEach((w, j) => { const o = new Option(dash(w), j); sel.add(o); });
     sel.value = isl.winters.indexOf("2023-24");
-    const redraw = () => { drawMap(isl); mapTable(isl); };
+    const redraw = () => mapTable(isl);
     document.querySelectorAll("input[name=fill], #map-winter").forEach((e) => e.addEventListener("input", redraw));
     redraw();
     drawDesal(desal); desalTable(desal);
@@ -314,8 +214,8 @@
     window.addEventListener("resize", () => {
       clearTimeout(timer);
       timer = setTimeout(() => {
-        const w = $("islands-map").parentElement.clientWidth;
-        if (w !== last) { last = w; drawMap(isl); drawDesal(desal); drawCosts(costs); }
+        const w = $("desal-time").parentElement.clientWidth;
+        if (w !== last) { last = w; drawDesal(desal); drawCosts(costs); }
       }, 150);
     });
   }).catch(() => {});

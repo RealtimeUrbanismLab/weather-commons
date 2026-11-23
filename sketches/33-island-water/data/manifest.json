@@ -1776,6 +1776,14 @@
       "sha256": "",
       "licence": "Copernicus DEM GLO-30 (free, with attribution: DLR / Airbus, under COPERNICUS by EU and ESA)",
       "note": "Range requests only: internal tiles covering (24.62, 36.86, 24.78, 37.05), 75 KB"
+    },
+    {
+      "url": "https://minedbuildings.z5.web.core.windows.net/global-buildings/2026-02-03/global-buildings.geojsonl/RegionName=Greece/quadkey=122100233/part-00063-4feead82-d499-422b-94cb-c036c212127a.c000.csv.gz",
+      "retrieved": "2026-11-23T09:49:09+00:00",
+      "file": "data/raw/ms_buildings/122100233.csv.gz",
+      "sha256": "7f579c2adff10ddaf13a171ec7bd502b109ad629acc3ec13931f19b759b6cff6",
+      "licence": "ODbL (Microsoft Global ML Building Footprints)",
+      "note": "Quadkey 122100233 for Sifnos; uploaded 2026-02-23"
     }
   ]
 }

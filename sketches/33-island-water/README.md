@@ -75,9 +75,11 @@ Leros, Crete (eight municipalities), northern Evia and Andros; Lesvos and Chios 
 2025 (documented, full-text search of Diavgeia, `data/civil_protection_water.csv`). Leros,
 Patmos and Astypalaia in 2025–26: reported. Three views:
 
-- a map with each island drawn as a small tank at its main village (cartographic, OSM),
-  over Natural Earth land with OSM outlines for 30 small islands, filled with one winter's
-  rain as a share of its average, or with desalination capacity per 2021 resident;
+- an interactive satellite map (Leaflet on Sentinel-2 cloudless 2024, EOX, CC BY-NC-SA 4.0),
+  each island a small tank filled with one winter's rain as a share of its average, or with
+  desalination capacity per 2021 resident; on Sifnos, every building footprint (Microsoft ML
+  footprints, ODbL) as a possible cistern, with the rain that lands on its roofs (upper bound;
+  `tools/fetch_ms_buildings.py`, `tools/build_roofs.py`, `aegean-map.js`);
 - desalination over time: capacity still listed in 2020 by year online (a survivor count,
   94,400 m³/day on the base islands), and one strip of records per island, 1970–2026,
   with the 29 temporary permits of 2024–26 (16,550 m³/day) shown apart;
