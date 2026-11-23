@@ -59,7 +59,7 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - Tidy the data (see Questions): island names, status values, `residents` as numbers only.
 - Page: Simulate is built (see Done). Still template text: the lede (the sketch's question),
   Event, Situate and Narrate in `index.html`, and the README's first sentence, Event,
-  Situate and Narrate. Before any push to `main`, decide on `Publish: no` (Questions).
+  Situate and Narrate.
 - Simulate, later: let the reader pick another island (page data is Sifnos only; run
   `build_page_data.py` per island); show drinking use only with a treatment note.
 
@@ -100,6 +100,10 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
     - One €/m³ scale.
     - Desalination strips per island.
 
+- 2026-11-23: `Publish: no` in the README header until the page has its question, Event,
+  Situate and Narrate. Work stays on branch `33-island-water`. The root README sketch table
+  is left to the maintainers (it is refreshed after merging).
+
 ## Questions
 
 - Evidence kinds: the kit uses documented, reported, reanalysed, calculated, synthetic,
@@ -111,7 +115,6 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 - `data/datasets.csv` has no licence column; licences are partly in `access`.
 - Island names: `islands_geo.csv` has Tinos, Kythera and Koufonisia, while `islands.csv` has
   "Koufonisia and Small Cyclades" and no Tinos or Kythera.
-- Should the sketch carry `Publish: no` until the page has real content?
 - Futures horizon: 2050 proposed in `docs/scope.md`, not yet agreed.
 - Donousa: the census settlement "Δονούσα" is taken to be Stavros, the main village. Verify.
 - Keep a copy of ELSTAT's re-use approval in `private/` (it is recorded as "approved by
