@@ -1256,6 +1256,398 @@
       "sha256": "c6c03de490bdcf1f12076ff103318556ff6568216a78bcbea6949f8088becda3",
       "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
       "note": "Civil Protection emergency extension text (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ1ΗΜ46ΝΠΙΘ-Θ2Υ",
+      "retrieved": "2026-11-23T08:17:56+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ1ΗΜ46ΝΠΙΘ-Θ2Υ.pdf",
+      "sha256": "5b3bedb18ede01d7a329f716bb349200f2a020334d67146a315e64ed561d0cbd",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΔΗΤ46ΝΠΙΘ-ΦΩΙ",
+      "retrieved": "2026-11-23T08:17:58+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΔΗΤ46ΝΠΙΘ-ΦΩΙ.pdf",
+      "sha256": "b7c362c33936db7a542378ba1e6e40d214bb41fa55cd2b44dfceccb60d221620",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/98ΖΑ46ΝΠΙΘ-Μ51",
+      "retrieved": "2026-11-23T08:18:01+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/98ΖΑ46ΝΠΙΘ-Μ51.pdf",
+      "sha256": "772b4333ade63fe645b256603bee6410ecfc60ca45fb77a1d3e5e2f0705964cf",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΕΣ546ΝΠΙΘ-ΙΡΩ",
+      "retrieved": "2026-11-23T08:18:03+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΕΣ546ΝΠΙΘ-ΙΡΩ.pdf",
+      "sha256": "0d4431b5cf06769577a44f5e3db7500c2e4df2d42816b0b60eb30ef3776d6b21",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΘΙΟ46ΝΠΙΘ-91Μ",
+      "retrieved": "2026-11-23T08:18:05+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΘΙΟ46ΝΠΙΘ-91Μ.pdf",
+      "sha256": "f0e9c1144908b9eea86996b96fe3befe41227793ea0b446a49284e178f1d54ac",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΕΤ146ΝΠΙΘ-Β91",
+      "retrieved": "2026-11-23T08:18:08+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΕΤ146ΝΠΙΘ-Β91.pdf",
+      "sha256": "6289431aceba0587f18076db6227ccfd06ec97992797cdfcc9dedbe10f00c817",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ρ51Φ46ΝΠΙΘ-3ΜΠ",
+      "retrieved": "2026-11-23T08:18:10+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ρ51Φ46ΝΠΙΘ-3ΜΠ.pdf",
+      "sha256": "ee7f78e0577fb0d7b80bf938a80621b42b97182f41bda34f901d56dc4f1cc23a",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΟΥΜ46ΝΠΙΘ-0ΧΥ",
+      "retrieved": "2026-11-23T08:18:13+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΟΥΜ46ΝΠΙΘ-0ΧΥ.pdf",
+      "sha256": "f46fdac7d6994ae0c7ed3a0d85d8cda0d3e0fc75852864514064a8ab5decbf24",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΤΡ346ΝΠΙΘ-ΕΥ8",
+      "retrieved": "2026-11-23T08:18:16+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΤΡ346ΝΠΙΘ-ΕΥ8.pdf",
+      "sha256": "082fc406a81420f74860ef1691dd3f2fa95a623964e483de792092ce36460e71",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ρ9ΔΟ46ΝΠΙΘ-ΓΓ0",
+      "retrieved": "2026-11-23T08:18:18+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ρ9ΔΟ46ΝΠΙΘ-ΓΓ0.pdf",
+      "sha256": "952879cc9214370affb24a84d8ef0aeb07eacb7be4a443b3bb5f27d83875acf3",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΝΝΔ46ΝΠΙΘ-Τ0Σ",
+      "retrieved": "2026-11-23T08:18:20+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΝΝΔ46ΝΠΙΘ-Τ0Σ.pdf",
+      "sha256": "fd41a6f7618ba0fbd26a7893f07ac9cff707e37e372efea4d9ab9fed4b6f25f1",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ρ1ΣΝ46ΝΠΙΘ-ΤΤΓ",
+      "retrieved": "2026-11-23T08:18:23+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ρ1ΣΝ46ΝΠΙΘ-ΤΤΓ.pdf",
+      "sha256": "6ee1af4671e504b6d7aff5567c502016733ea23ab8c34b62bf909c6b6932f346",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΥΞ746ΝΠΙΘ-5ΕΚ",
+      "retrieved": "2026-11-23T08:18:25+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΥΞ746ΝΠΙΘ-5ΕΚ.pdf",
+      "sha256": "e9321d31ea48061bf8300cc0abace9eb3b0760c77d3ffb1bb8e86722cd088542",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ4ΓΧ46ΝΠΙΘ-Ο6Ν",
+      "retrieved": "2026-11-23T08:18:28+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ4ΓΧ46ΝΠΙΘ-Ο6Ν.pdf",
+      "sha256": "14a4e0ccd0b3f695320d0b14cdb4d6c980ea56f3058a4a1da2cbf69e4b49b1f2",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΝ1Ξ46ΝΠΙΘ-ΩΨΞ",
+      "retrieved": "2026-11-23T08:18:31+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΝ1Ξ46ΝΠΙΘ-ΩΨΞ.pdf",
+      "sha256": "f69665048e1e877b647a3e9b042e454c7aa00c2ecdf20c1c2b4928cac33c953c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΠΙΖ46ΝΠΙΘ-ΛΦΘ",
+      "retrieved": "2026-11-23T08:18:33+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΠΙΖ46ΝΠΙΘ-ΛΦΘ.pdf",
+      "sha256": "36cbe5c4a1331e7e657b022faf4dbd06dd55039e319aa3a196bdbff92a117de0",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΚ3Ζ46ΝΠΙΘ-Ο7Ω",
+      "retrieved": "2026-11-23T08:18:36+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΚ3Ζ46ΝΠΙΘ-Ο7Ω.pdf",
+      "sha256": "2f55b1dc0464f91a1e8c1f15e67ce40663d1146799e1931da608261fb57291b5",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΤΕΥ46ΝΠΙΘ-ΑΗΤ",
+      "retrieved": "2026-11-23T08:18:38+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΤΕΥ46ΝΠΙΘ-ΑΗΤ.pdf",
+      "sha256": "2fd271dfe26855191a5fb729ed8e4a9d3f94bc60291fe93c8fb715c62f66f949",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΣΠΚ46ΝΠΙΘ-ΗΜΧ",
+      "retrieved": "2026-11-23T08:18:40+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΣΠΚ46ΝΠΙΘ-ΗΜΧ.pdf",
+      "sha256": "ccd260a4b344d5ec11ddaaf5eb338e49a880839d9d66a25d14fad91a716d14a8",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΓΝΑ46ΝΠΙΘ-ΞΕΣ",
+      "retrieved": "2026-11-23T08:18:43+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΓΝΑ46ΝΠΙΘ-ΞΕΣ.pdf",
+      "sha256": "785d5de5c9ae1178dc58ea63da72ea64bd162f4f3dfebbf3691d08fcc38090b4",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΖΥ746ΝΠΙΘ-ΟΑΞ",
+      "retrieved": "2026-11-23T08:18:46+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΖΥ746ΝΠΙΘ-ΟΑΞ.pdf",
+      "sha256": "66cf991fe932a43fd16ecc5db9f29f1aeb07ad3f5a9acee0d694b27177e381e2",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΤΧΜ46ΝΠΙΘ-Η44",
+      "retrieved": "2026-11-23T08:18:54+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΤΧΜ46ΝΠΙΘ-Η44.pdf",
+      "sha256": "d1211a785ff83b5e3d88ab037372ba211e8a00514b720a5f2a1e81ca716c4e56",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΗΛΙ46ΝΠΙΘ-Σ73",
+      "retrieved": "2026-11-23T08:18:57+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΗΛΙ46ΝΠΙΘ-Σ73.pdf",
+      "sha256": "ab491d9be3ec56e0b1eb85a37df014e82cba01fb9894157d2bbc1972bbccf01d",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΖΜΩ46ΝΠΙΘ-ΞΦΖ",
+      "retrieved": "2026-11-23T08:18:59+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΖΜΩ46ΝΠΙΘ-ΞΦΖ.pdf",
+      "sha256": "08e5cab4f6a881c789771f462f560ac8f262670401903b58de12810346c65a61",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΡΖ546ΝΠΙΘ-4ΥΦ",
+      "retrieved": "2026-11-23T08:19:02+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΡΖ546ΝΠΙΘ-4ΥΦ.pdf",
+      "sha256": "19f846907171166215f582b699f4ca943489bfa39a351ca0a312695488cd5a7d",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΞΜΨ46ΝΠΙΘ-ΑΗΥ",
+      "retrieved": "2026-11-23T08:19:04+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΞΜΨ46ΝΠΙΘ-ΑΗΥ.pdf",
+      "sha256": "6aae0887db595a057cf6a80e643b3b3f11ea0036ad25fdc060074146a10f86de",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/96ΤΧ46ΝΠΙΘ-Π52",
+      "retrieved": "2026-11-23T08:19:06+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/96ΤΧ46ΝΠΙΘ-Π52.pdf",
+      "sha256": "4f379fca650dad1c05edbc549d98c7caff57e2f35b7aee45712a4cc1258fa3c9",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΔΡΠ46ΝΠΙΘ-ΖΝΑ",
+      "retrieved": "2026-11-23T08:19:09+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΔΡΠ46ΝΠΙΘ-ΖΝΑ.pdf",
+      "sha256": "30d60d2b9a34bf8bcf8682f38b25a934126efeb60c7cb945a48a29dffda229e0",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΕΩΣ46ΝΠΙΘ-Θ1Χ",
+      "retrieved": "2026-11-23T08:19:11+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΕΩΣ46ΝΠΙΘ-Θ1Χ.pdf",
+      "sha256": "682e7549027b1f5e2a7aaa633d70b58807d13d094a05cfb14acc9ded0e758f0b",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΟ0846ΝΠΙΘ-ΕΞ5",
+      "retrieved": "2026-11-23T08:19:14+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΟ0846ΝΠΙΘ-ΕΞ5.pdf",
+      "sha256": "be6666e6f5f5d7baa090df4656364fa243fe378c27522e49fb18f905f80ab73c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection 2024 declaration whose text mentions water shortage (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/60ΕΨ46ΝΠΙΘ-8ΟΓ",
+      "retrieved": "2026-11-23T08:21:03+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/60ΕΨ46ΝΠΙΘ-8ΟΓ.pdf",
+      "sha256": "41334d6b70216d356707efcdcf4faff9450a29844c6f3912eba1f24dd20ba2b2",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΥΜΡ46ΝΠΙΘ-15Κ",
+      "retrieved": "2026-11-23T08:21:06+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΥΜΡ46ΝΠΙΘ-15Κ.pdf",
+      "sha256": "9b979ea14c4531227964b670b8230e2aaaab156d5b123f5aedde2390106ec0e0",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΖΜΥ46ΝΠΙΘ-ΣΔ8",
+      "retrieved": "2026-11-23T08:21:09+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΖΜΥ46ΝΠΙΘ-ΣΔ8.pdf",
+      "sha256": "76bc9862d0c85f5fae05e20fdcb99316f5e22ca03578ea209a38a8bd039b6a74",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Θ0046ΝΠΙΘ-Θ4Ο",
+      "retrieved": "2026-11-23T08:21:13+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Θ0046ΝΠΙΘ-Θ4Ο.pdf",
+      "sha256": "1dd622cef8c25732baebc2df0ecea8458d47fefe9dd7d197d6e4251d500beb4c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΡΜ1646ΝΠΙΘ-ΓΗΝ",
+      "retrieved": "2026-11-23T08:21:16+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΡΜ1646ΝΠΙΘ-ΓΗΝ.pdf",
+      "sha256": "0ba8f5560d522e542f494391e876c1f3fbbd02b02cbf8b99ed1fca571dbca2d6",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/Ψ04546ΝΠΙΘ-854",
+      "retrieved": "2026-11-23T08:21:19+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/Ψ04546ΝΠΙΘ-854.pdf",
+      "sha256": "12295f3992822c8f08089adb9d32d14507f4b864f4130e8bede94fd286e20b9e",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΟΡΠ46ΝΠΙΘ-7ΝΛ",
+      "retrieved": "2026-11-23T08:21:22+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΟΡΠ46ΝΠΙΘ-7ΝΛ.pdf",
+      "sha256": "4b3425022b6e6c68a0a157d7e401821c8a49529e7d028729db5caff18fa27fe2",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΗΧ246ΝΠΙΘ-ΡΗΤ",
+      "retrieved": "2026-11-23T08:21:24+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΗΧ246ΝΠΙΘ-ΡΗΤ.pdf",
+      "sha256": "ad81779a0326654d5acf45462eb8ee0fee71833439681e3d069d93663e43375c",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Σ3Κ46ΝΠΙΘ-6ΟΙ",
+      "retrieved": "2026-11-23T08:21:27+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Σ3Κ46ΝΠΙΘ-6ΟΙ.pdf",
+      "sha256": "2933bf17023e3da2cf9f6084fed5587dc29fef7ae50d9937875e00e3c13e8072",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/93ΡΛ46ΝΠΙΘ-ΘΣΕ",
+      "retrieved": "2026-11-23T08:21:30+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/93ΡΛ46ΝΠΙΘ-ΘΣΕ.pdf",
+      "sha256": "cf1d771aad3cce5725ec47f705c95e726456b95d86c03f6ca8ccf58be6a03e5b",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΞ0346ΝΠΙΘ-Ο69",
+      "retrieved": "2026-11-23T08:21:41+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΞ0346ΝΠΙΘ-Ο69.pdf",
+      "sha256": "1a48b673864e0b4bd4d79b57fab7e16814b5a93e1006f3324cc8b2b5c7778eb2",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/6ΚΧΙ46ΝΠΙΘ-ΠΝΓ",
+      "retrieved": "2026-11-23T08:21:44+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/6ΚΧΙ46ΝΠΙΘ-ΠΝΓ.pdf",
+      "sha256": "5078107d2cb06d30bced43c9ef09c700729fefe621850ffa1e10c6fdb9f282f8",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/ΨΤΘΨ46ΝΠΙΘ-ΙΦΙ",
+      "retrieved": "2026-11-23T08:21:47+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/ΨΤΘΨ46ΝΠΙΘ-ΙΦΙ.pdf",
+      "sha256": "37f20b5bc7da768fadea10c8e44bb71bf1699d6d46b4c1b42df3d05099343ec8",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/98ΚΤ46ΝΠΙΘ-096",
+      "retrieved": "2026-11-23T08:21:49+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/98ΚΤ46ΝΠΙΘ-096.pdf",
+      "sha256": "84bd11aba5a2532e75f1c105ed8da78474c589937c2f7ab57bfb2fb94c833a27",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/99ΜΚ46ΝΠΙΘ-Ψ91",
+      "retrieved": "2026-11-23T08:21:52+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/99ΜΚ46ΝΠΙΘ-Ψ91.pdf",
+      "sha256": "83d4973367a370523189f574328777bf5cfae50d5714383b194320905a3f93e5",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9Λ7Ρ46ΝΠΙΘ-Ε23",
+      "retrieved": "2026-11-23T08:21:54+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9Λ7Ρ46ΝΠΙΘ-Ε23.pdf",
+      "sha256": "f049daebee10df479396158908a2f78abe48e16a7171ab2102de9efad4f6c32e",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/9ΗΙ446ΝΠΙΘ-ΣΓΥ",
+      "retrieved": "2026-11-23T08:21:57+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/9ΗΙ446ΝΠΙΘ-ΣΓΥ.pdf",
+      "sha256": "493744e52fe0a3dcaf995f4dd9a381e34e1311aed76c69a23c9b148351effada",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/doc/604146ΝΠΙΘ-Ξ2Χ",
+      "retrieved": "2026-11-23T08:22:00+00:00",
+      "file": "data/raw/diavgeia/emergency_docs/604146ΝΠΙΘ-Ξ2Χ.pdf",
+      "sha256": "44142069b44c0ac3751d46988c231a0c6d12160e0ed8d08256f797d8555de13e",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Civil Protection water emergency decision, island municipality (names officials; raw only)"
+    },
+    {
+      "url": "https://diavgeia.gov.gr/opendata/search/advanced (organizationUid:\"100068650\" AND content:\"λειψυδρίας\", monthly 2024-01-01..2026-11-23)",
+      "retrieved": "2026-11-23T08:24:06+00:00",
+      "file": "data/raw/diavgeia/gscp_water.json",
+      "sha256": "92a7e9002cf31bb9134737af1208343ead793ee54df5fa29454f6a586356bafb",
+      "licence": "Diavgeia open data (public decisions, Law 4210/2013)",
+      "note": "Metadata only: 257 decisions; 35 API requests"
     }
   ]
 }

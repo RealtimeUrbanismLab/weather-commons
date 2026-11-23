@@ -60,8 +60,10 @@ within 1.5–6.9 points (`tools/check_cistern_reference.py`). Page data:
 
 105 Aegean islands. In October–March 2022–23 all 105 had less rain than their 1991–2020
 average and 28 had a drier winter than Sifnos, relative to their own average (reanalysed,
-ERA5). Civil Protection water emergencies in 2024: Serifos (30 April 2024 – 7 January
-2025), Spetses, Poros, Sifnos and Leros; Poros again in 2025 (documented, Diavgeia). Leros,
+ERA5). In 2024 Civil Protection declared water emergencies in 33 municipalities across
+Greece, on eight of the sketch's islands: Serifos (from 30 April), Spetses, Poros, Sifnos,
+Leros, Crete (eight municipalities), northern Evia and Andros; Lesvos and Chios followed in
+2025 (documented, full-text search of Diavgeia, `data/civil_protection_water.csv`). Leros,
 Patmos and Astypalaia in 2025–26: reported. Three views:
 
 - a map with each island drawn as a small tank at its main village (cartographic, OSM),

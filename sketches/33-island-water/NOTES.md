@@ -130,6 +130,25 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
 
 ## Done
 
+- 2026-11-23: every Civil Protection water emergency, 2024–2026. Diavgeia searches decision
+  texts (`content:"λειψυδρίας"`; stemmed, so λειψυδρία/λειψυδρίες give the same; ανομβρίας,
+  ξηρασίας, "έλλειψη νερού" add nothing). Monthly queries, organisation 100068650,
+  Jan 2024 – Nov 2026: 257 decisions, 43 declaration chains (`tools/fetch_gscp_water.py`,
+  raw metadata git-ignored). Operative paragraph read for 40 of 43 declarations (all water;
+  not read: Sami 2025, Paxoi, Ermionida) and the last decision of every island chain.
+  Reviewed table: `data/civil_protection_water.csv` (one row per chain; island column
+  maps to the sketch's names). 2024: 34 declarations in 33 municipalities (Evrotas twice);
+  sketch islands Serifos, Spetses, Poros, Sifnos, Leros, Crete (8 municipalities), Evia
+  (Istiaia-Aidipsos), Andros; outside the sketch Corfu (3) and Kefalonia (Sami). 2025:
+  Poros again, Crete (Ierapetra, Kantanos-Selino), Lesvos (West Lesvos, Mytilene), Chios.
+  The first 2024 declaration in Greece was Velo-Vocha (Corinthia), 18 January.
+  - The map now takes documented emergencies from this table, and only reported rows from
+    `emergencies.csv` (whose documented rows duplicate it, with notes). Crete's tooltip
+    summarises its 10 municipalities. Tooltips now wrap on phones.
+  - Open: end dates of 15 chains are not read (mostly mainland); the Ierapetra extension
+    of 3 Jul 2025 states no end date; whether Leros and Patmos (Nov 2025) and Astypalaia
+    (2026) appear in Ministry of Environment decisions on Diavgeia.
+
 - 2026-11-23: dates of the 2024 water emergencies, from Civil Protection decisions on
   Diavgeia (organisation 100068650; 25 decision texts read, PDFs in git-ignored
   `data/raw/diavgeia/emergency_docs/`, logged in the manifest). Water shortage: Serifos
@@ -144,9 +163,6 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
     `design.md`, `sifnos_timeline.csv` and `emergencies.csv`. `docs/brief.md` still says
     "first Cycladic water emergency" (author's file, left for the author). Iefimerida's
     "first in the South Aegean" for Leros is wrong for the same reason.
-  - Searched by municipality name only; other islands may have had water emergencies in
-    2024 (in.gr counted 14 municipalities). Next: search all 2024–26 Civil Protection
-    declarations for island municipalities and test each text for λειψυδρία.
 
 - 2026-11-23: coastlines on the Situate map. Natural Earth 1:10m land and minor islands
   v5.1.1 (public domain, 3.6 MB zipped, `tools/fetch_coastlines.py`) leaves out 30 of the

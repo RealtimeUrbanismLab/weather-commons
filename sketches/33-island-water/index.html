@@ -30,7 +30,7 @@
   .chart .cross { stroke: var(--fg); stroke-width: 1; }
   .chart .hit { fill: transparent; cursor: crosshair; }
   .tip { position: absolute; pointer-events: none; background: var(--bg); border: 1px solid var(--line);
-         padding: 6px 8px; font-size: 13px; line-height: 1.35; white-space: nowrap; }
+         padding: 6px 8px; font-size: 13px; line-height: 1.35; max-width: min(360px, calc(100vw - 40px)); }
   details { margin: 8px 0; font-size: 15px; }
   details table { font-size: 13px; }
   .chart .bar.soft { fill-opacity: .3; }
@@ -227,14 +227,17 @@ would be empty. The school case follows a study of a school on Chios, where it c
 <p>This sketch covers 105 Aegean islands. In October–March 2022–23 all 105 received less
 rain than their 1991–2020 average, and 100 received less than 80% of it; 28 had a drier
 winter than Sifnos, relative to their own average. In 2023–24, 104 of the 105 were below
-average <span class="kind">reanalysed</span>. Civil Protection declared water emergencies on five
-of them in 2024: Serifos from 30 April 2024 to 7 January 2025, Spetses from 4 June to
-4 July, Poros from 20 June to 22 July, Sifnos from 20 June to 22 August, and Leros from
-25 June to 26 August; Poros again from 27 March to 31 December 2025
-<span class="kind">documented</span>. Leros and Patmos were declared in drought by
-ministerial decision in November 2025, and Astypalaia was reported in a water emergency in
-May 2026 <span class="kind">reported</span>. The list is incomplete: one 2024 report counts
-14 municipalities in a water emergency.</p>
+average <span class="kind">reanalysed</span>. In 2024 the General Secretariat for Civil
+Protection declared water emergencies in 33 municipalities across Greece, on eight of the
+sketch's islands: Serifos (30 April), Spetses (4 June), Poros, Sifnos (both 20 June), Leros
+(25 June), eight municipalities of Crete (20 June to 9 September), northern Evia (2 October)
+and Andros (12 November). Each was declared for one month, for the consequences that "may
+arise" from water shortage. On Spetses, Poros and Sifnos they ended within two months; on
+Andros and on four of the Cretan municipalities they were extended month by month to
+31 December 2025, and on Minoa Pediadas to 14 January 2026. In 2025 Poros was declared again, and Lesvos (West Lesvos and Mytilene)
+and Chios were added <span class="kind">documented</span>. Leros and Patmos were declared
+in drought by ministerial decision in November 2025, and Astypalaia was reported in a water
+emergency in May 2026 <span class="kind">reported</span>.</p>
 
 <h3>Every island as a cistern</h3>
 <p class="small">Each island is drawn as a small tank at the position of its main village,
@@ -375,12 +378,14 @@ in the 1980s; six did in 2022, four of them over 75 <span class="kind">reported<
     time: EMODnet, Zotalis et al. 2014, Bertsiou 2023 and Diavgeia decisions 2010–2026
     (<code>data/derived/desal_timeline.csv</code>). The 29 temporary permits of 2024–26 are
     Diavgeia decisions read by title.</li>
-  <li>Water emergencies, 2024–2025: documented. Decisions of the General Secretariat for
-    Civil Protection on Diavgeia, read in full: 25 decisions declaring or extending emergencies
-    for Serifos, Spetses, Poros, Leros and Astypalaia, downloaded 2026-11-23. Each 2024 water
-    emergency was declared for one month "for the consequences that may arise" from water
-    shortage; Serifos's was extended seven times. Decisions for floods, a forest fire and coastal
-    erosion on the same islands are left out. Leros and Patmos (November 2025) and Astypalaia
+  <li>Water emergencies, 2024–2025: documented. A full-text search of Diavgeia for decisions
+    of the General Secretariat for Civil Protection containing λειψυδρία (water shortage),
+    January 2024 to November 2026, returned 257 decisions: 43 first declarations and their
+    extensions (<code>tools/fetch_gscp_water.py</code>). The operative paragraph of 40 of the
+    43 declarations was read to confirm the cause, and the last decision of each island chain
+    for its end date (<code>data/civil_protection_water.csv</code>). Downloaded 2026-11-23.
+    Emergencies on the same islands for floods, a forest fire and coastal erosion are left
+    out. Leros and Patmos (November 2025) and Astypalaia
     (May 2026): reported (Naftemporiki; Reuters).</li>
   <li>Situate, costs: reported, collected in <code>data/water_costs.csv</code> with year and
     source: Zotalis et al. 2014; Proto Thema, September 2025 (a University of the Aegean

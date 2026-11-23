@@ -58,7 +58,13 @@
     } else rows.push("No desalination plant listed");
     if (i.temp_permits) rows.push(`Temporary permits 2024–26: ${i.temp_permits}${i.temp_permit_m3d ? ", " + fmt(i.temp_permit_m3d) + " m³/day" : ""}`);
     if (i.desal_cost_2025) rows.push(`Desalination cost 2025: €${fmt(i.desal_cost_2025, 2)}/m³ (reported)`);
-    for (const e of i.emergencies) rows.push(`Water emergency ${e.start}${e.end ? " to " + e.end : ""}, ${e.by} (${e.kind})`);
+    const em = i.emergencies;
+    if (em.length > 3) {   // Crete: one per municipality
+      const doc = em.filter((e) => e.kind === "documented");
+      rows.push(`Water emergencies: ${doc.length} municipalities, declared ${doc[0].start} to ${doc[doc.length - 1].start} (documented)`);
+    } else {
+      for (const e of em) rows.push(`Water emergency ${e.start}${e.end ? " to " + e.end : ""}${e.place && e.place !== i.name ? ", " + e.place : ""}, ${e.by} (${e.kind})`);
+    }
     return rows;
   }
 

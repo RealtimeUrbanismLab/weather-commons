@@ -88,13 +88,22 @@ def situate():
     hist = {r["island"]: r for r in read(DATA / "derived" / "desal_history_by_island.csv")}
     cost = {r["island"]: r["desal_cost_eur_m3"] for r in read(DATA / "islands.csv")}
     # water emergencies only: the Sifnos erosion emergency is listed in the file so it is not mistaken for one
+    # documented: every Civil Protection water emergency (data/civil_protection_water.csv, one row per
+    # municipality chain); reported: the other rows of emergencies.csv (ministerial or press only)
     emerg = {}
+    for r in read(DATA / "civil_protection_water.csv"):
+        if r["island"] and not r["island"].startswith("outside"):
+            emerg.setdefault(r["island"], []).append(
+                {"start": r["declared"], "end": r["end"], "by": "Civil Protection", "place": r["municipality"],
+                 "trigger": "water shortage", "kind": "documented", "source": r["source_ids"]})
     for r in read(DATA / "emergencies.csv"):
-        if "NOT a water emergency" in r["notes"]:
+        if "NOT a water emergency" in r["notes"] or "DIAVGEIA" in r["source_ids"]:
             continue
         emerg.setdefault(r["island_or_area"], []).append(
             {"start": r["start"], "end": r["end"], "by": r["declared_by"], "trigger": r["trigger"],
-             "kind": "documented" if "DIAVGEIA" in r["source_ids"] else "reported", "source": r["source_ids"]})
+             "kind": "reported", "source": r["source_ids"]})
+    for v in emerg.values():
+        v.sort(key=lambda e: e["start"])
     winters = sorted({r["winter"] for r in read(DATA / "derived" / "rain_winters.csv") if r["complete"] == "yes"})
     rain = {}
     for r in read(DATA / "derived" / "rain_winters.csv"):
