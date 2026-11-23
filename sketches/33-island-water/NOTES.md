@@ -139,7 +139,7 @@ Working notes for sketch 33. Read this first. Date each entry, and move items to
   Tab links open at the top again (the browser's jump to the anchor happens on load).
   - Winter vs annual rain: Oct-Mar is 87% of the Oct-Sep total on average (64-92% by island;
     Sifnos 90%). Island rankings agree closely in 2023-24 and 2024-25 (r = 0.94, 0.93) but not
-    in 2022-23 (r = 0.58), when spring and autumn rain differed. Kept winter, pending the author.
+    in 2022-23 (r = 0.58), when spring and autumn rain differed. Author chose to keep winter rain.
 
 - 2026-11-23: tabs renamed by the author: "Mapping" (`#mapping`, was Aegean freshwater map) and
   "Storing" (`#storing`, was Cisterns); `tabs.js` maps the old addresses. Sifnos timeline cut to
