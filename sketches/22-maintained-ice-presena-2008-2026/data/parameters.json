@@ -1,0 +1,78 @@
+{
+  "about": "Parameters for the Simulate model of sketch 22. Every value says where it comes from and whether it is synthetic. Replace placeholders with published values and update 'status'.",
+  "model": "Enhanced temperature-index melt: melt per hour = tf * T + srf * (1 - albedo) * G, when T > tt. Applied to daily means x 24 h.",
+  "values": {
+    "tf": {
+      "value": 0.05,
+      "unit": "mm w.e. h-1 degC-1",
+      "source": "Pellicciotti et al. 2005, J. Glaciol. 51(175)",
+      "status": "to verify against the paper"
+    },
+    "srf": {
+      "value": 0.0094,
+      "unit": "m2 mm w.e. W-1 h-1",
+      "source": "Pellicciotti et al. 2005, J. Glaciol. 51(175)",
+      "status": "to verify against the paper"
+    },
+    "tt": {
+      "value": 1.0,
+      "unit": "degC",
+      "source": "Pellicciotti et al. 2005",
+      "status": "to verify against the paper"
+    },
+    "albedo_ice": {
+      "value": 0.43,
+      "unit": "-",
+      "source": "Diolaiuti et al., AINEVA Neve e Valanghe 74: mean albedo of the unmodified glacier surface, 31 Jul-29 Aug 2010 (bare ice from 16 Jul at 2,900 m)",
+      "status": "documented"
+    },
+    "albedo_snow": {
+      "value": 0.75,
+      "unit": "-",
+      "source": "none",
+      "status": "SYNTHETIC placeholder; thesis 2012 gives dirty snow 0.27-0.47 (Aug); fresh snow value still to source"
+    },
+    "albedo_fleece": {
+      "value": 0.64,
+      "unit": "-",
+      "source": "AINEVA Neve e Valanghe 74: mean albedo on the cover, 31 Jul-29 Aug 2010",
+      "status": "documented (new fabric)"
+    },
+    "albedo_fleece_reused": {
+      "value": 0.43,
+      "unit": "-",
+      "source": "PhD thesis UniMi (Jan 2013), Tab. 1-2: TenCate Toptex GLS 340 reused, 0.433-0.44 in Aug 2012",
+      "status": "documented (reused fabric)"
+    }
+  },
+  "patch_area_m2": {
+    "value": 76400,
+    "source": "AINEVA Neve e Valanghe 74 (2010 cover)",
+    "status": "documented"
+  },
+  "ice_density_kg_m3": {
+    "value": 900,
+    "source": "standard glaciological value",
+    "status": "convention"
+  },
+  "checks": {
+    "ablation_2010_unmodified_m_we": {
+      "value": 2.93,
+      "source": "AINEVA nv74, 1 Oct 2009-27 Sep 2010 at 2,900 m"
+    },
+    "melt_2010_covered_vs_unmodified_cm_we": {
+      "value": [
+        59,
+        123
+      ],
+      "source": "AINEVA nv74, 31 Jul-29 Aug 2010, hours with T>0"
+    },
+    "step_end_of_summer_2010_m": {
+      "value": [
+        1.5,
+        2.0
+      ],
+      "source": "AINEVA nv74, observed"
+    }
+  }
+}

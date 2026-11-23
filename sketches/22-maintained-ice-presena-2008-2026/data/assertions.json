@@ -1,0 +1,45 @@
+{
+ "about": "What this sketch itself asserts, with how sure it is. Confidence: high, medium, low.",
+ "assertions": [
+  {
+   "id": "A1",
+   "text": "The cover is visible from Sentinel-2 at 10 m.",
+   "kind": "Observed",
+   "confidence": "high",
+   "basis": "A bright strip along the ski run in every late-summer scene 2016-2026 (filmstrip).",
+   "limit": "Presence is clear; shape details at 10 m are not."
+  },
+  {
+   "id": "A2",
+   "text": "Fleece and clean ice differ in shortwave infrared (fleece reflects, ice absorbs).",
+   "kind": "Observed",
+   "confidence": "medium",
+   "basis": "Two sample areas per surface, one date: fleece 37-47%, ice 3-4% at 1.6 um.",
+   "limit": "Two areas, one date; sheets age and get dirty."
+  },
+  {
+   "id": "A3",
+   "text": "The covered area can be bounded year by year from 2016 (lower / best / upper).",
+   "kind": "Calculated",
+   "confidence": "low",
+   "basis": "Spectral unmixing with five reference surfaces; fleece found outside the ski run reported as error.",
+   "limit": "Not validated against independent images; dirty snow and covers outside the zone inflate the error in some years."
+  },
+  {
+   "id": "A4",
+   "text": "The melt model reproduces the field result of 52-69% less melt.",
+   "kind": "Calculated",
+   "confidence": "low",
+   "basis": "Model runs.",
+   "limit": "Albedos now from field measurements (0.64 new fleece, 0.43 glacier and reused fleece, AINEVA 2010 and thesis 2012); weather reanalysed for 2021 only."
+  },
+  {
+   "id": "A5",
+   "text": "The standard cloud mask (s2cloudless) mistakes the fleece for cloud.",
+   "kind": "Calculated",
+   "confidence": "high",
+   "basis": "14 Aug 2021, a clear day: 0.26% cloud on a ring around the ski run, 11.1% on the ski run itself.",
+   "limit": "One clear day checked; the effect on other dates is inferred from the missing 2021 scene."
+  }
+ ]
+}

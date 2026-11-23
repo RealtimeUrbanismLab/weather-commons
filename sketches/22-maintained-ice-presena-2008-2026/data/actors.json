@@ -1,0 +1,31 @@
+{
+ "about": "Who maintains the Presena glacier: actors and the links between them. Every link carries its kind and source. A link with no source is drawn dotted and marked 'not known'. Sources: s1 operator page, s2 AINEVA Neve e Valanghe 74 (with the Province of Trento), s9 PhD thesis UniMi 2013, s10 Betti and Fleck 2021. Made 2026-11-23.",
+ "actors": [
+  {"id": "glacier", "label": "Presena glacier", "sub": "ski run, Vermiglio", "role": "the maintained ice"},
+  {"id": "province", "label": "Province of Trento", "sub": "public body", "role": "approved the experimental programme; part-funding claimed by the operator", "kind": "Documented", "source": "s2"},
+  {"id": "lifts", "label": "Carosello-Tonale spa", "sub": "lift company", "role": "convention with the Province; lays the covers", "kind": "Documented", "source": "s2"},
+  {"id": "comune", "label": "Comune di Vermiglio", "sub": "municipality", "role": "bought the lifts in 1987 and founded Società Carosello", "kind": "Documented", "source": "s2"},
+  {"id": "consorzio", "label": "Consorzio Pontedilegno-Tonale", "sub": "operator", "role": "publishes the covering page; organises the operation", "kind": "Reported", "source": "s1, s10"},
+  {"id": "unimi", "label": "University of Milan", "sub": "research", "role": "scientific convention; field measurements 2009-2012", "kind": "Documented", "source": "s2"},
+  {"id": "unitn", "label": "University of Trento", "sub": "research", "role": "scientific convention", "kind": "Documented", "source": "s2"},
+  {"id": "linz", "label": "Fabric maker, Linz", "sub": "TenCate Toptex GLS 340", "role": "made the fabric used 2008-2012", "kind": "Documented", "source": "s2, s9"},
+  {"id": "bolzano", "label": "Waste-to-energy plant, Bolzano", "sub": "incinerator", "role": "burns 17 t of used sheets a year", "kind": "Reported", "source": "s10"},
+  {"id": "biennale", "label": "Venice Biennale 2021", "sub": "Italian Pavilion", "role": "used sheets shown as 'The Invisible Mountain'", "kind": "Reported", "source": "s1, s10"}
+ ],
+ "links": [
+  {"from": "province", "to": "glacier", "label": "approved the programme, 2008", "kind": "Documented", "source": "s2"},
+  {"from": "province", "to": "lifts", "label": "convention", "kind": "Documented", "source": "s2"},
+  {"from": "province", "to": "lifts", "label": "pays part of the cost: share not known", "kind": "Claimed (operator)", "source": "s1", "known": false},
+  {"from": "comune", "to": "lifts", "label": "bought the lifts, 1987", "kind": "Documented", "source": "s2"},
+  {"from": "comune", "to": "lifts", "label": "owns them today?", "kind": "Not known", "source": null, "known": false},
+  {"from": "lifts", "to": "glacier", "label": "lays the covers", "kind": "Documented", "source": "s2"},
+  {"from": "consorzio", "to": "glacier", "label": "organises the covering", "kind": "Reported", "source": "s10"},
+  {"from": "consorzio", "to": "lifts", "label": "relation not known", "kind": "Not known", "source": null, "known": false},
+  {"from": "unimi", "to": "province", "label": "scientific convention", "kind": "Documented", "source": "s2"},
+  {"from": "unitn", "to": "province", "label": "scientific convention", "kind": "Documented", "source": "s2"},
+  {"from": "linz", "to": "glacier", "label": "fabric to 2012", "kind": "Documented", "source": "s2, s9"},
+  {"from": "linz", "to": "glacier", "label": "supplier after 2012 not known", "kind": "Not known", "source": null, "known": false},
+  {"from": "glacier", "to": "bolzano", "label": "17 t of used sheets a year", "kind": "Reported", "source": "s10"},
+  {"from": "glacier", "to": "biennale", "label": "used sheets, 2021", "kind": "Reported", "source": "s1, s10"}
+ ]
+}

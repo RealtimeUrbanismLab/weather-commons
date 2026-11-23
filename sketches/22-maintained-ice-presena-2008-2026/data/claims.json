@@ -1,0 +1,165 @@
+{
+ "about": "Statements by others (the operator, institutions, studies) and how far they are tested. Status vocabulary: supported, published (one study, not replicated), pending (test planned), tension (contradicts another statement), unverifiable (as stated), contradicted.",
+ "claims": [
+  {
+   "id": "C01",
+   "text": "Costs of up to EUR 350,000 a year, partly financed by the Province of Trento.",
+   "who": "Operator",
+   "status": "pending",
+   "test": "Provincial acts, civic access request, right of reply.",
+   "source": "s1"
+  },
+  {
+   "id": "C02",
+   "text": "2010 cover of 76,400 m2; about 52% less ablation.",
+   "who": "AINEVA (field study)",
+   "status": "published",
+   "test": "Single season, one station per surface.",
+   "source": "s2"
+  },
+  {
+   "id": "C03",
+   "text": "Up to 69% less melt; albedo about 50% higher than ice.",
+   "who": "Senese et al. 2020",
+   "status": "published",
+   "test": "Single season.",
+   "source": "s3"
+  },
+  {
+   "id": "C04",
+   "text": "Used sheets reused as the installation The Invisible Mountain.",
+   "who": "Operator",
+   "status": "pending",
+   "test": "Betti and Fleck (2021): a 5 x 15 m piece shown in Venice; sheets used two seasons, then about 17 t a year sent to the Bolzano waste-to-energy plant. Ask operator and plant for records.",
+   "source": "s1"
+  },
+  {
+   "id": "C05",
+   "text": "About 0.18 km2 of glacier covered in Switzerland; up to 350,000 m3 of ice saved a year.",
+   "who": "Huss et al. 2022",
+   "status": "published",
+   "test": "Context and scale only.",
+   "source": "s6"
+  },
+  {
+   "id": "C06",
+   "text": "The Presena glacier is a Site of Community Importance.",
+   "who": "AINEVA 2013",
+   "status": "pending",
+   "test": "Current Natura 2000 status; candidate site IT3120158.",
+   "source": "s4"
+  },
+  {
+   "id": "C07",
+   "text": "Covers reduce melt by about 50%.",
+   "who": "Operator",
+   "status": "supported",
+   "test": "Consistent with C02 and C03 (published field measurements).",
+   "source": "s1"
+  },
+  {
+   "id": "C08",
+   "text": "Covered areas absorb 36% of solar energy, uncovered areas 57%.",
+   "who": "Operator, attributed to University of Milan",
+   "status": "supported",
+   "test": "Confirmed by AINEVA Neve e Valanghe 74: albedo 0.64 on the cover vs 0.43 on the glacier, 31 Jul-29 Aug 2010; absorbed 36% vs 57%.",
+   "source": "s1"
+  },
+  {
+   "id": "C09",
+   "text": "After six seasons the covers preserved 2.5 m of snow; uncovered ice dropped 11 m.",
+   "who": "Operator",
+   "status": "pending",
+   "test": "AINEVA documents a step of about 1.5-2 m after the single summer 2010: 11 m in six seasons is plausible in order of magnitude. Still to measure with LiDAR 2006-09 vs 2014/2018.",
+   "source": "s1"
+  },
+  {
+   "id": "C10",
+   "text": "Covered area 40,000 m2 (2014) rising to 110,000 m2 (2020-2021).",
+   "who": "Operator",
+   "status": "tension",
+   "test": "Sentinel-2, preliminary, not validated (v3.5, 23 Nov 2026). The cover is visible every summer 2016-2026. Visible area (lower-upper, m2): 2016 26,000-59,000 vs claim 50,000 (within range); 2017 27,000-52,000 vs 65,000; 2019 9,000-53,000 vs 100,000; 2020 5,000-88,000 vs 110,000; 2021 31,000-102,000 vs 110,000. Earlier runs (16 Nov) gave lower values; results changed as cloud, shadow, rock and snow errors were fixed. Possible reasons for the gap: fabric vs visible area, sheets under snow or in shadow, covers outside the zone. Also in tension with C02. Documented areas before: 28,000 (2008), 37,300 (2009), 76,400 (2010; about 70,000 in the 2013 thesis), 57,800 (2011).",
+   "source": "s1"
+  },
+  {
+   "id": "C11",
+   "text": "Partly financed by the Province, and carried out 'in total autonomy'.",
+   "who": "Operator (same page)",
+   "status": "tension",
+   "test": "AINEVA: an experimental programme approved by the Province and a convention between the Province and the lift company; the 2012 thesis says covers were laid by the lift company and the Province. Funding share still unknown; provincial acts and right of reply.",
+   "source": "s1"
+  },
+  {
+   "id": "C12",
+   "text": "350,000 m2 of snow laid every winter; yearly loss of 600,000 m2 of ice mass.",
+   "who": "Operator",
+   "status": "unverifiable",
+   "test": "Units mix area and volume; ask the operator.",
+   "source": "s1"
+  },
+  {
+   "id": "C13",
+   "text": "Strips of 5 x 70 m, 500 g/m2, 4 mm thick, EUR 2/m2; more than 300 sheets.",
+   "who": "Operator",
+   "status": "tension",
+   "test": "AINEVA and Betti and Fleck give TOPTEX GLS 340 (340 g/m2, made in Linz), and the 2012 thesis names TenCate Toptex GLS 340; the 2010 thesis section and the operator give 500 g/m2. Possibly different fabrics in different years.",
+   "source": "s1"
+  },
+  {
+   "id": "C14",
+   "text": "A covered glacier will never disappear: it stays as a rectangular mass kept with snowmaking (2021 MUSE study).",
+   "who": "Operator, citing MUSE",
+   "status": "pending",
+   "test": "Find the MUSE study itself.",
+   "source": "s1"
+  },
+  {
+   "id": "C15",
+   "text": "Covers 2008-2011: 28,000, 37,300, 76,400 and 57,800 m2, with maps for each year.",
+   "who": "Diolaiuti et al., AINEVA Neve e Valanghe 74 (with the Province of Trento)",
+   "status": "published",
+   "test": "Compare 2010 with the 2013 thesis (about 70,000 m2); check maps against orthophotos.",
+   "source": "s2"
+  },
+  {
+   "id": "C16",
+   "text": "White geotextiles were already laid at the end of the 1990s on the right-hand side, after straw mulching and moved or artificial snow.",
+   "who": "AINEVA Neve e Valanghe 74",
+   "status": "published",
+   "test": "Find photos or records of the 1990s covers.",
+   "source": "s2"
+  },
+  {
+   "id": "C17",
+   "text": "Every year 34 t of plastic cover the mountain; 17 t a year go as special waste to the Bolzano waste-to-energy plant.",
+   "who": "Betti and Fleck 2021 (materials from the operator)",
+   "status": "pending",
+   "test": "34 t matches 100,000 m2 x 340 g/m2 (calculated). Ask the operator and the plant for disposal records.",
+   "source": "s10"
+  },
+  {
+   "id": "C18",
+   "text": "Covers are laid every year between May and June.",
+   "who": "Betti and Fleck 2021",
+   "status": "tension",
+   "test": "2010 laid 28 June (thesis); 2012 experiments from early July. Earlier laying since? Check with webcams and Sentinel-2 calendar (H3).",
+   "source": "s10"
+  },
+  {
+   "id": "C19",
+   "text": "Presena has the largest covered glacier surface in the world.",
+   "who": "Betti and Fleck 2021",
+   "status": "unverifiable",
+   "test": "No global inventory of covered glaciers; Austrian ski glaciers report over 100 ha in total.",
+   "source": "s10"
+  },
+  {
+   "id": "C20",
+   "text": "The Presena glacier has lost more than a third of its volume since 1993.",
+   "who": "Betti and Fleck 2021",
+   "status": "pending",
+   "test": "Area series 82 ha (1961), 68 (1987), 33 (2003), 26 (2011) is documented by AINEVA; volume needs DEMs.",
+   "source": "s10"
+  }
+ ]
+}

@@ -1,0 +1,5 @@
+{
+  "sketch": "22-maintained-ice-presena-2008-2026",
+  "note": "Large, raw and licensed files live on Box (2026 Realtime Weather), not in git. Lab members add them with: node scripts/assets.mjs add 22 <path>.",
+  "items": []
+}

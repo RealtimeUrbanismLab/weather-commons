@@ -1,0 +1,35 @@
+/* Sketch 22 · styles for the shared views (index.html and explore.html). Black and white, after style.css. */
+.tag{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;border:1px solid var(--line);padding:0 5px;margin-right:6px;vertical-align:2px;white-space:nowrap}
+.tag.soft{border-style:dashed}.tag.dot{border-style:dotted}.tag.calc{border-style:double;border-width:3px}
+sup a{text-decoration:none;font-size:12px}
+.full{max-width:none}
+figure{margin:12px 0}
+.chart>svg,.full>svg{width:100%;height:auto;display:block}
+.breaths{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:10px 18px;margin:14px 0 6px}
+.breath{margin:0}.breath svg{width:100%;height:auto;display:block}
+.breath figcaption{font-size:13px;font-variant-numeric:tabular-nums}
+.breath.notok svg{opacity:.35}
+.verdict{font-style:italic;border:1px solid var(--line);padding:0 4px;font-size:11px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;margin:8px 0;max-width:none}
+.legend span{display:inline-flex;align-items:center;gap:4px}
+.readout{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px 16px;margin:14px 0;font-size:14px;max-width:none}
+.readout strong{display:block;font-size:22px;font-variant-numeric:tabular-nums}
+.controls{display:flex;flex-wrap:wrap;gap:6px 8px;margin:10px 0}
+.controls button{font:13px var(--font);padding:3px 10px;cursor:pointer;background:var(--bg);color:var(--fg);border:1px solid var(--line)}
+.controls button[aria-pressed=true]{background:var(--fg);color:var(--bg)}
+table.ledger{font-size:14px;max-width:none}.ledger td,.ledger th{vertical-align:top}
+.chip{display:inline-block;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);padding:0 5px}
+.chip.pending{border-style:dashed}.chip.unverifiable{border-style:dotted}.chip.tension{border-width:2px}.chip.supported{background:var(--fg);color:var(--bg)}
+.actors-list{list-style:none;padding:0}.actors-list li{border-top:1px solid var(--line);padding:4px 0;max-width:none}
+.explorer{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:20px;align-items:start;max-width:none}
+.explorer>figure{margin:0}.explorer>figure>svg{width:100%;height:auto;display:block}
+.inspector{position:sticky;top:12px;border:1px solid var(--line);padding:4px 14px 10px;font-size:15px;max-height:calc(100vh - 24px);overflow:auto}
+.inspector h3{margin-top:10px}
+.witness{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.witness figure{margin:0}
+.witness img{width:100%;height:auto;image-rendering:pixelated;display:block}.witness figcaption{font-size:11px}
+.plate{cursor:pointer;outline:none}.plate:hover .slab,.plate:focus .slab{stroke-width:2}
+.plate.sel .slab{stroke-width:2.5}
+@media (max-width:820px){.explorer{grid-template-columns:1fr}.inspector{position:static;max-height:none}}
+.intro{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:12px 28px;align-items:start;max-width:none}
+.intro figure{margin:4px 0 0}.intro img{width:100%;height:auto;display:block}.intro p{margin-top:0}
+@media (max-width:820px){.intro{grid-template-columns:1fr}}
