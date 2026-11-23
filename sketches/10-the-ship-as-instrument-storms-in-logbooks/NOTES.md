@@ -17,6 +17,8 @@ Working notes for sketch 10. Read this first. Date each entry, and move items to
 - 2026-11-09: topic changed from Greek hail suppression to ship logbooks. The hail page was a placeholder from the first session. It was replaced, not kept as a retired sketch, and number 10 was kept.
 - 2026-11-09: entry point is storms, with the ship as the instrument. The 1796 Dutch group is the specific case if one is needed.
 - 2026-11-09: no CLIWOC data file in git until the licence question is settled. The page quotes only six entries.
+- 2026-11-23: licence settled: CLIWOC 2.1 is CC0 at DANS (https://doi.org/10.17026/dans-2bx-dutg). The data files in data/ are built from it by the scripts in tools/, each under 10 MB.
+- 2026-11-23: the page is now the full ship map, developed in a private research folder and copied here.
 
 ## Questions
 
@@ -31,3 +33,4 @@ Working notes for sketch 10. Read this first. Date each entry, and move items to
 - 2026-11-09: started from the template.
 - 2026-11-09: first page: question, the idea, a table of six ships' words for the storm of 7 March 1796, and Sources and limits.
 - 2026-11-09: added the history of the two squadrons and the surrender at Saldanha Bay (17 August 1796), from Wikipedia and a 1796 map in the South African Library of Parliament. It matches the logbooks: Gran Canaria 13 April, Praia 26 May, Saldanha Bay 5–7 August, and *Revolutie*'s last entry on 17 August.
+- 2026-11-23: published the full ship map: every CLIWOC entry 1750–1855 day by day, storms, events of empire, slave voyages, reckoned and observed positions, the linework ship view, the whole-voyage and storm pop-ups, layers (instruments, compass needles, sky and sea, cargo and encounters, zero meridians, words and numbers), the archives panel and the Reckoned text switch.

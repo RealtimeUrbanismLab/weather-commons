@@ -1,0 +1,69 @@
+#!/usr/bin/env node
+// Slavery in the logbooks: which voyages carried enslaved people, how sure we can be, and which slave ships
+// other logbooks met at sea. Writes data/slavery.js. Run after build-data.mjs.
+//   node tools/build-slavery.mjs path/to/cliwoc21.gpkg
+//
+// Levels, per voyage (one logbook = one voyage), never per ship:
+//   recorded  the logbook of a slaving company (MCC, WIC) itself records enslaved people on board
+//   likely    an MCC voyage with no such words, whose track runs from the West African coast to the Americas
+//   aboard    another non-navy logbook records enslaved people on board (servants, passengers, crew), not a slaving voyage
+//   encounter another ship's logbook records meeting a ship carrying enslaved people, at that day's noon position
+// A route alone is not used for any other ship: tested on all 1,756 logbooks, it mostly finds ships that were not slavers.
+import { DatabaseSync } from 'node:sqlite';
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const src = process.argv[2];
+if (!src) { console.error('Usage: node tools/build-slavery.mjs path/to/cliwoc21.gpkg'); process.exit(1); }
+const here = path.dirname(fileURLToPath(import.meta.url)), out = path.join(here, '..', 'data');
+const win = {}; new Function('window', fs.readFileSync(path.join(out, 'ships.js'), 'utf8'))(win);
+const SHIPS = win.CLIWOC_SHIPS, shipIdx = new Map(SHIPS.map((s, i) => [s.name + '|' + s.natName, i]));
+const EPOCH = Date.UTC(1662, 0, 1), dayOf = (y, m, d) => Math.round((Date.UTC(y, m - 1, d) - EPOCH) / 864e5);
+
+const db = new DatabaseSync(src, { readOnly: true });
+const rows = db.prepare(`select LogbookIdent l, ShipName s, Nationality n, Company c, ShipType t, Year y, Month m, Day d, latitude la, longitude lo,
+    CargoMemo cm, LifeOnBoard lb, OtherRem orm, EncRem er, EncName en, EncNat ent
+  from CLIWOC21 where Year is not null and Month between 1 and 12 and Day between 1 and 31 order by l, y, m, d`).all();
+// 'negros' only as people carried (cargada de negros, con negros): in the Spanish logs it is mostly black birds, or the island of Negros
+const WORDS_RE = /SLAV|SLAAF|ESCLAV|NEGERS?|NEGERJONG|NÈGRES|NEGRES|CAPTIVE|(CARGAD[AO]|CON|DE) NEGROS/i, NOT = /P[ÁA]JAR|ISLA DE NEGROS|RABIAHORCADO|PECHO/i;
+const WORDS = { test: (t) => WORDS_RE.test(t) && !NOT.test(t) };
+const navy = (r) => /\b(RN|MAR|ADM|ROYAL NAVY)\b/.test(r.c || '') || /RATE|OORLOG|NAV[IÍ]O|KORVET/.test(r.t || '');
+const slaver = (r) => /\b(MCC|WIC)\b/.test(r.c || '');
+const wAfrica = (r) => r.la != null && r.la > -18 && r.la < 16 && r.lo > -18 && r.lo < 14 && (r.lo > -9 || r.la > 8);
+const americas = (r) => r.la != null && r.la > -35 && r.la < 33 && r.lo < -48;
+const clip = (s) => String(s).replace(/\s+/g, ' ').trim().slice(0, 220);
+
+const by = new Map(); for (const r of rows) { if (!by.has(r.l)) by.set(r.l, []); by.get(r.l).push(r); }
+const voyages = [], encounters = [];
+for (const [l, rs] of by) {
+  const r0 = rs[0], ship = shipIdx.get(r0.s + '|' + (r0.n || 'UNKNOWN'));
+  if (ship == null) continue;
+  // people on board: cargo and life-on-board notes; general remarks only for the slaving companies (elsewhere they are often about other ships)
+  const onboard = rs.filter((r) => WORDS.test(`${r.cm || ''} ${r.lb || ''}`) || (slaver(r0) && WORDS.test(r.orm || '')));
+  const days = rs.map((r) => dayOf(r.y, r.m, r.d));
+  let tier = null, ev = onboard[0];
+  if (onboard.length && slaver(r0)) tier = 'recorded';
+  else if (onboard.length && !navy(r0)) tier = 'aboard';
+  else if (slaver(r0)) { const a = rs.findIndex(wAfrica); if (a >= 0 && rs.slice(a).some(americas)) tier = 'likely'; }
+  if (tier) {
+    // the number of people, where the logbook states one
+    let count = null;
+    for (const r of onboard) { const txt = `${r.cm || ''} ${r.lb || ''} ${r.orm || ''}`; for (const m of txt.matchAll(/(\d{2,3})\s*(?:STUKS?\s*)?(?:SLAVEN|SLAVES|ESCLAVOS|NEGERS|NEGROS|SLAAVEN)/gi)) count = Math.max(count || 0, +m[1]); }
+    const deaths = onboard.filter((r) => /OVERLEDEN|GESTORVEN|DIED|DEAD|MUERT/i.test(`${r.cm || ''} ${r.lb || ''}`)).length;
+    voyages.push({ ship, log: l, tier, start: Math.min(...days), end: Math.max(...days), count, deaths, mentions: onboard.length,
+      evidence: ev ? clip(`${ev.cm || ''} ${ev.lb || ''} ${ev.orm || ''}`) : null, evidenceDay: ev ? dayOf(ev.y, ev.m, ev.d) : null });
+  }
+  // meetings with slave ships recorded in this logbook (any ship, navy included)
+  for (const r of rs) {
+    const txt = `${r.er || ''} ${r.en || ''} ${!slaver(r0) ? (r.orm || '') : ''}`;
+    if (!WORDS.test(txt) || r.la == null) continue;
+    if (slaver(r0) && !r.er) continue; // a slaver's own remarks are about its own cargo
+    encounters.push({ day: dayOf(r.y, r.m, r.d), lat: +r.la.toFixed(2), lon: +r.lo.toFixed(2), by: ship, name: r.en || null, nat: r.ent || null, text: clip(txt) });
+  }
+}
+fs.writeFileSync(path.join(out, 'slavery.js'),
+  `// Generated by tools/build-slavery.mjs from CLIWOC 2.1 (CC0). Slavery recorded in the logbooks; see the levels in the script.\n` +
+  `window.SLAVERY = ${JSON.stringify({ voyages, encounters })};\n`);
+const c = (t) => voyages.filter((v) => v.tier === t).length;
+console.log(`voyages: recorded ${c('recorded')}, likely ${c('likely')}, aboard ${c('aboard')}; encounters ${encounters.length}; people counted on ${voyages.filter((v) => v.count).length} voyages`);

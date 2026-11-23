@@ -3,89 +3,235 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>10 · The Ship as Instrument: Storms in Logbooks · Realtime Weather</title>
-<!-- style.css is the shared Realtime Weather look, copied into this folder. Add your own styles below it. -->
-<link rel="stylesheet" href="style.css">
+<title>The Ship as Instrument</title>
 <style>
-  .scroll { overflow-x: auto; }
-  .scroll table { min-width: 36rem; }
+:root{--bg:#05070f;--ink:#e8ecf4;--mut:#93a0b8;--line:#2a3350;--panel:rgba(10,14,28,.95);--storm:#d9a441;--empire:#e0533d}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);font:14px/1.45 system-ui,sans-serif;overflow:hidden}
+#stage{position:fixed;inset:0}
+#stage canvas{position:absolute;inset:0;width:100%;height:100%}
+#hud{position:fixed;left:16px;top:12px;width:340px;max-width:calc(100vw - 32px);max-height:calc(100vh - 146px);overflow-y:auto;overflow-x:hidden;scrollbar-width:thin;pointer-events:none}
+#hud.scroll{pointer-events:auto}
+#hud h1{font-size:16px;font-weight:500;margin:0 0 2px}
+#hud p{margin:0;color:var(--mut);font-size:11px;line-height:1.4}
+#legend{display:flex;flex-wrap:wrap;gap:3px 10px;margin-top:6px;font-size:11px;pointer-events:auto}
+#legend label{display:flex;align-items:center;gap:5px;cursor:pointer;user-select:none}
+#legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
+#tools{display:flex;gap:5px;margin-top:6px;pointer-events:auto}
+#tools button{font-size:11px;padding:2px 8px}
+#rkBtn{display:inline-flex;align-items:center;gap:6px;border-color:transparent;padding:2px 4px}
+#rkBtn .sw{width:28px;height:15px;border-radius:8px;background:#2a3350;position:relative;flex:none;transition:background .2s}
+#rkBtn .sw i{position:absolute;left:2px;top:2px;width:11px;height:11px;border-radius:50%;background:#93a0b8;transition:transform .2s,background .2s}
+#rkBtn[aria-pressed=true]{color:#fff}#rkBtn[aria-pressed=true] .sw{background:#9fb0cc}#rkBtn[aria-pressed=true] .sw i{transform:translateX(13px);background:#fff}
+/* when on: everything not written by a machine fades back; machine text stays at full strength */
+body.rk :is(#pbody,#hud>p,#vinfo,#slist,#skyl,#adetail,#reckon p,#acountries,#alist), body.rk :is(#pbody,#hud>p,#vinfo,#slist,#skyl,#adetail,#reckon p,#acountries,#alist) *{color:rgba(232,236,244,.32)!important}
+body.rk :is(#pbody,#hud,#vinfo,#slist,#skyl,#adetail,#reckon,#acountries,#alist,#list,#tip) :is(.mx,.mxb,.gloss), body.rk :is(#pbody,#hud,#vinfo,#slist,#skyl,#adetail,#reckon,#acountries,#alist,#list,#tip) :is(.mx,.mxb,.gloss) *{color:#fff!important}
+body.rk #rkKey p, body.rk #rkKey p *{color:#e8ecf4!important}
+#rkKey{pointer-events:auto}#rkKey p{margin:5px 0 0}
+.rkS{border-bottom:1.5px solid #e8ecf4;color:#e8ecf4}.rkD{border-bottom:1.5px dashed #9fb0cc;color:#e8ecf4}
+body.rk .mx,body.rk .gloss .mxi{text-decoration:underline dashed #cfd8ea 1px;text-underline-offset:3px}
+body.rk .gloss,body.rk .mxb{border-left:1.5px dashed #cfd8ea;padding-left:8px}
+body.rk .words,body.rk .orig,body.rk .lgb{border-left:1.5px solid rgba(232,236,244,.32);padding-left:8px}
+body.rk .lg{text-decoration:underline solid rgba(232,236,244,.32) 1px;text-underline-offset:3px}
+#count{margin-top:5px;font-size:11px;color:var(--mut)}
+#archive{margin-top:8px;pointer-events:auto;background:rgba(5,7,15,.7);border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:11px}
+#adetail{max-height:38vh;overflow-y:auto}
+#archive .ahead{display:flex;gap:10px;align-items:center}
+#archive b{font-weight:500;font-size:12px}
+#acountries div{display:flex;gap:6px;align-items:center;color:var(--mut);line-height:1.5}
+#acountries i,#alist i{width:9px;height:9px;border-radius:2px;flex:none;display:inline-block}
+#acountries span{color:var(--ink);min-width:32px;text-align:right}
+#amore{margin-top:6px;width:100%;font-size:11px;padding:2px 8px}
+#alist div{display:flex;gap:6px;align-items:baseline;padding:2px 0;border-bottom:1px solid #161d33}
+#alist div span{margin-left:auto;color:var(--mut);white-space:nowrap}
+#alist div.on,#acountries div.on{background:#111830}
+#adetail p{color:var(--mut);margin:8px 0 0;line-height:1.5}
+#apie path{cursor:default;transition:opacity .15s}
+#apie.hov path{opacity:.35}#apie.hov path.on{opacity:1}
+#bar{position:fixed;left:0;right:0;bottom:0;padding:6px 16px 12px;background:linear-gradient(transparent,rgba(5,7,15,.94) 28%)}
+#timeline{display:block;width:100%;height:82px;cursor:ew-resize;touch-action:none;outline:none}
+#timeline:focus-visible{outline:1px solid var(--mut)}
+#row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:4px}
+#date{font-size:20px;font-weight:500;min-width:180px;font-variant-numeric:tabular-nums}
+.key{font-size:11px;color:var(--mut);display:flex;gap:12px;margin-left:auto}
+.key b{display:inline-block;width:10px;height:10px;border-radius:2px;vertical-align:-1px;margin-right:4px}
+button,select,input[type=search]{font:inherit;font-size:13px;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:6px;padding:4px 10px;cursor:pointer}
+input[type=search]{cursor:text;width:100%}
+button:hover{border-color:var(--mut)}
+select option{background:#0a0e1c}
+.side{position:fixed;top:0;bottom:0;width:min(440px,100%);background:var(--panel);overflow-y:auto;padding:16px 18px 140px;transition:transform .25s;z-index:5}
+#panel{right:0;border-left:1px solid var(--line);transform:translateX(100%)}
+#index,#sources,#skyp{left:0;border-right:1px solid var(--line);transform:translateX(-100%)}
+#panel.open,#index.open,#sources.open,#skyp.open{transform:none}
+.side h2{font-size:20px;font-weight:500;margin:0 60px 0 0}
+.side h3{font-size:12px;font-weight:500;text-transform:uppercase;letter-spacing:.06em;color:var(--mut);margin:18px 0 6px}
+.side .sub{color:var(--mut);font-size:13px}
+.side .close{position:absolute;right:12px;top:12px}
+.side p{font-size:13px}
+.side a{color:#9fd3ff}
+#ship3d{width:100%;height:380px;border:1px solid var(--line);border-radius:8px;margin-top:12px;position:relative;overflow:hidden;background:#05070f}
+#ship3d canvas{display:block}
+#ship3d .tag{position:absolute;left:8px;bottom:6px;right:8px;font-size:11px;color:var(--mut)}
+#voyageBtn{margin-top:8px;width:100%}
+#wordsBtn[aria-pressed=true]{border-color:#8fd3e8;color:#8fd3e8}
+#layers{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px;pointer-events:auto;align-items:center}
+#layers span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;margin-right:2px}
+#layers button{font-size:11px;padding:2px 7px}
+#layers button[aria-pressed=true]{border-color:#e8ecf4;color:#fff;background:rgba(232,236,244,.08)}
+#layerKey{pointer-events:auto}#layerKey p{margin:5px 0 0;font-size:11px;color:var(--mut)}#layerKey a{color:#9fd3ff}
+#skyl .it{padding:6px 4px;border-bottom:1px solid #161d33;cursor:pointer;font-size:13px}#skyl .it:hover{background:#111830}
+#skyl .d{color:var(--mut);font-size:12px}#skyl .t{color:#c9d3e6;font-style:italic;font-size:12px}
+#skyf{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}#skyf button{font-size:12px;padding:2px 8px}#skyf button[aria-pressed=true]{border-color:#d7c8ff;color:#d7c8ff}
+#storm .row2{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#storm #sbody2{flex:1 1 0;display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:12px;min-height:0;overflow:hidden}
+#smap{width:100%;height:100%;min-height:0;display:block;border:1px solid var(--line);border-radius:8px}
+#slist{overflow-y:auto;font-size:13px;min-height:0}
+#slist .sh{border-left:2px solid var(--storm);padding:4px 10px;margin:0 0 8px}
+#slist .sh .d{color:var(--mut);font-size:12px}
+#slist .sh .on{color:#fff}
+#voyage,#storm{position:fixed;left:16px;right:calc(min(440px,100%) + 16px);top:16px;bottom:138px;background:var(--panel);border:1px solid var(--line);border-radius:10px;z-index:6;display:none;flex-direction:column;padding:14px 16px;gap:8px}
+#voyage.open,#storm.open{display:flex}
+#voyage a,#reckon a{color:#9fd3ff}
+#reckon{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);width:min(760px,94vw);max-height:88vh;overflow-y:auto;background:var(--panel);border:1px solid var(--line);border-radius:10px;z-index:8;display:none;padding:16px 20px}
+#reckon.open{display:block}
+#reckon h2{font-size:18px;font-weight:500;margin:0 70px 10px 0}
+#reckon .close{position:absolute;right:12px;top:12px}
+#reckon p{font-size:13px;margin:8px 0}
+#rkc{width:100%;height:260px;display:block;border:1px solid var(--line);border-radius:8px}
+.rkcap{min-height:36px;color:#e8ecf4;font-size:14px !important}
+#storm .vhead,#voyage .vhead{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding-right:70px}
+#storm h2,#voyage h2{font-size:18px;font-weight:500;margin:0}
+#storm .close,#voyage .close{position:absolute;right:12px;top:12px}
+#vbody{flex:1 1 0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);grid-template-rows:minmax(0,1fr);gap:12px;min-height:0;overflow:hidden}
+#vmap,#vchart{width:100%;height:100%;min-height:0;display:block;border:1px solid var(--line);border-radius:8px;cursor:crosshair}
+#vinfo{font-size:13px;min-height:38px}
+#vinfo .words{font-size:15px}
+@media (max-width:900px){#voyage{right:16px;left:16px}#vbody{grid-template-columns:1fr;grid-template-rows:1fr 1fr}}
+.chain{display:grid;gap:4px}
+.chain .step{border:1px solid var(--line);border-radius:6px;padding:6px 10px}
+.chain .step b{display:block;font-size:11px;font-weight:500;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.chain .arrow{text-align:center;color:var(--mut);font-size:12px;line-height:1}
+.words{font-family:Georgia,serif;font-style:italic;font-size:17px}
+.gloss{font-size:13px;color:#c9d3e6;margin:0 0 4px}
+.gloss .unk{color:var(--mut);font-style:italic}
+.big{font-size:22px;font-weight:500}
+dl{display:grid;grid-template-columns:110px 1fr;gap:4px 10px;margin:0;font-size:13px}
+dt{color:var(--mut)}dd{margin:0}
+.lab{display:inline-block;font-size:10px;border:1px solid var(--line);border-radius:4px;padding:0 5px;color:var(--mut);margin-left:6px;vertical-align:2px;font-weight:400;text-transform:none;letter-spacing:0}
+.flag{color:#ffb98a}
+.orig{color:var(--mut);font-size:12px;font-style:italic}
+.slave{border-left:2px solid #e0508a;padding:4px 10px;margin:6px 0;font-size:13px}
+.event{border-left:2px solid var(--empire);padding:4px 10px;margin:6px 0;font-size:13px}
+.storm{border-left:2px solid var(--storm);padding:4px 10px;margin:6px 0;font-size:13px}
+#list{margin-top:10px}
+#list .it{display:flex;gap:8px;align-items:baseline;padding:5px 4px;border-bottom:1px solid #161d33;cursor:pointer;font-size:13px}
+#list .it:hover{background:#111830}
+#list .it i{width:8px;height:8px;border-radius:50%;flex:none}
+#list .it span{color:var(--mut);font-size:12px;margin-left:auto;white-space:nowrap}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+#tip{position:fixed;pointer-events:none;background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:4px 8px;font-size:12px;display:none;max-width:320px;z-index:9}
+#loading{position:fixed;inset:0;display:grid;place-items:center;color:var(--mut)}
 </style>
 </head>
 <body>
-<main>
-<header class="site-header">
-  <div class="brand"><a class="wordmark" href="../">Realtime Weather</a><span class="tagline">Part of <a href="https://tba21.org/uni_weathercommons">Weather Commons</a>, TBA21–Academy UNI</span></div>
-  <nav aria-label="Site">
-    <a href="../">Sketches</a>
-    <a href="../guide/">Guide</a>
-    <a href="../catalog/">Catalog</a>
-    <a href="https://github.com/RealtimeUrbanismLab/weather-commons/blob/main/CONTRIBUTING.md">Contribute</a>
-    <a href="https://community.ocean-archive.org/spaces/25478985">Community</a>
-  </nav>
-</header>
-
-<h1>The Ship as Instrument: Storms in Logbooks</h1>
-
-<!-- 1. Event: what are you looking at, and what do you want to find out? -->
-<p class="lede">What does a storm look like when the instrument is a ship, and what changes when the sailors' words become data?</p>
-<p class="muted small">10 · Christos Montsenigos · started 2026-11-09</p>
-
-<h2>Event</h2>
-<p>Before there were reliable wind gauges, officers at sea judged the wind themselves. They watched how fast the ship went and how much sail it could safely carry, and wrote what they saw in the logbook in words: a moderate breeze, a topsail breeze, a storm. Every day at noon they also noted the ship's position. The researchers who digitised these logs call this "semi-instrumental": the sails were the instrument.</p>
-<p>Thousands of these logbooks survive. The CLIWOC project typed in about 280,000 noon entries from Dutch, British, Spanish and French ships between 1662 and 1855, and translated their wind words into Beaufort numbers, the scale used today. This sketch looks at storms, where the instrument is pushed hardest, and at what happens to the sailors' words on the way to becoming a number.</p>
-<p class="label">Interpretive: my framing, drawing on the sources listed below.</p>
-
-<h3>A first look: 7 March 1796</h3>
-<p>On 23 February 1796 two Dutch squadrons left Texel together and sailed north around Scotland: one under Rear-Admiral Engelbertus Lucas bound for the Cape of Good Hope, the other under Vice-Admiral Adriaan Braak bound for the West Indies. On 7 March six of their ships, all near 63°N, logged a storm. Each ship wrote it down in its own words, and the database turns those words into two different wind speeds.</p>
-<div class="scroll">
-<table>
-  <thead>
-    <tr><th>Ship</th><th>Noon position</th><th>Logbook words (Dutch)</th><th>In English</th><th>CLIWOC wind speed</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>Castor</td><td>62.9°N 1.9°W</td><td>storm</td><td>storm</td><td>26.8 m/s</td></tr>
-    <tr><td>Dordrecht</td><td>62.6°N 4.1°W</td><td>stormweer</td><td>stormy weather</td><td>22.6 m/s</td></tr>
-    <tr><td>Havick</td><td>63.0°N 1.5°W</td><td>gereefde onderzeilskoelte-storm</td><td>reefed lower-sail breeze, to storm</td><td>26.8 m/s</td></tr>
-    <tr><td>Pollux</td><td>63.1°N 5.6°W</td><td>stormweer</td><td>stormy weather</td><td>22.6 m/s</td></tr>
-    <tr><td>Tromp</td><td>63.0°N 4.5°W</td><td>continuerende storm</td><td>continuing storm</td><td>26.8 m/s</td></tr>
-    <tr><td>Vrouwe Maria</td><td>63.2°N 1.3°W</td><td>stijve gereefde onderzeilskoelte met stormvlagen</td><td>stiff reefed lower-sail breeze with storm gusts</td><td>26.8 m/s</td></tr>
-  </tbody>
-</table>
+<div id="stage">
+  <canvas id="base"></canvas>
+  <canvas id="wind"></canvas>
+  <canvas id="ships"></canvas>
 </div>
-<p class="label">Observed: ship names, positions and Dutch words, as transcribed in CLIWOC 2.1. Converted: wind speeds are CLIWOC's estimates for each word (the middle of a Beaufort band), not measurements. Interpretive: the English translations are mine.</p>
-<p>The same storm, met by ships up to about 200 km apart, becomes 22.6 or 26.8 m/s depending on whether an officer wrote "stormy weather" or "storm".</p>
-<p>The logbooks follow Lucas's squadron the rest of the way: anchored at Gran Canaria on 13 April and at Praia in the Cape Verde Islands on 26 May, then at Saldanha Bay, north of Cape Town, from 5 to 7 August. There, short of water, sick and close to mutiny, the squadron was trapped by a larger British fleet under Vice-Admiral George Elphinstone and surrendered without a fight on 17 August 1796. The last logbook entry, from the <i>Revolutie</i>, is dated that day. The ships were taken into the Royal Navy.</p>
-<p class="label">Observed: anchorages and dates, from the logbooks in CLIWOC 2.1. Historical: the surrender and its circumstances, from the sources below.</p>
+<div id="loading">Loading 257,498 logbook entries…</div>
 
-<!-- 2. Simulate: a first model. -->
-<h2>Simulate</h2>
-<p>To come: the ships' noon positions as dots (not lines, since we only know where they were at noon), each day's words beside the number they became, and a drawing of how much sail each entry implies.</p>
+<div id="hud">
+  <h1>The Ship as Instrument, 1750–1855</h1>
+  <p>Every CLIWOC logbook entry, day by day. The ships that measured the wind also carried the empires. Background: winds averaged from the same logbooks for this month; dark sea means nobody wrote there. Drag to move, scroll to zoom, click a ship.</p>
+  <div id="legend"></div>
+  <p style="margin-top:6px">A dot with a <b style="color:#fff;font-weight:500">white ring</b> wrote in its logbook in the last 4 days (it can be clicked); a dot without a ring is fading out. A <b style="color:#ff9b88;font-weight:500">red ring</b> marks a ship that took part in a documented event of empire. A <b style="color:#e0508a;font-weight:600">square</b> marks a slave voyage: solid if its own logbook records it, dashed if very likely; a crossed square is a slave ship met by another ship. Tracks are <b style="color:#fff;font-weight:500">solid</b> where the noon position was observed (sun or stars) and <b style="color:#fff;font-weight:500">dashed</b> where it was only reckoned. <a href="#" class="howpos" style="color:#9fd3ff">How positions were found</a></p>
+  <div id="tools"><button id="openIndex">Ships</button><button id="openSources">About and sources</button><button id="rkBtn" role="switch" aria-pressed="false" aria-checked="false" title="Mark what a machine wrote"><span class="sw"><i></i></span>Reckoned text</button></div>
+  <div id="rkKey" hidden><p><span class="rkS">Solid</span>: from the logbooks and archives, as written. <span class="rkD">Dashed</span>: written by a machine (an AI model): word glosses, translations, ship roles, event summaries, the history of the collection, the explainers. Like a dead-reckoned position, it is fluent and plausible, produced from what the model knew, without sight of the source. The interface's own instructions were also drafted with a machine and are not marked.</p></div>
+  <div id="layers"><span>Layers</span><button id="wordsBtn" aria-pressed="false" title="Show how each ship wrote the wind: in words, or in numbers">Words and numbers</button><button data-l="instr" aria-pressed="false">Barometer and temperature</button><button data-l="compass" aria-pressed="false">Compass needles</button><button data-l="sky" aria-pressed="false">Sky and sea</button><button data-l="cargo" aria-pressed="false">Cargo and encounters</button><button data-l="meridians" aria-pressed="false">Zero meridians</button></div>
+  <div id="layerKey"></div>
+  <p id="wordsKey" style="display:none;margin-top:6px">Each ship writing today shows how its officer wrote the wind: <i style="font-family:Georgia,serif;color:#f1e6cf">in words</i> or <span style="font-family:ui-monospace,Consolas,monospace;color:#8fd3e8">in numbers</span>. On the timeline, the <span style="color:#8fd3e8">blue line</span> is the share of entries written in numbers each year.</p>
+  <div id="count"></div>
+<aside id="archive" aria-label="Which archives the logbooks come from">
+  <div class="ahead"><svg id="apie" viewBox="-50 -50 100 100" width="72" height="72" role="img" aria-label="Share of the map's entries by archive"></svg>
+    <div><b>Whose logbooks?</b><div id="acountries"></div></div></div>
+  <button id="amore" aria-expanded="false">The archives, and how the collection came together</button>
+  <div id="adetail" hidden>
+    <div id="alist"></div>
+    <p class="mxb">CLIWOC was a European Union research project (2001–2003) of climate scientists and historians from Spain, the United Kingdom, the Netherlands and Argentina. They chose and transcribed over 1,700 logbooks from the archives above, mainly for 1750–1850, and turned the officers' wind words into numbers. Version 2.1 is published by DANS, the Dutch national data archive.</p>
+    <p class="mxb">The balance reflects which archives the team could reach and fund, not how many ships sailed. Dutch logbooks are about 45% of the entries, and after 1830 almost all of them, from the collection of the Dutch weather institute KNMI. British logbooks are about 35%, mostly from the National Maritime Museum and the East India Company's records at the British Library. Spain is 17%; France, then a major naval power, barely 2%; Portuguese, Danish and other fleets are almost absent. So where the map looks busy, it may show which logbooks survived and were chosen, rather than where most ships actually sailed.</p>
+  </div>
+</aside>
+</div>
+<div id="bar">
+  <canvas id="timeline" tabindex="0" aria-label="Timeline: drag to change the date; arrow keys move by a day, shift+arrow by a year"></canvas>
+  <div id="row">
+    <button id="play">Play</button>
+    <select id="speed" title="Days per second">
+      <option value="5">5 days/s</option><option value="30" selected>1 month/s</option><option value="180">6 months/s</option><option value="730">2 years/s</option>
+    </select>
+    <span id="date"></span>
+    <span class="key"><span><b style="background:#6fa8d6"></b>entries per year</span><span><b style="background:var(--storm)"></b>storms in the logbooks</span><span><b style="background:var(--empire)"></b>events of empire</span><span><b style="background:#e0508a"></b>slave voyages</span></span>
+  </div>
+</div>
 
-<!-- 3. Situate: where, when, who. -->
-<h2>Situate</h2>
-<p>To come: the routes, the war that shaped them, and the archives where the logbooks ended up, among them Den Haag, De Bilt, Greenwich and Seville.</p>
+<div id="tip"></div>
 
-<!-- 4. Narrate: the story in a few sentences, and what the model cannot show. -->
-<h2>Narrate</h2>
-<p>To come.</p>
-
-<section class="note" id="sources">
-<h2>Sources and limits</h2>
-<ul class="small">
-  <li><strong>CLIWOC 2.1</strong>, the Climatological Database for the World's Oceans, reformatted by Dagomar Degroot and Steven Ottens at <a href="https://historicalclimatology.com/cliwoc">historicalclimatology.com</a> from the EU CLIWOC project (2001–2004). Downloaded 8 November 2026. Licence: not stated by the source. Used here: six entries for 7 March 1796, and the anchorages and dates of the same voyages, with positions rounded to 0.1°. Logbook words: observed, as transcribed. Wind speeds: converted by the database from words.</li>
-  <li>R. García-Herrera et al., "CLIWOC: a climatological database for the world's oceans 1750–1854", <i>Climatic Change</i> 73 (2005): 1–12. How the database was made, and the term "semi-instrumental".</li>
-  <li>D. Wheeler and C. Wilkinson, "From calm to storm: the origins of the Beaufort wind scale", <i>Mariner's Mirror</i> 90 (2004): 187–201; and "The determination of logbook wind force and weather terms: the English case", <i>Climatic Change</i> 73 (2005): 57–77. How wind was judged without instruments.</li>
-  <li>R. Sorrenson, "The ship as a scientific instrument in the eighteenth century", <i>Osiris</i> 11 (1996): 221–236.</li>
-  <li>"Capitulation of Saldanha Bay", <a href="https://en.wikipedia.org/wiki/Capitulation_of_Saldanha_Bay">Wikipedia</a>, read 9 November 2026. Secondary source, citing naval histories by William James and William Laird Clowes among others. Used for the two squadrons, the voyage and the surrender.</li>
-  <li>"A plan of Soldanah Bay and capture of the Dutch fleet which surrendered to his Majesty's arms 17th August, 1796", map, 1796, <a href="https://archive.parliament.gov.za/items/8d100406-d96a-4ba5-839b-625fe37b5eb4">Library of Parliament, South Africa</a>. Primary source for the date.</li>
-  <li>English translations of the Dutch words: mine, interpretive.</li>
-</ul>
-<p class="small">What this sketch cannot show yet: the wind speeds are estimates for words, not measurements; positions were often worked out by dead reckoning, not observed; the logs give one noon entry a day, so we don't know what happened in between; a ship that wrote nothing was not necessarily in calm weather; and not every logbook was digitised in full. The sloop <i>Havick</i> sailed with Lucas to the Cape, but its log in the database stops at Gran Canaria.</p>
+<section id="reckon" aria-label="How a ship knew where it was"><button class="close" id="rclose">Close</button>
+  <h2>How a ship knew where it was</h2>
+  <canvas id="rkc"></canvas>
+  <p id="rkcap" class="rkcap"></p>
+  <p class="mxb">Out of sight of land, an officer worked like someone crossing a dark field with eyes closed: he knew where he had started, which way he was facing, and how fast he was going. Adding these up hour by hour gave the <b>reckoned</b> position. When the sky allowed, the sun at noon (or the stars) gave the true latitude, and later in the period a chronometer could give longitude: the <b>observed</b> position. The difference was the push of wind and current that nobody aboard could feel.</p>
+  <p class="mxb">CLIWOC records which it was. About <b>36% of latitudes</b> and <b>40% of longitudes</b> on this map are reckoned only. On about 54,000 days a logbook gives both: the reckoned latitude was off by a median of <b>11 km</b>, a little more as the wind rose; the reckoned longitude by a median of <b>90 km</b>. (These double entries are almost all Dutch.)</p>
+  <p class="sub">On the map, tracks are solid where the position was observed and dashed where it was reckoned. In a ship's whole-voyage view, a small circle marks where the officer thought the ship was, joined to where the sky showed it to be.</p>
 </section>
+<section id="storm" aria-label="A storm logged by several ships"><button class="close" id="sclose">Close</button>
+  <div class="vhead"><h2 id="stitle"></h2><button id="sprev" title="Previous day">◀</button><span id="sday" style="min-width:140px;text-align:center"></span><button id="snext" title="Next day">▶</button><button id="sgo">Go to this day on the map</button></div>
+  <div id="sbody2"><canvas id="smap"></canvas><div id="slist"></div></div>
+  <p class="sub" style="margin:0;font-size:12px;color:var(--mut)">Each ship's noon positions over the storm and the days around it. Each feathered arrow is that day's logged wind, pointing the way it blew, with one feather per two Beaufort forces; storm days in ochre. Ships on different sides of a storm log different winds: together they outline it. The ochre spiral is a sketch of the storm's form: by Buys Ballot's rule, with your back to the wind the storm's centre lies to your left (right in the southern hemisphere), nearer when the wind is stronger. A plausible shape, not a reconstruction. Scroll on the map to zoom, drag to move, double-click to reset.</p>
+</section>
+<section id="voyage" aria-label="The whole voyage"><button class="close" id="vclose">Close</button>
+  <div class="vhead"><h2 id="vtitle"></h2><select id="vlog" title="Logbook"></select><button id="vprev" title="Previous entry">◀</button><button id="vplay">Play</button><button id="vnext" title="Next entry">▶</button></div>
+  <div id="vinfo"></div>
+  <div id="vbody"><canvas id="vmap"></canvas><canvas id="vchart"></canvas></div>
+  <p class="sub" style="margin:0;font-size:12px;color:var(--mut)">Every entry in this logbook. Map: noon positions, dots sized by the Beaufort force, ochre at force 10 and above. Solid track: position observed; dashed: reckoned. Blue circles: where the officer reckoned the ship was, joined to where the sky showed it. Chart: force by day (bars), with the wind direction above (each tick points the way the wind blew). Click either to open that day; the ship above updates. Scroll on the map to zoom, drag to move, double-click to reset. Long gaps in the chart (in port, or a logbook resumed later) are closed up and marked //.</p>
+</section>
+<aside id="panel" class="side" aria-label="Ship details"><button class="close">Close</button><div id="pbody"></div></aside>
+<aside id="index" class="side" aria-label="Ship index"><button class="close">Close</button>
+  <h2>Ships</h2>
+  <p class="sub">All 991 ships in CLIWOC. Click one to go to its first logbook entry.</p>
+  <input type="search" id="q" placeholder="Search a name, captain, type…">
+  <div class="filters" id="fNat"></div>
+  <div class="filters"><select id="fRole"><option value="">All roles</option></select><select id="fSort"><option value="name">A–Z</option><option value="first">By date</option><option value="n">Most entries</option></select></div>
+  <div id="list"></div>
+</aside>
+<aside id="skyp" class="side" aria-label="Sky and sea"><button class="close">Close</button>
+  <h2>Sky and sea</h2>
+  <p class="sub">Rare things the officers wrote down, found in the logbook remarks, plus CLIWOC's sea-ice, snow and hail markers. Original words; click one to go there.</p>
+  <div id="skyf"></div><div id="skyl"></div>
+</aside>
+<aside id="sources" class="side" aria-label="About and sources"><button class="close">Close</button><div id="sbody"></div></aside>
 
-<footer class="site-footer">
-  <p>The Ship as Instrument: Storms in Logbooks · Christos Montsenigos · Realtime Weather working group, Weather Commons</p>
-</footer>
-</main>
+<script src="data/land.js"></script>
+<script src="data/ships.js"></script>
+<script src="data/entries.js"></script>
+<script src="data/wind.js"></script>
+<script src="data/storms.js"></script>
+<script src="data/glossary.js"></script>
+<script src="data/slavery.js"></script>
+<script src="data/events.js" onerror="window.EVENTS=[]"></script>
+<script src="data/sources.js"></script>
+<script src="data/archives.js" onerror="window.ARCHIVES=null"></script>
+
+<script type="importmap">
+{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+</script>
+<script type="module">
+// Load three.js, then the ship builder (ship3d.js), which is a plain script so the page also works opened from disk.
+import * as THREE from 'three';
+window.THREEX = { THREE };
+const s = document.createElement('script'); s.src = 'ship3d.js'; document.body.appendChild(s);
+</script>
+<script src="app.js"></script>
 </body>
 </html>
